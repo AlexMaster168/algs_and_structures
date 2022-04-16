@@ -1,0 +1,14 @@
+{
+  "name": "algs_and_structures",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
