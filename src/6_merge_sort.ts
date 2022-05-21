@@ -1,46 +1,36 @@
-function MergeSort(items: number[]): number[] {
-    return divide(items);
-}
+function mergeSort(array: Number[]) {
+    let k;
+    let j;
+    if (array.length > 1) {
+        let mid = Math.floor(array.length / 2),
+            lefthalf = array.slice(0, mid),
+            righthalf = array.slice(mid);
+        mergeSort(lefthalf)
+        mergeSort(righthalf)
 
-function divide(items: number[]): number[] {
-    const halfLength = Math.ceil(items.length / 2);
-    let low = items.slice(0, halfLength);
-    let high = items.slice(halfLength);
-    if (halfLength > 1) {
-        low = divide(low);
-        high = divide(high);
-    }
-    return combine(low, high);
-}
-
-function combine(low: number[], high: number[]): number[] {
-    let indexLow = 0;
-    let indexHigh = 0;
-    const lengthLow = low.length;
-    const lengthHigh = high.length;
-    const combined = [];
-    while (indexLow < lengthLow || indexHigh < lengthHigh) {
-        const lowItem = low[indexLow];
-        const highItem = high[indexHigh];
-        if (lowItem !== undefined) {
-            if (highItem === undefined) {
-                combined.push(lowItem);
-                indexLow++;
+        let i = j = k = 0
+        while (i < lefthalf.length && j < righthalf.length) {
+            if (lefthalf[i] < righthalf[j]) {
+                array[k] = lefthalf[i]
+                i++;
             } else {
-                if (lowItem <= highItem) {
-                    combined.push(lowItem);
-                    indexLow++;
-                } else {
-                    combined.push(highItem);
-                    indexHigh++;
-                }
+                array[k] = righthalf[j]
+                j++
             }
-        } else {
-            if (highItem !== undefined) {
-                combined.push(highItem);
-                indexHigh++;
-            }
+            k++
+        }
+        while (i < lefthalf.length) {
+            array[k] = lefthalf[i]
+            i++
+            k++
+        }
+        while (j < righthalf.length) {
+            array[k] = righthalf[j]
+            j++
+            k++
         }
     }
-    return combined;
+    return array
 }
+
+console.log(mergeSort([0,3,2,5,6,8,1,9,4,2,1,2,9,6,4,1,7,-1, -5, 23,6,2,35,6,3,32]))
