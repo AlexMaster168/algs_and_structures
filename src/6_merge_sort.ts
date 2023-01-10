@@ -1,36 +1,23 @@
-function mergeSort(array: Number[]) {
-    let k;
-    let j;
-    if (array.length > 1) {
-        let mid = Math.floor(array.length / 2),
-            lefthalf = array.slice(0, mid),
-            righthalf = array.slice(mid);
-        mergeSort(lefthalf)
-        mergeSort(righthalf)
+function mergeSort(arr: number[]): number[] {
+  if (arr.length <= 1) return arr;
 
-        let i = j = k = 0
-        while (i < lefthalf.length && j < righthalf.length) {
-            if (lefthalf[i] < righthalf[j]) {
-                array[k] = lefthalf[i]
-                i++;
-            } else {
-                array[k] = righthalf[j]
-                j++
-            }
-            k++
-        }
-        while (i < lefthalf.length) {
-            array[k] = lefthalf[i]
-            i++
-            k++
-        }
-        while (j < righthalf.length) {
-            array[k] = righthalf[j]
-            j++
-            k++
-        }
-    }
-    return array
+  const middle = Math.floor(arr.length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+
+  return merge(mergeSort(left), mergeSort(right));
 }
 
-console.log(mergeSort([0,3,2,5,6,8,1,9,4,2,1,2,9,6,4,1,7,-1, -5, 23,6,2,35,6,3,32]))
+function merge(left: number[], right: number[]): number[] {
+  const result: number[] = [];
+
+  while (left.length && right.length) {
+    if (left[0] < right[0]) {
+      result.push(left.shift()!);
+    } else {
+      result.push(right.shift()!);
+    }
+  }
+
+  return result.concat(left, right);
+}

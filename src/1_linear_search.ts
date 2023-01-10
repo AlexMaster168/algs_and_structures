@@ -4,9 +4,7 @@ let count: number = 0
 function linearSearch(array: number[], item: number): null | number {
     for (let i = 0; i < array.length; i++) {
         count += 1
-        if (array[i] === item) {
-            return i;
-        }
+        if (array[i] === item) return i;
     }
     return null
 }
