@@ -6,6 +6,8 @@
 
 ## Оглавление
 
+- [Шаблоны на других языках](#шаблоны-на-других-языках)
+
 - [Как пользоваться репозиторием](#как-пользоваться-репозиторием)
   - [Запуск](#запуск) · [Структура проекта](#структура-проекта) · [Соглашения](#соглашения) · [Как читать оценки сложности](#как-читать-оценки-сложности) · [Шпаргалка по структурам данных](#шпаргалка-по-структурам-данных)
 
@@ -2726,3 +2728,150 @@ breaker.state; // 'closed' | 'open' | 'half-open'
 
 await retry(() => fetch('https://api.example.com'), { attempts: 5, delayMs: 100 });
 ```
+
+
+## Шаблоны на других языках
+
+В [templates/](templates/) лежит стартовый набор из 24 самостоятельных реализаций: по три на Python, C#, C++, PHP, Java, JavaScript, Go и Rust. Это дополнение к полной коллекции TypeScript, а не полный перенос всех её алгоритмов и паттернов. Зависимости сторонних библиотек не нужны. Код шаблонов не содержит комментариев.
+
+### Каталог исходников
+
+| Язык | Поиск: бинарный | Сортировки: слиянием | Структуры данных: Union-Find |
+|---|---|---|---|
+| Python | [binary_search.py](templates/python/searching/binary_search.py) | [merge_sort.py](templates/python/sorting/merge_sort.py) | [disjoint_set.py](templates/python/data_structures/disjoint_set.py) |
+| C# | [BinarySearch.cs](templates/csharp/searching/BinarySearch.cs) | [MergeSort.cs](templates/csharp/sorting/MergeSort.cs) | [DisjointSet.cs](templates/csharp/data-structures/DisjointSet.cs) |
+| C++ | [binary_search.hpp](templates/cpp/searching/binary_search.hpp) | [merge_sort.hpp](templates/cpp/sorting/merge_sort.hpp) | [disjoint_set.hpp](templates/cpp/data-structures/disjoint_set.hpp) |
+| PHP | [binary_search.php](templates/php/searching/binary_search.php) | [merge_sort.php](templates/php/sorting/merge_sort.php) | [DisjointSet.php](templates/php/data-structures/DisjointSet.php) |
+| Java | [BinarySearch.java](templates/java/searching/BinarySearch.java) | [MergeSort.java](templates/java/sorting/MergeSort.java) | [DisjointSet.java](templates/java/data-structures/DisjointSet.java) |
+| JavaScript | [binary-search.mjs](templates/javascript/searching/binary-search.mjs) | [merge-sort.mjs](templates/javascript/sorting/merge-sort.mjs) | [disjoint-set.mjs](templates/javascript/data-structures/disjoint-set.mjs) |
+| Go | [binary_search.go](templates/go/searching/binary_search.go) | [merge_sort.go](templates/go/sorting/merge_sort.go) | [disjoint_set.go](templates/go/data-structures/disjoint_set.go) |
+| Rust | [binary_search.rs](templates/rust/searching/binary_search.rs) | [merge_sort.rs](templates/rust/sorting/merge_sort.rs) | [disjoint_set.rs](templates/rust/data-structures/disjoint_set.rs) |
+
+### Как работают решения
+
+**Бинарный поиск.** Входной массив должен быть отсортирован по возрастанию. Держим полуоткрытый интервал `[left, right)`, сравниваем середину с целью и отбрасываем половину. При равенстве продолжаем слева: все шаблоны возвращают индекс первого совпадения. Например, `[1, 3, 3, 7]` и цель `3` дают `1`; цель `2` даёт `-1`, а Rust возвращает `None`. Время `O(log n)`, дополнительная память `O(1)`. Подходит для поиска в отсортированном справочнике; сортировка перед единственным поиском обычно дороже линейного прохода.
+
+**Сортировка слиянием.** Делим массив пополам до частей длиной 0 или 1, сортируем обе половины, затем сливаем двумя указателями. При равенстве выбираем левый элемент: сортировка стабильна. `[3, -1, 3, 0]` превращается в `[-1, 0, 3, 3]`. Исходный массив сохраняется, возвращается новый. Время `O(n log n)`, пиковая дополнительная память `O(n)`, глубина рекурсии `O(log n)`. В шаблонах используются копии половин ради простоты; для больших массивов можно переиспользовать общий буфер. PHP-массивы занимают существенно больше памяти, чем массивы целых чисел в C++ или Java.
+
+**Union-Find.** Индексы `0..n-1` сначала образуют отдельные множества. `find` находит корень и сокращает путь к нему; `union` прикрепляет меньшую компоненту к большей. После объединений `(0, 1)` и `(1, 2)` корни 0 и 2 совпадают; повторное объединение `(2, 0)` возвращает `false`. Применяется в алгоритме Краскала и при добавлении связей в неориентированный граф. Создание занимает `O(n)` времени и памяти, последовательность операций — амортизированно `O(α(n))` на операцию. Удаление связей этот шаблон не поддерживает. Неверный индекс вызывает исключение, а в Go и Rust — panic.
+
+### Примеры использования по языкам
+
+Во всех примерах поиск возвращает первый индекс `1`, сортировка — `[-1, 0, 3, 3]`, объединение двух отдельных множеств — истину. Шаблоны рассчитаны на целые числа; Python и JavaScript также допускают другие сравнимые значения, но смешивать несовместимые типы не следует.
+
+**Python.** Импорты ниже выполняются из каталога `templates/python`:
+
+```python
+from searching.binary_search import binary_search
+from sorting.merge_sort import merge_sort
+from data_structures.disjoint_set import DisjointSet
+
+index = binary_search([1, 3, 3, 7], 3)
+ordered = merge_sort([3, -1, 3, 0])
+sets = DisjointSet(4)
+merged = sets.union(0, 1)
+```
+
+**C#.** Добавьте три `.cs` файла в консольный проект .NET 8 или новее. Методы принимают `int[]`, Union-Find — фиксированное количество индексов:
+
+```csharp
+var index = BinarySearch.Search(new[] { 1, 3, 3, 7 }, 3);
+var ordered = MergeSort.Sort(new[] { 3, -1, 3, 0 });
+var sets = new DisjointSet(4);
+var merged = sets.Union(0, 1);
+```
+
+**C++.** Подключите заголовки относительно `templates/cpp`. Функции объявлены `inline`, чтобы заголовки можно было включать из нескольких единиц трансляции:
+
+```cpp
+#include "searching/binary_search.hpp"
+#include "sorting/merge_sort.hpp"
+#include "data-structures/disjoint_set.hpp"
+
+int main() {
+    auto index = binary_search({1, 3, 3, 7}, 3);
+    auto ordered = merge_sort({3, -1, 3, 0});
+    DisjointSet sets(4);
+    auto merged = sets.unite(0, 1);
+}
+```
+
+**PHP.** Подключите файлы относительно `templates/php`. На вход подавайте списки с последовательными числовыми ключами и целыми значениями, а не ассоциативные массивы:
+
+```php
+require 'searching/binary_search.php';
+require 'sorting/merge_sort.php';
+require 'data-structures/DisjointSet.php';
+
+$index = binarySearch([1, 3, 3, 7], 3);
+$ordered = mergeSort([3, -1, 3, 0]);
+$sets = new DisjointSet(4);
+$merged = $sets->union(0, 1);
+```
+
+**Java.** Классы без объявления пакета, чтобы их можно было скопировать в учебный проект. При переносе в приложение добавьте собственный `package`:
+
+```java
+int index = BinarySearch.search(new int[] {1, 3, 3, 7}, 3);
+int[] ordered = MergeSort.sort(new int[] {3, -1, 3, 0});
+DisjointSet sets = new DisjointSet(4);
+boolean merged = sets.union(0, 1);
+```
+
+**JavaScript.** Используются ES-модули `.mjs`; импорты относительно `templates/javascript`. Для точного представления целых чисел используйте безопасный диапазон `Number`:
+
+```javascript
+import { binarySearch } from './searching/binary-search.mjs';
+import { mergeSort } from './sorting/merge-sort.mjs';
+import { DisjointSet } from './data-structures/disjoint-set.mjs';
+
+const index = binarySearch([1, 3, 3, 7], 3);
+const ordered = mergeSort([3, -1, 3, 0]);
+const sets = new DisjointSet(4);
+const merged = sets.union(0, 1);
+```
+
+**Go.** Каталог содержит собственный [go.mod](templates/go/go.mod). Внутри модуля функции доступны через следующие пакеты:
+
+```go
+import (
+    "algorithms/templates/searching"
+    "algorithms/templates/sorting"
+    structures "algorithms/templates/data-structures"
+)
+
+func example() {
+    index := searching.BinarySearch([]int{1, 3, 3, 7}, 3)
+    ordered := sorting.MergeSort([]int{3, -1, 3, 0})
+    sets := structures.NewDisjointSet(4)
+    merged := sets.Union(0, 1)
+    _, _, _ = index, ordered, merged
+}
+```
+
+**Rust.** Подключите модули относительно `templates/rust`. Поиск возвращает `Option<usize>`, Union-Find требует изменяемого доступа, поскольку поиск сжимает пути:
+
+```rust
+#[path = "searching/binary_search.rs"] mod searching;
+#[path = "sorting/merge_sort.rs"] mod sorting;
+#[path = "data-structures/disjoint_set.rs"] mod structures;
+
+fn main() {
+    let index = searching::binary_search(&[1, 3, 3, 7], 3);
+    let ordered = sorting::merge_sort(&[3, -1, 3, 0]);
+    let mut sets = structures::DisjointSet::new(4);
+    let merged = sets.union(0, 1);
+}
+```
+
+### Проверка шаблонов
+
+[templates/check.py](templates/check.py) собирает временные программы в `dist/template-checks`, запускает проверки и удаляет их после завершения. Проверяет сортировку против стандартной, поиск против первого совпадения, пустой ввод, дубликаты, отрицательные значения и повторное объединение. Это отдельные проверки; `pnpm test` продолжает проверять TypeScript.
+
+```bash
+python -B templates/check.py
+python -B templates/check.py python javascript php java csharp
+python -B templates/check.py cpp go rust
+```
+
+Без аргументов недоступные компиляторы отмечаются как `SKIP`. Если язык указан явно, отсутствие его инструмента считается ошибкой. Требуются Python 3.9+, Node.js 22+, PHP 8+, JDK 17+, .NET SDK 8+, C++17, Go 1.22+ или Rust с поддержкой edition 2021 — в зависимости от выбранных языков. Скрипт не устанавливает эти инструменты. В CI все восемь языков проверяются отдельным заданием.
