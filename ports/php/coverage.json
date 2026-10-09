@@ -1,0 +1,1043 @@
+{
+  "src/algorithms/backtracking/n-queens.ts": {
+    "path": "ports/php/algorithms/backtracking/n-queens.php",
+    "exports": {
+      "nQueens": "Ports\\Algorithms\\Backtracking\\nQueens",
+      "countNQueens": "Ports\\Algorithms\\Backtracking\\countNQueens"
+    }
+  },
+  "src/algorithms/backtracking/permutations.ts": {
+    "path": "ports/php/algorithms/backtracking/permutations.php",
+    "exports": {
+      "permutations": "Ports\\Algorithms\\Backtracking\\permutations",
+      "combinations": "Ports\\Algorithms\\Backtracking\\combinations",
+      "subsets": "Ports\\Algorithms\\Backtracking\\subsets",
+      "combinationSum": "Ports\\Algorithms\\Backtracking\\combinationSum"
+    }
+  },
+  "src/algorithms/backtracking/sudoku.ts": {
+    "path": "ports/php/algorithms/backtracking/sudoku.php",
+    "exports": {
+      "solveSudoku": "Ports\\Algorithms\\Backtracking\\solveSudoku"
+    }
+  },
+  "src/algorithms/backtracking/word-search.ts": {
+    "path": "ports/php/algorithms/backtracking/word-search.php",
+    "exports": {
+      "wordSearch": "Ports\\Algorithms\\Backtracking\\wordSearch"
+    }
+  },
+  "src/algorithms/bit-manipulation/bits.ts": {
+    "path": "ports/php/algorithms/bit-manipulation/bits.php",
+    "exports": {
+      "getBit": "Ports\\Algorithms\\BitManipulation\\getBit",
+      "setBit": "Ports\\Algorithms\\BitManipulation\\setBit",
+      "clearBit": "Ports\\Algorithms\\BitManipulation\\clearBit",
+      "toggleBit": "Ports\\Algorithms\\BitManipulation\\toggleBit",
+      "countSetBits": "Ports\\Algorithms\\BitManipulation\\countSetBits",
+      "isPowerOfTwo": "Ports\\Algorithms\\BitManipulation\\isPowerOfTwo",
+      "lowestSetBit": "Ports\\Algorithms\\BitManipulation\\lowestSetBit",
+      "singleNumber": "Ports\\Algorithms\\BitManipulation\\singleNumber",
+      "reverseBits": "Ports\\Algorithms\\BitManipulation\\reverseBits",
+      "grayCode": "Ports\\Algorithms\\BitManipulation\\grayCode",
+      "subsetsByMask": "Ports\\Algorithms\\BitManipulation\\subsetsByMask",
+      "swapWithoutTemp": "Ports\\Algorithms\\BitManipulation\\swapWithoutTemp",
+      "hammingDistance": "Ports\\Algorithms\\BitManipulation\\hammingDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/coin-change.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/coin-change.php",
+    "exports": {
+      "minCoins": "Ports\\Algorithms\\DynamicProgramming\\minCoins",
+      "coinChangeWays": "Ports\\Algorithms\\DynamicProgramming\\coinChangeWays"
+    }
+  },
+  "src/algorithms/dynamic-programming/edit-distance.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/edit-distance.php",
+    "exports": {
+      "editDistance": "Ports\\Algorithms\\DynamicProgramming\\editDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/fibonacci.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/fibonacci.php",
+    "exports": {
+      "fibonacciRecursive": "Ports\\Algorithms\\DynamicProgramming\\fibonacciRecursive",
+      "fibonacciMemo": "Ports\\Algorithms\\DynamicProgramming\\fibonacciMemo",
+      "fibonacci": "Ports\\Algorithms\\DynamicProgramming\\fibonacci",
+      "fibonacciFast": "Ports\\Algorithms\\DynamicProgramming\\fibonacciFast"
+    }
+  },
+  "src/algorithms/dynamic-programming/grid-paths.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/grid-paths.php",
+    "exports": {
+      "uniquePaths": "Ports\\Algorithms\\DynamicProgramming\\uniquePaths",
+      "minPathSum": "Ports\\Algorithms\\DynamicProgramming\\minPathSum"
+    }
+  },
+  "src/algorithms/dynamic-programming/knapsack.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/knapsack.php",
+    "exports": {
+      "knapsack01": "Ports\\Algorithms\\DynamicProgramming\\knapsack01",
+      "unboundedKnapsack": "Ports\\Algorithms\\DynamicProgramming\\unboundedKnapsack"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-common-subsequence.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/longest-common-subsequence.php",
+    "exports": {
+      "longestCommonSubsequence": "Ports\\Algorithms\\DynamicProgramming\\longestCommonSubsequence",
+      "longestCommonSubstring": "Ports\\Algorithms\\DynamicProgramming\\longestCommonSubstring"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-increasing-subsequence.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/longest-increasing-subsequence.php",
+    "exports": {
+      "longestIncreasingSubsequence": "Ports\\Algorithms\\DynamicProgramming\\longestIncreasingSubsequence"
+    }
+  },
+  "src/algorithms/dynamic-programming/matrix-chain.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/matrix-chain.php",
+    "exports": {
+      "matrixChainOrder": "Ports\\Algorithms\\DynamicProgramming\\matrixChainOrder"
+    }
+  },
+  "src/algorithms/dynamic-programming/max-subarray.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/max-subarray.php",
+    "exports": {
+      "maxSubarray": "Ports\\Algorithms\\DynamicProgramming\\maxSubarray"
+    }
+  },
+  "src/algorithms/dynamic-programming/memoize.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/memoize.php",
+    "exports": {
+      "memoize": "Ports\\Algorithms\\DynamicProgramming\\memoize"
+    }
+  },
+  "src/algorithms/dynamic-programming/rod-cutting.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/rod-cutting.php",
+    "exports": {
+      "rodCutting": "Ports\\Algorithms\\DynamicProgramming\\rodCutting"
+    }
+  },
+  "src/algorithms/dynamic-programming/subset-sum.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/subset-sum.php",
+    "exports": {
+      "subsetSum": "Ports\\Algorithms\\DynamicProgramming\\subsetSum",
+      "canPartition": "Ports\\Algorithms\\DynamicProgramming\\canPartition"
+    }
+  },
+  "src/algorithms/dynamic-programming/word-break.ts": {
+    "path": "ports/php/algorithms/dynamic-programming/word-break.php",
+    "exports": {
+      "wordBreak": "Ports\\Algorithms\\DynamicProgramming\\wordBreak"
+    }
+  },
+  "src/algorithms/geometry/geometry.ts": {
+    "path": "ports/php/algorithms/geometry/geometry.php",
+    "exports": {
+      "cross": "Ports\\Algorithms\\Geometry\\cross",
+      "distance": "Ports\\Algorithms\\Geometry\\distance",
+      "convexHull": "Ports\\Algorithms\\Geometry\\convexHull",
+      "polygonArea": "Ports\\Algorithms\\Geometry\\polygonArea",
+      "pointInPolygon": "Ports\\Algorithms\\Geometry\\pointInPolygon",
+      "segmentsIntersect": "Ports\\Algorithms\\Geometry\\segmentsIntersect",
+      "closestPair": "Ports\\Algorithms\\Geometry\\closestPair"
+    }
+  },
+  "src/algorithms/graphs/a-star.ts": {
+    "path": "ports/php/algorithms/graphs/a-star.php",
+    "exports": {
+      "aStar": "Ports\\Algorithms\\Graphs\\aStar",
+      "aStarGrid": "Ports\\Algorithms\\Graphs\\aStarGrid"
+    }
+  },
+  "src/algorithms/graphs/bellman-ford.ts": {
+    "path": "ports/php/algorithms/graphs/bellman-ford.php",
+    "exports": {
+      "bellmanFord": "Ports\\Algorithms\\Graphs\\bellmanFord"
+    }
+  },
+  "src/algorithms/graphs/bfs.ts": {
+    "path": "ports/php/algorithms/graphs/bfs.php",
+    "exports": {
+      "bfs": "Ports\\Algorithms\\Graphs\\bfs",
+      "shortestPathUnweighted": "Ports\\Algorithms\\Graphs\\shortestPathUnweighted",
+      "gridShortestPath": "Ports\\Algorithms\\Graphs\\gridShortestPath"
+    }
+  },
+  "src/algorithms/graphs/bipartite.ts": {
+    "path": "ports/php/algorithms/graphs/bipartite.php",
+    "exports": {
+      "bipartiteColoring": "Ports\\Algorithms\\Graphs\\bipartiteColoring",
+      "isBipartite": "Ports\\Algorithms\\Graphs\\isBipartite"
+    }
+  },
+  "src/algorithms/graphs/bridges-and-articulation-points.ts": {
+    "path": "ports/php/algorithms/graphs/bridges-and-articulation-points.php",
+    "exports": {
+      "findBridgesAndArticulationPoints": "Ports\\Algorithms\\Graphs\\findBridgesAndArticulationPoints"
+    }
+  },
+  "src/algorithms/graphs/connected-components.ts": {
+    "path": "ports/php/algorithms/graphs/connected-components.php",
+    "exports": {
+      "connectedComponents": "Ports\\Algorithms\\Graphs\\connectedComponents"
+    }
+  },
+  "src/algorithms/graphs/cycle-detection.ts": {
+    "path": "ports/php/algorithms/graphs/cycle-detection.php",
+    "exports": {
+      "hasCycleDirected": "Ports\\Algorithms\\Graphs\\hasCycleDirected",
+      "hasCycleUndirected": "Ports\\Algorithms\\Graphs\\hasCycleUndirected"
+    }
+  },
+  "src/algorithms/graphs/dfs.ts": {
+    "path": "ports/php/algorithms/graphs/dfs.php",
+    "exports": {
+      "dfs": "Ports\\Algorithms\\Graphs\\dfs",
+      "dfsRecursive": "Ports\\Algorithms\\Graphs\\dfsRecursive",
+      "hasPath": "Ports\\Algorithms\\Graphs\\hasPath"
+    }
+  },
+  "src/algorithms/graphs/dijkstra.ts": {
+    "path": "ports/php/algorithms/graphs/dijkstra.php",
+    "exports": {
+      "dijkstra": "Ports\\Algorithms\\Graphs\\dijkstra",
+      "dijkstraPath": "Ports\\Algorithms\\Graphs\\dijkstraPath"
+    }
+  },
+  "src/algorithms/graphs/eulerian-path.ts": {
+    "path": "ports/php/algorithms/graphs/eulerian-path.php",
+    "exports": {
+      "eulerianPathDirected": "Ports\\Algorithms\\Graphs\\eulerianPathDirected"
+    }
+  },
+  "src/algorithms/graphs/flood-fill.ts": {
+    "path": "ports/php/algorithms/graphs/flood-fill.php",
+    "exports": {
+      "floodFill": "Ports\\Algorithms\\Graphs\\floodFill"
+    }
+  },
+  "src/algorithms/graphs/floyd-warshall.ts": {
+    "path": "ports/php/algorithms/graphs/floyd-warshall.php",
+    "exports": {
+      "floydWarshall": "Ports\\Algorithms\\Graphs\\floydWarshall",
+      "floydWarshallPath": "Ports\\Algorithms\\Graphs\\floydWarshallPath"
+    }
+  },
+  "src/algorithms/graphs/max-flow.ts": {
+    "path": "ports/php/algorithms/graphs/max-flow.php",
+    "exports": {
+      "edmondsKarp": "Ports\\Algorithms\\Graphs\\edmondsKarp"
+    }
+  },
+  "src/algorithms/graphs/minimum-spanning-tree.ts": {
+    "path": "ports/php/algorithms/graphs/minimum-spanning-tree.php",
+    "exports": {
+      "kruskal": "Ports\\Algorithms\\Graphs\\kruskal",
+      "prim": "Ports\\Algorithms\\Graphs\\prim"
+    }
+  },
+  "src/algorithms/graphs/strongly-connected-components.ts": {
+    "path": "ports/php/algorithms/graphs/strongly-connected-components.php",
+    "exports": {
+      "tarjanScc": "Ports\\Algorithms\\Graphs\\tarjanScc",
+      "kosarajuScc": "Ports\\Algorithms\\Graphs\\kosarajuScc"
+    }
+  },
+  "src/algorithms/graphs/topological-sort.ts": {
+    "path": "ports/php/algorithms/graphs/topological-sort.php",
+    "exports": {
+      "topologicalSortKahn": "Ports\\Algorithms\\Graphs\\topologicalSortKahn",
+      "topologicalSortDfs": "Ports\\Algorithms\\Graphs\\topologicalSortDfs"
+    }
+  },
+  "src/algorithms/graphs/types.ts": {
+    "path": "ports/php/algorithms/graphs/types.php",
+    "exports": {
+      "reconstructPath": "Ports\\Algorithms\\Graphs\\reconstructPath",
+      "toUndirected": "Ports\\Algorithms\\Graphs\\toUndirected",
+      "toWeightedUndirected": "Ports\\Algorithms\\Graphs\\toWeightedUndirected"
+    }
+  },
+  "src/algorithms/greedy/activity-selection.ts": {
+    "path": "ports/php/algorithms/greedy/activity-selection.php",
+    "exports": {
+      "activitySelection": "Ports\\Algorithms\\Greedy\\activitySelection",
+      "mergeIntervals": "Ports\\Algorithms\\Greedy\\mergeIntervals",
+      "minMeetingRooms": "Ports\\Algorithms\\Greedy\\minMeetingRooms"
+    }
+  },
+  "src/algorithms/greedy/fractional-knapsack.ts": {
+    "path": "ports/php/algorithms/greedy/fractional-knapsack.php",
+    "exports": {
+      "fractionalKnapsack": "Ports\\Algorithms\\Greedy\\fractionalKnapsack"
+    }
+  },
+  "src/algorithms/greedy/huffman.ts": {
+    "path": "ports/php/algorithms/greedy/huffman.php",
+    "exports": {
+      "huffmanCodes": "Ports\\Algorithms\\Greedy\\huffmanCodes",
+      "huffmanEncode": "Ports\\Algorithms\\Greedy\\huffmanEncode",
+      "huffmanDecode": "Ports\\Algorithms\\Greedy\\huffmanDecode"
+    }
+  },
+  "src/algorithms/greedy/jump-game.ts": {
+    "path": "ports/php/algorithms/greedy/jump-game.php",
+    "exports": {
+      "canReachEnd": "Ports\\Algorithms\\Greedy\\canReachEnd",
+      "minJumps": "Ports\\Algorithms\\Greedy\\minJumps",
+      "greedyChange": "Ports\\Algorithms\\Greedy\\greedyChange"
+    }
+  },
+  "src/algorithms/math/combinatorics.ts": {
+    "path": "ports/php/algorithms/math/combinatorics.php",
+    "exports": {
+      "factorial": "Ports\\Algorithms\\Math\\factorial",
+      "binomial": "Ports\\Algorithms\\Math\\binomial",
+      "pascalTriangle": "Ports\\Algorithms\\Math\\pascalTriangle",
+      "catalan": "Ports\\Algorithms\\Math\\catalan",
+      "nextPermutation": "Ports\\Algorithms\\Math\\nextPermutation"
+    }
+  },
+  "src/algorithms/math/gcd.ts": {
+    "path": "ports/php/algorithms/math/gcd.php",
+    "exports": {
+      "gcd": "Ports\\Algorithms\\Math\\gcd",
+      "lcm": "Ports\\Algorithms\\Math\\lcm",
+      "extendedGcd": "Ports\\Algorithms\\Math\\extendedGcd",
+      "modInverse": "Ports\\Algorithms\\Math\\modInverse"
+    }
+  },
+  "src/algorithms/math/matrix.ts": {
+    "path": "ports/php/algorithms/math/matrix.php",
+    "exports": {
+      "identity": "Ports\\Algorithms\\Math\\identity",
+      "multiply": "Ports\\Algorithms\\Math\\multiply",
+      "transpose": "Ports\\Algorithms\\Math\\transpose",
+      "matrixPower": "Ports\\Algorithms\\Math\\matrixPower",
+      "determinant": "Ports\\Algorithms\\Math\\determinant",
+      "solveLinearSystem": "Ports\\Algorithms\\Math\\solveLinearSystem"
+    }
+  },
+  "src/algorithms/math/number-conversion.ts": {
+    "path": "ports/php/algorithms/math/number-conversion.php",
+    "exports": {
+      "toBase": "Ports\\Algorithms\\Math\\toBase",
+      "fromBase": "Ports\\Algorithms\\Math\\fromBase",
+      "toRoman": "Ports\\Algorithms\\Math\\toRoman",
+      "fromRoman": "Ports\\Algorithms\\Math\\fromRoman"
+    }
+  },
+  "src/algorithms/math/power.ts": {
+    "path": "ports/php/algorithms/math/power.php",
+    "exports": {
+      "fastPower": "Ports\\Algorithms\\Math\\fastPower",
+      "modPow": "Ports\\Algorithms\\Math\\modPow",
+      "integerSqrt": "Ports\\Algorithms\\Math\\integerSqrt",
+      "newtonSqrt": "Ports\\Algorithms\\Math\\newtonSqrt"
+    }
+  },
+  "src/algorithms/math/primes.ts": {
+    "path": "ports/php/algorithms/math/primes.php",
+    "exports": {
+      "sieveOfEratosthenes": "Ports\\Algorithms\\Math\\sieveOfEratosthenes",
+      "linearSieve": "Ports\\Algorithms\\Math\\linearSieve",
+      "isPrime": "Ports\\Algorithms\\Math\\isPrime",
+      "millerRabin": "Ports\\Algorithms\\Math\\millerRabin",
+      "primeFactors": "Ports\\Algorithms\\Math\\primeFactors",
+      "divisors": "Ports\\Algorithms\\Math\\divisors",
+      "eulerPhi": "Ports\\Algorithms\\Math\\eulerPhi"
+    }
+  },
+  "src/algorithms/randomized/shuffle.ts": {
+    "path": "ports/php/algorithms/randomized/shuffle.php",
+    "exports": {
+      "fisherYatesShuffle": "Ports\\Algorithms\\Randomized\\fisherYatesShuffle",
+      "reservoirSample": "Ports\\Algorithms\\Randomized\\reservoirSample",
+      "mulberry32": "Ports\\Algorithms\\Randomized\\mulberry32",
+      "monteCarloPi": "Ports\\Algorithms\\Randomized\\monteCarloPi"
+    }
+  },
+  "src/algorithms/searching/binary-search.ts": {
+    "path": "ports/php/algorithms/searching/binary-search.php",
+    "exports": {
+      "binarySearch": "Ports\\Algorithms\\Searching\\binarySearch",
+      "binarySearchRecursive": "Ports\\Algorithms\\Searching\\binarySearchRecursive",
+      "lowerBound": "Ports\\Algorithms\\Searching\\lowerBound",
+      "upperBound": "Ports\\Algorithms\\Searching\\upperBound",
+      "firstTrue": "Ports\\Algorithms\\Searching\\firstTrue"
+    }
+  },
+  "src/algorithms/searching/exponential-search.ts": {
+    "path": "ports/php/algorithms/searching/exponential-search.php",
+    "exports": {
+      "exponentialSearch": "Ports\\Algorithms\\Searching\\exponentialSearch"
+    }
+  },
+  "src/algorithms/searching/interpolation-search.ts": {
+    "path": "ports/php/algorithms/searching/interpolation-search.php",
+    "exports": {
+      "interpolationSearch": "Ports\\Algorithms\\Searching\\interpolationSearch"
+    }
+  },
+  "src/algorithms/searching/jump-search.ts": {
+    "path": "ports/php/algorithms/searching/jump-search.php",
+    "exports": {
+      "jumpSearch": "Ports\\Algorithms\\Searching\\jumpSearch"
+    }
+  },
+  "src/algorithms/searching/linear-search.ts": {
+    "path": "ports/php/algorithms/searching/linear-search.php",
+    "exports": {
+      "linearSearch": "Ports\\Algorithms\\Searching\\linearSearch",
+      "linearSearchAll": "Ports\\Algorithms\\Searching\\linearSearchAll"
+    }
+  },
+  "src/algorithms/searching/quick-select.ts": {
+    "path": "ports/php/algorithms/searching/quick-select.php",
+    "exports": {
+      "quickSelect": "Ports\\Algorithms\\Searching\\quickSelect",
+      "median": "Ports\\Algorithms\\Searching\\median"
+    }
+  },
+  "src/algorithms/searching/ternary-search.ts": {
+    "path": "ports/php/algorithms/searching/ternary-search.php",
+    "exports": {
+      "ternarySearchMax": "Ports\\Algorithms\\Searching\\ternarySearchMax",
+      "ternarySearchMin": "Ports\\Algorithms\\Searching\\ternarySearchMin",
+      "findPeakIndex": "Ports\\Algorithms\\Searching\\findPeakIndex"
+    }
+  },
+  "src/algorithms/sorting/bubble-sort.ts": {
+    "path": "ports/php/algorithms/sorting/bubble-sort.php",
+    "exports": {
+      "bubbleSort": "Ports\\Algorithms\\Sorting\\bubbleSort"
+    }
+  },
+  "src/algorithms/sorting/bucket-sort.ts": {
+    "path": "ports/php/algorithms/sorting/bucket-sort.php",
+    "exports": {
+      "bucketSort": "Ports\\Algorithms\\Sorting\\bucketSort"
+    }
+  },
+  "src/algorithms/sorting/cocktail-shaker-sort.ts": {
+    "path": "ports/php/algorithms/sorting/cocktail-shaker-sort.php",
+    "exports": {
+      "cocktailShakerSort": "Ports\\Algorithms\\Sorting\\cocktailShakerSort"
+    }
+  },
+  "src/algorithms/sorting/counting-sort.ts": {
+    "path": "ports/php/algorithms/sorting/counting-sort.php",
+    "exports": {
+      "countingSort": "Ports\\Algorithms\\Sorting\\countingSort"
+    }
+  },
+  "src/algorithms/sorting/heap-sort.ts": {
+    "path": "ports/php/algorithms/sorting/heap-sort.php",
+    "exports": {
+      "heapSort": "Ports\\Algorithms\\Sorting\\heapSort"
+    }
+  },
+  "src/algorithms/sorting/index.ts": {
+    "path": "ports/php/algorithms/sorting/index.php",
+    "exports": {}
+  },
+  "src/algorithms/sorting/insertion-sort.ts": {
+    "path": "ports/php/algorithms/sorting/insertion-sort.php",
+    "exports": {
+      "insertionSortRange": "Ports\\Algorithms\\Sorting\\insertionSortRange",
+      "insertionSort": "Ports\\Algorithms\\Sorting\\insertionSort"
+    }
+  },
+  "src/algorithms/sorting/merge-sort.ts": {
+    "path": "ports/php/algorithms/sorting/merge-sort.php",
+    "exports": {
+      "merge": "Ports\\Algorithms\\Sorting\\merge",
+      "mergeSort": "Ports\\Algorithms\\Sorting\\mergeSort",
+      "bottomUpMergeSort": "Ports\\Algorithms\\Sorting\\bottomUpMergeSort"
+    }
+  },
+  "src/algorithms/sorting/quick-sort.ts": {
+    "path": "ports/php/algorithms/sorting/quick-sort.php",
+    "exports": {
+      "partition3": "Ports\\Algorithms\\Sorting\\partition3",
+      "quickSort": "Ports\\Algorithms\\Sorting\\quickSort",
+      "lomutoPartition": "Ports\\Algorithms\\Sorting\\lomutoPartition",
+      "quickSortFunctional": "Ports\\Algorithms\\Sorting\\quickSortFunctional"
+    }
+  },
+  "src/algorithms/sorting/radix-sort.ts": {
+    "path": "ports/php/algorithms/sorting/radix-sort.php",
+    "exports": {
+      "radixSort": "Ports\\Algorithms\\Sorting\\radixSort"
+    }
+  },
+  "src/algorithms/sorting/selection-sort.ts": {
+    "path": "ports/php/algorithms/sorting/selection-sort.php",
+    "exports": {
+      "selectionSort": "Ports\\Algorithms\\Sorting\\selectionSort"
+    }
+  },
+  "src/algorithms/sorting/shell-sort.ts": {
+    "path": "ports/php/algorithms/sorting/shell-sort.php",
+    "exports": {
+      "shellSort": "Ports\\Algorithms\\Sorting\\shellSort"
+    }
+  },
+  "src/algorithms/sorting/tim-sort.ts": {
+    "path": "ports/php/algorithms/sorting/tim-sort.php",
+    "exports": {
+      "timSort": "Ports\\Algorithms\\Sorting\\timSort"
+    }
+  },
+  "src/algorithms/strings/aho-corasick.ts": {
+    "path": "ports/php/algorithms/strings/aho-corasick.php",
+    "exports": {
+      "AhoCorasick": "Ports\\Algorithms\\Strings\\AhoCorasick"
+    }
+  },
+  "src/algorithms/strings/boyer-moore-horspool.ts": {
+    "path": "ports/php/algorithms/strings/boyer-moore-horspool.php",
+    "exports": {
+      "boyerMooreHorspool": "Ports\\Algorithms\\Strings\\boyerMooreHorspool"
+    }
+  },
+  "src/algorithms/strings/kmp.ts": {
+    "path": "ports/php/algorithms/strings/kmp.php",
+    "exports": {
+      "prefixFunction": "Ports\\Algorithms\\Strings\\prefixFunction",
+      "kmpSearch": "Ports\\Algorithms\\Strings\\kmpSearch"
+    }
+  },
+  "src/algorithms/strings/manacher.ts": {
+    "path": "ports/php/algorithms/strings/manacher.php",
+    "exports": {
+      "longestPalindromicSubstring": "Ports\\Algorithms\\Strings\\longestPalindromicSubstring"
+    }
+  },
+  "src/algorithms/strings/rabin-karp.ts": {
+    "path": "ports/php/algorithms/strings/rabin-karp.php",
+    "exports": {
+      "rabinKarp": "Ports\\Algorithms\\Strings\\rabinKarp"
+    }
+  },
+  "src/algorithms/strings/string-utils.ts": {
+    "path": "ports/php/algorithms/strings/string-utils.php",
+    "exports": {
+      "isBalanced": "Ports\\Algorithms\\Strings\\isBalanced",
+      "isPalindrome": "Ports\\Algorithms\\Strings\\isPalindrome",
+      "isAnagram": "Ports\\Algorithms\\Strings\\isAnagram",
+      "groupAnagrams": "Ports\\Algorithms\\Strings\\groupAnagrams",
+      "runLengthEncode": "Ports\\Algorithms\\Strings\\runLengthEncode",
+      "runLengthDecode": "Ports\\Algorithms\\Strings\\runLengthDecode",
+      "reverseWords": "Ports\\Algorithms\\Strings\\reverseWords"
+    }
+  },
+  "src/algorithms/strings/suffix-array.ts": {
+    "path": "ports/php/algorithms/strings/suffix-array.php",
+    "exports": {
+      "suffixArray": "Ports\\Algorithms\\Strings\\suffixArray",
+      "lcpArray": "Ports\\Algorithms\\Strings\\lcpArray",
+      "countDistinctSubstrings": "Ports\\Algorithms\\Strings\\countDistinctSubstrings"
+    }
+  },
+  "src/algorithms/strings/z-function.ts": {
+    "path": "ports/php/algorithms/strings/z-function.php",
+    "exports": {
+      "zFunction": "Ports\\Algorithms\\Strings\\zFunction",
+      "zSearch": "Ports\\Algorithms\\Strings\\zSearch"
+    }
+  },
+  "src/algorithms/techniques/prefix-sums.ts": {
+    "path": "ports/php/algorithms/techniques/prefix-sums.php",
+    "exports": {
+      "PrefixSums": "Ports\\Algorithms\\Techniques\\PrefixSums",
+      "PrefixSums2D": "Ports\\Algorithms\\Techniques\\PrefixSums2D",
+      "subarraySumEquals": "Ports\\Algorithms\\Techniques\\subarraySumEquals",
+      "differenceArrayApply": "Ports\\Algorithms\\Techniques\\differenceArrayApply",
+      "majorityElement": "Ports\\Algorithms\\Techniques\\majorityElement"
+    }
+  },
+  "src/algorithms/techniques/sliding-window.ts": {
+    "path": "ports/php/algorithms/techniques/sliding-window.php",
+    "exports": {
+      "maxSumWindow": "Ports\\Algorithms\\Techniques\\maxSumWindow",
+      "slidingWindowMaximum": "Ports\\Algorithms\\Techniques\\slidingWindowMaximum",
+      "longestUniqueSubstring": "Ports\\Algorithms\\Techniques\\longestUniqueSubstring",
+      "minWindowSubstring": "Ports\\Algorithms\\Techniques\\minWindowSubstring"
+    }
+  },
+  "src/algorithms/techniques/two-pointers.ts": {
+    "path": "ports/php/algorithms/techniques/two-pointers.php",
+    "exports": {
+      "twoSumSorted": "Ports\\Algorithms\\Techniques\\twoSumSorted",
+      "twoSum": "Ports\\Algorithms\\Techniques\\twoSum",
+      "threeSum": "Ports\\Algorithms\\Techniques\\threeSum",
+      "containerWithMostWater": "Ports\\Algorithms\\Techniques\\containerWithMostWater",
+      "removeDuplicatesSorted": "Ports\\Algorithms\\Techniques\\removeDuplicatesSorted",
+      "dutchNationalFlag": "Ports\\Algorithms\\Techniques\\dutchNationalFlag",
+      "hasCycleFloyd": "Ports\\Algorithms\\Techniques\\hasCycleFloyd"
+    }
+  },
+  "src/algorithms/trees/binary-tree.ts": {
+    "path": "ports/php/algorithms/trees/binary-tree.php",
+    "exports": {
+      "treeNode": "Ports\\Algorithms\\Trees\\treeNode",
+      "fromLevelOrder": "Ports\\Algorithms\\Trees\\fromLevelOrder",
+      "preOrder": "Ports\\Algorithms\\Trees\\preOrder",
+      "inOrder": "Ports\\Algorithms\\Trees\\inOrder",
+      "postOrder": "Ports\\Algorithms\\Trees\\postOrder",
+      "levelOrder": "Ports\\Algorithms\\Trees\\levelOrder",
+      "maxDepth": "Ports\\Algorithms\\Trees\\maxDepth",
+      "maxValue": "Ports\\Algorithms\\Trees\\maxValue",
+      "isValidBst": "Ports\\Algorithms\\Trees\\isValidBst",
+      "invertTree": "Ports\\Algorithms\\Trees\\invertTree",
+      "lowestCommonAncestorBst": "Ports\\Algorithms\\Trees\\lowestCommonAncestorBst"
+    }
+  },
+  "src/algorithms/trees/lowest-common-ancestor.ts": {
+    "path": "ports/php/algorithms/trees/lowest-common-ancestor.php",
+    "exports": {
+      "LowestCommonAncestor": "Ports\\Algorithms\\Trees\\LowestCommonAncestor"
+    }
+  },
+  "src/algorithms/trees/tree-diameter.ts": {
+    "path": "ports/php/algorithms/trees/tree-diameter.php",
+    "exports": {
+      "treeDiameter": "Ports\\Algorithms\\Trees\\treeDiameter"
+    }
+  },
+  "src/data-structures/graphs/disjoint-set.ts": {
+    "path": "ports/php/data-structures/graphs/disjoint-set.php",
+    "exports": {
+      "DisjointSet": "Ports\\DataStructures\\Graphs\\DisjointSet"
+    }
+  },
+  "src/data-structures/graphs/graph.ts": {
+    "path": "ports/php/data-structures/graphs/graph.php",
+    "exports": {
+      "Graph": "Ports\\DataStructures\\Graphs\\Graph"
+    }
+  },
+  "src/data-structures/hashing/bloom-filter.ts": {
+    "path": "ports/php/data-structures/hashing/bloom-filter.php",
+    "exports": {
+      "BloomFilter": "Ports\\DataStructures\\Hashing\\BloomFilter"
+    }
+  },
+  "src/data-structures/hashing/hash-table.ts": {
+    "path": "ports/php/data-structures/hashing/hash-table.php",
+    "exports": {
+      "HashTable": "Ports\\DataStructures\\Hashing\\HashTable"
+    }
+  },
+  "src/data-structures/hashing/hash.ts": {
+    "path": "ports/php/data-structures/hashing/hash.php",
+    "exports": {
+      "fnv1a": "Ports\\DataStructures\\Hashing\\fnv1a",
+      "defaultHasher": "Ports\\DataStructures\\Hashing\\defaultHasher"
+    }
+  },
+  "src/data-structures/hashing/lru-cache.ts": {
+    "path": "ports/php/data-structures/hashing/lru-cache.php",
+    "exports": {
+      "LRUCache": "Ports\\DataStructures\\Hashing\\LRUCache"
+    }
+  },
+  "src/data-structures/hashing/open-addressing-hash-map.ts": {
+    "path": "ports/php/data-structures/hashing/open-addressing-hash-map.php",
+    "exports": {
+      "OpenAddressingHashMap": "Ports\\DataStructures\\Hashing\\OpenAddressingHashMap"
+    }
+  },
+  "src/data-structures/heaps/binary-heap.ts": {
+    "path": "ports/php/data-structures/heaps/binary-heap.php",
+    "exports": {
+      "BinaryHeap": "Ports\\DataStructures\\Heaps\\BinaryHeap",
+      "MinHeap": "Ports\\DataStructures\\Heaps\\MinHeap",
+      "MaxHeap": "Ports\\DataStructures\\Heaps\\MaxHeap"
+    }
+  },
+  "src/data-structures/heaps/priority-queue.ts": {
+    "path": "ports/php/data-structures/heaps/priority-queue.php",
+    "exports": {
+      "PriorityQueue": "Ports\\DataStructures\\Heaps\\PriorityQueue"
+    }
+  },
+  "src/data-structures/linear/circular-buffer.ts": {
+    "path": "ports/php/data-structures/linear/circular-buffer.php",
+    "exports": {
+      "CircularBuffer": "Ports\\DataStructures\\Linear\\CircularBuffer"
+    }
+  },
+  "src/data-structures/linear/deque.ts": {
+    "path": "ports/php/data-structures/linear/deque.php",
+    "exports": {
+      "Deque": "Ports\\DataStructures\\Linear\\Deque"
+    }
+  },
+  "src/data-structures/linear/doubly-linked-list.ts": {
+    "path": "ports/php/data-structures/linear/doubly-linked-list.php",
+    "exports": {
+      "DoublyLinkedListNode": "Ports\\DataStructures\\Linear\\DoublyLinkedListNode",
+      "DoublyLinkedList": "Ports\\DataStructures\\Linear\\DoublyLinkedList"
+    }
+  },
+  "src/data-structures/linear/linked-list.ts": {
+    "path": "ports/php/data-structures/linear/linked-list.php",
+    "exports": {
+      "LinkedListNode": "Ports\\DataStructures\\Linear\\LinkedListNode",
+      "LinkedList": "Ports\\DataStructures\\Linear\\LinkedList"
+    }
+  },
+  "src/data-structures/linear/queue.ts": {
+    "path": "ports/php/data-structures/linear/queue.php",
+    "exports": {
+      "Queue": "Ports\\DataStructures\\Linear\\Queue"
+    }
+  },
+  "src/data-structures/linear/skip-list.ts": {
+    "path": "ports/php/data-structures/linear/skip-list.php",
+    "exports": {
+      "SkipList": "Ports\\DataStructures\\Linear\\SkipList"
+    }
+  },
+  "src/data-structures/linear/stack.ts": {
+    "path": "ports/php/data-structures/linear/stack.php",
+    "exports": {
+      "Stack": "Ports\\DataStructures\\Linear\\Stack"
+    }
+  },
+  "src/data-structures/range-queries/fenwick-tree.ts": {
+    "path": "ports/php/data-structures/range-queries/fenwick-tree.php",
+    "exports": {
+      "FenwickTree": "Ports\\DataStructures\\RangeQueries\\FenwickTree"
+    }
+  },
+  "src/data-structures/range-queries/lazy-segment-tree.ts": {
+    "path": "ports/php/data-structures/range-queries/lazy-segment-tree.php",
+    "exports": {
+      "LazySegmentTree": "Ports\\DataStructures\\RangeQueries\\LazySegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/segment-tree.ts": {
+    "path": "ports/php/data-structures/range-queries/segment-tree.php",
+    "exports": {
+      "SegmentTree": "Ports\\DataStructures\\RangeQueries\\SegmentTree",
+      "sumSegmentTree": "Ports\\DataStructures\\RangeQueries\\sumSegmentTree",
+      "minSegmentTree": "Ports\\DataStructures\\RangeQueries\\minSegmentTree",
+      "maxSegmentTree": "Ports\\DataStructures\\RangeQueries\\maxSegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/sparse-table.ts": {
+    "path": "ports/php/data-structures/range-queries/sparse-table.php",
+    "exports": {
+      "SparseTable": "Ports\\DataStructures\\RangeQueries\\SparseTable",
+      "minSparseTable": "Ports\\DataStructures\\RangeQueries\\minSparseTable",
+      "maxSparseTable": "Ports\\DataStructures\\RangeQueries\\maxSparseTable"
+    }
+  },
+  "src/data-structures/range-queries/sqrt-decomposition.ts": {
+    "path": "ports/php/data-structures/range-queries/sqrt-decomposition.php",
+    "exports": {
+      "SqrtDecomposition": "Ports\\DataStructures\\RangeQueries\\SqrtDecomposition"
+    }
+  },
+  "src/data-structures/trees/avl-tree.ts": {
+    "path": "ports/php/data-structures/trees/avl-tree.php",
+    "exports": {
+      "AVLTree": "Ports\\DataStructures\\Trees\\AVLTree"
+    }
+  },
+  "src/data-structures/trees/b-tree.ts": {
+    "path": "ports/php/data-structures/trees/b-tree.php",
+    "exports": {
+      "BTree": "Ports\\DataStructures\\Trees\\BTree"
+    }
+  },
+  "src/data-structures/trees/binary-search-tree.ts": {
+    "path": "ports/php/data-structures/trees/binary-search-tree.php",
+    "exports": {
+      "BSTNode": "Ports\\DataStructures\\Trees\\BSTNode",
+      "BinarySearchTree": "Ports\\DataStructures\\Trees\\BinarySearchTree"
+    }
+  },
+  "src/data-structures/trees/red-black-tree.ts": {
+    "path": "ports/php/data-structures/trees/red-black-tree.php",
+    "exports": {
+      "RedBlackTree": "Ports\\DataStructures\\Trees\\RedBlackTree"
+    }
+  },
+  "src/data-structures/trees/trie.ts": {
+    "path": "ports/php/data-structures/trees/trie.php",
+    "exports": {
+      "Trie": "Ports\\DataStructures\\Trees\\Trie"
+    }
+  },
+  "src/patterns/architectural/circuit-breaker.ts": {
+    "path": "ports/php/patterns/architectural/circuit-breaker.php",
+    "exports": {
+      "CircuitOpenError": "Ports\\Patterns\\Architectural\\CircuitOpenError",
+      "CircuitBreaker": "Ports\\Patterns\\Architectural\\CircuitBreaker",
+      "retry": "Ports\\Patterns\\Architectural\\retry"
+    }
+  },
+  "src/patterns/architectural/dependency-injection.ts": {
+    "path": "ports/php/patterns/architectural/dependency-injection.php",
+    "exports": {
+      "token": "Ports\\Patterns\\Architectural\\token",
+      "Container": "Ports\\Patterns\\Architectural\\Container"
+    }
+  },
+  "src/patterns/architectural/event-emitter.ts": {
+    "path": "ports/php/patterns/architectural/event-emitter.php",
+    "exports": {
+      "TypedEventEmitter": "Ports\\Patterns\\Architectural\\TypedEventEmitter"
+    }
+  },
+  "src/patterns/architectural/middleware.ts": {
+    "path": "ports/php/patterns/architectural/middleware.php",
+    "exports": {
+      "compose": "Ports\\Patterns\\Architectural\\compose",
+      "Pipeline": "Ports\\Patterns\\Architectural\\Pipeline"
+    }
+  },
+  "src/patterns/architectural/null-object.ts": {
+    "path": "ports/php/patterns/architectural/null-object.php",
+    "exports": {
+      "MemoryLogger": "Ports\\Patterns\\Architectural\\MemoryLogger",
+      "NullLogger": "Ports\\Patterns\\Architectural\\NullLogger",
+      "PaymentService": "Ports\\Patterns\\Architectural\\PaymentService"
+    }
+  },
+  "src/patterns/architectural/repository.ts": {
+    "path": "ports/php/patterns/architectural/repository.php",
+    "exports": {
+      "InMemoryRepository": "Ports\\Patterns\\Architectural\\InMemoryRepository"
+    }
+  },
+  "src/patterns/architectural/specification.ts": {
+    "path": "ports/php/patterns/architectural/specification.php",
+    "exports": {
+      "Spec": "Ports\\Patterns\\Architectural\\Spec",
+      "spec": "Ports\\Patterns\\Architectural\\spec"
+    }
+  },
+  "src/patterns/architectural/store.ts": {
+    "path": "ports/php/patterns/architectural/store.php",
+    "exports": {
+      "createStore": "Ports\\Patterns\\Architectural\\createStore",
+      "combineReducers": "Ports\\Patterns\\Architectural\\combineReducers",
+      "counterReducer": "Ports\\Patterns\\Architectural\\counterReducer"
+    }
+  },
+  "src/patterns/behavioral/chain-of-responsibility.ts": {
+    "path": "ports/php/patterns/behavioral/chain-of-responsibility.php",
+    "exports": {
+      "SupportHandler": "Ports\\Patterns\\Behavioral\\SupportHandler",
+      "FaqBot": "Ports\\Patterns\\Behavioral\\FaqBot",
+      "SupportAgent": "Ports\\Patterns\\Behavioral\\SupportAgent",
+      "Engineer": "Ports\\Patterns\\Behavioral\\Engineer",
+      "createSupportChain": "Ports\\Patterns\\Behavioral\\createSupportChain"
+    }
+  },
+  "src/patterns/behavioral/command.ts": {
+    "path": "ports/php/patterns/behavioral/command.php",
+    "exports": {
+      "TextDocument": "Ports\\Patterns\\Behavioral\\TextDocument",
+      "InsertCommand": "Ports\\Patterns\\Behavioral\\InsertCommand",
+      "DeleteCommand": "Ports\\Patterns\\Behavioral\\DeleteCommand",
+      "MacroCommand": "Ports\\Patterns\\Behavioral\\MacroCommand",
+      "CommandHistory": "Ports\\Patterns\\Behavioral\\CommandHistory"
+    }
+  },
+  "src/patterns/behavioral/interpreter.ts": {
+    "path": "ports/php/patterns/behavioral/interpreter.php",
+    "exports": {
+      "NumberExpression": "Ports\\Patterns\\Behavioral\\NumberExpression",
+      "VariableExpression": "Ports\\Patterns\\Behavioral\\VariableExpression",
+      "BinaryExpression": "Ports\\Patterns\\Behavioral\\BinaryExpression",
+      "parseExpression": "Ports\\Patterns\\Behavioral\\parseExpression"
+    }
+  },
+  "src/patterns/behavioral/iterator.ts": {
+    "path": "ports/php/patterns/behavioral/iterator.php",
+    "exports": {
+      "NumberRange": "Ports\\Patterns\\Behavioral\\NumberRange",
+      "depthFirst": "Ports\\Patterns\\Behavioral\\depthFirst",
+      "breadthFirst": "Ports\\Patterns\\Behavioral\\breadthFirst",
+      "take": "Ports\\Patterns\\Behavioral\\take"
+    }
+  },
+  "src/patterns/behavioral/mediator.ts": {
+    "path": "ports/php/patterns/behavioral/mediator.php",
+    "exports": {
+      "ChatUser": "Ports\\Patterns\\Behavioral\\ChatUser",
+      "ChatRoom": "Ports\\Patterns\\Behavioral\\ChatRoom"
+    }
+  },
+  "src/patterns/behavioral/memento.ts": {
+    "path": "ports/php/patterns/behavioral/memento.php",
+    "exports": {
+      "Editor": "Ports\\Patterns\\Behavioral\\Editor",
+      "EditorHistory": "Ports\\Patterns\\Behavioral\\EditorHistory"
+    }
+  },
+  "src/patterns/behavioral/observer.ts": {
+    "path": "ports/php/patterns/behavioral/observer.php",
+    "exports": {
+      "Subject": "Ports\\Patterns\\Behavioral\\Subject",
+      "StockTicker": "Ports\\Patterns\\Behavioral\\StockTicker",
+      "BehaviorSubject": "Ports\\Patterns\\Behavioral\\BehaviorSubject"
+    }
+  },
+  "src/patterns/behavioral/state.ts": {
+    "path": "ports/php/patterns/behavioral/state.php",
+    "exports": {
+      "Order": "Ports\\Patterns\\Behavioral\\Order"
+    }
+  },
+  "src/patterns/behavioral/strategy.ts": {
+    "path": "ports/php/patterns/behavioral/strategy.php",
+    "exports": {
+      "FlatRateShipping": "Ports\\Patterns\\Behavioral\\FlatRateShipping",
+      "WeightBasedShipping": "Ports\\Patterns\\Behavioral\\WeightBasedShipping",
+      "FreeOverThresholdShipping": "Ports\\Patterns\\Behavioral\\FreeOverThresholdShipping",
+      "ShippingCalculator": "Ports\\Patterns\\Behavioral\\ShippingCalculator"
+    }
+  },
+  "src/patterns/behavioral/template-method.ts": {
+    "path": "ports/php/patterns/behavioral/template-method.php",
+    "exports": {
+      "SalesDataMiner": "Ports\\Patterns\\Behavioral\\SalesDataMiner",
+      "CsvSalesMiner": "Ports\\Patterns\\Behavioral\\CsvSalesMiner",
+      "JsonSalesMiner": "Ports\\Patterns\\Behavioral\\JsonSalesMiner"
+    }
+  },
+  "src/patterns/behavioral/visitor.ts": {
+    "path": "ports/php/patterns/behavioral/visitor.php",
+    "exports": {
+      "CircleShape": "Ports\\Patterns\\Behavioral\\CircleShape",
+      "RectangleShape": "Ports\\Patterns\\Behavioral\\RectangleShape",
+      "TriangleShape": "Ports\\Patterns\\Behavioral\\TriangleShape",
+      "AreaVisitor": "Ports\\Patterns\\Behavioral\\AreaVisitor",
+      "PerimeterVisitor": "Ports\\Patterns\\Behavioral\\PerimeterVisitor",
+      "JsonExportVisitor": "Ports\\Patterns\\Behavioral\\JsonExportVisitor"
+    }
+  },
+  "src/patterns/creational/abstract-factory.ts": {
+    "path": "ports/php/patterns/creational/abstract-factory.php",
+    "exports": {
+      "LightThemeFactory": "Ports\\Patterns\\Creational\\LightThemeFactory",
+      "DarkThemeFactory": "Ports\\Patterns\\Creational\\DarkThemeFactory",
+      "renderSettingsForm": "Ports\\Patterns\\Creational\\renderSettingsForm"
+    }
+  },
+  "src/patterns/creational/builder.ts": {
+    "path": "ports/php/patterns/creational/builder.php",
+    "exports": {
+      "HttpRequestBuilder": "Ports\\Patterns\\Creational\\HttpRequestBuilder"
+    }
+  },
+  "src/patterns/creational/factory-method.ts": {
+    "path": "ports/php/patterns/creational/factory-method.php",
+    "exports": {
+      "Truck": "Ports\\Patterns\\Creational\\Truck",
+      "Ship": "Ports\\Patterns\\Creational\\Ship",
+      "Logistics": "Ports\\Patterns\\Creational\\Logistics",
+      "RoadLogistics": "Ports\\Patterns\\Creational\\RoadLogistics",
+      "SeaLogistics": "Ports\\Patterns\\Creational\\SeaLogistics",
+      "createTransport": "Ports\\Patterns\\Creational\\createTransport"
+    }
+  },
+  "src/patterns/creational/object-pool.ts": {
+    "path": "ports/php/patterns/creational/object-pool.php",
+    "exports": {
+      "ObjectPool": "Ports\\Patterns\\Creational\\ObjectPool"
+    }
+  },
+  "src/patterns/creational/prototype.ts": {
+    "path": "ports/php/patterns/creational/prototype.php",
+    "exports": {
+      "Shape": "Ports\\Patterns\\Creational\\Shape",
+      "Circle": "Ports\\Patterns\\Creational\\Circle",
+      "Rectangle": "Ports\\Patterns\\Creational\\Rectangle",
+      "PrototypeRegistry": "Ports\\Patterns\\Creational\\PrototypeRegistry"
+    }
+  },
+  "src/patterns/creational/singleton.ts": {
+    "path": "ports/php/patterns/creational/singleton.php",
+    "exports": {
+      "AppConfig": "Ports\\Patterns\\Creational\\AppConfig",
+      "lazySingleton": "Ports\\Patterns\\Creational\\lazySingleton"
+    }
+  },
+  "src/patterns/structural/adapter.ts": {
+    "path": "ports/php/patterns/structural/adapter.php",
+    "exports": {
+      "LegacyFahrenheitSensor": "Ports\\Patterns\\Structural\\LegacyFahrenheitSensor",
+      "FahrenheitSensorAdapter": "Ports\\Patterns\\Structural\\FahrenheitSensorAdapter",
+      "averageTemperature": "Ports\\Patterns\\Structural\\averageTemperature",
+      "promisify": "Ports\\Patterns\\Structural\\promisify"
+    }
+  },
+  "src/patterns/structural/bridge.ts": {
+    "path": "ports/php/patterns/structural/bridge.php",
+    "exports": {
+      "Tv": "Ports\\Patterns\\Structural\\Tv",
+      "Radio": "Ports\\Patterns\\Structural\\Radio",
+      "RemoteControl": "Ports\\Patterns\\Structural\\RemoteControl",
+      "AdvancedRemoteControl": "Ports\\Patterns\\Structural\\AdvancedRemoteControl"
+    }
+  },
+  "src/patterns/structural/composite.ts": {
+    "path": "ports/php/patterns/structural/composite.php",
+    "exports": {
+      "FileEntry": "Ports\\Patterns\\Structural\\FileEntry",
+      "Directory": "Ports\\Patterns\\Structural\\Directory"
+    }
+  },
+  "src/patterns/structural/decorator.ts": {
+    "path": "ports/php/patterns/structural/decorator.php",
+    "exports": {
+      "EmailNotifier": "Ports\\Patterns\\Structural\\EmailNotifier",
+      "NotifierDecorator": "Ports\\Patterns\\Structural\\NotifierDecorator",
+      "SmsNotifier": "Ports\\Patterns\\Structural\\SmsNotifier",
+      "SlackNotifier": "Ports\\Patterns\\Structural\\SlackNotifier",
+      "withLogging": "Ports\\Patterns\\Structural\\withLogging"
+    }
+  },
+  "src/patterns/structural/facade.ts": {
+    "path": "ports/php/patterns/structural/facade.php",
+    "exports": {
+      "VideoFile": "Ports\\Patterns\\Structural\\VideoFile",
+      "CodecFactory": "Ports\\Patterns\\Structural\\CodecFactory",
+      "BitrateReader": "Ports\\Patterns\\Structural\\BitrateReader",
+      "AudioMixer": "Ports\\Patterns\\Structural\\AudioMixer",
+      "VideoConverter": "Ports\\Patterns\\Structural\\VideoConverter"
+    }
+  },
+  "src/patterns/structural/flyweight.ts": {
+    "path": "ports/php/patterns/structural/flyweight.php",
+    "exports": {
+      "TreeType": "Ports\\Patterns\\Structural\\TreeType",
+      "TreeTypeFactory": "Ports\\Patterns\\Structural\\TreeTypeFactory",
+      "Forest": "Ports\\Patterns\\Structural\\Forest"
+    }
+  },
+  "src/patterns/structural/proxy.ts": {
+    "path": "ports/php/patterns/structural/proxy.php",
+    "exports": {
+      "CachingWeatherProxy": "Ports\\Patterns\\Structural\\CachingWeatherProxy",
+      "AccessControlProxy": "Ports\\Patterns\\Structural\\AccessControlProxy",
+      "createValidatedObject": "Ports\\Patterns\\Structural\\createValidatedObject"
+    }
+  },
+  "src/shared/compare.ts": {
+    "path": "ports/php/shared/compare.php",
+    "exports": {
+      "defaultCompare": "Ports\\Shared\\defaultCompare",
+      "reverseCompare": "Ports\\Shared\\reverseCompare"
+    }
+  }
+}

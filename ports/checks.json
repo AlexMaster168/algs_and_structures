@@ -1,14 +1,62 @@
 {
   "python": {
     "cwd": ".",
-    "commands": [["{python}", "-B", "ports/python/check.py"]]
+    "commands": [
+      [
+        "{python}",
+        "-B",
+        "ports/python/check.py"
+      ]
+    ]
   },
   "java": {
     "cwd": ".",
-    "commands": [["{python}", "-B", "ports/java/check.py"]]
+    "commands": [
+      [
+        "{python}",
+        "-B",
+        "ports/java/check.py"
+      ]
+    ]
   },
   "javascript": {
     "cwd": ".",
-    "commands": [["node", "--test", "ports/javascript/tests/**/*.test.js"]]
+    "commands": [
+      [
+        "node",
+        "--test",
+        "ports/javascript/tests/**/*.test.js"
+      ]
+    ]
+  },
+  "csharp": {
+    "cwd": ".",
+    "commands": [
+      [
+        "{python}",
+        "-B",
+        "ports/csharp/check.py"
+      ]
+    ]
+  },
+  "php": {
+    "cwd": ".",
+    "commands": [
+      [
+        "{python}",
+        "-B",
+        "ports/php/check.py"
+      ]
+    ]
+  },
+  "go": {
+    "cwd": ".",
+    "commands": [
+      [
+        "{python}",
+        "-B",
+        "ports/go/check.py"
+      ]
+    ]
   }
 }

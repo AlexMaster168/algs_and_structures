@@ -1,0 +1,11 @@
+<?php
+declare(strict_types=1);
+
+namespace Ports\Algorithms\Math;
+
+function identity(int $size): array { $out = array_fill(0,$size,array_fill(0,$size,0)); for ($i = 0; $i < $size; $i++) $out[$i][$i] = 1; return $out; }
+function multiply(array $a,array $b): array { $rows = count($a); $inner = count($b); $cols = count($b[0] ?? []); if (count($a[0] ?? []) !== $inner) throw new \RangeException('Columns of A must match rows of B'); $result = array_fill(0,$rows,array_fill(0,$cols,0)); for ($i = 0; $i < $rows; $i++) for ($k = 0; $k < $inner; $k++) { $aik = $a[$i][$k]; if ($aik == 0) continue; for ($j = 0; $j < $cols; $j++) $result[$i][$j] += $aik*$b[$k][$j]; } return $result; }
+function transpose(array $matrix): array { $out = []; foreach ($matrix[0] ?? [] as $j => $_) $out[] = array_column($matrix,$j); return $out; }
+function matrixPower(array $matrix,int $exponent): array { $result = identity(count($matrix)); $base = $matrix; while ($exponent > 0) { if ($exponent&1) $result = multiply($result,$base); $base = multiply($base,$base); $exponent = intdiv($exponent,2); } return $result; }
+function determinant(array $matrix): int|float { $n = count($matrix); $m = $matrix; $det = 1; for ($col = 0; $col < $n; $col++) { $pivot = $col; for ($row = $col+1; $row < $n; $row++) if (abs($m[$row][$col]) > abs($m[$pivot][$col])) $pivot = $row; if (abs($m[$pivot][$col]) < 1e-12) return 0; if ($pivot !== $col) { [$m[$pivot],$m[$col]] = [$m[$col],$m[$pivot]]; $det = -$det; } $det *= $m[$col][$col]; for ($row = $col+1; $row < $n; $row++) { $factor = $m[$row][$col]/$m[$col][$col]; for ($k = $col; $k < $n; $k++) $m[$row][$k] -= $factor*$m[$col][$k]; } } return $det; }
+function solveLinearSystem(array $a,array $b): ?array { $n = count($a); $m = $a; foreach ($m as $i => $_) $m[$i][] = $b[$i]; for ($col = 0; $col < $n; $col++) { $pivot = $col; for ($row = $col+1; $row < $n; $row++) if (abs($m[$row][$col]) > abs($m[$pivot][$col])) $pivot = $row; if (abs($m[$pivot][$col]) < 1e-12) return null; [$m[$pivot],$m[$col]] = [$m[$col],$m[$pivot]]; for ($row = 0; $row < $n; $row++) { if ($row === $col) continue; $factor = $m[$row][$col]/$m[$col][$col]; for ($k = $col; $k <= $n; $k++) $m[$row][$k] -= $factor*$m[$col][$k]; } } $result = []; foreach ($m as $i => $row) $result[] = $row[$n]/$row[$i]; return $result; }

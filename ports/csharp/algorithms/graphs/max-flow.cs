@@ -1,0 +1,5 @@
+namespace Algorithms.Graphs;
+public static partial class GraphAlgorithms
+{
+    public static double EdmondsKarp(double[][] capacity, int source, int sink) { if (source == sink) throw new ArgumentException("Source and sink must differ"); var n = capacity.Length; var residual = capacity.Select(r => r.ToArray()).ToArray(); var flow = 0d; while (true) { var parent = Enumerable.Repeat(-1, n).ToArray(); parent[source] = source; var queue = new List<int> { source }; for (var h = 0; h < queue.Count && parent[sink] == -1; h++) { var v = queue[h]; for (var next = 0; next < n; next++) if (parent[next] == -1 && residual[v][next] > 0) { parent[next] = v; queue.Add(next); } } if (parent[sink] == -1) return flow; var bottleneck = double.PositiveInfinity; for (var v = sink; v != source; v = parent[v]) bottleneck = Math.Min(bottleneck, residual[parent[v]][v]); for (var v = sink; v != source; v = parent[v]) { residual[parent[v]][v] -= bottleneck; residual[v][parent[v]] += bottleneck; } flow += bottleneck; } }
+}

@@ -1,0 +1,10 @@
+<?php
+declare(strict_types=1);
+
+namespace Ports\Algorithms\Graphs;
+
+use Ports\Shared\Map;
+use Ports\DataStructures\Heaps\BinaryHeap;
+use function Ports\Shared\{field,units};
+function aStar(array $options): ?array { ['start'=>$start,'goal'=>$goal,'neighbors'=>$neighbors,'heuristic'=>$heuristic] = $options; $key = $options['key'] ?? fn($node) => is_scalar($node) ? (string)$node : (is_array($node) ? implode(',',$node) : '[object Object]'); $goalKey = $key($goal); $bestCost = new Map([[$key($start),0]]); $cameFrom = new Map(); $open = new BinaryHeap(fn($a,$b) => $a['estimate'] <=> $b['estimate']); $open->push(['node'=>$start,'cost'=>0,'estimate'=>$heuristic($start)]); while (!$open->isEmpty()) { ['node'=>$node,'cost'=>$cost] = $open->pop(); $nodeKey = $key($node); if ($cost > $bestCost->get($nodeKey)) continue; if ($nodeKey === $goalKey) { $path = [$node]; for ($currentKey = $nodeKey; $cameFrom->has($currentKey);) { $current = $cameFrom->get($currentKey); $path[] = $current; $currentKey = $key($current); } return ['path'=>array_reverse($path),'cost'=>$cost]; } foreach ($neighbors($node) as $next) { $nextNode = field($next,'node'); $nextKey = $key($nextNode); $nextCost = $cost+field($next,'cost'); if ($nextCost < ($bestCost->get($nextKey) ?? INF)) { $bestCost->set($nextKey,$nextCost); $cameFrom->set($nextKey,$node); $open->push(['node'=>$nextNode,'cost'=>$nextCost,'estimate'=>$nextCost+$heuristic($nextNode)]); } } } return null; }
+function aStarGrid(array $grid,array $start,array $goal,string $wall = '#'): ?array { $grid = array_map(units(...),$grid); $wall = units($wall)[0]; $result = aStar(['start'=>$start,'goal'=>$goal,'key'=>fn($cell) => implode(',',$cell),'heuristic'=>fn($cell) => abs($cell[0]-$goal[0])+abs($cell[1]-$goal[1]),'neighbors'=>function($cell) use ($grid,$wall) { $result = []; foreach ([[1,0],[-1,0],[0,1],[0,-1]] as [$dr,$dc]) { $r = $cell[0]+$dr; $c = $cell[1]+$dc; if (isset($grid[$r][$c]) && $grid[$r][$c] !== $wall) $result[] = ['node'=>[$r,$c],'cost'=>1]; } return $result; }]); return $result['path'] ?? null; }

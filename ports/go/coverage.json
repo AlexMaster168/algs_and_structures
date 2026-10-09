@@ -1,0 +1,1043 @@
+{
+  "src/algorithms/backtracking/n-queens.ts": {
+    "path": "ports/go/algorithms/backtracking/n-queens.go",
+    "exports": {
+      "nQueens": "NQueens",
+      "countNQueens": "CountNQueens"
+    }
+  },
+  "src/algorithms/backtracking/permutations.ts": {
+    "path": "ports/go/algorithms/backtracking/permutations.go",
+    "exports": {
+      "permutations": "Permutations",
+      "combinations": "Combinations",
+      "subsets": "Subsets",
+      "combinationSum": "CombinationSum"
+    }
+  },
+  "src/algorithms/backtracking/sudoku.ts": {
+    "path": "ports/go/algorithms/backtracking/sudoku.go",
+    "exports": {
+      "solveSudoku": "SolveSudoku"
+    }
+  },
+  "src/algorithms/backtracking/word-search.ts": {
+    "path": "ports/go/algorithms/backtracking/word-search.go",
+    "exports": {
+      "wordSearch": "WordSearch"
+    }
+  },
+  "src/algorithms/bit-manipulation/bits.ts": {
+    "path": "ports/go/algorithms/bit-manipulation/bits.go",
+    "exports": {
+      "getBit": "GetBit",
+      "setBit": "SetBit",
+      "clearBit": "ClearBit",
+      "toggleBit": "ToggleBit",
+      "countSetBits": "CountSetBits",
+      "isPowerOfTwo": "IsPowerOfTwo",
+      "lowestSetBit": "LowestSetBit",
+      "singleNumber": "SingleNumber",
+      "reverseBits": "ReverseBits",
+      "grayCode": "GrayCode",
+      "subsetsByMask": "SubsetsByMask",
+      "swapWithoutTemp": "SwapWithoutTemp",
+      "hammingDistance": "HammingDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/coin-change.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/coin-change.go",
+    "exports": {
+      "minCoins": "MinCoins",
+      "coinChangeWays": "CoinChangeWays"
+    }
+  },
+  "src/algorithms/dynamic-programming/edit-distance.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/edit-distance.go",
+    "exports": {
+      "editDistance": "EditDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/fibonacci.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/fibonacci.go",
+    "exports": {
+      "fibonacciRecursive": "FibonacciRecursive",
+      "fibonacciMemo": "FibonacciMemo",
+      "fibonacci": "Fibonacci",
+      "fibonacciFast": "FibonacciFast"
+    }
+  },
+  "src/algorithms/dynamic-programming/grid-paths.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/grid-paths.go",
+    "exports": {
+      "uniquePaths": "UniquePaths",
+      "minPathSum": "MinPathSum"
+    }
+  },
+  "src/algorithms/dynamic-programming/knapsack.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/knapsack.go",
+    "exports": {
+      "knapsack01": "Knapsack01",
+      "unboundedKnapsack": "UnboundedKnapsack"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-common-subsequence.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/longest-common-subsequence.go",
+    "exports": {
+      "longestCommonSubsequence": "LongestCommonSubsequence",
+      "longestCommonSubstring": "LongestCommonSubstring"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-increasing-subsequence.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/longest-increasing-subsequence.go",
+    "exports": {
+      "longestIncreasingSubsequence": "LongestIncreasingSubsequence"
+    }
+  },
+  "src/algorithms/dynamic-programming/matrix-chain.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/matrix-chain.go",
+    "exports": {
+      "matrixChainOrder": "MatrixChainOrder"
+    }
+  },
+  "src/algorithms/dynamic-programming/max-subarray.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/max-subarray.go",
+    "exports": {
+      "maxSubarray": "MaxSubarray"
+    }
+  },
+  "src/algorithms/dynamic-programming/memoize.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/memoize.go",
+    "exports": {
+      "memoize": "Memoize"
+    }
+  },
+  "src/algorithms/dynamic-programming/rod-cutting.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/rod-cutting.go",
+    "exports": {
+      "rodCutting": "RodCutting"
+    }
+  },
+  "src/algorithms/dynamic-programming/subset-sum.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/subset-sum.go",
+    "exports": {
+      "subsetSum": "SubsetSum",
+      "canPartition": "CanPartition"
+    }
+  },
+  "src/algorithms/dynamic-programming/word-break.ts": {
+    "path": "ports/go/algorithms/dynamic-programming/word-break.go",
+    "exports": {
+      "wordBreak": "WordBreak"
+    }
+  },
+  "src/algorithms/geometry/geometry.ts": {
+    "path": "ports/go/algorithms/geometry/geometry.go",
+    "exports": {
+      "cross": "Cross",
+      "distance": "Distance",
+      "convexHull": "ConvexHull",
+      "polygonArea": "PolygonArea",
+      "pointInPolygon": "PointInPolygon",
+      "segmentsIntersect": "SegmentsIntersect",
+      "closestPair": "ClosestPair"
+    }
+  },
+  "src/algorithms/graphs/a-star.ts": {
+    "path": "ports/go/algorithms/graphs/a-star.go",
+    "exports": {
+      "aStar": "AStar",
+      "aStarGrid": "AStarGrid"
+    }
+  },
+  "src/algorithms/graphs/bellman-ford.ts": {
+    "path": "ports/go/algorithms/graphs/bellman-ford.go",
+    "exports": {
+      "bellmanFord": "BellmanFord"
+    }
+  },
+  "src/algorithms/graphs/bfs.ts": {
+    "path": "ports/go/algorithms/graphs/bfs.go",
+    "exports": {
+      "bfs": "BFS",
+      "shortestPathUnweighted": "ShortestPathUnweighted",
+      "gridShortestPath": "GridShortestPath"
+    }
+  },
+  "src/algorithms/graphs/bipartite.ts": {
+    "path": "ports/go/algorithms/graphs/bipartite.go",
+    "exports": {
+      "bipartiteColoring": "BipartiteColoring",
+      "isBipartite": "IsBipartite"
+    }
+  },
+  "src/algorithms/graphs/bridges-and-articulation-points.ts": {
+    "path": "ports/go/algorithms/graphs/bridges-and-articulation-points.go",
+    "exports": {
+      "findBridgesAndArticulationPoints": "FindBridgesAndArticulationPoints"
+    }
+  },
+  "src/algorithms/graphs/connected-components.ts": {
+    "path": "ports/go/algorithms/graphs/connected-components.go",
+    "exports": {
+      "connectedComponents": "ConnectedComponents"
+    }
+  },
+  "src/algorithms/graphs/cycle-detection.ts": {
+    "path": "ports/go/algorithms/graphs/cycle-detection.go",
+    "exports": {
+      "hasCycleDirected": "HasCycleDirected",
+      "hasCycleUndirected": "HasCycleUndirected"
+    }
+  },
+  "src/algorithms/graphs/dfs.ts": {
+    "path": "ports/go/algorithms/graphs/dfs.go",
+    "exports": {
+      "dfs": "DFS",
+      "dfsRecursive": "DFSRecursive",
+      "hasPath": "HasPath"
+    }
+  },
+  "src/algorithms/graphs/dijkstra.ts": {
+    "path": "ports/go/algorithms/graphs/dijkstra.go",
+    "exports": {
+      "dijkstra": "Dijkstra",
+      "dijkstraPath": "DijkstraPath"
+    }
+  },
+  "src/algorithms/graphs/eulerian-path.ts": {
+    "path": "ports/go/algorithms/graphs/eulerian-path.go",
+    "exports": {
+      "eulerianPathDirected": "EulerianPathDirected"
+    }
+  },
+  "src/algorithms/graphs/flood-fill.ts": {
+    "path": "ports/go/algorithms/graphs/flood-fill.go",
+    "exports": {
+      "floodFill": "FloodFill"
+    }
+  },
+  "src/algorithms/graphs/floyd-warshall.ts": {
+    "path": "ports/go/algorithms/graphs/floyd-warshall.go",
+    "exports": {
+      "floydWarshall": "FloydWarshall",
+      "floydWarshallPath": "FloydWarshallPath"
+    }
+  },
+  "src/algorithms/graphs/max-flow.ts": {
+    "path": "ports/go/algorithms/graphs/max-flow.go",
+    "exports": {
+      "edmondsKarp": "EdmondsKarp"
+    }
+  },
+  "src/algorithms/graphs/minimum-spanning-tree.ts": {
+    "path": "ports/go/algorithms/graphs/minimum-spanning-tree.go",
+    "exports": {
+      "kruskal": "Kruskal",
+      "prim": "Prim"
+    }
+  },
+  "src/algorithms/graphs/strongly-connected-components.ts": {
+    "path": "ports/go/algorithms/graphs/strongly-connected-components.go",
+    "exports": {
+      "tarjanScc": "TarjanSCC",
+      "kosarajuScc": "KosarajuSCC"
+    }
+  },
+  "src/algorithms/graphs/topological-sort.ts": {
+    "path": "ports/go/algorithms/graphs/topological-sort.go",
+    "exports": {
+      "topologicalSortKahn": "TopologicalSortKahn",
+      "topologicalSortDfs": "TopologicalSortDFS"
+    }
+  },
+  "src/algorithms/graphs/types.ts": {
+    "path": "ports/go/algorithms/graphs/types.go",
+    "exports": {
+      "reconstructPath": "ReconstructPath",
+      "toUndirected": "ToUndirected",
+      "toWeightedUndirected": "ToWeightedUndirected"
+    }
+  },
+  "src/algorithms/greedy/activity-selection.ts": {
+    "path": "ports/go/algorithms/greedy/activity-selection.go",
+    "exports": {
+      "activitySelection": "ActivitySelection",
+      "mergeIntervals": "MergeIntervals",
+      "minMeetingRooms": "MinMeetingRooms"
+    }
+  },
+  "src/algorithms/greedy/fractional-knapsack.ts": {
+    "path": "ports/go/algorithms/greedy/fractional-knapsack.go",
+    "exports": {
+      "fractionalKnapsack": "FractionalKnapsack"
+    }
+  },
+  "src/algorithms/greedy/huffman.ts": {
+    "path": "ports/go/algorithms/greedy/huffman.go",
+    "exports": {
+      "huffmanCodes": "HuffmanCodes",
+      "huffmanEncode": "HuffmanEncode",
+      "huffmanDecode": "HuffmanDecode"
+    }
+  },
+  "src/algorithms/greedy/jump-game.ts": {
+    "path": "ports/go/algorithms/greedy/jump-game.go",
+    "exports": {
+      "canReachEnd": "CanReachEnd",
+      "minJumps": "MinJumps",
+      "greedyChange": "GreedyChange"
+    }
+  },
+  "src/algorithms/math/combinatorics.ts": {
+    "path": "ports/go/algorithms/math/combinatorics.go",
+    "exports": {
+      "factorial": "Factorial",
+      "binomial": "Binomial",
+      "pascalTriangle": "PascalTriangle",
+      "catalan": "Catalan",
+      "nextPermutation": "NextPermutation"
+    }
+  },
+  "src/algorithms/math/gcd.ts": {
+    "path": "ports/go/algorithms/math/gcd.go",
+    "exports": {
+      "gcd": "GCD",
+      "lcm": "LCM",
+      "extendedGcd": "ExtendedGCD",
+      "modInverse": "ModInverse"
+    }
+  },
+  "src/algorithms/math/matrix.ts": {
+    "path": "ports/go/algorithms/math/matrix.go",
+    "exports": {
+      "identity": "Identity",
+      "multiply": "Multiply",
+      "transpose": "Transpose",
+      "matrixPower": "MatrixPower",
+      "determinant": "Determinant",
+      "solveLinearSystem": "SolveLinearSystem"
+    }
+  },
+  "src/algorithms/math/number-conversion.ts": {
+    "path": "ports/go/algorithms/math/number-conversion.go",
+    "exports": {
+      "toBase": "ToBase",
+      "fromBase": "FromBase",
+      "toRoman": "ToRoman",
+      "fromRoman": "FromRoman"
+    }
+  },
+  "src/algorithms/math/power.ts": {
+    "path": "ports/go/algorithms/math/power.go",
+    "exports": {
+      "fastPower": "FastPower",
+      "modPow": "ModPow",
+      "integerSqrt": "IntegerSqrt",
+      "newtonSqrt": "NewtonSqrt"
+    }
+  },
+  "src/algorithms/math/primes.ts": {
+    "path": "ports/go/algorithms/math/primes.go",
+    "exports": {
+      "sieveOfEratosthenes": "SieveOfEratosthenes",
+      "linearSieve": "LinearSieve",
+      "isPrime": "IsPrime",
+      "millerRabin": "MillerRabin",
+      "primeFactors": "PrimeFactors",
+      "divisors": "Divisors",
+      "eulerPhi": "EulerPhi"
+    }
+  },
+  "src/algorithms/randomized/shuffle.ts": {
+    "path": "ports/go/algorithms/randomized/shuffle.go",
+    "exports": {
+      "fisherYatesShuffle": "FisherYatesShuffle",
+      "reservoirSample": "ReservoirSample",
+      "mulberry32": "Mulberry32",
+      "monteCarloPi": "MonteCarloPi"
+    }
+  },
+  "src/algorithms/searching/binary-search.ts": {
+    "path": "ports/go/algorithms/searching/binary-search.go",
+    "exports": {
+      "binarySearch": "BinarySearch",
+      "binarySearchRecursive": "BinarySearchRecursive",
+      "lowerBound": "LowerBound",
+      "upperBound": "UpperBound",
+      "firstTrue": "FirstTrue"
+    }
+  },
+  "src/algorithms/searching/exponential-search.ts": {
+    "path": "ports/go/algorithms/searching/exponential-search.go",
+    "exports": {
+      "exponentialSearch": "ExponentialSearch"
+    }
+  },
+  "src/algorithms/searching/interpolation-search.ts": {
+    "path": "ports/go/algorithms/searching/interpolation-search.go",
+    "exports": {
+      "interpolationSearch": "InterpolationSearch"
+    }
+  },
+  "src/algorithms/searching/jump-search.ts": {
+    "path": "ports/go/algorithms/searching/jump-search.go",
+    "exports": {
+      "jumpSearch": "JumpSearch"
+    }
+  },
+  "src/algorithms/searching/linear-search.ts": {
+    "path": "ports/go/algorithms/searching/linear-search.go",
+    "exports": {
+      "linearSearch": "LinearSearch",
+      "linearSearchAll": "LinearSearchAll"
+    }
+  },
+  "src/algorithms/searching/quick-select.ts": {
+    "path": "ports/go/algorithms/searching/quick-select.go",
+    "exports": {
+      "quickSelect": "QuickSelect",
+      "median": "Median"
+    }
+  },
+  "src/algorithms/searching/ternary-search.ts": {
+    "path": "ports/go/algorithms/searching/ternary-search.go",
+    "exports": {
+      "ternarySearchMax": "TernarySearchMax",
+      "ternarySearchMin": "TernarySearchMin",
+      "findPeakIndex": "FindPeakIndex"
+    }
+  },
+  "src/algorithms/sorting/bubble-sort.ts": {
+    "path": "ports/go/algorithms/sorting/bubble-sort.go",
+    "exports": {
+      "bubbleSort": "BubbleSort"
+    }
+  },
+  "src/algorithms/sorting/bucket-sort.ts": {
+    "path": "ports/go/algorithms/sorting/bucket-sort.go",
+    "exports": {
+      "bucketSort": "BucketSort"
+    }
+  },
+  "src/algorithms/sorting/cocktail-shaker-sort.ts": {
+    "path": "ports/go/algorithms/sorting/cocktail-shaker-sort.go",
+    "exports": {
+      "cocktailShakerSort": "CocktailShakerSort"
+    }
+  },
+  "src/algorithms/sorting/counting-sort.ts": {
+    "path": "ports/go/algorithms/sorting/counting-sort.go",
+    "exports": {
+      "countingSort": "CountingSort"
+    }
+  },
+  "src/algorithms/sorting/heap-sort.ts": {
+    "path": "ports/go/algorithms/sorting/heap-sort.go",
+    "exports": {
+      "heapSort": "HeapSort"
+    }
+  },
+  "src/algorithms/sorting/index.ts": {
+    "path": "ports/go/algorithms/sorting/index.go",
+    "exports": {}
+  },
+  "src/algorithms/sorting/insertion-sort.ts": {
+    "path": "ports/go/algorithms/sorting/insertion-sort.go",
+    "exports": {
+      "insertionSortRange": "InsertionSortRange",
+      "insertionSort": "InsertionSort"
+    }
+  },
+  "src/algorithms/sorting/merge-sort.ts": {
+    "path": "ports/go/algorithms/sorting/merge-sort.go",
+    "exports": {
+      "merge": "Merge",
+      "mergeSort": "MergeSort",
+      "bottomUpMergeSort": "BottomUpMergeSort"
+    }
+  },
+  "src/algorithms/sorting/quick-sort.ts": {
+    "path": "ports/go/algorithms/sorting/quick-sort.go",
+    "exports": {
+      "partition3": "Partition3",
+      "quickSort": "QuickSort",
+      "lomutoPartition": "LomutoPartition",
+      "quickSortFunctional": "QuickSortFunctional"
+    }
+  },
+  "src/algorithms/sorting/radix-sort.ts": {
+    "path": "ports/go/algorithms/sorting/radix-sort.go",
+    "exports": {
+      "radixSort": "RadixSort"
+    }
+  },
+  "src/algorithms/sorting/selection-sort.ts": {
+    "path": "ports/go/algorithms/sorting/selection-sort.go",
+    "exports": {
+      "selectionSort": "SelectionSort"
+    }
+  },
+  "src/algorithms/sorting/shell-sort.ts": {
+    "path": "ports/go/algorithms/sorting/shell-sort.go",
+    "exports": {
+      "shellSort": "ShellSort"
+    }
+  },
+  "src/algorithms/sorting/tim-sort.ts": {
+    "path": "ports/go/algorithms/sorting/tim-sort.go",
+    "exports": {
+      "timSort": "TimSort"
+    }
+  },
+  "src/algorithms/strings/aho-corasick.ts": {
+    "path": "ports/go/algorithms/strings/aho-corasick.go",
+    "exports": {
+      "AhoCorasick": "AhoCorasick"
+    }
+  },
+  "src/algorithms/strings/boyer-moore-horspool.ts": {
+    "path": "ports/go/algorithms/strings/boyer-moore-horspool.go",
+    "exports": {
+      "boyerMooreHorspool": "BoyerMooreHorspool"
+    }
+  },
+  "src/algorithms/strings/kmp.ts": {
+    "path": "ports/go/algorithms/strings/kmp.go",
+    "exports": {
+      "prefixFunction": "PrefixFunction",
+      "kmpSearch": "KMPSearch"
+    }
+  },
+  "src/algorithms/strings/manacher.ts": {
+    "path": "ports/go/algorithms/strings/manacher.go",
+    "exports": {
+      "longestPalindromicSubstring": "LongestPalindromicSubstring"
+    }
+  },
+  "src/algorithms/strings/rabin-karp.ts": {
+    "path": "ports/go/algorithms/strings/rabin-karp.go",
+    "exports": {
+      "rabinKarp": "RabinKarp"
+    }
+  },
+  "src/algorithms/strings/string-utils.ts": {
+    "path": "ports/go/algorithms/strings/string-utils.go",
+    "exports": {
+      "isBalanced": "IsBalanced",
+      "isPalindrome": "IsPalindrome",
+      "isAnagram": "IsAnagram",
+      "groupAnagrams": "GroupAnagrams",
+      "runLengthEncode": "RunLengthEncode",
+      "runLengthDecode": "RunLengthDecode",
+      "reverseWords": "ReverseWords"
+    }
+  },
+  "src/algorithms/strings/suffix-array.ts": {
+    "path": "ports/go/algorithms/strings/suffix-array.go",
+    "exports": {
+      "suffixArray": "SuffixArray",
+      "lcpArray": "LCPArray",
+      "countDistinctSubstrings": "CountDistinctSubstrings"
+    }
+  },
+  "src/algorithms/strings/z-function.ts": {
+    "path": "ports/go/algorithms/strings/z-function.go",
+    "exports": {
+      "zFunction": "ZFunction",
+      "zSearch": "ZSearch"
+    }
+  },
+  "src/algorithms/techniques/prefix-sums.ts": {
+    "path": "ports/go/algorithms/techniques/prefix-sums.go",
+    "exports": {
+      "PrefixSums": "PrefixSums",
+      "PrefixSums2D": "PrefixSums2D",
+      "subarraySumEquals": "SubarraySumEquals",
+      "differenceArrayApply": "DifferenceArrayApply",
+      "majorityElement": "MajorityElement"
+    }
+  },
+  "src/algorithms/techniques/sliding-window.ts": {
+    "path": "ports/go/algorithms/techniques/sliding-window.go",
+    "exports": {
+      "maxSumWindow": "MaxSumWindow",
+      "slidingWindowMaximum": "SlidingWindowMaximum",
+      "longestUniqueSubstring": "LongestUniqueSubstring",
+      "minWindowSubstring": "MinWindowSubstring"
+    }
+  },
+  "src/algorithms/techniques/two-pointers.ts": {
+    "path": "ports/go/algorithms/techniques/two-pointers.go",
+    "exports": {
+      "twoSumSorted": "TwoSumSorted",
+      "twoSum": "TwoSum",
+      "threeSum": "ThreeSum",
+      "containerWithMostWater": "ContainerWithMostWater",
+      "removeDuplicatesSorted": "RemoveDuplicatesSorted",
+      "dutchNationalFlag": "DutchNationalFlag",
+      "hasCycleFloyd": "HasCycleFloyd"
+    }
+  },
+  "src/algorithms/trees/binary-tree.ts": {
+    "path": "ports/go/algorithms/trees/binary-tree.go",
+    "exports": {
+      "treeNode": "NewTreeNode",
+      "fromLevelOrder": "FromLevelOrder",
+      "preOrder": "PreOrder",
+      "inOrder": "InOrder",
+      "postOrder": "PostOrder",
+      "levelOrder": "LevelOrder",
+      "maxDepth": "MaxDepth",
+      "maxValue": "MaxValue",
+      "isValidBst": "IsValidBst",
+      "invertTree": "InvertTree",
+      "lowestCommonAncestorBst": "LowestCommonAncestorBst"
+    }
+  },
+  "src/algorithms/trees/lowest-common-ancestor.ts": {
+    "path": "ports/go/algorithms/trees/lowest-common-ancestor.go",
+    "exports": {
+      "LowestCommonAncestor": "LowestCommonAncestor"
+    }
+  },
+  "src/algorithms/trees/tree-diameter.ts": {
+    "path": "ports/go/algorithms/trees/tree-diameter.go",
+    "exports": {
+      "treeDiameter": "TreeDiameter"
+    }
+  },
+  "src/data-structures/graphs/disjoint-set.ts": {
+    "path": "ports/go/data-structures/graphs/disjoint-set.go",
+    "exports": {
+      "DisjointSet": "DisjointSet"
+    }
+  },
+  "src/data-structures/graphs/graph.ts": {
+    "path": "ports/go/data-structures/graphs/graph.go",
+    "exports": {
+      "Graph": "Graph"
+    }
+  },
+  "src/data-structures/hashing/bloom-filter.ts": {
+    "path": "ports/go/data-structures/hashing/bloom-filter.go",
+    "exports": {
+      "BloomFilter": "BloomFilter"
+    }
+  },
+  "src/data-structures/hashing/hash-table.ts": {
+    "path": "ports/go/data-structures/hashing/hash-table.go",
+    "exports": {
+      "HashTable": "HashTable"
+    }
+  },
+  "src/data-structures/hashing/hash.ts": {
+    "path": "ports/go/data-structures/hashing/hash.go",
+    "exports": {
+      "fnv1a": "FNV1a",
+      "defaultHasher": "DefaultHasher"
+    }
+  },
+  "src/data-structures/hashing/lru-cache.ts": {
+    "path": "ports/go/data-structures/hashing/lru-cache.go",
+    "exports": {
+      "LRUCache": "LRUCache"
+    }
+  },
+  "src/data-structures/hashing/open-addressing-hash-map.ts": {
+    "path": "ports/go/data-structures/hashing/open-addressing-hash-map.go",
+    "exports": {
+      "OpenAddressingHashMap": "OpenAddressingHashMap"
+    }
+  },
+  "src/data-structures/heaps/binary-heap.ts": {
+    "path": "ports/go/data-structures/heaps/binary-heap.go",
+    "exports": {
+      "BinaryHeap": "BinaryHeap",
+      "MinHeap": "MinHeap",
+      "MaxHeap": "MaxHeap"
+    }
+  },
+  "src/data-structures/heaps/priority-queue.ts": {
+    "path": "ports/go/data-structures/heaps/priority-queue.go",
+    "exports": {
+      "PriorityQueue": "PriorityQueue"
+    }
+  },
+  "src/data-structures/linear/circular-buffer.ts": {
+    "path": "ports/go/data-structures/linear/circular-buffer.go",
+    "exports": {
+      "CircularBuffer": "CircularBuffer"
+    }
+  },
+  "src/data-structures/linear/deque.ts": {
+    "path": "ports/go/data-structures/linear/deque.go",
+    "exports": {
+      "Deque": "Deque"
+    }
+  },
+  "src/data-structures/linear/doubly-linked-list.ts": {
+    "path": "ports/go/data-structures/linear/doubly-linked-list.go",
+    "exports": {
+      "DoublyLinkedListNode": "DoublyLinkedListNode",
+      "DoublyLinkedList": "DoublyLinkedList"
+    }
+  },
+  "src/data-structures/linear/linked-list.ts": {
+    "path": "ports/go/data-structures/linear/linked-list.go",
+    "exports": {
+      "LinkedListNode": "LinkedListNode",
+      "LinkedList": "LinkedList"
+    }
+  },
+  "src/data-structures/linear/queue.ts": {
+    "path": "ports/go/data-structures/linear/queue.go",
+    "exports": {
+      "Queue": "Queue"
+    }
+  },
+  "src/data-structures/linear/skip-list.ts": {
+    "path": "ports/go/data-structures/linear/skip-list.go",
+    "exports": {
+      "SkipList": "SkipList"
+    }
+  },
+  "src/data-structures/linear/stack.ts": {
+    "path": "ports/go/data-structures/linear/stack.go",
+    "exports": {
+      "Stack": "Stack"
+    }
+  },
+  "src/data-structures/range-queries/fenwick-tree.ts": {
+    "path": "ports/go/data-structures/range-queries/fenwick-tree.go",
+    "exports": {
+      "FenwickTree": "FenwickTree"
+    }
+  },
+  "src/data-structures/range-queries/lazy-segment-tree.ts": {
+    "path": "ports/go/data-structures/range-queries/lazy-segment-tree.go",
+    "exports": {
+      "LazySegmentTree": "LazySegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/segment-tree.ts": {
+    "path": "ports/go/data-structures/range-queries/segment-tree.go",
+    "exports": {
+      "SegmentTree": "SegmentTree",
+      "sumSegmentTree": "SumSegmentTree",
+      "minSegmentTree": "MinSegmentTree",
+      "maxSegmentTree": "MaxSegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/sparse-table.ts": {
+    "path": "ports/go/data-structures/range-queries/sparse-table.go",
+    "exports": {
+      "SparseTable": "SparseTable",
+      "minSparseTable": "MinSparseTable",
+      "maxSparseTable": "MaxSparseTable"
+    }
+  },
+  "src/data-structures/range-queries/sqrt-decomposition.ts": {
+    "path": "ports/go/data-structures/range-queries/sqrt-decomposition.go",
+    "exports": {
+      "SqrtDecomposition": "SqrtDecomposition"
+    }
+  },
+  "src/data-structures/trees/avl-tree.ts": {
+    "path": "ports/go/data-structures/trees/avl-tree.go",
+    "exports": {
+      "AVLTree": "AVLTree"
+    }
+  },
+  "src/data-structures/trees/b-tree.ts": {
+    "path": "ports/go/data-structures/trees/b-tree.go",
+    "exports": {
+      "BTree": "BTree"
+    }
+  },
+  "src/data-structures/trees/binary-search-tree.ts": {
+    "path": "ports/go/data-structures/trees/binary-search-tree.go",
+    "exports": {
+      "BSTNode": "BSTNode",
+      "BinarySearchTree": "BinarySearchTree"
+    }
+  },
+  "src/data-structures/trees/red-black-tree.ts": {
+    "path": "ports/go/data-structures/trees/red-black-tree.go",
+    "exports": {
+      "RedBlackTree": "RedBlackTree"
+    }
+  },
+  "src/data-structures/trees/trie.ts": {
+    "path": "ports/go/data-structures/trees/trie.go",
+    "exports": {
+      "Trie": "Trie"
+    }
+  },
+  "src/patterns/architectural/circuit-breaker.ts": {
+    "path": "ports/go/patterns/architectural/circuit-breaker.go",
+    "exports": {
+      "CircuitOpenError": "CircuitOpenError",
+      "CircuitBreaker": "CircuitBreaker",
+      "retry": "Retry"
+    }
+  },
+  "src/patterns/architectural/dependency-injection.ts": {
+    "path": "ports/go/patterns/architectural/dependency-injection.go",
+    "exports": {
+      "token": "NewToken",
+      "Container": "Container"
+    }
+  },
+  "src/patterns/architectural/event-emitter.ts": {
+    "path": "ports/go/patterns/architectural/event-emitter.go",
+    "exports": {
+      "TypedEventEmitter": "TypedEventEmitter"
+    }
+  },
+  "src/patterns/architectural/middleware.ts": {
+    "path": "ports/go/patterns/architectural/middleware.go",
+    "exports": {
+      "compose": "Compose",
+      "Pipeline": "Pipeline"
+    }
+  },
+  "src/patterns/architectural/null-object.ts": {
+    "path": "ports/go/patterns/architectural/null-object.go",
+    "exports": {
+      "MemoryLogger": "MemoryLogger",
+      "NullLogger": "NullLogger",
+      "PaymentService": "PaymentService"
+    }
+  },
+  "src/patterns/architectural/repository.ts": {
+    "path": "ports/go/patterns/architectural/repository.go",
+    "exports": {
+      "InMemoryRepository": "InMemoryRepository"
+    }
+  },
+  "src/patterns/architectural/specification.ts": {
+    "path": "ports/go/patterns/architectural/specification.go",
+    "exports": {
+      "Spec": "Spec",
+      "spec": "NewSpec"
+    }
+  },
+  "src/patterns/architectural/store.ts": {
+    "path": "ports/go/patterns/architectural/store.go",
+    "exports": {
+      "createStore": "CreateStore",
+      "combineReducers": "CombineReducers",
+      "counterReducer": "CounterReducer"
+    }
+  },
+  "src/patterns/behavioral/chain-of-responsibility.ts": {
+    "path": "ports/go/patterns/behavioral/chain-of-responsibility.go",
+    "exports": {
+      "SupportHandler": "SupportHandler",
+      "FaqBot": "FaqBot",
+      "SupportAgent": "SupportAgent",
+      "Engineer": "Engineer",
+      "createSupportChain": "CreateSupportChain"
+    }
+  },
+  "src/patterns/behavioral/command.ts": {
+    "path": "ports/go/patterns/behavioral/command.go",
+    "exports": {
+      "TextDocument": "TextDocument",
+      "InsertCommand": "InsertCommand",
+      "DeleteCommand": "DeleteCommand",
+      "MacroCommand": "MacroCommand",
+      "CommandHistory": "CommandHistory"
+    }
+  },
+  "src/patterns/behavioral/interpreter.ts": {
+    "path": "ports/go/patterns/behavioral/interpreter.go",
+    "exports": {
+      "NumberExpression": "NumberExpression",
+      "VariableExpression": "VariableExpression",
+      "BinaryExpression": "BinaryExpression",
+      "parseExpression": "ParseExpression"
+    }
+  },
+  "src/patterns/behavioral/iterator.ts": {
+    "path": "ports/go/patterns/behavioral/iterator.go",
+    "exports": {
+      "NumberRange": "NumberRange",
+      "depthFirst": "DepthFirst",
+      "breadthFirst": "BreadthFirst",
+      "take": "Take"
+    }
+  },
+  "src/patterns/behavioral/mediator.ts": {
+    "path": "ports/go/patterns/behavioral/mediator.go",
+    "exports": {
+      "ChatUser": "ChatUser",
+      "ChatRoom": "ChatRoom"
+    }
+  },
+  "src/patterns/behavioral/memento.ts": {
+    "path": "ports/go/patterns/behavioral/memento.go",
+    "exports": {
+      "Editor": "Editor",
+      "EditorHistory": "EditorHistory"
+    }
+  },
+  "src/patterns/behavioral/observer.ts": {
+    "path": "ports/go/patterns/behavioral/observer.go",
+    "exports": {
+      "Subject": "Subject",
+      "StockTicker": "StockTicker",
+      "BehaviorSubject": "BehaviorSubject"
+    }
+  },
+  "src/patterns/behavioral/state.ts": {
+    "path": "ports/go/patterns/behavioral/state.go",
+    "exports": {
+      "Order": "Order"
+    }
+  },
+  "src/patterns/behavioral/strategy.ts": {
+    "path": "ports/go/patterns/behavioral/strategy.go",
+    "exports": {
+      "FlatRateShipping": "FlatRateShipping",
+      "WeightBasedShipping": "WeightBasedShipping",
+      "FreeOverThresholdShipping": "FreeOverThresholdShipping",
+      "ShippingCalculator": "ShippingCalculator"
+    }
+  },
+  "src/patterns/behavioral/template-method.ts": {
+    "path": "ports/go/patterns/behavioral/template-method.go",
+    "exports": {
+      "SalesDataMiner": "SalesDataMiner",
+      "CsvSalesMiner": "CsvSalesMiner",
+      "JsonSalesMiner": "JsonSalesMiner"
+    }
+  },
+  "src/patterns/behavioral/visitor.ts": {
+    "path": "ports/go/patterns/behavioral/visitor.go",
+    "exports": {
+      "CircleShape": "CircleShape",
+      "RectangleShape": "RectangleShape",
+      "TriangleShape": "TriangleShape",
+      "AreaVisitor": "AreaVisitor",
+      "PerimeterVisitor": "PerimeterVisitor",
+      "JsonExportVisitor": "JsonExportVisitor"
+    }
+  },
+  "src/patterns/creational/abstract-factory.ts": {
+    "path": "ports/go/patterns/creational/abstract-factory.go",
+    "exports": {
+      "LightThemeFactory": "LightThemeFactory",
+      "DarkThemeFactory": "DarkThemeFactory",
+      "renderSettingsForm": "RenderSettingsForm"
+    }
+  },
+  "src/patterns/creational/builder.ts": {
+    "path": "ports/go/patterns/creational/builder.go",
+    "exports": {
+      "HttpRequestBuilder": "HttpRequestBuilder"
+    }
+  },
+  "src/patterns/creational/factory-method.ts": {
+    "path": "ports/go/patterns/creational/factory-method.go",
+    "exports": {
+      "Truck": "Truck",
+      "Ship": "Ship",
+      "Logistics": "Logistics",
+      "RoadLogistics": "RoadLogistics",
+      "SeaLogistics": "SeaLogistics",
+      "createTransport": "CreateTransport"
+    }
+  },
+  "src/patterns/creational/object-pool.ts": {
+    "path": "ports/go/patterns/creational/object-pool.go",
+    "exports": {
+      "ObjectPool": "ObjectPool"
+    }
+  },
+  "src/patterns/creational/prototype.ts": {
+    "path": "ports/go/patterns/creational/prototype.go",
+    "exports": {
+      "Shape": "Shape",
+      "Circle": "Circle",
+      "Rectangle": "Rectangle",
+      "PrototypeRegistry": "PrototypeRegistry"
+    }
+  },
+  "src/patterns/creational/singleton.ts": {
+    "path": "ports/go/patterns/creational/singleton.go",
+    "exports": {
+      "AppConfig": "AppConfig",
+      "lazySingleton": "LazySingleton"
+    }
+  },
+  "src/patterns/structural/adapter.ts": {
+    "path": "ports/go/patterns/structural/adapter.go",
+    "exports": {
+      "LegacyFahrenheitSensor": "LegacyFahrenheitSensor",
+      "FahrenheitSensorAdapter": "FahrenheitSensorAdapter",
+      "averageTemperature": "AverageTemperature",
+      "promisify": "Promisify"
+    }
+  },
+  "src/patterns/structural/bridge.ts": {
+    "path": "ports/go/patterns/structural/bridge.go",
+    "exports": {
+      "Tv": "Tv",
+      "Radio": "Radio",
+      "RemoteControl": "RemoteControl",
+      "AdvancedRemoteControl": "AdvancedRemoteControl"
+    }
+  },
+  "src/patterns/structural/composite.ts": {
+    "path": "ports/go/patterns/structural/composite.go",
+    "exports": {
+      "FileEntry": "FileEntry",
+      "Directory": "Directory"
+    }
+  },
+  "src/patterns/structural/decorator.ts": {
+    "path": "ports/go/patterns/structural/decorator.go",
+    "exports": {
+      "EmailNotifier": "EmailNotifier",
+      "NotifierDecorator": "NotifierDecorator",
+      "SmsNotifier": "SmsNotifier",
+      "SlackNotifier": "SlackNotifier",
+      "withLogging": "WithLogging"
+    }
+  },
+  "src/patterns/structural/facade.ts": {
+    "path": "ports/go/patterns/structural/facade.go",
+    "exports": {
+      "VideoFile": "VideoFile",
+      "CodecFactory": "CodecFactory",
+      "BitrateReader": "BitrateReader",
+      "AudioMixer": "AudioMixer",
+      "VideoConverter": "VideoConverter"
+    }
+  },
+  "src/patterns/structural/flyweight.ts": {
+    "path": "ports/go/patterns/structural/flyweight.go",
+    "exports": {
+      "TreeType": "TreeType",
+      "TreeTypeFactory": "TreeTypeFactory",
+      "Forest": "Forest"
+    }
+  },
+  "src/patterns/structural/proxy.ts": {
+    "path": "ports/go/patterns/structural/proxy.go",
+    "exports": {
+      "CachingWeatherProxy": "CachingWeatherProxy",
+      "AccessControlProxy": "AccessControlProxy",
+      "createValidatedObject": "CreateValidatedObject"
+    }
+  },
+  "src/shared/compare.ts": {
+    "path": "ports/go/shared/compare.go",
+    "exports": {
+      "defaultCompare": "DefaultCompare",
+      "reverseCompare": "ReverseCompare"
+    }
+  }
+}

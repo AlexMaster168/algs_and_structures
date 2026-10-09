@@ -1,0 +1,1043 @@
+{
+  "src/algorithms/backtracking/n-queens.ts": {
+    "path": "ports/csharp/algorithms/backtracking/n-queens.cs",
+    "exports": {
+      "nQueens": "NQueens",
+      "countNQueens": "CountNQueens"
+    }
+  },
+  "src/algorithms/backtracking/permutations.ts": {
+    "path": "ports/csharp/algorithms/backtracking/permutations.cs",
+    "exports": {
+      "permutations": "Permutations",
+      "combinations": "Combinations",
+      "subsets": "Subsets",
+      "combinationSum": "CombinationSum"
+    }
+  },
+  "src/algorithms/backtracking/sudoku.ts": {
+    "path": "ports/csharp/algorithms/backtracking/sudoku.cs",
+    "exports": {
+      "solveSudoku": "SolveSudoku"
+    }
+  },
+  "src/algorithms/backtracking/word-search.ts": {
+    "path": "ports/csharp/algorithms/backtracking/word-search.cs",
+    "exports": {
+      "wordSearch": "WordSearch"
+    }
+  },
+  "src/algorithms/bit-manipulation/bits.ts": {
+    "path": "ports/csharp/algorithms/bit-manipulation/bits.cs",
+    "exports": {
+      "getBit": "GetBit",
+      "setBit": "SetBit",
+      "clearBit": "ClearBit",
+      "toggleBit": "ToggleBit",
+      "countSetBits": "CountSetBits",
+      "isPowerOfTwo": "IsPowerOfTwo",
+      "lowestSetBit": "LowestSetBit",
+      "singleNumber": "SingleNumber",
+      "reverseBits": "ReverseBits",
+      "grayCode": "GrayCode",
+      "subsetsByMask": "SubsetsByMask",
+      "swapWithoutTemp": "SwapWithoutTemp",
+      "hammingDistance": "HammingDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/coin-change.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/coin-change.cs",
+    "exports": {
+      "minCoins": "MinCoins",
+      "coinChangeWays": "CoinChangeWays"
+    }
+  },
+  "src/algorithms/dynamic-programming/edit-distance.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/edit-distance.cs",
+    "exports": {
+      "editDistance": "EditDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/fibonacci.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/fibonacci.cs",
+    "exports": {
+      "fibonacciRecursive": "FibonacciRecursive",
+      "fibonacciMemo": "FibonacciMemo",
+      "fibonacci": "Fibonacci",
+      "fibonacciFast": "FibonacciFast"
+    }
+  },
+  "src/algorithms/dynamic-programming/grid-paths.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/grid-paths.cs",
+    "exports": {
+      "uniquePaths": "UniquePaths",
+      "minPathSum": "MinPathSum"
+    }
+  },
+  "src/algorithms/dynamic-programming/knapsack.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/knapsack.cs",
+    "exports": {
+      "knapsack01": "Knapsack01",
+      "unboundedKnapsack": "UnboundedKnapsack"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-common-subsequence.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/longest-common-subsequence.cs",
+    "exports": {
+      "longestCommonSubsequence": "LongestCommonSubsequence",
+      "longestCommonSubstring": "LongestCommonSubstring"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-increasing-subsequence.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/longest-increasing-subsequence.cs",
+    "exports": {
+      "longestIncreasingSubsequence": "LongestIncreasingSubsequence"
+    }
+  },
+  "src/algorithms/dynamic-programming/matrix-chain.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/matrix-chain.cs",
+    "exports": {
+      "matrixChainOrder": "MatrixChainOrder"
+    }
+  },
+  "src/algorithms/dynamic-programming/max-subarray.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/max-subarray.cs",
+    "exports": {
+      "maxSubarray": "MaxSubarray"
+    }
+  },
+  "src/algorithms/dynamic-programming/memoize.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/memoize.cs",
+    "exports": {
+      "memoize": "Memoize"
+    }
+  },
+  "src/algorithms/dynamic-programming/rod-cutting.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/rod-cutting.cs",
+    "exports": {
+      "rodCutting": "RodCutting"
+    }
+  },
+  "src/algorithms/dynamic-programming/subset-sum.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/subset-sum.cs",
+    "exports": {
+      "subsetSum": "SubsetSum",
+      "canPartition": "CanPartition"
+    }
+  },
+  "src/algorithms/dynamic-programming/word-break.ts": {
+    "path": "ports/csharp/algorithms/dynamic-programming/word-break.cs",
+    "exports": {
+      "wordBreak": "WordBreak"
+    }
+  },
+  "src/algorithms/geometry/geometry.ts": {
+    "path": "ports/csharp/algorithms/geometry/geometry.cs",
+    "exports": {
+      "cross": "Cross",
+      "distance": "Distance",
+      "convexHull": "ConvexHull",
+      "polygonArea": "PolygonArea",
+      "pointInPolygon": "PointInPolygon",
+      "segmentsIntersect": "SegmentsIntersect",
+      "closestPair": "ClosestPair"
+    }
+  },
+  "src/algorithms/graphs/a-star.ts": {
+    "path": "ports/csharp/algorithms/graphs/a-star.cs",
+    "exports": {
+      "aStar": "AStar",
+      "aStarGrid": "AStarGrid"
+    }
+  },
+  "src/algorithms/graphs/bellman-ford.ts": {
+    "path": "ports/csharp/algorithms/graphs/bellman-ford.cs",
+    "exports": {
+      "bellmanFord": "BellmanFord"
+    }
+  },
+  "src/algorithms/graphs/bfs.ts": {
+    "path": "ports/csharp/algorithms/graphs/bfs.cs",
+    "exports": {
+      "bfs": "Bfs",
+      "shortestPathUnweighted": "ShortestPathUnweighted",
+      "gridShortestPath": "GridShortestPath"
+    }
+  },
+  "src/algorithms/graphs/bipartite.ts": {
+    "path": "ports/csharp/algorithms/graphs/bipartite.cs",
+    "exports": {
+      "bipartiteColoring": "BipartiteColoring",
+      "isBipartite": "IsBipartite"
+    }
+  },
+  "src/algorithms/graphs/bridges-and-articulation-points.ts": {
+    "path": "ports/csharp/algorithms/graphs/bridges-and-articulation-points.cs",
+    "exports": {
+      "findBridgesAndArticulationPoints": "FindBridgesAndArticulationPoints"
+    }
+  },
+  "src/algorithms/graphs/connected-components.ts": {
+    "path": "ports/csharp/algorithms/graphs/connected-components.cs",
+    "exports": {
+      "connectedComponents": "ConnectedComponents"
+    }
+  },
+  "src/algorithms/graphs/cycle-detection.ts": {
+    "path": "ports/csharp/algorithms/graphs/cycle-detection.cs",
+    "exports": {
+      "hasCycleDirected": "HasCycleDirected",
+      "hasCycleUndirected": "HasCycleUndirected"
+    }
+  },
+  "src/algorithms/graphs/dfs.ts": {
+    "path": "ports/csharp/algorithms/graphs/dfs.cs",
+    "exports": {
+      "dfs": "Dfs",
+      "dfsRecursive": "DfsRecursive",
+      "hasPath": "HasPath"
+    }
+  },
+  "src/algorithms/graphs/dijkstra.ts": {
+    "path": "ports/csharp/algorithms/graphs/dijkstra.cs",
+    "exports": {
+      "dijkstra": "Dijkstra",
+      "dijkstraPath": "DijkstraPath"
+    }
+  },
+  "src/algorithms/graphs/eulerian-path.ts": {
+    "path": "ports/csharp/algorithms/graphs/eulerian-path.cs",
+    "exports": {
+      "eulerianPathDirected": "EulerianPathDirected"
+    }
+  },
+  "src/algorithms/graphs/flood-fill.ts": {
+    "path": "ports/csharp/algorithms/graphs/flood-fill.cs",
+    "exports": {
+      "floodFill": "FloodFill"
+    }
+  },
+  "src/algorithms/graphs/floyd-warshall.ts": {
+    "path": "ports/csharp/algorithms/graphs/floyd-warshall.cs",
+    "exports": {
+      "floydWarshall": "FloydWarshall",
+      "floydWarshallPath": "FloydWarshallPath"
+    }
+  },
+  "src/algorithms/graphs/max-flow.ts": {
+    "path": "ports/csharp/algorithms/graphs/max-flow.cs",
+    "exports": {
+      "edmondsKarp": "EdmondsKarp"
+    }
+  },
+  "src/algorithms/graphs/minimum-spanning-tree.ts": {
+    "path": "ports/csharp/algorithms/graphs/minimum-spanning-tree.cs",
+    "exports": {
+      "kruskal": "Kruskal",
+      "prim": "Prim"
+    }
+  },
+  "src/algorithms/graphs/strongly-connected-components.ts": {
+    "path": "ports/csharp/algorithms/graphs/strongly-connected-components.cs",
+    "exports": {
+      "tarjanScc": "TarjanScc",
+      "kosarajuScc": "KosarajuScc"
+    }
+  },
+  "src/algorithms/graphs/topological-sort.ts": {
+    "path": "ports/csharp/algorithms/graphs/topological-sort.cs",
+    "exports": {
+      "topologicalSortKahn": "TopologicalSortKahn",
+      "topologicalSortDfs": "TopologicalSortDfs"
+    }
+  },
+  "src/algorithms/graphs/types.ts": {
+    "path": "ports/csharp/algorithms/graphs/types.cs",
+    "exports": {
+      "reconstructPath": "ReconstructPath",
+      "toUndirected": "ToUndirected",
+      "toWeightedUndirected": "ToWeightedUndirected"
+    }
+  },
+  "src/algorithms/greedy/activity-selection.ts": {
+    "path": "ports/csharp/algorithms/greedy/activity-selection.cs",
+    "exports": {
+      "activitySelection": "ActivitySelection",
+      "mergeIntervals": "MergeIntervals",
+      "minMeetingRooms": "MinMeetingRooms"
+    }
+  },
+  "src/algorithms/greedy/fractional-knapsack.ts": {
+    "path": "ports/csharp/algorithms/greedy/fractional-knapsack.cs",
+    "exports": {
+      "fractionalKnapsack": "FractionalKnapsack"
+    }
+  },
+  "src/algorithms/greedy/huffman.ts": {
+    "path": "ports/csharp/algorithms/greedy/huffman.cs",
+    "exports": {
+      "huffmanCodes": "HuffmanCodes",
+      "huffmanEncode": "HuffmanEncode",
+      "huffmanDecode": "HuffmanDecode"
+    }
+  },
+  "src/algorithms/greedy/jump-game.ts": {
+    "path": "ports/csharp/algorithms/greedy/jump-game.cs",
+    "exports": {
+      "canReachEnd": "CanReachEnd",
+      "minJumps": "MinJumps",
+      "greedyChange": "GreedyChange"
+    }
+  },
+  "src/algorithms/math/combinatorics.ts": {
+    "path": "ports/csharp/algorithms/math/combinatorics.cs",
+    "exports": {
+      "factorial": "Factorial",
+      "binomial": "Binomial",
+      "pascalTriangle": "PascalTriangle",
+      "catalan": "Catalan",
+      "nextPermutation": "NextPermutation"
+    }
+  },
+  "src/algorithms/math/gcd.ts": {
+    "path": "ports/csharp/algorithms/math/gcd.cs",
+    "exports": {
+      "gcd": "Gcd",
+      "lcm": "Lcm",
+      "extendedGcd": "ExtendedGcd",
+      "modInverse": "ModInverse"
+    }
+  },
+  "src/algorithms/math/matrix.ts": {
+    "path": "ports/csharp/algorithms/math/matrix.cs",
+    "exports": {
+      "identity": "Identity",
+      "multiply": "Multiply",
+      "transpose": "Transpose",
+      "matrixPower": "MatrixPower",
+      "determinant": "Determinant",
+      "solveLinearSystem": "SolveLinearSystem"
+    }
+  },
+  "src/algorithms/math/number-conversion.ts": {
+    "path": "ports/csharp/algorithms/math/number-conversion.cs",
+    "exports": {
+      "toBase": "ToBase",
+      "fromBase": "FromBase",
+      "toRoman": "ToRoman",
+      "fromRoman": "FromRoman"
+    }
+  },
+  "src/algorithms/math/power.ts": {
+    "path": "ports/csharp/algorithms/math/power.cs",
+    "exports": {
+      "fastPower": "FastPower",
+      "modPow": "ModPow",
+      "integerSqrt": "IntegerSqrt",
+      "newtonSqrt": "NewtonSqrt"
+    }
+  },
+  "src/algorithms/math/primes.ts": {
+    "path": "ports/csharp/algorithms/math/primes.cs",
+    "exports": {
+      "sieveOfEratosthenes": "SieveOfEratosthenes",
+      "linearSieve": "LinearSieve",
+      "isPrime": "IsPrime",
+      "millerRabin": "MillerRabin",
+      "primeFactors": "PrimeFactors",
+      "divisors": "Divisors",
+      "eulerPhi": "EulerPhi"
+    }
+  },
+  "src/algorithms/randomized/shuffle.ts": {
+    "path": "ports/csharp/algorithms/randomized/shuffle.cs",
+    "exports": {
+      "fisherYatesShuffle": "FisherYatesShuffle",
+      "reservoirSample": "ReservoirSample",
+      "mulberry32": "Mulberry32",
+      "monteCarloPi": "MonteCarloPi"
+    }
+  },
+  "src/algorithms/searching/binary-search.ts": {
+    "path": "ports/csharp/algorithms/searching/binary-search.cs",
+    "exports": {
+      "binarySearch": "BinarySearch",
+      "binarySearchRecursive": "BinarySearchRecursive",
+      "lowerBound": "LowerBound",
+      "upperBound": "UpperBound",
+      "firstTrue": "FirstTrue"
+    }
+  },
+  "src/algorithms/searching/exponential-search.ts": {
+    "path": "ports/csharp/algorithms/searching/exponential-search.cs",
+    "exports": {
+      "exponentialSearch": "ExponentialSearch"
+    }
+  },
+  "src/algorithms/searching/interpolation-search.ts": {
+    "path": "ports/csharp/algorithms/searching/interpolation-search.cs",
+    "exports": {
+      "interpolationSearch": "InterpolationSearch"
+    }
+  },
+  "src/algorithms/searching/jump-search.ts": {
+    "path": "ports/csharp/algorithms/searching/jump-search.cs",
+    "exports": {
+      "jumpSearch": "JumpSearch"
+    }
+  },
+  "src/algorithms/searching/linear-search.ts": {
+    "path": "ports/csharp/algorithms/searching/linear-search.cs",
+    "exports": {
+      "linearSearch": "LinearSearch",
+      "linearSearchAll": "LinearSearchAll"
+    }
+  },
+  "src/algorithms/searching/quick-select.ts": {
+    "path": "ports/csharp/algorithms/searching/quick-select.cs",
+    "exports": {
+      "quickSelect": "QuickSelect",
+      "median": "Median"
+    }
+  },
+  "src/algorithms/searching/ternary-search.ts": {
+    "path": "ports/csharp/algorithms/searching/ternary-search.cs",
+    "exports": {
+      "ternarySearchMax": "TernarySearchMax",
+      "ternarySearchMin": "TernarySearchMin",
+      "findPeakIndex": "FindPeakIndex"
+    }
+  },
+  "src/algorithms/sorting/bubble-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/bubble-sort.cs",
+    "exports": {
+      "bubbleSort": "BubbleSort"
+    }
+  },
+  "src/algorithms/sorting/bucket-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/bucket-sort.cs",
+    "exports": {
+      "bucketSort": "BucketSort"
+    }
+  },
+  "src/algorithms/sorting/cocktail-shaker-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/cocktail-shaker-sort.cs",
+    "exports": {
+      "cocktailShakerSort": "CocktailShakerSort"
+    }
+  },
+  "src/algorithms/sorting/counting-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/counting-sort.cs",
+    "exports": {
+      "countingSort": "CountingSort"
+    }
+  },
+  "src/algorithms/sorting/heap-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/heap-sort.cs",
+    "exports": {
+      "heapSort": "HeapSort"
+    }
+  },
+  "src/algorithms/sorting/index.ts": {
+    "path": "ports/csharp/algorithms/sorting/index.cs",
+    "exports": {}
+  },
+  "src/algorithms/sorting/insertion-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/insertion-sort.cs",
+    "exports": {
+      "insertionSortRange": "InsertionSortRange",
+      "insertionSort": "InsertionSort"
+    }
+  },
+  "src/algorithms/sorting/merge-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/merge-sort.cs",
+    "exports": {
+      "merge": "Merge",
+      "mergeSort": "MergeSort",
+      "bottomUpMergeSort": "BottomUpMergeSort"
+    }
+  },
+  "src/algorithms/sorting/quick-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/quick-sort.cs",
+    "exports": {
+      "partition3": "Partition3",
+      "quickSort": "QuickSort",
+      "lomutoPartition": "LomutoPartition",
+      "quickSortFunctional": "QuickSortFunctional"
+    }
+  },
+  "src/algorithms/sorting/radix-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/radix-sort.cs",
+    "exports": {
+      "radixSort": "RadixSort"
+    }
+  },
+  "src/algorithms/sorting/selection-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/selection-sort.cs",
+    "exports": {
+      "selectionSort": "SelectionSort"
+    }
+  },
+  "src/algorithms/sorting/shell-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/shell-sort.cs",
+    "exports": {
+      "shellSort": "ShellSort"
+    }
+  },
+  "src/algorithms/sorting/tim-sort.ts": {
+    "path": "ports/csharp/algorithms/sorting/tim-sort.cs",
+    "exports": {
+      "timSort": "TimSort"
+    }
+  },
+  "src/algorithms/strings/aho-corasick.ts": {
+    "path": "ports/csharp/algorithms/strings/aho-corasick.cs",
+    "exports": {
+      "AhoCorasick": "AhoCorasick"
+    }
+  },
+  "src/algorithms/strings/boyer-moore-horspool.ts": {
+    "path": "ports/csharp/algorithms/strings/boyer-moore-horspool.cs",
+    "exports": {
+      "boyerMooreHorspool": "BoyerMooreHorspool"
+    }
+  },
+  "src/algorithms/strings/kmp.ts": {
+    "path": "ports/csharp/algorithms/strings/kmp.cs",
+    "exports": {
+      "prefixFunction": "PrefixFunction",
+      "kmpSearch": "KmpSearch"
+    }
+  },
+  "src/algorithms/strings/manacher.ts": {
+    "path": "ports/csharp/algorithms/strings/manacher.cs",
+    "exports": {
+      "longestPalindromicSubstring": "LongestPalindromicSubstring"
+    }
+  },
+  "src/algorithms/strings/rabin-karp.ts": {
+    "path": "ports/csharp/algorithms/strings/rabin-karp.cs",
+    "exports": {
+      "rabinKarp": "RabinKarp"
+    }
+  },
+  "src/algorithms/strings/string-utils.ts": {
+    "path": "ports/csharp/algorithms/strings/string-utils.cs",
+    "exports": {
+      "isBalanced": "IsBalanced",
+      "isPalindrome": "IsPalindrome",
+      "isAnagram": "IsAnagram",
+      "groupAnagrams": "GroupAnagrams",
+      "runLengthEncode": "RunLengthEncode",
+      "runLengthDecode": "RunLengthDecode",
+      "reverseWords": "ReverseWords"
+    }
+  },
+  "src/algorithms/strings/suffix-array.ts": {
+    "path": "ports/csharp/algorithms/strings/suffix-array.cs",
+    "exports": {
+      "suffixArray": "SuffixArray",
+      "lcpArray": "LcpArray",
+      "countDistinctSubstrings": "CountDistinctSubstrings"
+    }
+  },
+  "src/algorithms/strings/z-function.ts": {
+    "path": "ports/csharp/algorithms/strings/z-function.cs",
+    "exports": {
+      "zFunction": "ZFunction",
+      "zSearch": "ZSearch"
+    }
+  },
+  "src/algorithms/techniques/prefix-sums.ts": {
+    "path": "ports/csharp/algorithms/techniques/prefix-sums.cs",
+    "exports": {
+      "PrefixSums": "PrefixSums",
+      "PrefixSums2D": "PrefixSums2D",
+      "subarraySumEquals": "SubarraySumEquals",
+      "differenceArrayApply": "DifferenceArrayApply",
+      "majorityElement": "MajorityElement"
+    }
+  },
+  "src/algorithms/techniques/sliding-window.ts": {
+    "path": "ports/csharp/algorithms/techniques/sliding-window.cs",
+    "exports": {
+      "maxSumWindow": "MaxSumWindow",
+      "slidingWindowMaximum": "SlidingWindowMaximum",
+      "longestUniqueSubstring": "LongestUniqueSubstring",
+      "minWindowSubstring": "MinWindowSubstring"
+    }
+  },
+  "src/algorithms/techniques/two-pointers.ts": {
+    "path": "ports/csharp/algorithms/techniques/two-pointers.cs",
+    "exports": {
+      "twoSumSorted": "TwoSumSorted",
+      "twoSum": "TwoSum",
+      "threeSum": "ThreeSum",
+      "containerWithMostWater": "ContainerWithMostWater",
+      "removeDuplicatesSorted": "RemoveDuplicatesSorted",
+      "dutchNationalFlag": "DutchNationalFlag",
+      "hasCycleFloyd": "HasCycleFloyd"
+    }
+  },
+  "src/algorithms/trees/binary-tree.ts": {
+    "path": "ports/csharp/algorithms/trees/binary-tree.cs",
+    "exports": {
+      "treeNode": "TreeNode",
+      "fromLevelOrder": "FromLevelOrder",
+      "preOrder": "PreOrder",
+      "inOrder": "InOrder",
+      "postOrder": "PostOrder",
+      "levelOrder": "LevelOrder",
+      "maxDepth": "MaxDepth",
+      "maxValue": "MaxValue",
+      "isValidBst": "IsValidBst",
+      "invertTree": "InvertTree",
+      "lowestCommonAncestorBst": "LowestCommonAncestorBst"
+    }
+  },
+  "src/algorithms/trees/lowest-common-ancestor.ts": {
+    "path": "ports/csharp/algorithms/trees/lowest-common-ancestor.cs",
+    "exports": {
+      "LowestCommonAncestor": "LowestCommonAncestor"
+    }
+  },
+  "src/algorithms/trees/tree-diameter.ts": {
+    "path": "ports/csharp/algorithms/trees/tree-diameter.cs",
+    "exports": {
+      "treeDiameter": "TreeDiameter"
+    }
+  },
+  "src/data-structures/graphs/disjoint-set.ts": {
+    "path": "ports/csharp/data-structures/graphs/disjoint-set.cs",
+    "exports": {
+      "DisjointSet": "DisjointSet"
+    }
+  },
+  "src/data-structures/graphs/graph.ts": {
+    "path": "ports/csharp/data-structures/graphs/graph.cs",
+    "exports": {
+      "Graph": "Graph"
+    }
+  },
+  "src/data-structures/hashing/bloom-filter.ts": {
+    "path": "ports/csharp/data-structures/hashing/bloom-filter.cs",
+    "exports": {
+      "BloomFilter": "BloomFilter"
+    }
+  },
+  "src/data-structures/hashing/hash-table.ts": {
+    "path": "ports/csharp/data-structures/hashing/hash-table.cs",
+    "exports": {
+      "HashTable": "HashTable"
+    }
+  },
+  "src/data-structures/hashing/hash.ts": {
+    "path": "ports/csharp/data-structures/hashing/hash.cs",
+    "exports": {
+      "fnv1a": "Fnv1a",
+      "defaultHasher": "DefaultHasher"
+    }
+  },
+  "src/data-structures/hashing/lru-cache.ts": {
+    "path": "ports/csharp/data-structures/hashing/lru-cache.cs",
+    "exports": {
+      "LRUCache": "LRUCache"
+    }
+  },
+  "src/data-structures/hashing/open-addressing-hash-map.ts": {
+    "path": "ports/csharp/data-structures/hashing/open-addressing-hash-map.cs",
+    "exports": {
+      "OpenAddressingHashMap": "OpenAddressingHashMap"
+    }
+  },
+  "src/data-structures/heaps/binary-heap.ts": {
+    "path": "ports/csharp/data-structures/heaps/binary-heap.cs",
+    "exports": {
+      "BinaryHeap": "BinaryHeap",
+      "MinHeap": "MinHeap",
+      "MaxHeap": "MaxHeap"
+    }
+  },
+  "src/data-structures/heaps/priority-queue.ts": {
+    "path": "ports/csharp/data-structures/heaps/priority-queue.cs",
+    "exports": {
+      "PriorityQueue": "PriorityQueue"
+    }
+  },
+  "src/data-structures/linear/circular-buffer.ts": {
+    "path": "ports/csharp/data-structures/linear/circular-buffer.cs",
+    "exports": {
+      "CircularBuffer": "CircularBuffer"
+    }
+  },
+  "src/data-structures/linear/deque.ts": {
+    "path": "ports/csharp/data-structures/linear/deque.cs",
+    "exports": {
+      "Deque": "Deque"
+    }
+  },
+  "src/data-structures/linear/doubly-linked-list.ts": {
+    "path": "ports/csharp/data-structures/linear/doubly-linked-list.cs",
+    "exports": {
+      "DoublyLinkedListNode": "DoublyLinkedListNode",
+      "DoublyLinkedList": "DoublyLinkedList"
+    }
+  },
+  "src/data-structures/linear/linked-list.ts": {
+    "path": "ports/csharp/data-structures/linear/linked-list.cs",
+    "exports": {
+      "LinkedListNode": "LinkedListNode",
+      "LinkedList": "LinkedList"
+    }
+  },
+  "src/data-structures/linear/queue.ts": {
+    "path": "ports/csharp/data-structures/linear/queue.cs",
+    "exports": {
+      "Queue": "Queue"
+    }
+  },
+  "src/data-structures/linear/skip-list.ts": {
+    "path": "ports/csharp/data-structures/linear/skip-list.cs",
+    "exports": {
+      "SkipList": "SkipList"
+    }
+  },
+  "src/data-structures/linear/stack.ts": {
+    "path": "ports/csharp/data-structures/linear/stack.cs",
+    "exports": {
+      "Stack": "Stack"
+    }
+  },
+  "src/data-structures/range-queries/fenwick-tree.ts": {
+    "path": "ports/csharp/data-structures/range-queries/fenwick-tree.cs",
+    "exports": {
+      "FenwickTree": "FenwickTree"
+    }
+  },
+  "src/data-structures/range-queries/lazy-segment-tree.ts": {
+    "path": "ports/csharp/data-structures/range-queries/lazy-segment-tree.cs",
+    "exports": {
+      "LazySegmentTree": "LazySegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/segment-tree.ts": {
+    "path": "ports/csharp/data-structures/range-queries/segment-tree.cs",
+    "exports": {
+      "SegmentTree": "SegmentTree",
+      "sumSegmentTree": "SumSegmentTree",
+      "minSegmentTree": "MinSegmentTree",
+      "maxSegmentTree": "MaxSegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/sparse-table.ts": {
+    "path": "ports/csharp/data-structures/range-queries/sparse-table.cs",
+    "exports": {
+      "SparseTable": "SparseTable",
+      "minSparseTable": "MinSparseTable",
+      "maxSparseTable": "MaxSparseTable"
+    }
+  },
+  "src/data-structures/range-queries/sqrt-decomposition.ts": {
+    "path": "ports/csharp/data-structures/range-queries/sqrt-decomposition.cs",
+    "exports": {
+      "SqrtDecomposition": "SqrtDecomposition"
+    }
+  },
+  "src/data-structures/trees/avl-tree.ts": {
+    "path": "ports/csharp/data-structures/trees/avl-tree.cs",
+    "exports": {
+      "AVLTree": "AVLTree"
+    }
+  },
+  "src/data-structures/trees/b-tree.ts": {
+    "path": "ports/csharp/data-structures/trees/b-tree.cs",
+    "exports": {
+      "BTree": "BTree"
+    }
+  },
+  "src/data-structures/trees/binary-search-tree.ts": {
+    "path": "ports/csharp/data-structures/trees/binary-search-tree.cs",
+    "exports": {
+      "BSTNode": "BSTNode",
+      "BinarySearchTree": "BinarySearchTree"
+    }
+  },
+  "src/data-structures/trees/red-black-tree.ts": {
+    "path": "ports/csharp/data-structures/trees/red-black-tree.cs",
+    "exports": {
+      "RedBlackTree": "RedBlackTree"
+    }
+  },
+  "src/data-structures/trees/trie.ts": {
+    "path": "ports/csharp/data-structures/trees/trie.cs",
+    "exports": {
+      "Trie": "Trie"
+    }
+  },
+  "src/patterns/architectural/circuit-breaker.ts": {
+    "path": "ports/csharp/patterns/architectural/circuit-breaker.cs",
+    "exports": {
+      "CircuitOpenError": "CircuitOpenError",
+      "CircuitBreaker": "CircuitBreaker",
+      "retry": "Retry"
+    }
+  },
+  "src/patterns/architectural/dependency-injection.ts": {
+    "path": "ports/csharp/patterns/architectural/dependency-injection.cs",
+    "exports": {
+      "token": "Token",
+      "Container": "Container"
+    }
+  },
+  "src/patterns/architectural/event-emitter.ts": {
+    "path": "ports/csharp/patterns/architectural/event-emitter.cs",
+    "exports": {
+      "TypedEventEmitter": "TypedEventEmitter"
+    }
+  },
+  "src/patterns/architectural/middleware.ts": {
+    "path": "ports/csharp/patterns/architectural/middleware.cs",
+    "exports": {
+      "compose": "Compose",
+      "Pipeline": "Pipeline"
+    }
+  },
+  "src/patterns/architectural/null-object.ts": {
+    "path": "ports/csharp/patterns/architectural/null-object.cs",
+    "exports": {
+      "MemoryLogger": "MemoryLogger",
+      "NullLogger": "NullLogger",
+      "PaymentService": "PaymentService"
+    }
+  },
+  "src/patterns/architectural/repository.ts": {
+    "path": "ports/csharp/patterns/architectural/repository.cs",
+    "exports": {
+      "InMemoryRepository": "InMemoryRepository"
+    }
+  },
+  "src/patterns/architectural/specification.ts": {
+    "path": "ports/csharp/patterns/architectural/specification.cs",
+    "exports": {
+      "Spec": "Spec",
+      "spec": "Spec"
+    }
+  },
+  "src/patterns/architectural/store.ts": {
+    "path": "ports/csharp/patterns/architectural/store.cs",
+    "exports": {
+      "createStore": "CreateStore",
+      "combineReducers": "CombineReducers",
+      "counterReducer": "CounterReducer"
+    }
+  },
+  "src/patterns/behavioral/chain-of-responsibility.ts": {
+    "path": "ports/csharp/patterns/behavioral/chain-of-responsibility.cs",
+    "exports": {
+      "SupportHandler": "SupportHandler",
+      "FaqBot": "FaqBot",
+      "SupportAgent": "SupportAgent",
+      "Engineer": "Engineer",
+      "createSupportChain": "CreateSupportChain"
+    }
+  },
+  "src/patterns/behavioral/command.ts": {
+    "path": "ports/csharp/patterns/behavioral/command.cs",
+    "exports": {
+      "TextDocument": "TextDocument",
+      "InsertCommand": "InsertCommand",
+      "DeleteCommand": "DeleteCommand",
+      "MacroCommand": "MacroCommand",
+      "CommandHistory": "CommandHistory"
+    }
+  },
+  "src/patterns/behavioral/interpreter.ts": {
+    "path": "ports/csharp/patterns/behavioral/interpreter.cs",
+    "exports": {
+      "NumberExpression": "NumberExpression",
+      "VariableExpression": "VariableExpression",
+      "BinaryExpression": "BinaryExpression",
+      "parseExpression": "ParseExpression"
+    }
+  },
+  "src/patterns/behavioral/iterator.ts": {
+    "path": "ports/csharp/patterns/behavioral/iterator.cs",
+    "exports": {
+      "NumberRange": "NumberRange",
+      "depthFirst": "DepthFirst",
+      "breadthFirst": "BreadthFirst",
+      "take": "Take"
+    }
+  },
+  "src/patterns/behavioral/mediator.ts": {
+    "path": "ports/csharp/patterns/behavioral/mediator.cs",
+    "exports": {
+      "ChatUser": "ChatUser",
+      "ChatRoom": "ChatRoom"
+    }
+  },
+  "src/patterns/behavioral/memento.ts": {
+    "path": "ports/csharp/patterns/behavioral/memento.cs",
+    "exports": {
+      "Editor": "Editor",
+      "EditorHistory": "EditorHistory"
+    }
+  },
+  "src/patterns/behavioral/observer.ts": {
+    "path": "ports/csharp/patterns/behavioral/observer.cs",
+    "exports": {
+      "Subject": "Subject",
+      "StockTicker": "StockTicker",
+      "BehaviorSubject": "BehaviorSubject"
+    }
+  },
+  "src/patterns/behavioral/state.ts": {
+    "path": "ports/csharp/patterns/behavioral/state.cs",
+    "exports": {
+      "Order": "Order"
+    }
+  },
+  "src/patterns/behavioral/strategy.ts": {
+    "path": "ports/csharp/patterns/behavioral/strategy.cs",
+    "exports": {
+      "FlatRateShipping": "FlatRateShipping",
+      "WeightBasedShipping": "WeightBasedShipping",
+      "FreeOverThresholdShipping": "FreeOverThresholdShipping",
+      "ShippingCalculator": "ShippingCalculator"
+    }
+  },
+  "src/patterns/behavioral/template-method.ts": {
+    "path": "ports/csharp/patterns/behavioral/template-method.cs",
+    "exports": {
+      "SalesDataMiner": "SalesDataMiner",
+      "CsvSalesMiner": "CsvSalesMiner",
+      "JsonSalesMiner": "JsonSalesMiner"
+    }
+  },
+  "src/patterns/behavioral/visitor.ts": {
+    "path": "ports/csharp/patterns/behavioral/visitor.cs",
+    "exports": {
+      "CircleShape": "CircleShape",
+      "RectangleShape": "RectangleShape",
+      "TriangleShape": "TriangleShape",
+      "AreaVisitor": "AreaVisitor",
+      "PerimeterVisitor": "PerimeterVisitor",
+      "JsonExportVisitor": "JsonExportVisitor"
+    }
+  },
+  "src/patterns/creational/abstract-factory.ts": {
+    "path": "ports/csharp/patterns/creational/abstract-factory.cs",
+    "exports": {
+      "LightThemeFactory": "LightThemeFactory",
+      "DarkThemeFactory": "DarkThemeFactory",
+      "renderSettingsForm": "RenderSettingsForm"
+    }
+  },
+  "src/patterns/creational/builder.ts": {
+    "path": "ports/csharp/patterns/creational/builder.cs",
+    "exports": {
+      "HttpRequestBuilder": "HttpRequestBuilder"
+    }
+  },
+  "src/patterns/creational/factory-method.ts": {
+    "path": "ports/csharp/patterns/creational/factory-method.cs",
+    "exports": {
+      "Truck": "Truck",
+      "Ship": "Ship",
+      "Logistics": "Logistics",
+      "RoadLogistics": "RoadLogistics",
+      "SeaLogistics": "SeaLogistics",
+      "createTransport": "CreateTransport"
+    }
+  },
+  "src/patterns/creational/object-pool.ts": {
+    "path": "ports/csharp/patterns/creational/object-pool.cs",
+    "exports": {
+      "ObjectPool": "ObjectPool"
+    }
+  },
+  "src/patterns/creational/prototype.ts": {
+    "path": "ports/csharp/patterns/creational/prototype.cs",
+    "exports": {
+      "Shape": "Shape",
+      "Circle": "Circle",
+      "Rectangle": "Rectangle",
+      "PrototypeRegistry": "PrototypeRegistry"
+    }
+  },
+  "src/patterns/creational/singleton.ts": {
+    "path": "ports/csharp/patterns/creational/singleton.cs",
+    "exports": {
+      "AppConfig": "AppConfig",
+      "lazySingleton": "LazySingleton"
+    }
+  },
+  "src/patterns/structural/adapter.ts": {
+    "path": "ports/csharp/patterns/structural/adapter.cs",
+    "exports": {
+      "LegacyFahrenheitSensor": "LegacyFahrenheitSensor",
+      "FahrenheitSensorAdapter": "FahrenheitSensorAdapter",
+      "averageTemperature": "AverageTemperature",
+      "promisify": "Promisify"
+    }
+  },
+  "src/patterns/structural/bridge.ts": {
+    "path": "ports/csharp/patterns/structural/bridge.cs",
+    "exports": {
+      "Tv": "Tv",
+      "Radio": "Radio",
+      "RemoteControl": "RemoteControl",
+      "AdvancedRemoteControl": "AdvancedRemoteControl"
+    }
+  },
+  "src/patterns/structural/composite.ts": {
+    "path": "ports/csharp/patterns/structural/composite.cs",
+    "exports": {
+      "FileEntry": "FileEntry",
+      "Directory": "Directory"
+    }
+  },
+  "src/patterns/structural/decorator.ts": {
+    "path": "ports/csharp/patterns/structural/decorator.cs",
+    "exports": {
+      "EmailNotifier": "EmailNotifier",
+      "NotifierDecorator": "NotifierDecorator",
+      "SmsNotifier": "SmsNotifier",
+      "SlackNotifier": "SlackNotifier",
+      "withLogging": "WithLogging"
+    }
+  },
+  "src/patterns/structural/facade.ts": {
+    "path": "ports/csharp/patterns/structural/facade.cs",
+    "exports": {
+      "VideoFile": "VideoFile",
+      "CodecFactory": "CodecFactory",
+      "BitrateReader": "BitrateReader",
+      "AudioMixer": "AudioMixer",
+      "VideoConverter": "VideoConverter"
+    }
+  },
+  "src/patterns/structural/flyweight.ts": {
+    "path": "ports/csharp/patterns/structural/flyweight.cs",
+    "exports": {
+      "TreeType": "TreeType",
+      "TreeTypeFactory": "TreeTypeFactory",
+      "Forest": "Forest"
+    }
+  },
+  "src/patterns/structural/proxy.ts": {
+    "path": "ports/csharp/patterns/structural/proxy.cs",
+    "exports": {
+      "CachingWeatherProxy": "CachingWeatherProxy",
+      "AccessControlProxy": "AccessControlProxy",
+      "createValidatedObject": "CreateValidatedObject"
+    }
+  },
+  "src/shared/compare.ts": {
+    "path": "ports/csharp/shared/compare.cs",
+    "exports": {
+      "defaultCompare": "DefaultCompare",
+      "reverseCompare": "ReverseCompare"
+    }
+  }
+}

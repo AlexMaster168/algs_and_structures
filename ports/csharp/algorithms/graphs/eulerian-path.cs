@@ -1,0 +1,5 @@
+namespace Algorithms.Graphs;
+public static partial class GraphAlgorithms
+{
+    public static int[]? EulerianPathDirected(int[][] graph) { var n = graph.Length; var degree = new int[n]; var edgeCount = 0; foreach (var neighbors in graph) { foreach (var v in neighbors) degree[v]++; edgeCount += neighbors.Length; } if (edgeCount == 0) return n > 0 ? [0] : []; var start = Array.FindIndex(graph, r => r.Length > 0); int starts = 0, ends = 0; for (var v = 0; v < n; v++) { var balance = graph[v].Length - degree[v]; if (balance == 1) { starts++; start = v; } else if (balance == -1) ends++; else if (balance != 0) return null; } if (!((starts == 0 && ends == 0) || (starts == 1 && ends == 1))) return null; var next = new int[n]; var stack = new Stack<int>(); stack.Push(start); var path = new List<int>(); while (stack.Count > 0) { var v = stack.Peek(); if (next[v] < graph[v].Length) stack.Push(graph[v][next[v]++]); else path.Add(stack.Pop()); } if (path.Count != edgeCount + 1) return null; path.Reverse(); return path.ToArray(); }
+}

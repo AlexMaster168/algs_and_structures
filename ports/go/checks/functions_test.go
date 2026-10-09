@@ -1,0 +1,80 @@
+package checks
+
+import (
+	p_backtracking "algs/algorithms/backtracking"
+	p_bit_manipulation "algs/algorithms/bit-manipulation"
+	p_dynamic_programming "algs/algorithms/dynamic-programming"
+	p_graphs "algs/algorithms/graphs"
+	p_greedy "algs/algorithms/greedy"
+	p_math "algs/algorithms/math"
+	p_searching "algs/algorithms/searching"
+	p_sorting "algs/algorithms/sorting"
+	p_strings "algs/algorithms/strings"
+)
+
+var functions = map[string]any{
+	"bubbleSort":                  p_sorting.BubbleSort[int],
+	"cocktailShakerSort":          p_sorting.CocktailShakerSort[int],
+	"selectionSort":               p_sorting.SelectionSort[int],
+	"insertionSort":               p_sorting.InsertionSort[int],
+	"shellSort":                   p_sorting.ShellSort[int],
+	"mergeSort":                   p_sorting.MergeSort[int],
+	"bottomUpMergeSort":           p_sorting.BottomUpMergeSort[int],
+	"quickSort":                   p_sorting.QuickSort[int],
+	"quickSortFunctional":         p_sorting.QuickSortFunctional[int],
+	"heapSort":                    p_sorting.HeapSort[int],
+	"countingSort":                p_sorting.CountingSort,
+	"radixSort":                   p_sorting.RadixSort,
+	"bucketSort":                  p_sorting.BucketSort,
+	"timSort":                     p_sorting.TimSort[int],
+	"linearSearch":                p_searching.LinearSearch[int],
+	"binarySearch":                func(values []int, target int) int { return p_searching.BinarySearch(values, target, nil) },
+	"jumpSearch":                  p_searching.JumpSearch,
+	"interpolationSearch":         p_searching.InterpolationSearch,
+	"exponentialSearch":           p_searching.ExponentialSearch[int],
+	"quickSelect":                 p_searching.QuickSelect[int],
+	"median":                      p_searching.Median,
+	"fibonacciRecursive":          p_dynamic_programming.FibonacciRecursive,
+	"fibonacci":                   p_dynamic_programming.Fibonacci,
+	"fibonacciFast":               p_dynamic_programming.FibonacciFast,
+	"editDistance":                p_dynamic_programming.EditDistance,
+	"coinChangeWays":              p_dynamic_programming.CoinChangeWays,
+	"uniquePaths":                 p_dynamic_programming.UniquePaths,
+	"minPathSum":                  p_dynamic_programming.MinPathSum,
+	"canPartition":                p_dynamic_programming.CanPartition,
+	"prefixFunction":              p_strings.PrefixFunction,
+	"kmpSearch":                   p_strings.KMPSearch,
+	"zFunction":                   p_strings.ZFunction,
+	"rabinKarp":                   p_strings.RabinKarp,
+	"boyerMooreHorspool":          p_strings.BoyerMooreHorspool,
+	"longestPalindromicSubstring": p_strings.LongestPalindromicSubstring,
+	"suffixArray":                 p_strings.SuffixArray,
+	"gcd":                         p_math.GCD,
+	"lcm":                         p_math.LCM,
+	"extendedGcd":                 p_math.ExtendedGCD,
+	"modInverse":                  p_math.ModInverse,
+	"fastPower":                   p_math.FastPower,
+	"integerSqrt":                 p_math.IntegerSqrt,
+	"sieveOfEratosthenes":         p_math.SieveOfEratosthenes,
+	"linearSieve":                 p_math.LinearSieve,
+	"isPrime":                     p_math.IsPrime,
+	"primeFactors":                p_math.PrimeFactors,
+	"divisors":                    p_math.Divisors,
+	"eulerPhi":                    p_math.EulerPhi,
+	"factorial":                   p_math.Factorial,
+	"binomial":                    p_math.Binomial,
+	"catalan":                     p_math.Catalan,
+	"toRoman":                     p_math.ToRoman,
+	"fromRoman":                   p_math.FromRoman,
+	"multiply":                    p_math.Multiply,
+	"determinant":                 p_math.Determinant,
+	"countNQueens":                p_backtracking.CountNQueens,
+	"wordSearch":                  p_backtracking.WordSearch,
+	"canReachEnd":                 p_greedy.CanReachEnd,
+	"minJumps":                    p_greedy.MinJumps,
+	"reverseBits":                 p_bit_manipulation.ReverseBits,
+	"countSetBits":                p_bit_manipulation.CountSetBits,
+	"topologicalSortKahn":         p_graphs.TopologicalSortKahn,
+	"isBipartite":                 p_graphs.IsBipartite,
+	"edmondsKarp":                 p_graphs.EdmondsKarp,
+}

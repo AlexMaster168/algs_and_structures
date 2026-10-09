@@ -1,0 +1,9 @@
+using Algorithms.Sorting;
+namespace Algorithms.Backtracking;
+public static partial class Backtracking
+{
+    public static T[][] Permutations<T>(IReadOnlyList<T> items) { var result = new List<T[]>(); var current = new List<T>(); var used = new bool[items.Count]; void Build() { if (current.Count == items.Count) { result.Add(current.ToArray()); return; } for (var i = 0; i < items.Count; i++) { if (used[i]) continue; used[i] = true; current.Add(items[i]); Build(); current.RemoveAt(current.Count - 1); used[i] = false; } } Build(); return result.ToArray(); }
+    public static T[][] Combinations<T>(IReadOnlyList<T> items, int size) { var result = new List<T[]>(); var current = new List<T>(); void Build(int start) { if (current.Count == size) { result.Add(current.ToArray()); return; } for (var i = start; i <= items.Count - (size - current.Count); i++) { current.Add(items[i]); Build(i + 1); current.RemoveAt(current.Count - 1); } } Build(0); return result.ToArray(); }
+    public static T[][] Subsets<T>(IReadOnlyList<T> items) { var result = new List<T[]>(); var current = new List<T>(); void Build(int index) { if (index == items.Count) { result.Add(current.ToArray()); return; } Build(index + 1); current.Add(items[index]); Build(index + 1); current.RemoveAt(current.Count - 1); } Build(0); return result.ToArray(); }
+    public static int[][] CombinationSum(IReadOnlyList<int> candidates, int target) { var sorted = Sort.MergeSort(candidates.Distinct().ToArray()); if (sorted.Any(v => v <= 0)) throw new ArgumentOutOfRangeException(nameof(candidates)); var result = new List<int[]>(); var current = new List<int>(); void Build(int start, int remaining) { if (remaining == 0) { result.Add(current.ToArray()); return; } for (var i = start; i < sorted.Length && sorted[i] <= remaining; i++) { current.Add(sorted[i]); Build(i, remaining - sorted[i]); current.RemoveAt(current.Count - 1); } } Build(0, target); return result.ToArray(); }
+}
