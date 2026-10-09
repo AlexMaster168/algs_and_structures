@@ -1,0 +1,8 @@
+package patterns.creational;
+import java.util.*;
+import java.util.function.*;
+import java.math.*;
+
+public class Prototype {
+public interface CloneablePrototype<T>{T clone();}public abstract static class Shape implements CloneablePrototype<Shape>{public double x,y;public String color;public List<String> tags;protected Shape(double x,double y,String color,List<String> tags){this.x=x;this.y=y;this.color=color;this.tags=new ArrayList<>(tags);}public abstract Shape clone();public abstract double area();}public static class Circle extends Shape{public double radius;public Circle(double x,double y,String color,double radius){this(x,y,color,radius,List.of());}public Circle(double x,double y,String color,double radius,List<String> tags){super(x,y,color,tags);this.radius=radius;}public Circle clone(){return new Circle(x,y,color,radius,tags);}public double area(){return Math.PI*radius*radius;}}public static class Rectangle extends Shape{public double width,height;public Rectangle(double x,double y,String color,double w,double h){this(x,y,color,w,h,List.of());}public Rectangle(double x,double y,String color,double w,double h,List<String> tags){super(x,y,color,tags);width=w;height=h;}public Rectangle clone(){return new Rectangle(x,y,color,width,height,tags);}public double area(){return width*height;}}public static class PrototypeRegistry<T extends CloneablePrototype<T>>{private final Map<String,T> prototypes=new HashMap<>();public PrototypeRegistry<T> register(String key,T p){prototypes.put(key,p);return this;}public T create(String key){T p=prototypes.get(key);if(p==null)throw new IllegalArgumentException("Unknown prototype "+key);return p.clone();}}
+}

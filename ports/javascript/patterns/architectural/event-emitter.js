@@ -1,0 +1,33 @@
+export class TypedEventEmitter {
+    listeners = new Map();
+    on(event, listener) {
+        let set = this.listeners.get(event);
+        if (!set) {
+            set = new Set();
+            this.listeners.set(event, set);
+        }
+        set.add(listener);
+        return () => this.off(event, listener);
+    }
+    once(event, listener) {
+        const off = this.on(event, (payload) => {
+            off();
+            listener(payload);
+        });
+        return off;
+    }
+    off(event, listener) {
+        this.listeners.get(event)?.delete(listener);
+    }
+    emit(event, payload) {
+        const set = this.listeners.get(event);
+        if (!set)
+            return 0;
+        for (const listener of [...set])
+            listener(payload);
+        return set.size;
+    }
+    listenerCount(event) {
+        return this.listeners.get(event)?.size ?? 0;
+    }
+}

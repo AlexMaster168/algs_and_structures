@@ -1,0 +1,1043 @@
+{
+  "src/shared/compare.ts": {
+    "path": "ports/java/src/shared/Compare.java",
+    "exports": {
+      "defaultCompare": "defaultCompare",
+      "reverseCompare": "reverseCompare"
+    }
+  },
+  "src/patterns/architectural/circuit-breaker.ts": {
+    "path": "ports/java/src/patterns/architectural/CircuitBreaker.java",
+    "exports": {
+      "CircuitOpenError": "CircuitOpenError",
+      "CircuitBreaker": "CircuitBreaker",
+      "retry": "retry"
+    }
+  },
+  "src/patterns/architectural/dependency-injection.ts": {
+    "path": "ports/java/src/patterns/architectural/DependencyInjection.java",
+    "exports": {
+      "token": "token",
+      "Container": "Container"
+    }
+  },
+  "src/patterns/architectural/event-emitter.ts": {
+    "path": "ports/java/src/patterns/architectural/EventEmitter.java",
+    "exports": {
+      "TypedEventEmitter": "TypedEventEmitter"
+    }
+  },
+  "src/patterns/architectural/middleware.ts": {
+    "path": "ports/java/src/patterns/architectural/Middleware.java",
+    "exports": {
+      "compose": "compose",
+      "Pipeline": "Pipeline"
+    }
+  },
+  "src/patterns/architectural/null-object.ts": {
+    "path": "ports/java/src/patterns/architectural/NullObject.java",
+    "exports": {
+      "MemoryLogger": "MemoryLogger",
+      "NullLogger": "NullLogger",
+      "PaymentService": "PaymentService"
+    }
+  },
+  "src/patterns/architectural/repository.ts": {
+    "path": "ports/java/src/patterns/architectural/Repository.java",
+    "exports": {
+      "InMemoryRepository": "InMemoryRepository"
+    }
+  },
+  "src/patterns/architectural/specification.ts": {
+    "path": "ports/java/src/patterns/architectural/Specification.java",
+    "exports": {
+      "Spec": "Spec",
+      "spec": "spec"
+    }
+  },
+  "src/patterns/architectural/store.ts": {
+    "path": "ports/java/src/patterns/architectural/Store.java",
+    "exports": {
+      "createStore": "createStore",
+      "combineReducers": "combineReducers",
+      "counterReducer": "counterReducer"
+    }
+  },
+  "src/patterns/behavioral/chain-of-responsibility.ts": {
+    "path": "ports/java/src/patterns/behavioral/ChainOfResponsibility.java",
+    "exports": {
+      "SupportHandler": "SupportHandler",
+      "FaqBot": "FaqBot",
+      "SupportAgent": "SupportAgent",
+      "Engineer": "Engineer",
+      "createSupportChain": "createSupportChain"
+    }
+  },
+  "src/patterns/behavioral/command.ts": {
+    "path": "ports/java/src/patterns/behavioral/Command.java",
+    "exports": {
+      "TextDocument": "TextDocument",
+      "InsertCommand": "InsertCommand",
+      "DeleteCommand": "DeleteCommand",
+      "MacroCommand": "MacroCommand",
+      "CommandHistory": "CommandHistory"
+    }
+  },
+  "src/patterns/behavioral/interpreter.ts": {
+    "path": "ports/java/src/patterns/behavioral/Interpreter.java",
+    "exports": {
+      "NumberExpression": "NumberExpression",
+      "VariableExpression": "VariableExpression",
+      "BinaryExpression": "BinaryExpression",
+      "parseExpression": "parseExpression"
+    }
+  },
+  "src/patterns/behavioral/iterator.ts": {
+    "path": "ports/java/src/patterns/behavioral/Iterator.java",
+    "exports": {
+      "NumberRange": "NumberRange",
+      "depthFirst": "depthFirst",
+      "breadthFirst": "breadthFirst",
+      "take": "take"
+    }
+  },
+  "src/patterns/behavioral/mediator.ts": {
+    "path": "ports/java/src/patterns/behavioral/Mediator.java",
+    "exports": {
+      "ChatUser": "ChatUser",
+      "ChatRoom": "ChatRoom"
+    }
+  },
+  "src/patterns/behavioral/memento.ts": {
+    "path": "ports/java/src/patterns/behavioral/Memento.java",
+    "exports": {
+      "Editor": "Editor",
+      "EditorHistory": "EditorHistory"
+    }
+  },
+  "src/patterns/behavioral/observer.ts": {
+    "path": "ports/java/src/patterns/behavioral/Observer.java",
+    "exports": {
+      "Subject": "Subject",
+      "StockTicker": "StockTicker",
+      "BehaviorSubject": "BehaviorSubject"
+    }
+  },
+  "src/patterns/behavioral/state.ts": {
+    "path": "ports/java/src/patterns/behavioral/State.java",
+    "exports": {
+      "Order": "Order"
+    }
+  },
+  "src/patterns/behavioral/strategy.ts": {
+    "path": "ports/java/src/patterns/behavioral/Strategy.java",
+    "exports": {
+      "FlatRateShipping": "FlatRateShipping",
+      "WeightBasedShipping": "WeightBasedShipping",
+      "FreeOverThresholdShipping": "FreeOverThresholdShipping",
+      "ShippingCalculator": "ShippingCalculator"
+    }
+  },
+  "src/patterns/behavioral/template-method.ts": {
+    "path": "ports/java/src/patterns/behavioral/TemplateMethod.java",
+    "exports": {
+      "SalesDataMiner": "SalesDataMiner",
+      "CsvSalesMiner": "CsvSalesMiner",
+      "JsonSalesMiner": "JsonSalesMiner"
+    }
+  },
+  "src/patterns/behavioral/visitor.ts": {
+    "path": "ports/java/src/patterns/behavioral/Visitor.java",
+    "exports": {
+      "CircleShape": "CircleShape",
+      "RectangleShape": "RectangleShape",
+      "TriangleShape": "TriangleShape",
+      "AreaVisitor": "AreaVisitor",
+      "PerimeterVisitor": "PerimeterVisitor",
+      "JsonExportVisitor": "JsonExportVisitor"
+    }
+  },
+  "src/patterns/creational/abstract-factory.ts": {
+    "path": "ports/java/src/patterns/creational/AbstractFactory.java",
+    "exports": {
+      "LightThemeFactory": "LightThemeFactory",
+      "DarkThemeFactory": "DarkThemeFactory",
+      "renderSettingsForm": "renderSettingsForm"
+    }
+  },
+  "src/patterns/creational/builder.ts": {
+    "path": "ports/java/src/patterns/creational/Builder.java",
+    "exports": {
+      "HttpRequestBuilder": "HttpRequestBuilder"
+    }
+  },
+  "src/patterns/creational/factory-method.ts": {
+    "path": "ports/java/src/patterns/creational/FactoryMethod.java",
+    "exports": {
+      "Truck": "Truck",
+      "Ship": "Ship",
+      "Logistics": "Logistics",
+      "RoadLogistics": "RoadLogistics",
+      "SeaLogistics": "SeaLogistics",
+      "createTransport": "createTransport"
+    }
+  },
+  "src/patterns/creational/object-pool.ts": {
+    "path": "ports/java/src/patterns/creational/ObjectPool.java",
+    "exports": {
+      "ObjectPool": "ObjectPool"
+    }
+  },
+  "src/patterns/creational/prototype.ts": {
+    "path": "ports/java/src/patterns/creational/Prototype.java",
+    "exports": {
+      "Shape": "Shape",
+      "Circle": "Circle",
+      "Rectangle": "Rectangle",
+      "PrototypeRegistry": "PrototypeRegistry"
+    }
+  },
+  "src/patterns/creational/singleton.ts": {
+    "path": "ports/java/src/patterns/creational/Singleton.java",
+    "exports": {
+      "AppConfig": "AppConfig",
+      "lazySingleton": "lazySingleton"
+    }
+  },
+  "src/patterns/structural/adapter.ts": {
+    "path": "ports/java/src/patterns/structural/Adapter.java",
+    "exports": {
+      "LegacyFahrenheitSensor": "LegacyFahrenheitSensor",
+      "FahrenheitSensorAdapter": "FahrenheitSensorAdapter",
+      "averageTemperature": "averageTemperature",
+      "promisify": "promisify"
+    }
+  },
+  "src/patterns/structural/bridge.ts": {
+    "path": "ports/java/src/patterns/structural/Bridge.java",
+    "exports": {
+      "Tv": "Tv",
+      "Radio": "Radio",
+      "RemoteControl": "RemoteControl",
+      "AdvancedRemoteControl": "AdvancedRemoteControl"
+    }
+  },
+  "src/patterns/structural/composite.ts": {
+    "path": "ports/java/src/patterns/structural/Composite.java",
+    "exports": {
+      "FileEntry": "FileEntry",
+      "Directory": "Directory"
+    }
+  },
+  "src/patterns/structural/decorator.ts": {
+    "path": "ports/java/src/patterns/structural/Decorator.java",
+    "exports": {
+      "EmailNotifier": "EmailNotifier",
+      "NotifierDecorator": "NotifierDecorator",
+      "SmsNotifier": "SmsNotifier",
+      "SlackNotifier": "SlackNotifier",
+      "withLogging": "withLogging"
+    }
+  },
+  "src/patterns/structural/facade.ts": {
+    "path": "ports/java/src/patterns/structural/Facade.java",
+    "exports": {
+      "VideoFile": "VideoFile",
+      "CodecFactory": "CodecFactory",
+      "BitrateReader": "BitrateReader",
+      "AudioMixer": "AudioMixer",
+      "VideoConverter": "VideoConverter"
+    }
+  },
+  "src/patterns/structural/flyweight.ts": {
+    "path": "ports/java/src/patterns/structural/Flyweight.java",
+    "exports": {
+      "TreeType": "TreeType",
+      "TreeTypeFactory": "TreeTypeFactory",
+      "Forest": "Forest"
+    }
+  },
+  "src/patterns/structural/proxy.ts": {
+    "path": "ports/java/src/patterns/structural/Proxy.java",
+    "exports": {
+      "CachingWeatherProxy": "CachingWeatherProxy",
+      "AccessControlProxy": "AccessControlProxy",
+      "createValidatedObject": "createValidatedObject"
+    }
+  },
+  "src/data-structures/graphs/disjoint-set.ts": {
+    "path": "ports/java/src/data-structures/graphs/DisjointSet.java",
+    "exports": {
+      "DisjointSet": "DisjointSet"
+    }
+  },
+  "src/data-structures/graphs/graph.ts": {
+    "path": "ports/java/src/data-structures/graphs/Graph.java",
+    "exports": {
+      "Graph": "Graph"
+    }
+  },
+  "src/data-structures/hashing/bloom-filter.ts": {
+    "path": "ports/java/src/data-structures/hashing/BloomFilter.java",
+    "exports": {
+      "BloomFilter": "BloomFilter"
+    }
+  },
+  "src/data-structures/hashing/hash-table.ts": {
+    "path": "ports/java/src/data-structures/hashing/HashTable.java",
+    "exports": {
+      "HashTable": "HashTable"
+    }
+  },
+  "src/data-structures/hashing/hash.ts": {
+    "path": "ports/java/src/data-structures/hashing/Hash.java",
+    "exports": {
+      "fnv1a": "fnv1a",
+      "defaultHasher": "defaultHasher"
+    }
+  },
+  "src/data-structures/hashing/lru-cache.ts": {
+    "path": "ports/java/src/data-structures/hashing/LRUCache.java",
+    "exports": {
+      "LRUCache": "LRUCache"
+    }
+  },
+  "src/data-structures/hashing/open-addressing-hash-map.ts": {
+    "path": "ports/java/src/data-structures/hashing/OpenAddressingHashMap.java",
+    "exports": {
+      "OpenAddressingHashMap": "OpenAddressingHashMap"
+    }
+  },
+  "src/data-structures/heaps/binary-heap.ts": {
+    "path": "ports/java/src/data-structures/heaps/BinaryHeap.java",
+    "exports": {
+      "BinaryHeap": "BinaryHeap",
+      "MinHeap": "MinHeap",
+      "MaxHeap": "MaxHeap"
+    }
+  },
+  "src/data-structures/heaps/priority-queue.ts": {
+    "path": "ports/java/src/data-structures/heaps/PriorityQueue.java",
+    "exports": {
+      "PriorityQueue": "PriorityQueue"
+    }
+  },
+  "src/data-structures/linear/circular-buffer.ts": {
+    "path": "ports/java/src/data-structures/linear/CircularBuffer.java",
+    "exports": {
+      "CircularBuffer": "CircularBuffer"
+    }
+  },
+  "src/data-structures/linear/deque.ts": {
+    "path": "ports/java/src/data-structures/linear/Deque.java",
+    "exports": {
+      "Deque": "Deque"
+    }
+  },
+  "src/data-structures/linear/doubly-linked-list.ts": {
+    "path": "ports/java/src/data-structures/linear/DoublyLinkedList.java",
+    "exports": {
+      "DoublyLinkedListNode": "DoublyLinkedListNode",
+      "DoublyLinkedList": "DoublyLinkedList"
+    }
+  },
+  "src/data-structures/linear/linked-list.ts": {
+    "path": "ports/java/src/data-structures/linear/LinkedList.java",
+    "exports": {
+      "LinkedListNode": "LinkedListNode",
+      "LinkedList": "LinkedList"
+    }
+  },
+  "src/data-structures/linear/queue.ts": {
+    "path": "ports/java/src/data-structures/linear/Queue.java",
+    "exports": {
+      "Queue": "Queue"
+    }
+  },
+  "src/data-structures/linear/skip-list.ts": {
+    "path": "ports/java/src/data-structures/linear/SkipList.java",
+    "exports": {
+      "SkipList": "SkipList"
+    }
+  },
+  "src/data-structures/linear/stack.ts": {
+    "path": "ports/java/src/data-structures/linear/Stack.java",
+    "exports": {
+      "Stack": "Stack"
+    }
+  },
+  "src/data-structures/range-queries/fenwick-tree.ts": {
+    "path": "ports/java/src/data-structures/range-queries/FenwickTree.java",
+    "exports": {
+      "FenwickTree": "FenwickTree"
+    }
+  },
+  "src/data-structures/range-queries/lazy-segment-tree.ts": {
+    "path": "ports/java/src/data-structures/range-queries/LazySegmentTree.java",
+    "exports": {
+      "LazySegmentTree": "LazySegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/segment-tree.ts": {
+    "path": "ports/java/src/data-structures/range-queries/SegmentTree.java",
+    "exports": {
+      "SegmentTree": "SegmentTree",
+      "sumSegmentTree": "sumSegmentTree",
+      "minSegmentTree": "minSegmentTree",
+      "maxSegmentTree": "maxSegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/sparse-table.ts": {
+    "path": "ports/java/src/data-structures/range-queries/SparseTable.java",
+    "exports": {
+      "SparseTable": "SparseTable",
+      "minSparseTable": "minSparseTable",
+      "maxSparseTable": "maxSparseTable"
+    }
+  },
+  "src/data-structures/range-queries/sqrt-decomposition.ts": {
+    "path": "ports/java/src/data-structures/range-queries/SqrtDecomposition.java",
+    "exports": {
+      "SqrtDecomposition": "SqrtDecomposition"
+    }
+  },
+  "src/data-structures/trees/avl-tree.ts": {
+    "path": "ports/java/src/data-structures/trees/AVLTree.java",
+    "exports": {
+      "AVLTree": "AVLTree"
+    }
+  },
+  "src/data-structures/trees/b-tree.ts": {
+    "path": "ports/java/src/data-structures/trees/BTree.java",
+    "exports": {
+      "BTree": "BTree"
+    }
+  },
+  "src/data-structures/trees/binary-search-tree.ts": {
+    "path": "ports/java/src/data-structures/trees/BinarySearchTree.java",
+    "exports": {
+      "BSTNode": "BSTNode",
+      "BinarySearchTree": "BinarySearchTree"
+    }
+  },
+  "src/data-structures/trees/red-black-tree.ts": {
+    "path": "ports/java/src/data-structures/trees/RedBlackTree.java",
+    "exports": {
+      "RedBlackTree": "RedBlackTree"
+    }
+  },
+  "src/data-structures/trees/trie.ts": {
+    "path": "ports/java/src/data-structures/trees/Trie.java",
+    "exports": {
+      "Trie": "Trie"
+    }
+  },
+  "src/algorithms/backtracking/n-queens.ts": {
+    "path": "ports/java/src/algorithms/backtracking/NQueens.java",
+    "exports": {
+      "nQueens": "nQueens",
+      "countNQueens": "countNQueens"
+    }
+  },
+  "src/algorithms/backtracking/permutations.ts": {
+    "path": "ports/java/src/algorithms/backtracking/Permutations.java",
+    "exports": {
+      "permutations": "permutations",
+      "combinations": "combinations",
+      "subsets": "subsets",
+      "combinationSum": "combinationSum"
+    }
+  },
+  "src/algorithms/backtracking/sudoku.ts": {
+    "path": "ports/java/src/algorithms/backtracking/Sudoku.java",
+    "exports": {
+      "solveSudoku": "solveSudoku"
+    }
+  },
+  "src/algorithms/backtracking/word-search.ts": {
+    "path": "ports/java/src/algorithms/backtracking/WordSearch.java",
+    "exports": {
+      "wordSearch": "wordSearch"
+    }
+  },
+  "src/algorithms/bit-manipulation/bits.ts": {
+    "path": "ports/java/src/algorithms/bit-manipulation/Bits.java",
+    "exports": {
+      "getBit": "getBit",
+      "setBit": "setBit",
+      "clearBit": "clearBit",
+      "toggleBit": "toggleBit",
+      "countSetBits": "countSetBits",
+      "isPowerOfTwo": "isPowerOfTwo",
+      "lowestSetBit": "lowestSetBit",
+      "singleNumber": "singleNumber",
+      "reverseBits": "reverseBits",
+      "grayCode": "grayCode",
+      "subsetsByMask": "subsetsByMask",
+      "swapWithoutTemp": "swapWithoutTemp",
+      "hammingDistance": "hammingDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/coin-change.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/CoinChange.java",
+    "exports": {
+      "minCoins": "minCoins",
+      "coinChangeWays": "coinChangeWays"
+    }
+  },
+  "src/algorithms/dynamic-programming/edit-distance.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/EditDistance.java",
+    "exports": {
+      "editDistance": "editDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/fibonacci.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/Fibonacci.java",
+    "exports": {
+      "fibonacciRecursive": "fibonacciRecursive",
+      "fibonacciMemo": "fibonacciMemo",
+      "fibonacci": "fibonacci",
+      "fibonacciFast": "fibonacciFast"
+    }
+  },
+  "src/algorithms/dynamic-programming/grid-paths.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/GridPaths.java",
+    "exports": {
+      "uniquePaths": "uniquePaths",
+      "minPathSum": "minPathSum"
+    }
+  },
+  "src/algorithms/dynamic-programming/knapsack.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/Knapsack.java",
+    "exports": {
+      "knapsack01": "knapsack01",
+      "unboundedKnapsack": "unboundedKnapsack"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-common-subsequence.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/LongestCommonSubsequence.java",
+    "exports": {
+      "longestCommonSubsequence": "longestCommonSubsequence",
+      "longestCommonSubstring": "longestCommonSubstring"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-increasing-subsequence.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/LongestIncreasingSubsequence.java",
+    "exports": {
+      "longestIncreasingSubsequence": "longestIncreasingSubsequence"
+    }
+  },
+  "src/algorithms/dynamic-programming/matrix-chain.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/MatrixChain.java",
+    "exports": {
+      "matrixChainOrder": "matrixChainOrder"
+    }
+  },
+  "src/algorithms/dynamic-programming/max-subarray.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/MaxSubarray.java",
+    "exports": {
+      "maxSubarray": "maxSubarray"
+    }
+  },
+  "src/algorithms/dynamic-programming/memoize.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/Memoize.java",
+    "exports": {
+      "memoize": "memoize"
+    }
+  },
+  "src/algorithms/dynamic-programming/rod-cutting.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/RodCutting.java",
+    "exports": {
+      "rodCutting": "rodCutting"
+    }
+  },
+  "src/algorithms/dynamic-programming/subset-sum.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/SubsetSum.java",
+    "exports": {
+      "subsetSum": "subsetSum",
+      "canPartition": "canPartition"
+    }
+  },
+  "src/algorithms/dynamic-programming/word-break.ts": {
+    "path": "ports/java/src/algorithms/dynamic-programming/WordBreak.java",
+    "exports": {
+      "wordBreak": "wordBreak"
+    }
+  },
+  "src/algorithms/geometry/geometry.ts": {
+    "path": "ports/java/src/algorithms/geometry/Geometry.java",
+    "exports": {
+      "cross": "cross",
+      "distance": "distance",
+      "convexHull": "convexHull",
+      "polygonArea": "polygonArea",
+      "pointInPolygon": "pointInPolygon",
+      "segmentsIntersect": "segmentsIntersect",
+      "closestPair": "closestPair"
+    }
+  },
+  "src/algorithms/graphs/a-star.ts": {
+    "path": "ports/java/src/algorithms/graphs/AStar.java",
+    "exports": {
+      "aStar": "aStar",
+      "aStarGrid": "aStarGrid"
+    }
+  },
+  "src/algorithms/graphs/bellman-ford.ts": {
+    "path": "ports/java/src/algorithms/graphs/BellmanFord.java",
+    "exports": {
+      "bellmanFord": "bellmanFord"
+    }
+  },
+  "src/algorithms/graphs/bfs.ts": {
+    "path": "ports/java/src/algorithms/graphs/Bfs.java",
+    "exports": {
+      "bfs": "bfs",
+      "shortestPathUnweighted": "shortestPathUnweighted",
+      "gridShortestPath": "gridShortestPath"
+    }
+  },
+  "src/algorithms/graphs/bipartite.ts": {
+    "path": "ports/java/src/algorithms/graphs/Bipartite.java",
+    "exports": {
+      "bipartiteColoring": "bipartiteColoring",
+      "isBipartite": "isBipartite"
+    }
+  },
+  "src/algorithms/graphs/bridges-and-articulation-points.ts": {
+    "path": "ports/java/src/algorithms/graphs/BridgesAndArticulationPoints.java",
+    "exports": {
+      "findBridgesAndArticulationPoints": "findBridgesAndArticulationPoints"
+    }
+  },
+  "src/algorithms/graphs/connected-components.ts": {
+    "path": "ports/java/src/algorithms/graphs/ConnectedComponents.java",
+    "exports": {
+      "connectedComponents": "connectedComponents"
+    }
+  },
+  "src/algorithms/graphs/cycle-detection.ts": {
+    "path": "ports/java/src/algorithms/graphs/CycleDetection.java",
+    "exports": {
+      "hasCycleDirected": "hasCycleDirected",
+      "hasCycleUndirected": "hasCycleUndirected"
+    }
+  },
+  "src/algorithms/graphs/dfs.ts": {
+    "path": "ports/java/src/algorithms/graphs/Dfs.java",
+    "exports": {
+      "dfs": "dfs",
+      "dfsRecursive": "dfsRecursive",
+      "hasPath": "hasPath"
+    }
+  },
+  "src/algorithms/graphs/dijkstra.ts": {
+    "path": "ports/java/src/algorithms/graphs/Dijkstra.java",
+    "exports": {
+      "dijkstra": "dijkstra",
+      "dijkstraPath": "dijkstraPath"
+    }
+  },
+  "src/algorithms/graphs/eulerian-path.ts": {
+    "path": "ports/java/src/algorithms/graphs/EulerianPath.java",
+    "exports": {
+      "eulerianPathDirected": "eulerianPathDirected"
+    }
+  },
+  "src/algorithms/graphs/flood-fill.ts": {
+    "path": "ports/java/src/algorithms/graphs/FloodFill.java",
+    "exports": {
+      "floodFill": "floodFill"
+    }
+  },
+  "src/algorithms/graphs/floyd-warshall.ts": {
+    "path": "ports/java/src/algorithms/graphs/FloydWarshall.java",
+    "exports": {
+      "floydWarshall": "floydWarshall",
+      "floydWarshallPath": "floydWarshallPath"
+    }
+  },
+  "src/algorithms/graphs/max-flow.ts": {
+    "path": "ports/java/src/algorithms/graphs/MaxFlow.java",
+    "exports": {
+      "edmondsKarp": "edmondsKarp"
+    }
+  },
+  "src/algorithms/graphs/minimum-spanning-tree.ts": {
+    "path": "ports/java/src/algorithms/graphs/MinimumSpanningTree.java",
+    "exports": {
+      "kruskal": "kruskal",
+      "prim": "prim"
+    }
+  },
+  "src/algorithms/graphs/strongly-connected-components.ts": {
+    "path": "ports/java/src/algorithms/graphs/StronglyConnectedComponents.java",
+    "exports": {
+      "tarjanScc": "tarjanScc",
+      "kosarajuScc": "kosarajuScc"
+    }
+  },
+  "src/algorithms/graphs/topological-sort.ts": {
+    "path": "ports/java/src/algorithms/graphs/TopologicalSort.java",
+    "exports": {
+      "topologicalSortKahn": "topologicalSortKahn",
+      "topologicalSortDfs": "topologicalSortDfs"
+    }
+  },
+  "src/algorithms/graphs/types.ts": {
+    "path": "ports/java/src/algorithms/graphs/Types.java",
+    "exports": {
+      "reconstructPath": "reconstructPath",
+      "toUndirected": "toUndirected",
+      "toWeightedUndirected": "toWeightedUndirected"
+    }
+  },
+  "src/algorithms/greedy/activity-selection.ts": {
+    "path": "ports/java/src/algorithms/greedy/ActivitySelection.java",
+    "exports": {
+      "activitySelection": "activitySelection",
+      "mergeIntervals": "mergeIntervals",
+      "minMeetingRooms": "minMeetingRooms"
+    }
+  },
+  "src/algorithms/greedy/fractional-knapsack.ts": {
+    "path": "ports/java/src/algorithms/greedy/FractionalKnapsack.java",
+    "exports": {
+      "fractionalKnapsack": "fractionalKnapsack"
+    }
+  },
+  "src/algorithms/greedy/huffman.ts": {
+    "path": "ports/java/src/algorithms/greedy/Huffman.java",
+    "exports": {
+      "huffmanCodes": "huffmanCodes",
+      "huffmanEncode": "huffmanEncode",
+      "huffmanDecode": "huffmanDecode"
+    }
+  },
+  "src/algorithms/greedy/jump-game.ts": {
+    "path": "ports/java/src/algorithms/greedy/JumpGame.java",
+    "exports": {
+      "canReachEnd": "canReachEnd",
+      "minJumps": "minJumps",
+      "greedyChange": "greedyChange"
+    }
+  },
+  "src/algorithms/math/combinatorics.ts": {
+    "path": "ports/java/src/algorithms/math/Combinatorics.java",
+    "exports": {
+      "factorial": "factorial",
+      "binomial": "binomial",
+      "pascalTriangle": "pascalTriangle",
+      "catalan": "catalan",
+      "nextPermutation": "nextPermutation"
+    }
+  },
+  "src/algorithms/math/gcd.ts": {
+    "path": "ports/java/src/algorithms/math/Gcd.java",
+    "exports": {
+      "gcd": "gcd",
+      "lcm": "lcm",
+      "extendedGcd": "extendedGcd",
+      "modInverse": "modInverse"
+    }
+  },
+  "src/algorithms/math/matrix.ts": {
+    "path": "ports/java/src/algorithms/math/Matrix.java",
+    "exports": {
+      "identity": "identity",
+      "multiply": "multiply",
+      "transpose": "transpose",
+      "matrixPower": "matrixPower",
+      "determinant": "determinant",
+      "solveLinearSystem": "solveLinearSystem"
+    }
+  },
+  "src/algorithms/math/number-conversion.ts": {
+    "path": "ports/java/src/algorithms/math/NumberConversion.java",
+    "exports": {
+      "toBase": "toBase",
+      "fromBase": "fromBase",
+      "toRoman": "toRoman",
+      "fromRoman": "fromRoman"
+    }
+  },
+  "src/algorithms/math/power.ts": {
+    "path": "ports/java/src/algorithms/math/Power.java",
+    "exports": {
+      "fastPower": "fastPower",
+      "modPow": "modPow",
+      "integerSqrt": "integerSqrt",
+      "newtonSqrt": "newtonSqrt"
+    }
+  },
+  "src/algorithms/math/primes.ts": {
+    "path": "ports/java/src/algorithms/math/Primes.java",
+    "exports": {
+      "sieveOfEratosthenes": "sieveOfEratosthenes",
+      "linearSieve": "linearSieve",
+      "isPrime": "isPrime",
+      "millerRabin": "millerRabin",
+      "primeFactors": "primeFactors",
+      "divisors": "divisors",
+      "eulerPhi": "eulerPhi"
+    }
+  },
+  "src/algorithms/randomized/shuffle.ts": {
+    "path": "ports/java/src/algorithms/randomized/Shuffle.java",
+    "exports": {
+      "fisherYatesShuffle": "fisherYatesShuffle",
+      "reservoirSample": "reservoirSample",
+      "mulberry32": "mulberry32",
+      "monteCarloPi": "monteCarloPi"
+    }
+  },
+  "src/algorithms/searching/binary-search.ts": {
+    "path": "ports/java/src/algorithms/searching/BinarySearch.java",
+    "exports": {
+      "binarySearch": "binarySearch",
+      "binarySearchRecursive": "binarySearchRecursive",
+      "lowerBound": "lowerBound",
+      "upperBound": "upperBound",
+      "firstTrue": "firstTrue"
+    }
+  },
+  "src/algorithms/searching/exponential-search.ts": {
+    "path": "ports/java/src/algorithms/searching/ExponentialSearch.java",
+    "exports": {
+      "exponentialSearch": "exponentialSearch"
+    }
+  },
+  "src/algorithms/searching/interpolation-search.ts": {
+    "path": "ports/java/src/algorithms/searching/InterpolationSearch.java",
+    "exports": {
+      "interpolationSearch": "interpolationSearch"
+    }
+  },
+  "src/algorithms/searching/jump-search.ts": {
+    "path": "ports/java/src/algorithms/searching/JumpSearch.java",
+    "exports": {
+      "jumpSearch": "jumpSearch"
+    }
+  },
+  "src/algorithms/searching/linear-search.ts": {
+    "path": "ports/java/src/algorithms/searching/LinearSearch.java",
+    "exports": {
+      "linearSearch": "linearSearch",
+      "linearSearchAll": "linearSearchAll"
+    }
+  },
+  "src/algorithms/searching/quick-select.ts": {
+    "path": "ports/java/src/algorithms/searching/QuickSelect.java",
+    "exports": {
+      "quickSelect": "quickSelect",
+      "median": "median"
+    }
+  },
+  "src/algorithms/searching/ternary-search.ts": {
+    "path": "ports/java/src/algorithms/searching/TernarySearch.java",
+    "exports": {
+      "ternarySearchMax": "ternarySearchMax",
+      "ternarySearchMin": "ternarySearchMin",
+      "findPeakIndex": "findPeakIndex"
+    }
+  },
+  "src/algorithms/sorting/bubble-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/BubbleSort.java",
+    "exports": {
+      "bubbleSort": "bubbleSort"
+    }
+  },
+  "src/algorithms/sorting/bucket-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/BucketSort.java",
+    "exports": {
+      "bucketSort": "bucketSort"
+    }
+  },
+  "src/algorithms/sorting/cocktail-shaker-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/CocktailShakerSort.java",
+    "exports": {
+      "cocktailShakerSort": "cocktailShakerSort"
+    }
+  },
+  "src/algorithms/sorting/counting-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/CountingSort.java",
+    "exports": {
+      "countingSort": "countingSort"
+    }
+  },
+  "src/algorithms/sorting/heap-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/HeapSort.java",
+    "exports": {
+      "heapSort": "heapSort"
+    }
+  },
+  "src/algorithms/sorting/index.ts": {
+    "path": "ports/java/src/algorithms/sorting/Index.java",
+    "exports": {}
+  },
+  "src/algorithms/sorting/insertion-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/InsertionSort.java",
+    "exports": {
+      "insertionSortRange": "insertionSortRange",
+      "insertionSort": "insertionSort"
+    }
+  },
+  "src/algorithms/sorting/merge-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/MergeSort.java",
+    "exports": {
+      "merge": "merge",
+      "mergeSort": "mergeSort",
+      "bottomUpMergeSort": "bottomUpMergeSort"
+    }
+  },
+  "src/algorithms/sorting/quick-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/QuickSort.java",
+    "exports": {
+      "partition3": "partition3",
+      "quickSort": "quickSort",
+      "lomutoPartition": "lomutoPartition",
+      "quickSortFunctional": "quickSortFunctional"
+    }
+  },
+  "src/algorithms/sorting/radix-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/RadixSort.java",
+    "exports": {
+      "radixSort": "radixSort"
+    }
+  },
+  "src/algorithms/sorting/selection-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/SelectionSort.java",
+    "exports": {
+      "selectionSort": "selectionSort"
+    }
+  },
+  "src/algorithms/sorting/shell-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/ShellSort.java",
+    "exports": {
+      "shellSort": "shellSort"
+    }
+  },
+  "src/algorithms/sorting/tim-sort.ts": {
+    "path": "ports/java/src/algorithms/sorting/TimSort.java",
+    "exports": {
+      "timSort": "timSort"
+    }
+  },
+  "src/algorithms/strings/aho-corasick.ts": {
+    "path": "ports/java/src/algorithms/strings/AhoCorasick.java",
+    "exports": {
+      "AhoCorasick": "AhoCorasick"
+    }
+  },
+  "src/algorithms/strings/boyer-moore-horspool.ts": {
+    "path": "ports/java/src/algorithms/strings/BoyerMooreHorspool.java",
+    "exports": {
+      "boyerMooreHorspool": "boyerMooreHorspool"
+    }
+  },
+  "src/algorithms/strings/kmp.ts": {
+    "path": "ports/java/src/algorithms/strings/Kmp.java",
+    "exports": {
+      "prefixFunction": "prefixFunction",
+      "kmpSearch": "kmpSearch"
+    }
+  },
+  "src/algorithms/strings/manacher.ts": {
+    "path": "ports/java/src/algorithms/strings/Manacher.java",
+    "exports": {
+      "longestPalindromicSubstring": "longestPalindromicSubstring"
+    }
+  },
+  "src/algorithms/strings/rabin-karp.ts": {
+    "path": "ports/java/src/algorithms/strings/RabinKarp.java",
+    "exports": {
+      "rabinKarp": "rabinKarp"
+    }
+  },
+  "src/algorithms/strings/string-utils.ts": {
+    "path": "ports/java/src/algorithms/strings/StringUtils.java",
+    "exports": {
+      "isBalanced": "isBalanced",
+      "isPalindrome": "isPalindrome",
+      "isAnagram": "isAnagram",
+      "groupAnagrams": "groupAnagrams",
+      "runLengthEncode": "runLengthEncode",
+      "runLengthDecode": "runLengthDecode",
+      "reverseWords": "reverseWords"
+    }
+  },
+  "src/algorithms/strings/suffix-array.ts": {
+    "path": "ports/java/src/algorithms/strings/SuffixArray.java",
+    "exports": {
+      "suffixArray": "suffixArray",
+      "lcpArray": "lcpArray",
+      "countDistinctSubstrings": "countDistinctSubstrings"
+    }
+  },
+  "src/algorithms/strings/z-function.ts": {
+    "path": "ports/java/src/algorithms/strings/ZFunction.java",
+    "exports": {
+      "zFunction": "zFunction",
+      "zSearch": "zSearch"
+    }
+  },
+  "src/algorithms/techniques/prefix-sums.ts": {
+    "path": "ports/java/src/algorithms/techniques/PrefixSums.java",
+    "exports": {
+      "PrefixSums": "PrefixSums",
+      "PrefixSums2D": "PrefixSums2D",
+      "subarraySumEquals": "subarraySumEquals",
+      "differenceArrayApply": "differenceArrayApply",
+      "majorityElement": "majorityElement"
+    }
+  },
+  "src/algorithms/techniques/sliding-window.ts": {
+    "path": "ports/java/src/algorithms/techniques/SlidingWindow.java",
+    "exports": {
+      "maxSumWindow": "maxSumWindow",
+      "slidingWindowMaximum": "slidingWindowMaximum",
+      "longestUniqueSubstring": "longestUniqueSubstring",
+      "minWindowSubstring": "minWindowSubstring"
+    }
+  },
+  "src/algorithms/techniques/two-pointers.ts": {
+    "path": "ports/java/src/algorithms/techniques/TwoPointers.java",
+    "exports": {
+      "twoSumSorted": "twoSumSorted",
+      "twoSum": "twoSum",
+      "threeSum": "threeSum",
+      "containerWithMostWater": "containerWithMostWater",
+      "removeDuplicatesSorted": "removeDuplicatesSorted",
+      "dutchNationalFlag": "dutchNationalFlag",
+      "hasCycleFloyd": "hasCycleFloyd"
+    }
+  },
+  "src/algorithms/trees/binary-tree.ts": {
+    "path": "ports/java/src/algorithms/trees/BinaryTree.java",
+    "exports": {
+      "treeNode": "treeNode",
+      "fromLevelOrder": "fromLevelOrder",
+      "preOrder": "preOrder",
+      "inOrder": "inOrder",
+      "postOrder": "postOrder",
+      "levelOrder": "levelOrder",
+      "maxDepth": "maxDepth",
+      "maxValue": "maxValue",
+      "isValidBst": "isValidBst",
+      "invertTree": "invertTree",
+      "lowestCommonAncestorBst": "lowestCommonAncestorBst"
+    }
+  },
+  "src/algorithms/trees/lowest-common-ancestor.ts": {
+    "path": "ports/java/src/algorithms/trees/LowestCommonAncestor.java",
+    "exports": {
+      "LowestCommonAncestor": "LowestCommonAncestor"
+    }
+  },
+  "src/algorithms/trees/tree-diameter.ts": {
+    "path": "ports/java/src/algorithms/trees/TreeDiameter.java",
+    "exports": {
+      "treeDiameter": "treeDiameter"
+    }
+  }
+}

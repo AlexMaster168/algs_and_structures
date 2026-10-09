@@ -1,0 +1,8 @@
+package algorithms.techniques;
+import java.util.*;
+import java.util.function.*;
+import java.math.*;
+
+public class SlidingWindow {
+public static double maxSumWindow(double[] a,int size){if(size<=0||size>a.length)throw new IllegalArgumentException();double s=0;for(int i=0;i<size;i++)s+=a[i];double b=s;for(int i=size;i<a.length;i++){s+=a[i]-a[i-size];b=Math.max(b,s);}return b;}public static List<Double> slidingWindowMaximum(double[] a,int size){Deque<Integer> q=new ArrayDeque<>();List<Double> o=new ArrayList<>();for(int i=0;i<a.length;i++){while(!q.isEmpty()&&q.peekFirst()<=i-size)q.removeFirst();while(!q.isEmpty()&&a[q.peekLast()]<=a[i])q.removeLast();q.addLast(i);if(i>=size-1)o.add(a[q.peekFirst()]);}return o;}public static String longestUniqueSubstring(String s){Map<Character,Integer> seen=new HashMap<>();int start=0,bestStart=0,best=0;for(int end=0;end<s.length();end++){Integer prev=seen.put(s.charAt(end),end);if(prev!=null&&prev>=start)start=prev+1;if(end-start+1>best){best=end-start+1;bestStart=start;}}return s.substring(bestStart,bestStart+best);}public static String minWindowSubstring(String s,String req){if(req.isEmpty())return "";Map<Character,Integer> need=new HashMap<>();for(char c:req.toCharArray())need.merge(c,1,Integer::sum);int missing=req.length(),start=0,best=Integer.MAX_VALUE;for(int l=0,r=0;r<s.length();r++){char c=s.charAt(r);if(need.getOrDefault(c,0)>0)missing--;need.merge(c,-1,Integer::sum);while(missing==0){if(r-l+1<best){best=r-l+1;start=l;}char lc=s.charAt(l++);need.merge(lc,1,Integer::sum);if(need.get(lc)>0)missing++;}}return best==Integer.MAX_VALUE?"":s.substring(start,start+best);}
+}

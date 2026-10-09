@@ -1,0 +1,1043 @@
+{
+  "src/algorithms/backtracking/n-queens.ts": {
+    "path": "ports/javascript/algorithms/backtracking/n-queens.js",
+    "exports": {
+      "nQueens": "nQueens",
+      "countNQueens": "countNQueens"
+    }
+  },
+  "src/algorithms/backtracking/permutations.ts": {
+    "path": "ports/javascript/algorithms/backtracking/permutations.js",
+    "exports": {
+      "permutations": "permutations",
+      "combinations": "combinations",
+      "subsets": "subsets",
+      "combinationSum": "combinationSum"
+    }
+  },
+  "src/algorithms/backtracking/sudoku.ts": {
+    "path": "ports/javascript/algorithms/backtracking/sudoku.js",
+    "exports": {
+      "solveSudoku": "solveSudoku"
+    }
+  },
+  "src/algorithms/backtracking/word-search.ts": {
+    "path": "ports/javascript/algorithms/backtracking/word-search.js",
+    "exports": {
+      "wordSearch": "wordSearch"
+    }
+  },
+  "src/algorithms/bit-manipulation/bits.ts": {
+    "path": "ports/javascript/algorithms/bit-manipulation/bits.js",
+    "exports": {
+      "getBit": "getBit",
+      "setBit": "setBit",
+      "clearBit": "clearBit",
+      "toggleBit": "toggleBit",
+      "countSetBits": "countSetBits",
+      "isPowerOfTwo": "isPowerOfTwo",
+      "lowestSetBit": "lowestSetBit",
+      "singleNumber": "singleNumber",
+      "reverseBits": "reverseBits",
+      "grayCode": "grayCode",
+      "subsetsByMask": "subsetsByMask",
+      "swapWithoutTemp": "swapWithoutTemp",
+      "hammingDistance": "hammingDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/coin-change.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/coin-change.js",
+    "exports": {
+      "minCoins": "minCoins",
+      "coinChangeWays": "coinChangeWays"
+    }
+  },
+  "src/algorithms/dynamic-programming/edit-distance.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/edit-distance.js",
+    "exports": {
+      "editDistance": "editDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/fibonacci.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/fibonacci.js",
+    "exports": {
+      "fibonacciRecursive": "fibonacciRecursive",
+      "fibonacciMemo": "fibonacciMemo",
+      "fibonacci": "fibonacci",
+      "fibonacciFast": "fibonacciFast"
+    }
+  },
+  "src/algorithms/dynamic-programming/grid-paths.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/grid-paths.js",
+    "exports": {
+      "uniquePaths": "uniquePaths",
+      "minPathSum": "minPathSum"
+    }
+  },
+  "src/algorithms/dynamic-programming/knapsack.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/knapsack.js",
+    "exports": {
+      "knapsack01": "knapsack01",
+      "unboundedKnapsack": "unboundedKnapsack"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-common-subsequence.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/longest-common-subsequence.js",
+    "exports": {
+      "longestCommonSubsequence": "longestCommonSubsequence",
+      "longestCommonSubstring": "longestCommonSubstring"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-increasing-subsequence.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/longest-increasing-subsequence.js",
+    "exports": {
+      "longestIncreasingSubsequence": "longestIncreasingSubsequence"
+    }
+  },
+  "src/algorithms/dynamic-programming/matrix-chain.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/matrix-chain.js",
+    "exports": {
+      "matrixChainOrder": "matrixChainOrder"
+    }
+  },
+  "src/algorithms/dynamic-programming/max-subarray.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/max-subarray.js",
+    "exports": {
+      "maxSubarray": "maxSubarray"
+    }
+  },
+  "src/algorithms/dynamic-programming/memoize.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/memoize.js",
+    "exports": {
+      "memoize": "memoize"
+    }
+  },
+  "src/algorithms/dynamic-programming/rod-cutting.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/rod-cutting.js",
+    "exports": {
+      "rodCutting": "rodCutting"
+    }
+  },
+  "src/algorithms/dynamic-programming/subset-sum.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/subset-sum.js",
+    "exports": {
+      "subsetSum": "subsetSum",
+      "canPartition": "canPartition"
+    }
+  },
+  "src/algorithms/dynamic-programming/word-break.ts": {
+    "path": "ports/javascript/algorithms/dynamic-programming/word-break.js",
+    "exports": {
+      "wordBreak": "wordBreak"
+    }
+  },
+  "src/algorithms/geometry/geometry.ts": {
+    "path": "ports/javascript/algorithms/geometry/geometry.js",
+    "exports": {
+      "cross": "cross",
+      "distance": "distance",
+      "convexHull": "convexHull",
+      "polygonArea": "polygonArea",
+      "pointInPolygon": "pointInPolygon",
+      "segmentsIntersect": "segmentsIntersect",
+      "closestPair": "closestPair"
+    }
+  },
+  "src/algorithms/graphs/a-star.ts": {
+    "path": "ports/javascript/algorithms/graphs/a-star.js",
+    "exports": {
+      "aStar": "aStar",
+      "aStarGrid": "aStarGrid"
+    }
+  },
+  "src/algorithms/graphs/bellman-ford.ts": {
+    "path": "ports/javascript/algorithms/graphs/bellman-ford.js",
+    "exports": {
+      "bellmanFord": "bellmanFord"
+    }
+  },
+  "src/algorithms/graphs/bfs.ts": {
+    "path": "ports/javascript/algorithms/graphs/bfs.js",
+    "exports": {
+      "bfs": "bfs",
+      "shortestPathUnweighted": "shortestPathUnweighted",
+      "gridShortestPath": "gridShortestPath"
+    }
+  },
+  "src/algorithms/graphs/bipartite.ts": {
+    "path": "ports/javascript/algorithms/graphs/bipartite.js",
+    "exports": {
+      "bipartiteColoring": "bipartiteColoring",
+      "isBipartite": "isBipartite"
+    }
+  },
+  "src/algorithms/graphs/bridges-and-articulation-points.ts": {
+    "path": "ports/javascript/algorithms/graphs/bridges-and-articulation-points.js",
+    "exports": {
+      "findBridgesAndArticulationPoints": "findBridgesAndArticulationPoints"
+    }
+  },
+  "src/algorithms/graphs/connected-components.ts": {
+    "path": "ports/javascript/algorithms/graphs/connected-components.js",
+    "exports": {
+      "connectedComponents": "connectedComponents"
+    }
+  },
+  "src/algorithms/graphs/cycle-detection.ts": {
+    "path": "ports/javascript/algorithms/graphs/cycle-detection.js",
+    "exports": {
+      "hasCycleDirected": "hasCycleDirected",
+      "hasCycleUndirected": "hasCycleUndirected"
+    }
+  },
+  "src/algorithms/graphs/dfs.ts": {
+    "path": "ports/javascript/algorithms/graphs/dfs.js",
+    "exports": {
+      "dfs": "dfs",
+      "dfsRecursive": "dfsRecursive",
+      "hasPath": "hasPath"
+    }
+  },
+  "src/algorithms/graphs/dijkstra.ts": {
+    "path": "ports/javascript/algorithms/graphs/dijkstra.js",
+    "exports": {
+      "dijkstra": "dijkstra",
+      "dijkstraPath": "dijkstraPath"
+    }
+  },
+  "src/algorithms/graphs/eulerian-path.ts": {
+    "path": "ports/javascript/algorithms/graphs/eulerian-path.js",
+    "exports": {
+      "eulerianPathDirected": "eulerianPathDirected"
+    }
+  },
+  "src/algorithms/graphs/flood-fill.ts": {
+    "path": "ports/javascript/algorithms/graphs/flood-fill.js",
+    "exports": {
+      "floodFill": "floodFill"
+    }
+  },
+  "src/algorithms/graphs/floyd-warshall.ts": {
+    "path": "ports/javascript/algorithms/graphs/floyd-warshall.js",
+    "exports": {
+      "floydWarshall": "floydWarshall",
+      "floydWarshallPath": "floydWarshallPath"
+    }
+  },
+  "src/algorithms/graphs/max-flow.ts": {
+    "path": "ports/javascript/algorithms/graphs/max-flow.js",
+    "exports": {
+      "edmondsKarp": "edmondsKarp"
+    }
+  },
+  "src/algorithms/graphs/minimum-spanning-tree.ts": {
+    "path": "ports/javascript/algorithms/graphs/minimum-spanning-tree.js",
+    "exports": {
+      "kruskal": "kruskal",
+      "prim": "prim"
+    }
+  },
+  "src/algorithms/graphs/strongly-connected-components.ts": {
+    "path": "ports/javascript/algorithms/graphs/strongly-connected-components.js",
+    "exports": {
+      "tarjanScc": "tarjanScc",
+      "kosarajuScc": "kosarajuScc"
+    }
+  },
+  "src/algorithms/graphs/topological-sort.ts": {
+    "path": "ports/javascript/algorithms/graphs/topological-sort.js",
+    "exports": {
+      "topologicalSortKahn": "topologicalSortKahn",
+      "topologicalSortDfs": "topologicalSortDfs"
+    }
+  },
+  "src/algorithms/graphs/types.ts": {
+    "path": "ports/javascript/algorithms/graphs/types.js",
+    "exports": {
+      "reconstructPath": "reconstructPath",
+      "toUndirected": "toUndirected",
+      "toWeightedUndirected": "toWeightedUndirected"
+    }
+  },
+  "src/algorithms/greedy/activity-selection.ts": {
+    "path": "ports/javascript/algorithms/greedy/activity-selection.js",
+    "exports": {
+      "activitySelection": "activitySelection",
+      "mergeIntervals": "mergeIntervals",
+      "minMeetingRooms": "minMeetingRooms"
+    }
+  },
+  "src/algorithms/greedy/fractional-knapsack.ts": {
+    "path": "ports/javascript/algorithms/greedy/fractional-knapsack.js",
+    "exports": {
+      "fractionalKnapsack": "fractionalKnapsack"
+    }
+  },
+  "src/algorithms/greedy/huffman.ts": {
+    "path": "ports/javascript/algorithms/greedy/huffman.js",
+    "exports": {
+      "huffmanCodes": "huffmanCodes",
+      "huffmanEncode": "huffmanEncode",
+      "huffmanDecode": "huffmanDecode"
+    }
+  },
+  "src/algorithms/greedy/jump-game.ts": {
+    "path": "ports/javascript/algorithms/greedy/jump-game.js",
+    "exports": {
+      "canReachEnd": "canReachEnd",
+      "minJumps": "minJumps",
+      "greedyChange": "greedyChange"
+    }
+  },
+  "src/algorithms/math/combinatorics.ts": {
+    "path": "ports/javascript/algorithms/math/combinatorics.js",
+    "exports": {
+      "factorial": "factorial",
+      "binomial": "binomial",
+      "pascalTriangle": "pascalTriangle",
+      "catalan": "catalan",
+      "nextPermutation": "nextPermutation"
+    }
+  },
+  "src/algorithms/math/gcd.ts": {
+    "path": "ports/javascript/algorithms/math/gcd.js",
+    "exports": {
+      "gcd": "gcd",
+      "lcm": "lcm",
+      "extendedGcd": "extendedGcd",
+      "modInverse": "modInverse"
+    }
+  },
+  "src/algorithms/math/matrix.ts": {
+    "path": "ports/javascript/algorithms/math/matrix.js",
+    "exports": {
+      "identity": "identity",
+      "multiply": "multiply",
+      "transpose": "transpose",
+      "matrixPower": "matrixPower",
+      "determinant": "determinant",
+      "solveLinearSystem": "solveLinearSystem"
+    }
+  },
+  "src/algorithms/math/number-conversion.ts": {
+    "path": "ports/javascript/algorithms/math/number-conversion.js",
+    "exports": {
+      "toBase": "toBase",
+      "fromBase": "fromBase",
+      "toRoman": "toRoman",
+      "fromRoman": "fromRoman"
+    }
+  },
+  "src/algorithms/math/power.ts": {
+    "path": "ports/javascript/algorithms/math/power.js",
+    "exports": {
+      "fastPower": "fastPower",
+      "modPow": "modPow",
+      "integerSqrt": "integerSqrt",
+      "newtonSqrt": "newtonSqrt"
+    }
+  },
+  "src/algorithms/math/primes.ts": {
+    "path": "ports/javascript/algorithms/math/primes.js",
+    "exports": {
+      "sieveOfEratosthenes": "sieveOfEratosthenes",
+      "linearSieve": "linearSieve",
+      "isPrime": "isPrime",
+      "millerRabin": "millerRabin",
+      "primeFactors": "primeFactors",
+      "divisors": "divisors",
+      "eulerPhi": "eulerPhi"
+    }
+  },
+  "src/algorithms/randomized/shuffle.ts": {
+    "path": "ports/javascript/algorithms/randomized/shuffle.js",
+    "exports": {
+      "fisherYatesShuffle": "fisherYatesShuffle",
+      "reservoirSample": "reservoirSample",
+      "mulberry32": "mulberry32",
+      "monteCarloPi": "monteCarloPi"
+    }
+  },
+  "src/algorithms/searching/binary-search.ts": {
+    "path": "ports/javascript/algorithms/searching/binary-search.js",
+    "exports": {
+      "binarySearch": "binarySearch",
+      "binarySearchRecursive": "binarySearchRecursive",
+      "lowerBound": "lowerBound",
+      "upperBound": "upperBound",
+      "firstTrue": "firstTrue"
+    }
+  },
+  "src/algorithms/searching/exponential-search.ts": {
+    "path": "ports/javascript/algorithms/searching/exponential-search.js",
+    "exports": {
+      "exponentialSearch": "exponentialSearch"
+    }
+  },
+  "src/algorithms/searching/interpolation-search.ts": {
+    "path": "ports/javascript/algorithms/searching/interpolation-search.js",
+    "exports": {
+      "interpolationSearch": "interpolationSearch"
+    }
+  },
+  "src/algorithms/searching/jump-search.ts": {
+    "path": "ports/javascript/algorithms/searching/jump-search.js",
+    "exports": {
+      "jumpSearch": "jumpSearch"
+    }
+  },
+  "src/algorithms/searching/linear-search.ts": {
+    "path": "ports/javascript/algorithms/searching/linear-search.js",
+    "exports": {
+      "linearSearch": "linearSearch",
+      "linearSearchAll": "linearSearchAll"
+    }
+  },
+  "src/algorithms/searching/quick-select.ts": {
+    "path": "ports/javascript/algorithms/searching/quick-select.js",
+    "exports": {
+      "quickSelect": "quickSelect",
+      "median": "median"
+    }
+  },
+  "src/algorithms/searching/ternary-search.ts": {
+    "path": "ports/javascript/algorithms/searching/ternary-search.js",
+    "exports": {
+      "ternarySearchMax": "ternarySearchMax",
+      "ternarySearchMin": "ternarySearchMin",
+      "findPeakIndex": "findPeakIndex"
+    }
+  },
+  "src/algorithms/sorting/bubble-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/bubble-sort.js",
+    "exports": {
+      "bubbleSort": "bubbleSort"
+    }
+  },
+  "src/algorithms/sorting/bucket-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/bucket-sort.js",
+    "exports": {
+      "bucketSort": "bucketSort"
+    }
+  },
+  "src/algorithms/sorting/cocktail-shaker-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/cocktail-shaker-sort.js",
+    "exports": {
+      "cocktailShakerSort": "cocktailShakerSort"
+    }
+  },
+  "src/algorithms/sorting/counting-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/counting-sort.js",
+    "exports": {
+      "countingSort": "countingSort"
+    }
+  },
+  "src/algorithms/sorting/heap-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/heap-sort.js",
+    "exports": {
+      "heapSort": "heapSort"
+    }
+  },
+  "src/algorithms/sorting/index.ts": {
+    "path": "ports/javascript/algorithms/sorting/index.js",
+    "exports": {}
+  },
+  "src/algorithms/sorting/insertion-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/insertion-sort.js",
+    "exports": {
+      "insertionSortRange": "insertionSortRange",
+      "insertionSort": "insertionSort"
+    }
+  },
+  "src/algorithms/sorting/merge-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/merge-sort.js",
+    "exports": {
+      "merge": "merge",
+      "mergeSort": "mergeSort",
+      "bottomUpMergeSort": "bottomUpMergeSort"
+    }
+  },
+  "src/algorithms/sorting/quick-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/quick-sort.js",
+    "exports": {
+      "partition3": "partition3",
+      "quickSort": "quickSort",
+      "lomutoPartition": "lomutoPartition",
+      "quickSortFunctional": "quickSortFunctional"
+    }
+  },
+  "src/algorithms/sorting/radix-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/radix-sort.js",
+    "exports": {
+      "radixSort": "radixSort"
+    }
+  },
+  "src/algorithms/sorting/selection-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/selection-sort.js",
+    "exports": {
+      "selectionSort": "selectionSort"
+    }
+  },
+  "src/algorithms/sorting/shell-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/shell-sort.js",
+    "exports": {
+      "shellSort": "shellSort"
+    }
+  },
+  "src/algorithms/sorting/tim-sort.ts": {
+    "path": "ports/javascript/algorithms/sorting/tim-sort.js",
+    "exports": {
+      "timSort": "timSort"
+    }
+  },
+  "src/algorithms/strings/aho-corasick.ts": {
+    "path": "ports/javascript/algorithms/strings/aho-corasick.js",
+    "exports": {
+      "AhoCorasick": "AhoCorasick"
+    }
+  },
+  "src/algorithms/strings/boyer-moore-horspool.ts": {
+    "path": "ports/javascript/algorithms/strings/boyer-moore-horspool.js",
+    "exports": {
+      "boyerMooreHorspool": "boyerMooreHorspool"
+    }
+  },
+  "src/algorithms/strings/kmp.ts": {
+    "path": "ports/javascript/algorithms/strings/kmp.js",
+    "exports": {
+      "prefixFunction": "prefixFunction",
+      "kmpSearch": "kmpSearch"
+    }
+  },
+  "src/algorithms/strings/manacher.ts": {
+    "path": "ports/javascript/algorithms/strings/manacher.js",
+    "exports": {
+      "longestPalindromicSubstring": "longestPalindromicSubstring"
+    }
+  },
+  "src/algorithms/strings/rabin-karp.ts": {
+    "path": "ports/javascript/algorithms/strings/rabin-karp.js",
+    "exports": {
+      "rabinKarp": "rabinKarp"
+    }
+  },
+  "src/algorithms/strings/string-utils.ts": {
+    "path": "ports/javascript/algorithms/strings/string-utils.js",
+    "exports": {
+      "isBalanced": "isBalanced",
+      "isPalindrome": "isPalindrome",
+      "isAnagram": "isAnagram",
+      "groupAnagrams": "groupAnagrams",
+      "runLengthEncode": "runLengthEncode",
+      "runLengthDecode": "runLengthDecode",
+      "reverseWords": "reverseWords"
+    }
+  },
+  "src/algorithms/strings/suffix-array.ts": {
+    "path": "ports/javascript/algorithms/strings/suffix-array.js",
+    "exports": {
+      "suffixArray": "suffixArray",
+      "lcpArray": "lcpArray",
+      "countDistinctSubstrings": "countDistinctSubstrings"
+    }
+  },
+  "src/algorithms/strings/z-function.ts": {
+    "path": "ports/javascript/algorithms/strings/z-function.js",
+    "exports": {
+      "zFunction": "zFunction",
+      "zSearch": "zSearch"
+    }
+  },
+  "src/algorithms/techniques/prefix-sums.ts": {
+    "path": "ports/javascript/algorithms/techniques/prefix-sums.js",
+    "exports": {
+      "PrefixSums": "PrefixSums",
+      "PrefixSums2D": "PrefixSums2D",
+      "subarraySumEquals": "subarraySumEquals",
+      "differenceArrayApply": "differenceArrayApply",
+      "majorityElement": "majorityElement"
+    }
+  },
+  "src/algorithms/techniques/sliding-window.ts": {
+    "path": "ports/javascript/algorithms/techniques/sliding-window.js",
+    "exports": {
+      "maxSumWindow": "maxSumWindow",
+      "slidingWindowMaximum": "slidingWindowMaximum",
+      "longestUniqueSubstring": "longestUniqueSubstring",
+      "minWindowSubstring": "minWindowSubstring"
+    }
+  },
+  "src/algorithms/techniques/two-pointers.ts": {
+    "path": "ports/javascript/algorithms/techniques/two-pointers.js",
+    "exports": {
+      "twoSumSorted": "twoSumSorted",
+      "twoSum": "twoSum",
+      "threeSum": "threeSum",
+      "containerWithMostWater": "containerWithMostWater",
+      "removeDuplicatesSorted": "removeDuplicatesSorted",
+      "dutchNationalFlag": "dutchNationalFlag",
+      "hasCycleFloyd": "hasCycleFloyd"
+    }
+  },
+  "src/algorithms/trees/binary-tree.ts": {
+    "path": "ports/javascript/algorithms/trees/binary-tree.js",
+    "exports": {
+      "treeNode": "treeNode",
+      "fromLevelOrder": "fromLevelOrder",
+      "preOrder": "preOrder",
+      "inOrder": "inOrder",
+      "postOrder": "postOrder",
+      "levelOrder": "levelOrder",
+      "maxDepth": "maxDepth",
+      "maxValue": "maxValue",
+      "isValidBst": "isValidBst",
+      "invertTree": "invertTree",
+      "lowestCommonAncestorBst": "lowestCommonAncestorBst"
+    }
+  },
+  "src/algorithms/trees/lowest-common-ancestor.ts": {
+    "path": "ports/javascript/algorithms/trees/lowest-common-ancestor.js",
+    "exports": {
+      "LowestCommonAncestor": "LowestCommonAncestor"
+    }
+  },
+  "src/algorithms/trees/tree-diameter.ts": {
+    "path": "ports/javascript/algorithms/trees/tree-diameter.js",
+    "exports": {
+      "treeDiameter": "treeDiameter"
+    }
+  },
+  "src/data-structures/graphs/disjoint-set.ts": {
+    "path": "ports/javascript/data-structures/graphs/disjoint-set.js",
+    "exports": {
+      "DisjointSet": "DisjointSet"
+    }
+  },
+  "src/data-structures/graphs/graph.ts": {
+    "path": "ports/javascript/data-structures/graphs/graph.js",
+    "exports": {
+      "Graph": "Graph"
+    }
+  },
+  "src/data-structures/hashing/bloom-filter.ts": {
+    "path": "ports/javascript/data-structures/hashing/bloom-filter.js",
+    "exports": {
+      "BloomFilter": "BloomFilter"
+    }
+  },
+  "src/data-structures/hashing/hash-table.ts": {
+    "path": "ports/javascript/data-structures/hashing/hash-table.js",
+    "exports": {
+      "HashTable": "HashTable"
+    }
+  },
+  "src/data-structures/hashing/hash.ts": {
+    "path": "ports/javascript/data-structures/hashing/hash.js",
+    "exports": {
+      "fnv1a": "fnv1a",
+      "defaultHasher": "defaultHasher"
+    }
+  },
+  "src/data-structures/hashing/lru-cache.ts": {
+    "path": "ports/javascript/data-structures/hashing/lru-cache.js",
+    "exports": {
+      "LRUCache": "LRUCache"
+    }
+  },
+  "src/data-structures/hashing/open-addressing-hash-map.ts": {
+    "path": "ports/javascript/data-structures/hashing/open-addressing-hash-map.js",
+    "exports": {
+      "OpenAddressingHashMap": "OpenAddressingHashMap"
+    }
+  },
+  "src/data-structures/heaps/binary-heap.ts": {
+    "path": "ports/javascript/data-structures/heaps/binary-heap.js",
+    "exports": {
+      "BinaryHeap": "BinaryHeap",
+      "MinHeap": "MinHeap",
+      "MaxHeap": "MaxHeap"
+    }
+  },
+  "src/data-structures/heaps/priority-queue.ts": {
+    "path": "ports/javascript/data-structures/heaps/priority-queue.js",
+    "exports": {
+      "PriorityQueue": "PriorityQueue"
+    }
+  },
+  "src/data-structures/linear/circular-buffer.ts": {
+    "path": "ports/javascript/data-structures/linear/circular-buffer.js",
+    "exports": {
+      "CircularBuffer": "CircularBuffer"
+    }
+  },
+  "src/data-structures/linear/deque.ts": {
+    "path": "ports/javascript/data-structures/linear/deque.js",
+    "exports": {
+      "Deque": "Deque"
+    }
+  },
+  "src/data-structures/linear/doubly-linked-list.ts": {
+    "path": "ports/javascript/data-structures/linear/doubly-linked-list.js",
+    "exports": {
+      "DoublyLinkedListNode": "DoublyLinkedListNode",
+      "DoublyLinkedList": "DoublyLinkedList"
+    }
+  },
+  "src/data-structures/linear/linked-list.ts": {
+    "path": "ports/javascript/data-structures/linear/linked-list.js",
+    "exports": {
+      "LinkedListNode": "LinkedListNode",
+      "LinkedList": "LinkedList"
+    }
+  },
+  "src/data-structures/linear/queue.ts": {
+    "path": "ports/javascript/data-structures/linear/queue.js",
+    "exports": {
+      "Queue": "Queue"
+    }
+  },
+  "src/data-structures/linear/skip-list.ts": {
+    "path": "ports/javascript/data-structures/linear/skip-list.js",
+    "exports": {
+      "SkipList": "SkipList"
+    }
+  },
+  "src/data-structures/linear/stack.ts": {
+    "path": "ports/javascript/data-structures/linear/stack.js",
+    "exports": {
+      "Stack": "Stack"
+    }
+  },
+  "src/data-structures/range-queries/fenwick-tree.ts": {
+    "path": "ports/javascript/data-structures/range-queries/fenwick-tree.js",
+    "exports": {
+      "FenwickTree": "FenwickTree"
+    }
+  },
+  "src/data-structures/range-queries/lazy-segment-tree.ts": {
+    "path": "ports/javascript/data-structures/range-queries/lazy-segment-tree.js",
+    "exports": {
+      "LazySegmentTree": "LazySegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/segment-tree.ts": {
+    "path": "ports/javascript/data-structures/range-queries/segment-tree.js",
+    "exports": {
+      "SegmentTree": "SegmentTree",
+      "sumSegmentTree": "sumSegmentTree",
+      "minSegmentTree": "minSegmentTree",
+      "maxSegmentTree": "maxSegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/sparse-table.ts": {
+    "path": "ports/javascript/data-structures/range-queries/sparse-table.js",
+    "exports": {
+      "SparseTable": "SparseTable",
+      "minSparseTable": "minSparseTable",
+      "maxSparseTable": "maxSparseTable"
+    }
+  },
+  "src/data-structures/range-queries/sqrt-decomposition.ts": {
+    "path": "ports/javascript/data-structures/range-queries/sqrt-decomposition.js",
+    "exports": {
+      "SqrtDecomposition": "SqrtDecomposition"
+    }
+  },
+  "src/data-structures/trees/avl-tree.ts": {
+    "path": "ports/javascript/data-structures/trees/avl-tree.js",
+    "exports": {
+      "AVLTree": "AVLTree"
+    }
+  },
+  "src/data-structures/trees/b-tree.ts": {
+    "path": "ports/javascript/data-structures/trees/b-tree.js",
+    "exports": {
+      "BTree": "BTree"
+    }
+  },
+  "src/data-structures/trees/binary-search-tree.ts": {
+    "path": "ports/javascript/data-structures/trees/binary-search-tree.js",
+    "exports": {
+      "BSTNode": "BSTNode",
+      "BinarySearchTree": "BinarySearchTree"
+    }
+  },
+  "src/data-structures/trees/red-black-tree.ts": {
+    "path": "ports/javascript/data-structures/trees/red-black-tree.js",
+    "exports": {
+      "RedBlackTree": "RedBlackTree"
+    }
+  },
+  "src/data-structures/trees/trie.ts": {
+    "path": "ports/javascript/data-structures/trees/trie.js",
+    "exports": {
+      "Trie": "Trie"
+    }
+  },
+  "src/patterns/architectural/circuit-breaker.ts": {
+    "path": "ports/javascript/patterns/architectural/circuit-breaker.js",
+    "exports": {
+      "CircuitOpenError": "CircuitOpenError",
+      "CircuitBreaker": "CircuitBreaker",
+      "retry": "retry"
+    }
+  },
+  "src/patterns/architectural/dependency-injection.ts": {
+    "path": "ports/javascript/patterns/architectural/dependency-injection.js",
+    "exports": {
+      "token": "token",
+      "Container": "Container"
+    }
+  },
+  "src/patterns/architectural/event-emitter.ts": {
+    "path": "ports/javascript/patterns/architectural/event-emitter.js",
+    "exports": {
+      "TypedEventEmitter": "TypedEventEmitter"
+    }
+  },
+  "src/patterns/architectural/middleware.ts": {
+    "path": "ports/javascript/patterns/architectural/middleware.js",
+    "exports": {
+      "compose": "compose",
+      "Pipeline": "Pipeline"
+    }
+  },
+  "src/patterns/architectural/null-object.ts": {
+    "path": "ports/javascript/patterns/architectural/null-object.js",
+    "exports": {
+      "MemoryLogger": "MemoryLogger",
+      "NullLogger": "NullLogger",
+      "PaymentService": "PaymentService"
+    }
+  },
+  "src/patterns/architectural/repository.ts": {
+    "path": "ports/javascript/patterns/architectural/repository.js",
+    "exports": {
+      "InMemoryRepository": "InMemoryRepository"
+    }
+  },
+  "src/patterns/architectural/specification.ts": {
+    "path": "ports/javascript/patterns/architectural/specification.js",
+    "exports": {
+      "Spec": "Spec",
+      "spec": "spec"
+    }
+  },
+  "src/patterns/architectural/store.ts": {
+    "path": "ports/javascript/patterns/architectural/store.js",
+    "exports": {
+      "createStore": "createStore",
+      "combineReducers": "combineReducers",
+      "counterReducer": "counterReducer"
+    }
+  },
+  "src/patterns/behavioral/chain-of-responsibility.ts": {
+    "path": "ports/javascript/patterns/behavioral/chain-of-responsibility.js",
+    "exports": {
+      "SupportHandler": "SupportHandler",
+      "FaqBot": "FaqBot",
+      "SupportAgent": "SupportAgent",
+      "Engineer": "Engineer",
+      "createSupportChain": "createSupportChain"
+    }
+  },
+  "src/patterns/behavioral/command.ts": {
+    "path": "ports/javascript/patterns/behavioral/command.js",
+    "exports": {
+      "TextDocument": "TextDocument",
+      "InsertCommand": "InsertCommand",
+      "DeleteCommand": "DeleteCommand",
+      "MacroCommand": "MacroCommand",
+      "CommandHistory": "CommandHistory"
+    }
+  },
+  "src/patterns/behavioral/interpreter.ts": {
+    "path": "ports/javascript/patterns/behavioral/interpreter.js",
+    "exports": {
+      "NumberExpression": "NumberExpression",
+      "VariableExpression": "VariableExpression",
+      "BinaryExpression": "BinaryExpression",
+      "parseExpression": "parseExpression"
+    }
+  },
+  "src/patterns/behavioral/iterator.ts": {
+    "path": "ports/javascript/patterns/behavioral/iterator.js",
+    "exports": {
+      "NumberRange": "NumberRange",
+      "depthFirst": "depthFirst",
+      "breadthFirst": "breadthFirst",
+      "take": "take"
+    }
+  },
+  "src/patterns/behavioral/mediator.ts": {
+    "path": "ports/javascript/patterns/behavioral/mediator.js",
+    "exports": {
+      "ChatUser": "ChatUser",
+      "ChatRoom": "ChatRoom"
+    }
+  },
+  "src/patterns/behavioral/memento.ts": {
+    "path": "ports/javascript/patterns/behavioral/memento.js",
+    "exports": {
+      "Editor": "Editor",
+      "EditorHistory": "EditorHistory"
+    }
+  },
+  "src/patterns/behavioral/observer.ts": {
+    "path": "ports/javascript/patterns/behavioral/observer.js",
+    "exports": {
+      "Subject": "Subject",
+      "StockTicker": "StockTicker",
+      "BehaviorSubject": "BehaviorSubject"
+    }
+  },
+  "src/patterns/behavioral/state.ts": {
+    "path": "ports/javascript/patterns/behavioral/state.js",
+    "exports": {
+      "Order": "Order"
+    }
+  },
+  "src/patterns/behavioral/strategy.ts": {
+    "path": "ports/javascript/patterns/behavioral/strategy.js",
+    "exports": {
+      "FlatRateShipping": "FlatRateShipping",
+      "WeightBasedShipping": "WeightBasedShipping",
+      "FreeOverThresholdShipping": "FreeOverThresholdShipping",
+      "ShippingCalculator": "ShippingCalculator"
+    }
+  },
+  "src/patterns/behavioral/template-method.ts": {
+    "path": "ports/javascript/patterns/behavioral/template-method.js",
+    "exports": {
+      "SalesDataMiner": "SalesDataMiner",
+      "CsvSalesMiner": "CsvSalesMiner",
+      "JsonSalesMiner": "JsonSalesMiner"
+    }
+  },
+  "src/patterns/behavioral/visitor.ts": {
+    "path": "ports/javascript/patterns/behavioral/visitor.js",
+    "exports": {
+      "CircleShape": "CircleShape",
+      "RectangleShape": "RectangleShape",
+      "TriangleShape": "TriangleShape",
+      "AreaVisitor": "AreaVisitor",
+      "PerimeterVisitor": "PerimeterVisitor",
+      "JsonExportVisitor": "JsonExportVisitor"
+    }
+  },
+  "src/patterns/creational/abstract-factory.ts": {
+    "path": "ports/javascript/patterns/creational/abstract-factory.js",
+    "exports": {
+      "LightThemeFactory": "LightThemeFactory",
+      "DarkThemeFactory": "DarkThemeFactory",
+      "renderSettingsForm": "renderSettingsForm"
+    }
+  },
+  "src/patterns/creational/builder.ts": {
+    "path": "ports/javascript/patterns/creational/builder.js",
+    "exports": {
+      "HttpRequestBuilder": "HttpRequestBuilder"
+    }
+  },
+  "src/patterns/creational/factory-method.ts": {
+    "path": "ports/javascript/patterns/creational/factory-method.js",
+    "exports": {
+      "Truck": "Truck",
+      "Ship": "Ship",
+      "Logistics": "Logistics",
+      "RoadLogistics": "RoadLogistics",
+      "SeaLogistics": "SeaLogistics",
+      "createTransport": "createTransport"
+    }
+  },
+  "src/patterns/creational/object-pool.ts": {
+    "path": "ports/javascript/patterns/creational/object-pool.js",
+    "exports": {
+      "ObjectPool": "ObjectPool"
+    }
+  },
+  "src/patterns/creational/prototype.ts": {
+    "path": "ports/javascript/patterns/creational/prototype.js",
+    "exports": {
+      "Shape": "Shape",
+      "Circle": "Circle",
+      "Rectangle": "Rectangle",
+      "PrototypeRegistry": "PrototypeRegistry"
+    }
+  },
+  "src/patterns/creational/singleton.ts": {
+    "path": "ports/javascript/patterns/creational/singleton.js",
+    "exports": {
+      "AppConfig": "AppConfig",
+      "lazySingleton": "lazySingleton"
+    }
+  },
+  "src/patterns/structural/adapter.ts": {
+    "path": "ports/javascript/patterns/structural/adapter.js",
+    "exports": {
+      "LegacyFahrenheitSensor": "LegacyFahrenheitSensor",
+      "FahrenheitSensorAdapter": "FahrenheitSensorAdapter",
+      "averageTemperature": "averageTemperature",
+      "promisify": "promisify"
+    }
+  },
+  "src/patterns/structural/bridge.ts": {
+    "path": "ports/javascript/patterns/structural/bridge.js",
+    "exports": {
+      "Tv": "Tv",
+      "Radio": "Radio",
+      "RemoteControl": "RemoteControl",
+      "AdvancedRemoteControl": "AdvancedRemoteControl"
+    }
+  },
+  "src/patterns/structural/composite.ts": {
+    "path": "ports/javascript/patterns/structural/composite.js",
+    "exports": {
+      "FileEntry": "FileEntry",
+      "Directory": "Directory"
+    }
+  },
+  "src/patterns/structural/decorator.ts": {
+    "path": "ports/javascript/patterns/structural/decorator.js",
+    "exports": {
+      "EmailNotifier": "EmailNotifier",
+      "NotifierDecorator": "NotifierDecorator",
+      "SmsNotifier": "SmsNotifier",
+      "SlackNotifier": "SlackNotifier",
+      "withLogging": "withLogging"
+    }
+  },
+  "src/patterns/structural/facade.ts": {
+    "path": "ports/javascript/patterns/structural/facade.js",
+    "exports": {
+      "VideoFile": "VideoFile",
+      "CodecFactory": "CodecFactory",
+      "BitrateReader": "BitrateReader",
+      "AudioMixer": "AudioMixer",
+      "VideoConverter": "VideoConverter"
+    }
+  },
+  "src/patterns/structural/flyweight.ts": {
+    "path": "ports/javascript/patterns/structural/flyweight.js",
+    "exports": {
+      "TreeType": "TreeType",
+      "TreeTypeFactory": "TreeTypeFactory",
+      "Forest": "Forest"
+    }
+  },
+  "src/patterns/structural/proxy.ts": {
+    "path": "ports/javascript/patterns/structural/proxy.js",
+    "exports": {
+      "CachingWeatherProxy": "CachingWeatherProxy",
+      "AccessControlProxy": "AccessControlProxy",
+      "createValidatedObject": "createValidatedObject"
+    }
+  },
+  "src/shared/compare.ts": {
+    "path": "ports/javascript/shared/compare.js",
+    "exports": {
+      "defaultCompare": "defaultCompare",
+      "reverseCompare": "reverseCompare"
+    }
+  }
+}

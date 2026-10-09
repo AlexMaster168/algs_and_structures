@@ -1,0 +1,14 @@
+{
+  "python": {
+    "cwd": ".",
+    "commands": [["{python}", "-B", "ports/python/check.py"]]
+  },
+  "java": {
+    "cwd": ".",
+    "commands": [["{python}", "-B", "ports/java/check.py"]]
+  },
+  "javascript": {
+    "cwd": ".",
+    "commands": [["node", "--test", "ports/javascript/tests/**/*.test.js"]]
+  }
+}

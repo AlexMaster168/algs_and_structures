@@ -1,0 +1,1043 @@
+{
+  "src/algorithms/backtracking/n-queens.ts": {
+    "path": "ports/python/algorithms/backtracking/n_queens.py",
+    "exports": {
+      "nQueens": "n_queens",
+      "countNQueens": "count_n_queens"
+    }
+  },
+  "src/algorithms/backtracking/permutations.ts": {
+    "path": "ports/python/algorithms/backtracking/permutations.py",
+    "exports": {
+      "permutations": "permutations",
+      "combinations": "combinations",
+      "subsets": "subsets",
+      "combinationSum": "combination_sum"
+    }
+  },
+  "src/algorithms/backtracking/sudoku.ts": {
+    "path": "ports/python/algorithms/backtracking/sudoku.py",
+    "exports": {
+      "solveSudoku": "solve_sudoku"
+    }
+  },
+  "src/algorithms/backtracking/word-search.ts": {
+    "path": "ports/python/algorithms/backtracking/word_search.py",
+    "exports": {
+      "wordSearch": "word_search"
+    }
+  },
+  "src/algorithms/bit-manipulation/bits.ts": {
+    "path": "ports/python/algorithms/bit_manipulation/bits.py",
+    "exports": {
+      "getBit": "get_bit",
+      "setBit": "set_bit",
+      "clearBit": "clear_bit",
+      "toggleBit": "toggle_bit",
+      "countSetBits": "count_set_bits",
+      "isPowerOfTwo": "is_power_of_two",
+      "lowestSetBit": "lowest_set_bit",
+      "singleNumber": "single_number",
+      "reverseBits": "reverse_bits",
+      "grayCode": "gray_code",
+      "subsetsByMask": "subsets_by_mask",
+      "swapWithoutTemp": "swap_without_temp",
+      "hammingDistance": "hamming_distance"
+    }
+  },
+  "src/algorithms/dynamic-programming/coin-change.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/coin_change.py",
+    "exports": {
+      "minCoins": "min_coins",
+      "coinChangeWays": "coin_change_ways"
+    }
+  },
+  "src/algorithms/dynamic-programming/edit-distance.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/edit_distance.py",
+    "exports": {
+      "editDistance": "edit_distance"
+    }
+  },
+  "src/algorithms/dynamic-programming/fibonacci.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/fibonacci.py",
+    "exports": {
+      "fibonacciRecursive": "fibonacci_recursive",
+      "fibonacciMemo": "fibonacci_memo",
+      "fibonacci": "fibonacci",
+      "fibonacciFast": "fibonacci_fast"
+    }
+  },
+  "src/algorithms/dynamic-programming/grid-paths.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/grid_paths.py",
+    "exports": {
+      "uniquePaths": "unique_paths",
+      "minPathSum": "min_path_sum"
+    }
+  },
+  "src/algorithms/dynamic-programming/knapsack.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/knapsack.py",
+    "exports": {
+      "knapsack01": "knapsack01",
+      "unboundedKnapsack": "unbounded_knapsack"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-common-subsequence.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/longest_common_subsequence.py",
+    "exports": {
+      "longestCommonSubsequence": "longest_common_subsequence",
+      "longestCommonSubstring": "longest_common_substring"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-increasing-subsequence.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/longest_increasing_subsequence.py",
+    "exports": {
+      "longestIncreasingSubsequence": "longest_increasing_subsequence"
+    }
+  },
+  "src/algorithms/dynamic-programming/matrix-chain.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/matrix_chain.py",
+    "exports": {
+      "matrixChainOrder": "matrix_chain_order"
+    }
+  },
+  "src/algorithms/dynamic-programming/max-subarray.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/max_subarray.py",
+    "exports": {
+      "maxSubarray": "max_subarray"
+    }
+  },
+  "src/algorithms/dynamic-programming/memoize.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/memoize.py",
+    "exports": {
+      "memoize": "memoize"
+    }
+  },
+  "src/algorithms/dynamic-programming/rod-cutting.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/rod_cutting.py",
+    "exports": {
+      "rodCutting": "rod_cutting"
+    }
+  },
+  "src/algorithms/dynamic-programming/subset-sum.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/subset_sum.py",
+    "exports": {
+      "subsetSum": "subset_sum",
+      "canPartition": "can_partition"
+    }
+  },
+  "src/algorithms/dynamic-programming/word-break.ts": {
+    "path": "ports/python/algorithms/dynamic_programming/word_break.py",
+    "exports": {
+      "wordBreak": "word_break"
+    }
+  },
+  "src/algorithms/geometry/geometry.ts": {
+    "path": "ports/python/algorithms/geometry/geometry.py",
+    "exports": {
+      "cross": "cross",
+      "distance": "distance",
+      "convexHull": "convex_hull",
+      "polygonArea": "polygon_area",
+      "pointInPolygon": "point_in_polygon",
+      "segmentsIntersect": "segments_intersect",
+      "closestPair": "closest_pair"
+    }
+  },
+  "src/algorithms/graphs/a-star.ts": {
+    "path": "ports/python/algorithms/graphs/a_star.py",
+    "exports": {
+      "aStar": "a_star",
+      "aStarGrid": "a_star_grid"
+    }
+  },
+  "src/algorithms/graphs/bellman-ford.ts": {
+    "path": "ports/python/algorithms/graphs/bellman_ford.py",
+    "exports": {
+      "bellmanFord": "bellman_ford"
+    }
+  },
+  "src/algorithms/graphs/bfs.ts": {
+    "path": "ports/python/algorithms/graphs/bfs.py",
+    "exports": {
+      "bfs": "bfs",
+      "shortestPathUnweighted": "shortest_path_unweighted",
+      "gridShortestPath": "grid_shortest_path"
+    }
+  },
+  "src/algorithms/graphs/bipartite.ts": {
+    "path": "ports/python/algorithms/graphs/bipartite.py",
+    "exports": {
+      "bipartiteColoring": "bipartite_coloring",
+      "isBipartite": "is_bipartite"
+    }
+  },
+  "src/algorithms/graphs/bridges-and-articulation-points.ts": {
+    "path": "ports/python/algorithms/graphs/bridges_and_articulation_points.py",
+    "exports": {
+      "findBridgesAndArticulationPoints": "find_bridges_and_articulation_points"
+    }
+  },
+  "src/algorithms/graphs/connected-components.ts": {
+    "path": "ports/python/algorithms/graphs/connected_components.py",
+    "exports": {
+      "connectedComponents": "connected_components"
+    }
+  },
+  "src/algorithms/graphs/cycle-detection.ts": {
+    "path": "ports/python/algorithms/graphs/cycle_detection.py",
+    "exports": {
+      "hasCycleDirected": "has_cycle_directed",
+      "hasCycleUndirected": "has_cycle_undirected"
+    }
+  },
+  "src/algorithms/graphs/dfs.ts": {
+    "path": "ports/python/algorithms/graphs/dfs.py",
+    "exports": {
+      "dfs": "dfs",
+      "dfsRecursive": "dfs_recursive",
+      "hasPath": "has_path"
+    }
+  },
+  "src/algorithms/graphs/dijkstra.ts": {
+    "path": "ports/python/algorithms/graphs/dijkstra.py",
+    "exports": {
+      "dijkstra": "dijkstra",
+      "dijkstraPath": "dijkstra_path"
+    }
+  },
+  "src/algorithms/graphs/eulerian-path.ts": {
+    "path": "ports/python/algorithms/graphs/eulerian_path.py",
+    "exports": {
+      "eulerianPathDirected": "eulerian_path_directed"
+    }
+  },
+  "src/algorithms/graphs/flood-fill.ts": {
+    "path": "ports/python/algorithms/graphs/flood_fill.py",
+    "exports": {
+      "floodFill": "flood_fill"
+    }
+  },
+  "src/algorithms/graphs/floyd-warshall.ts": {
+    "path": "ports/python/algorithms/graphs/floyd_warshall.py",
+    "exports": {
+      "floydWarshall": "floyd_warshall",
+      "floydWarshallPath": "floyd_warshall_path"
+    }
+  },
+  "src/algorithms/graphs/max-flow.ts": {
+    "path": "ports/python/algorithms/graphs/max_flow.py",
+    "exports": {
+      "edmondsKarp": "edmonds_karp"
+    }
+  },
+  "src/algorithms/graphs/minimum-spanning-tree.ts": {
+    "path": "ports/python/algorithms/graphs/minimum_spanning_tree.py",
+    "exports": {
+      "kruskal": "kruskal",
+      "prim": "prim"
+    }
+  },
+  "src/algorithms/graphs/strongly-connected-components.ts": {
+    "path": "ports/python/algorithms/graphs/strongly_connected_components.py",
+    "exports": {
+      "tarjanScc": "tarjan_scc",
+      "kosarajuScc": "kosaraju_scc"
+    }
+  },
+  "src/algorithms/graphs/topological-sort.ts": {
+    "path": "ports/python/algorithms/graphs/topological_sort.py",
+    "exports": {
+      "topologicalSortKahn": "topological_sort_kahn",
+      "topologicalSortDfs": "topological_sort_dfs"
+    }
+  },
+  "src/algorithms/graphs/types.ts": {
+    "path": "ports/python/algorithms/graphs/types.py",
+    "exports": {
+      "reconstructPath": "reconstruct_path",
+      "toUndirected": "to_undirected",
+      "toWeightedUndirected": "to_weighted_undirected"
+    }
+  },
+  "src/algorithms/greedy/activity-selection.ts": {
+    "path": "ports/python/algorithms/greedy/activity_selection.py",
+    "exports": {
+      "activitySelection": "activity_selection",
+      "mergeIntervals": "merge_intervals",
+      "minMeetingRooms": "min_meeting_rooms"
+    }
+  },
+  "src/algorithms/greedy/fractional-knapsack.ts": {
+    "path": "ports/python/algorithms/greedy/fractional_knapsack.py",
+    "exports": {
+      "fractionalKnapsack": "fractional_knapsack"
+    }
+  },
+  "src/algorithms/greedy/huffman.ts": {
+    "path": "ports/python/algorithms/greedy/huffman.py",
+    "exports": {
+      "huffmanCodes": "huffman_codes",
+      "huffmanEncode": "huffman_encode",
+      "huffmanDecode": "huffman_decode"
+    }
+  },
+  "src/algorithms/greedy/jump-game.ts": {
+    "path": "ports/python/algorithms/greedy/jump_game.py",
+    "exports": {
+      "canReachEnd": "can_reach_end",
+      "minJumps": "min_jumps",
+      "greedyChange": "greedy_change"
+    }
+  },
+  "src/algorithms/math/combinatorics.ts": {
+    "path": "ports/python/algorithms/math/combinatorics.py",
+    "exports": {
+      "factorial": "factorial",
+      "binomial": "binomial",
+      "pascalTriangle": "pascal_triangle",
+      "catalan": "catalan",
+      "nextPermutation": "next_permutation"
+    }
+  },
+  "src/algorithms/math/gcd.ts": {
+    "path": "ports/python/algorithms/math/gcd.py",
+    "exports": {
+      "gcd": "gcd",
+      "lcm": "lcm",
+      "extendedGcd": "extended_gcd",
+      "modInverse": "mod_inverse"
+    }
+  },
+  "src/algorithms/math/matrix.ts": {
+    "path": "ports/python/algorithms/math/matrix.py",
+    "exports": {
+      "identity": "identity",
+      "multiply": "multiply",
+      "transpose": "transpose",
+      "matrixPower": "matrix_power",
+      "determinant": "determinant",
+      "solveLinearSystem": "solve_linear_system"
+    }
+  },
+  "src/algorithms/math/number-conversion.ts": {
+    "path": "ports/python/algorithms/math/number_conversion.py",
+    "exports": {
+      "toBase": "to_base",
+      "fromBase": "from_base",
+      "toRoman": "to_roman",
+      "fromRoman": "from_roman"
+    }
+  },
+  "src/algorithms/math/power.ts": {
+    "path": "ports/python/algorithms/math/power.py",
+    "exports": {
+      "fastPower": "fast_power",
+      "modPow": "mod_pow",
+      "integerSqrt": "integer_sqrt",
+      "newtonSqrt": "newton_sqrt"
+    }
+  },
+  "src/algorithms/math/primes.ts": {
+    "path": "ports/python/algorithms/math/primes.py",
+    "exports": {
+      "sieveOfEratosthenes": "sieve_of_eratosthenes",
+      "linearSieve": "linear_sieve",
+      "isPrime": "is_prime",
+      "millerRabin": "miller_rabin",
+      "primeFactors": "prime_factors",
+      "divisors": "divisors",
+      "eulerPhi": "euler_phi"
+    }
+  },
+  "src/algorithms/randomized/shuffle.ts": {
+    "path": "ports/python/algorithms/randomized/shuffle.py",
+    "exports": {
+      "fisherYatesShuffle": "fisher_yates_shuffle",
+      "reservoirSample": "reservoir_sample",
+      "mulberry32": "mulberry32",
+      "monteCarloPi": "monte_carlo_pi"
+    }
+  },
+  "src/algorithms/searching/binary-search.ts": {
+    "path": "ports/python/algorithms/searching/binary_search.py",
+    "exports": {
+      "binarySearch": "binary_search",
+      "binarySearchRecursive": "binary_search_recursive",
+      "lowerBound": "lower_bound",
+      "upperBound": "upper_bound",
+      "firstTrue": "first_true"
+    }
+  },
+  "src/algorithms/searching/exponential-search.ts": {
+    "path": "ports/python/algorithms/searching/exponential_search.py",
+    "exports": {
+      "exponentialSearch": "exponential_search"
+    }
+  },
+  "src/algorithms/searching/interpolation-search.ts": {
+    "path": "ports/python/algorithms/searching/interpolation_search.py",
+    "exports": {
+      "interpolationSearch": "interpolation_search"
+    }
+  },
+  "src/algorithms/searching/jump-search.ts": {
+    "path": "ports/python/algorithms/searching/jump_search.py",
+    "exports": {
+      "jumpSearch": "jump_search"
+    }
+  },
+  "src/algorithms/searching/linear-search.ts": {
+    "path": "ports/python/algorithms/searching/linear_search.py",
+    "exports": {
+      "linearSearch": "linear_search",
+      "linearSearchAll": "linear_search_all"
+    }
+  },
+  "src/algorithms/searching/quick-select.ts": {
+    "path": "ports/python/algorithms/searching/quick_select.py",
+    "exports": {
+      "quickSelect": "quick_select",
+      "median": "median"
+    }
+  },
+  "src/algorithms/searching/ternary-search.ts": {
+    "path": "ports/python/algorithms/searching/ternary_search.py",
+    "exports": {
+      "ternarySearchMax": "ternary_search_max",
+      "ternarySearchMin": "ternary_search_min",
+      "findPeakIndex": "find_peak_index"
+    }
+  },
+  "src/algorithms/sorting/bubble-sort.ts": {
+    "path": "ports/python/algorithms/sorting/bubble_sort.py",
+    "exports": {
+      "bubbleSort": "bubble_sort"
+    }
+  },
+  "src/algorithms/sorting/bucket-sort.ts": {
+    "path": "ports/python/algorithms/sorting/bucket_sort.py",
+    "exports": {
+      "bucketSort": "bucket_sort"
+    }
+  },
+  "src/algorithms/sorting/cocktail-shaker-sort.ts": {
+    "path": "ports/python/algorithms/sorting/cocktail_shaker_sort.py",
+    "exports": {
+      "cocktailShakerSort": "cocktail_shaker_sort"
+    }
+  },
+  "src/algorithms/sorting/counting-sort.ts": {
+    "path": "ports/python/algorithms/sorting/counting_sort.py",
+    "exports": {
+      "countingSort": "counting_sort"
+    }
+  },
+  "src/algorithms/sorting/heap-sort.ts": {
+    "path": "ports/python/algorithms/sorting/heap_sort.py",
+    "exports": {
+      "heapSort": "heap_sort"
+    }
+  },
+  "src/algorithms/sorting/index.ts": {
+    "path": "ports/python/algorithms/sorting/index.py",
+    "exports": {}
+  },
+  "src/algorithms/sorting/insertion-sort.ts": {
+    "path": "ports/python/algorithms/sorting/insertion_sort.py",
+    "exports": {
+      "insertionSortRange": "insertion_sort_range",
+      "insertionSort": "insertion_sort"
+    }
+  },
+  "src/algorithms/sorting/merge-sort.ts": {
+    "path": "ports/python/algorithms/sorting/merge_sort.py",
+    "exports": {
+      "merge": "merge",
+      "mergeSort": "merge_sort",
+      "bottomUpMergeSort": "bottom_up_merge_sort"
+    }
+  },
+  "src/algorithms/sorting/quick-sort.ts": {
+    "path": "ports/python/algorithms/sorting/quick_sort.py",
+    "exports": {
+      "partition3": "partition3",
+      "quickSort": "quick_sort",
+      "lomutoPartition": "lomuto_partition",
+      "quickSortFunctional": "quick_sort_functional"
+    }
+  },
+  "src/algorithms/sorting/radix-sort.ts": {
+    "path": "ports/python/algorithms/sorting/radix_sort.py",
+    "exports": {
+      "radixSort": "radix_sort"
+    }
+  },
+  "src/algorithms/sorting/selection-sort.ts": {
+    "path": "ports/python/algorithms/sorting/selection_sort.py",
+    "exports": {
+      "selectionSort": "selection_sort"
+    }
+  },
+  "src/algorithms/sorting/shell-sort.ts": {
+    "path": "ports/python/algorithms/sorting/shell_sort.py",
+    "exports": {
+      "shellSort": "shell_sort"
+    }
+  },
+  "src/algorithms/sorting/tim-sort.ts": {
+    "path": "ports/python/algorithms/sorting/tim_sort.py",
+    "exports": {
+      "timSort": "tim_sort"
+    }
+  },
+  "src/algorithms/strings/aho-corasick.ts": {
+    "path": "ports/python/algorithms/strings/aho_corasick.py",
+    "exports": {
+      "AhoCorasick": "AhoCorasick"
+    }
+  },
+  "src/algorithms/strings/boyer-moore-horspool.ts": {
+    "path": "ports/python/algorithms/strings/boyer_moore_horspool.py",
+    "exports": {
+      "boyerMooreHorspool": "boyer_moore_horspool"
+    }
+  },
+  "src/algorithms/strings/kmp.ts": {
+    "path": "ports/python/algorithms/strings/kmp.py",
+    "exports": {
+      "prefixFunction": "prefix_function",
+      "kmpSearch": "kmp_search"
+    }
+  },
+  "src/algorithms/strings/manacher.ts": {
+    "path": "ports/python/algorithms/strings/manacher.py",
+    "exports": {
+      "longestPalindromicSubstring": "longest_palindromic_substring"
+    }
+  },
+  "src/algorithms/strings/rabin-karp.ts": {
+    "path": "ports/python/algorithms/strings/rabin_karp.py",
+    "exports": {
+      "rabinKarp": "rabin_karp"
+    }
+  },
+  "src/algorithms/strings/string-utils.ts": {
+    "path": "ports/python/algorithms/strings/string_utils.py",
+    "exports": {
+      "isBalanced": "is_balanced",
+      "isPalindrome": "is_palindrome",
+      "isAnagram": "is_anagram",
+      "groupAnagrams": "group_anagrams",
+      "runLengthEncode": "run_length_encode",
+      "runLengthDecode": "run_length_decode",
+      "reverseWords": "reverse_words"
+    }
+  },
+  "src/algorithms/strings/suffix-array.ts": {
+    "path": "ports/python/algorithms/strings/suffix_array.py",
+    "exports": {
+      "suffixArray": "suffix_array",
+      "lcpArray": "lcp_array",
+      "countDistinctSubstrings": "count_distinct_substrings"
+    }
+  },
+  "src/algorithms/strings/z-function.ts": {
+    "path": "ports/python/algorithms/strings/z_function.py",
+    "exports": {
+      "zFunction": "z_function",
+      "zSearch": "z_search"
+    }
+  },
+  "src/algorithms/techniques/prefix-sums.ts": {
+    "path": "ports/python/algorithms/techniques/prefix_sums.py",
+    "exports": {
+      "PrefixSums": "PrefixSums",
+      "PrefixSums2D": "PrefixSums2D",
+      "subarraySumEquals": "subarray_sum_equals",
+      "differenceArrayApply": "difference_array_apply",
+      "majorityElement": "majority_element"
+    }
+  },
+  "src/algorithms/techniques/sliding-window.ts": {
+    "path": "ports/python/algorithms/techniques/sliding_window.py",
+    "exports": {
+      "maxSumWindow": "max_sum_window",
+      "slidingWindowMaximum": "sliding_window_maximum",
+      "longestUniqueSubstring": "longest_unique_substring",
+      "minWindowSubstring": "min_window_substring"
+    }
+  },
+  "src/algorithms/techniques/two-pointers.ts": {
+    "path": "ports/python/algorithms/techniques/two_pointers.py",
+    "exports": {
+      "twoSumSorted": "two_sum_sorted",
+      "twoSum": "two_sum",
+      "threeSum": "three_sum",
+      "containerWithMostWater": "container_with_most_water",
+      "removeDuplicatesSorted": "remove_duplicates_sorted",
+      "dutchNationalFlag": "dutch_national_flag",
+      "hasCycleFloyd": "has_cycle_floyd"
+    }
+  },
+  "src/algorithms/trees/binary-tree.ts": {
+    "path": "ports/python/algorithms/trees/binary_tree.py",
+    "exports": {
+      "treeNode": "tree_node",
+      "fromLevelOrder": "from_level_order",
+      "preOrder": "pre_order",
+      "inOrder": "in_order",
+      "postOrder": "post_order",
+      "levelOrder": "level_order",
+      "maxDepth": "max_depth",
+      "maxValue": "max_value",
+      "isValidBst": "is_valid_bst",
+      "invertTree": "invert_tree",
+      "lowestCommonAncestorBst": "lowest_common_ancestor_bst"
+    }
+  },
+  "src/algorithms/trees/lowest-common-ancestor.ts": {
+    "path": "ports/python/algorithms/trees/lowest_common_ancestor.py",
+    "exports": {
+      "LowestCommonAncestor": "LowestCommonAncestor"
+    }
+  },
+  "src/algorithms/trees/tree-diameter.ts": {
+    "path": "ports/python/algorithms/trees/tree_diameter.py",
+    "exports": {
+      "treeDiameter": "tree_diameter"
+    }
+  },
+  "src/data-structures/graphs/disjoint-set.ts": {
+    "path": "ports/python/data_structures/graphs/disjoint_set.py",
+    "exports": {
+      "DisjointSet": "DisjointSet"
+    }
+  },
+  "src/data-structures/graphs/graph.ts": {
+    "path": "ports/python/data_structures/graphs/graph.py",
+    "exports": {
+      "Graph": "Graph"
+    }
+  },
+  "src/data-structures/hashing/bloom-filter.ts": {
+    "path": "ports/python/data_structures/hashing/bloom_filter.py",
+    "exports": {
+      "BloomFilter": "BloomFilter"
+    }
+  },
+  "src/data-structures/hashing/hash-table.ts": {
+    "path": "ports/python/data_structures/hashing/hash_table.py",
+    "exports": {
+      "HashTable": "HashTable"
+    }
+  },
+  "src/data-structures/hashing/hash.ts": {
+    "path": "ports/python/data_structures/hashing/hash.py",
+    "exports": {
+      "fnv1a": "fnv1a",
+      "defaultHasher": "default_hasher"
+    }
+  },
+  "src/data-structures/hashing/lru-cache.ts": {
+    "path": "ports/python/data_structures/hashing/lru_cache.py",
+    "exports": {
+      "LRUCache": "LRUCache"
+    }
+  },
+  "src/data-structures/hashing/open-addressing-hash-map.ts": {
+    "path": "ports/python/data_structures/hashing/open_addressing_hash_map.py",
+    "exports": {
+      "OpenAddressingHashMap": "OpenAddressingHashMap"
+    }
+  },
+  "src/data-structures/heaps/binary-heap.ts": {
+    "path": "ports/python/data_structures/heaps/binary_heap.py",
+    "exports": {
+      "BinaryHeap": "BinaryHeap",
+      "MinHeap": "MinHeap",
+      "MaxHeap": "MaxHeap"
+    }
+  },
+  "src/data-structures/heaps/priority-queue.ts": {
+    "path": "ports/python/data_structures/heaps/priority_queue.py",
+    "exports": {
+      "PriorityQueue": "PriorityQueue"
+    }
+  },
+  "src/data-structures/linear/circular-buffer.ts": {
+    "path": "ports/python/data_structures/linear/circular_buffer.py",
+    "exports": {
+      "CircularBuffer": "CircularBuffer"
+    }
+  },
+  "src/data-structures/linear/deque.ts": {
+    "path": "ports/python/data_structures/linear/deque.py",
+    "exports": {
+      "Deque": "Deque"
+    }
+  },
+  "src/data-structures/linear/doubly-linked-list.ts": {
+    "path": "ports/python/data_structures/linear/doubly_linked_list.py",
+    "exports": {
+      "DoublyLinkedListNode": "DoublyLinkedListNode",
+      "DoublyLinkedList": "DoublyLinkedList"
+    }
+  },
+  "src/data-structures/linear/linked-list.ts": {
+    "path": "ports/python/data_structures/linear/linked_list.py",
+    "exports": {
+      "LinkedListNode": "LinkedListNode",
+      "LinkedList": "LinkedList"
+    }
+  },
+  "src/data-structures/linear/queue.ts": {
+    "path": "ports/python/data_structures/linear/queue.py",
+    "exports": {
+      "Queue": "Queue"
+    }
+  },
+  "src/data-structures/linear/skip-list.ts": {
+    "path": "ports/python/data_structures/linear/skip_list.py",
+    "exports": {
+      "SkipList": "SkipList"
+    }
+  },
+  "src/data-structures/linear/stack.ts": {
+    "path": "ports/python/data_structures/linear/stack.py",
+    "exports": {
+      "Stack": "Stack"
+    }
+  },
+  "src/data-structures/range-queries/fenwick-tree.ts": {
+    "path": "ports/python/data_structures/range_queries/fenwick_tree.py",
+    "exports": {
+      "FenwickTree": "FenwickTree"
+    }
+  },
+  "src/data-structures/range-queries/lazy-segment-tree.ts": {
+    "path": "ports/python/data_structures/range_queries/lazy_segment_tree.py",
+    "exports": {
+      "LazySegmentTree": "LazySegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/segment-tree.ts": {
+    "path": "ports/python/data_structures/range_queries/segment_tree.py",
+    "exports": {
+      "SegmentTree": "SegmentTree",
+      "sumSegmentTree": "sum_segment_tree",
+      "minSegmentTree": "min_segment_tree",
+      "maxSegmentTree": "max_segment_tree"
+    }
+  },
+  "src/data-structures/range-queries/sparse-table.ts": {
+    "path": "ports/python/data_structures/range_queries/sparse_table.py",
+    "exports": {
+      "SparseTable": "SparseTable",
+      "minSparseTable": "min_sparse_table",
+      "maxSparseTable": "max_sparse_table"
+    }
+  },
+  "src/data-structures/range-queries/sqrt-decomposition.ts": {
+    "path": "ports/python/data_structures/range_queries/sqrt_decomposition.py",
+    "exports": {
+      "SqrtDecomposition": "SqrtDecomposition"
+    }
+  },
+  "src/data-structures/trees/avl-tree.ts": {
+    "path": "ports/python/data_structures/trees/avl_tree.py",
+    "exports": {
+      "AVLTree": "AVLTree"
+    }
+  },
+  "src/data-structures/trees/b-tree.ts": {
+    "path": "ports/python/data_structures/trees/b_tree.py",
+    "exports": {
+      "BTree": "BTree"
+    }
+  },
+  "src/data-structures/trees/binary-search-tree.ts": {
+    "path": "ports/python/data_structures/trees/binary_search_tree.py",
+    "exports": {
+      "BSTNode": "BSTNode",
+      "BinarySearchTree": "BinarySearchTree"
+    }
+  },
+  "src/data-structures/trees/red-black-tree.ts": {
+    "path": "ports/python/data_structures/trees/red_black_tree.py",
+    "exports": {
+      "RedBlackTree": "RedBlackTree"
+    }
+  },
+  "src/data-structures/trees/trie.ts": {
+    "path": "ports/python/data_structures/trees/trie.py",
+    "exports": {
+      "Trie": "Trie"
+    }
+  },
+  "src/patterns/architectural/circuit-breaker.ts": {
+    "path": "ports/python/patterns/architectural/circuit_breaker.py",
+    "exports": {
+      "CircuitOpenError": "CircuitOpenError",
+      "CircuitBreaker": "CircuitBreaker",
+      "retry": "retry"
+    }
+  },
+  "src/patterns/architectural/dependency-injection.ts": {
+    "path": "ports/python/patterns/architectural/dependency_injection.py",
+    "exports": {
+      "token": "token",
+      "Container": "Container"
+    }
+  },
+  "src/patterns/architectural/event-emitter.ts": {
+    "path": "ports/python/patterns/architectural/event_emitter.py",
+    "exports": {
+      "TypedEventEmitter": "TypedEventEmitter"
+    }
+  },
+  "src/patterns/architectural/middleware.ts": {
+    "path": "ports/python/patterns/architectural/middleware.py",
+    "exports": {
+      "compose": "compose",
+      "Pipeline": "Pipeline"
+    }
+  },
+  "src/patterns/architectural/null-object.ts": {
+    "path": "ports/python/patterns/architectural/null_object.py",
+    "exports": {
+      "MemoryLogger": "MemoryLogger",
+      "NullLogger": "NullLogger",
+      "PaymentService": "PaymentService"
+    }
+  },
+  "src/patterns/architectural/repository.ts": {
+    "path": "ports/python/patterns/architectural/repository.py",
+    "exports": {
+      "InMemoryRepository": "InMemoryRepository"
+    }
+  },
+  "src/patterns/architectural/specification.ts": {
+    "path": "ports/python/patterns/architectural/specification.py",
+    "exports": {
+      "Spec": "Spec",
+      "spec": "spec"
+    }
+  },
+  "src/patterns/architectural/store.ts": {
+    "path": "ports/python/patterns/architectural/store.py",
+    "exports": {
+      "createStore": "create_store",
+      "combineReducers": "combine_reducers",
+      "counterReducer": "counter_reducer"
+    }
+  },
+  "src/patterns/behavioral/chain-of-responsibility.ts": {
+    "path": "ports/python/patterns/behavioral/chain_of_responsibility.py",
+    "exports": {
+      "SupportHandler": "SupportHandler",
+      "FaqBot": "FaqBot",
+      "SupportAgent": "SupportAgent",
+      "Engineer": "Engineer",
+      "createSupportChain": "create_support_chain"
+    }
+  },
+  "src/patterns/behavioral/command.ts": {
+    "path": "ports/python/patterns/behavioral/command.py",
+    "exports": {
+      "TextDocument": "TextDocument",
+      "InsertCommand": "InsertCommand",
+      "DeleteCommand": "DeleteCommand",
+      "MacroCommand": "MacroCommand",
+      "CommandHistory": "CommandHistory"
+    }
+  },
+  "src/patterns/behavioral/interpreter.ts": {
+    "path": "ports/python/patterns/behavioral/interpreter.py",
+    "exports": {
+      "NumberExpression": "NumberExpression",
+      "VariableExpression": "VariableExpression",
+      "BinaryExpression": "BinaryExpression",
+      "parseExpression": "parse_expression"
+    }
+  },
+  "src/patterns/behavioral/iterator.ts": {
+    "path": "ports/python/patterns/behavioral/iterator.py",
+    "exports": {
+      "NumberRange": "NumberRange",
+      "depthFirst": "depth_first",
+      "breadthFirst": "breadth_first",
+      "take": "take"
+    }
+  },
+  "src/patterns/behavioral/mediator.ts": {
+    "path": "ports/python/patterns/behavioral/mediator.py",
+    "exports": {
+      "ChatUser": "ChatUser",
+      "ChatRoom": "ChatRoom"
+    }
+  },
+  "src/patterns/behavioral/memento.ts": {
+    "path": "ports/python/patterns/behavioral/memento.py",
+    "exports": {
+      "Editor": "Editor",
+      "EditorHistory": "EditorHistory"
+    }
+  },
+  "src/patterns/behavioral/observer.ts": {
+    "path": "ports/python/patterns/behavioral/observer.py",
+    "exports": {
+      "Subject": "Subject",
+      "StockTicker": "StockTicker",
+      "BehaviorSubject": "BehaviorSubject"
+    }
+  },
+  "src/patterns/behavioral/state.ts": {
+    "path": "ports/python/patterns/behavioral/state.py",
+    "exports": {
+      "Order": "Order"
+    }
+  },
+  "src/patterns/behavioral/strategy.ts": {
+    "path": "ports/python/patterns/behavioral/strategy.py",
+    "exports": {
+      "FlatRateShipping": "FlatRateShipping",
+      "WeightBasedShipping": "WeightBasedShipping",
+      "FreeOverThresholdShipping": "FreeOverThresholdShipping",
+      "ShippingCalculator": "ShippingCalculator"
+    }
+  },
+  "src/patterns/behavioral/template-method.ts": {
+    "path": "ports/python/patterns/behavioral/template_method.py",
+    "exports": {
+      "SalesDataMiner": "SalesDataMiner",
+      "CsvSalesMiner": "CsvSalesMiner",
+      "JsonSalesMiner": "JsonSalesMiner"
+    }
+  },
+  "src/patterns/behavioral/visitor.ts": {
+    "path": "ports/python/patterns/behavioral/visitor.py",
+    "exports": {
+      "CircleShape": "CircleShape",
+      "RectangleShape": "RectangleShape",
+      "TriangleShape": "TriangleShape",
+      "AreaVisitor": "AreaVisitor",
+      "PerimeterVisitor": "PerimeterVisitor",
+      "JsonExportVisitor": "JsonExportVisitor"
+    }
+  },
+  "src/patterns/creational/abstract-factory.ts": {
+    "path": "ports/python/patterns/creational/abstract_factory.py",
+    "exports": {
+      "LightThemeFactory": "LightThemeFactory",
+      "DarkThemeFactory": "DarkThemeFactory",
+      "renderSettingsForm": "render_settings_form"
+    }
+  },
+  "src/patterns/creational/builder.ts": {
+    "path": "ports/python/patterns/creational/builder.py",
+    "exports": {
+      "HttpRequestBuilder": "HttpRequestBuilder"
+    }
+  },
+  "src/patterns/creational/factory-method.ts": {
+    "path": "ports/python/patterns/creational/factory_method.py",
+    "exports": {
+      "Truck": "Truck",
+      "Ship": "Ship",
+      "Logistics": "Logistics",
+      "RoadLogistics": "RoadLogistics",
+      "SeaLogistics": "SeaLogistics",
+      "createTransport": "create_transport"
+    }
+  },
+  "src/patterns/creational/object-pool.ts": {
+    "path": "ports/python/patterns/creational/object_pool.py",
+    "exports": {
+      "ObjectPool": "ObjectPool"
+    }
+  },
+  "src/patterns/creational/prototype.ts": {
+    "path": "ports/python/patterns/creational/prototype.py",
+    "exports": {
+      "Shape": "Shape",
+      "Circle": "Circle",
+      "Rectangle": "Rectangle",
+      "PrototypeRegistry": "PrototypeRegistry"
+    }
+  },
+  "src/patterns/creational/singleton.ts": {
+    "path": "ports/python/patterns/creational/singleton.py",
+    "exports": {
+      "AppConfig": "AppConfig",
+      "lazySingleton": "lazy_singleton"
+    }
+  },
+  "src/patterns/structural/adapter.ts": {
+    "path": "ports/python/patterns/structural/adapter.py",
+    "exports": {
+      "LegacyFahrenheitSensor": "LegacyFahrenheitSensor",
+      "FahrenheitSensorAdapter": "FahrenheitSensorAdapter",
+      "averageTemperature": "average_temperature",
+      "promisify": "promisify"
+    }
+  },
+  "src/patterns/structural/bridge.ts": {
+    "path": "ports/python/patterns/structural/bridge.py",
+    "exports": {
+      "Tv": "Tv",
+      "Radio": "Radio",
+      "RemoteControl": "RemoteControl",
+      "AdvancedRemoteControl": "AdvancedRemoteControl"
+    }
+  },
+  "src/patterns/structural/composite.ts": {
+    "path": "ports/python/patterns/structural/composite.py",
+    "exports": {
+      "FileEntry": "FileEntry",
+      "Directory": "Directory"
+    }
+  },
+  "src/patterns/structural/decorator.ts": {
+    "path": "ports/python/patterns/structural/decorator.py",
+    "exports": {
+      "EmailNotifier": "EmailNotifier",
+      "NotifierDecorator": "NotifierDecorator",
+      "SmsNotifier": "SmsNotifier",
+      "SlackNotifier": "SlackNotifier",
+      "withLogging": "with_logging"
+    }
+  },
+  "src/patterns/structural/facade.ts": {
+    "path": "ports/python/patterns/structural/facade.py",
+    "exports": {
+      "VideoFile": "VideoFile",
+      "CodecFactory": "CodecFactory",
+      "BitrateReader": "BitrateReader",
+      "AudioMixer": "AudioMixer",
+      "VideoConverter": "VideoConverter"
+    }
+  },
+  "src/patterns/structural/flyweight.ts": {
+    "path": "ports/python/patterns/structural/flyweight.py",
+    "exports": {
+      "TreeType": "TreeType",
+      "TreeTypeFactory": "TreeTypeFactory",
+      "Forest": "Forest"
+    }
+  },
+  "src/patterns/structural/proxy.ts": {
+    "path": "ports/python/patterns/structural/proxy.py",
+    "exports": {
+      "CachingWeatherProxy": "CachingWeatherProxy",
+      "AccessControlProxy": "AccessControlProxy",
+      "createValidatedObject": "create_validated_object"
+    }
+  },
+  "src/shared/compare.ts": {
+    "path": "ports/python/shared/compare.py",
+    "exports": {
+      "defaultCompare": "default_compare",
+      "reverseCompare": "reverse_compare"
+    }
+  }
+}

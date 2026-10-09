@@ -1,0 +1,8 @@
+package algorithms.math;
+import java.util.*;
+import java.util.function.*;
+import java.math.*;
+
+public class NumberConversion {
+private static final String DIGITS="0123456789abcdefghijklmnopqrstuvwxyz";public static String toBase(long n,int b){if(b<2||b>36)throw new IllegalArgumentException();if(n==0)return "0";BigInteger r=BigInteger.valueOf(n).abs(),base=BigInteger.valueOf(b);StringBuilder o=new StringBuilder();while(r.signum()>0){BigInteger[] q=r.divideAndRemainder(base);o.append(DIGITS.charAt(q[1].intValue()));r=q[0];}if(n<0)o.append('-');return o.reverse().toString();}public static long fromBase(String s,int b){boolean neg=s.startsWith("-");long r=0;for(char c:s.substring(neg?1:0).toLowerCase(Locale.ROOT).toCharArray()){int d=DIGITS.indexOf(c);if(d<0||d>=b)throw new IllegalArgumentException();r=r*b+d;}return neg?-r:r;}private static final int[] amounts={1000,900,500,400,100,90,50,40,10,9,5,4,1};private static final String[] symbols={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};public static String toRoman(int n){if(n<1||n>3999)throw new IllegalArgumentException();StringBuilder o=new StringBuilder();for(int i=0;i<amounts.length;i++)while(n>=amounts[i]){o.append(symbols[i]);n-=amounts[i];}return o.toString();}private static int value(char c){return switch(c){case 'I'->1;case 'V'->5;case 'X'->10;case 'L'->50;case 'C'->100;case 'D'->500;case 'M'->1000;default->throw new IllegalArgumentException();};}public static int fromRoman(String s){int r=0;for(int i=0;i<s.length();i++){int c=value(s.charAt(i)),next=i+1<s.length()?value(s.charAt(i+1)):0;r+=c<next?-c:c;}return r;}
+}

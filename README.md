@@ -2,11 +2,13 @@
 
 [![CI](https://github.com/AlexMaster168/algs_and_structures/actions/workflows/ci.yml/badge.svg)](https://github.com/AlexMaster168/algs_and_structures/actions/workflows/ci.yml)
 
-Коллекция алгоритмов, структур данных и паттернов проектирования на TypeScript 7 (strict, ESM). У каждого раздела есть описание идеи, пошаговый разбор, оценка сложности, пример использования, ссылка на исходник и на тесты.
+Коллекция алгоритмов, структур данных и паттернов проектирования: 140 модулей TypeScript 7 (strict, ESM) и соответствующие реализации Python, Java и JavaScript. У каждого раздела есть описание идеи, пошаговый разбор, оценка сложности, пример использования, ссылка на исходник и на тесты.
 
 ## Оглавление
 
-- [Шаблоны на других языках](#шаблоны-на-других-языках)
+- [Реализации на других языках](#реализации-на-других-языках) · [Каталог всех модулей](ports/CATALOG.md)
+  - [Python](#python) · [Java](#java) · [JavaScript](#javascript) · [Общие проверки](#общие-проверки)
+- [Как выбрать решение](#как-выбрать-решение)
 
 - [Как пользоваться репозиторием](#как-пользоваться-репозиторием)
   - [Запуск](#запуск) · [Структура проекта](#структура-проекта) · [Соглашения](#соглашения) · [Как читать оценки сложности](#как-читать-оценки-сложности) · [Шпаргалка по структурам данных](#шпаргалка-по-структурам-данных)
@@ -110,6 +112,14 @@ src/
     behavioral/           поведенческие
     architectural/        архитектурные и прикладные
 tests/                    тесты, повторяющие структуру src/
+ports/
+  CATALOG.md              ссылки на все 140 модулей для каждого языка
+  python/                 самостоятельные реализации Python
+  java/src/               самостоятельные реализации Java
+  javascript/             самостоятельные ES-модули JavaScript
+  golden-cases.json       общие эталонные примеры
+  check.py                запуск проверок выбранных языков
+templates/                прежние минимальные примеры на восьми языках
 ```
 
 ### Соглашения
@@ -157,6 +167,8 @@ tests/                    тесты, повторяющие структуру 
 
 Код: [src/data-structures/linear/linked-list.ts](src/data-structures/linear/linked-list.ts)
 
+Другие языки: [Python](ports/python/data_structures/linear/linked_list.py) · [Java](ports/java/src/data-structures/linear/LinkedList.java) · [JavaScript](ports/javascript/data-structures/linear/linked-list.js)
+
 Цепочка узлов, где каждый хранит значение и ссылку на следующий. В отличие от массива элементы не лежат подряд в памяти, поэтому вставка в начало не требует сдвигать остальные элементы.
 
 Как работает:
@@ -185,6 +197,8 @@ list.reverse().toArray(); // ['Slim', 'is', 'name', 'My']
 
 Код: [src/data-structures/linear/doubly-linked-list.ts](src/data-structures/linear/doubly-linked-list.ts)
 
+Другие языки: [Python](ports/python/data_structures/linear/doubly_linked_list.py) · [Java](ports/java/src/data-structures/linear/DoublyLinkedList.java) · [JavaScript](ports/javascript/data-structures/linear/doubly-linked-list.js)
+
 Каждый узел знает и следующего, и предыдущего соседа. За это платим лишней ссылкой на узел, а взамен получаем удаление любого известного узла за O(1) и обход в обе стороны. На двусвязном списке построен [LRU-кеш](#lru-кеш).
 
 | Операция | Время |
@@ -207,6 +221,8 @@ list.popFront();      // 1
 
 Код: [src/data-structures/linear/stack.ts](src/data-structures/linear/stack.ts)
 
+Другие языки: [Python](ports/python/data_structures/linear/stack.py) · [Java](ports/java/src/data-structures/linear/Stack.java) · [JavaScript](ports/javascript/data-structures/linear/stack.js)
+
 LIFO (last in, first out): последний положенный элемент достаётся первым, как стопка тарелок. Стек лежит в основе вызовов функций, отмены действий, проверки скобок, обхода в глубину и вычисления выражений.
 
 Все операции (`push`, `pop`, `peek`) работают за O(1). Внутри обычный массив: `push`/`pop` в конец массива в JS дешёвые.
@@ -223,6 +239,8 @@ stack.pop();  // 3
 
 Код: [src/data-structures/linear/queue.ts](src/data-structures/linear/queue.ts)
 
+Другие языки: [Python](ports/python/data_structures/linear/queue.py) · [Java](ports/java/src/data-structures/linear/Queue.java) · [JavaScript](ports/javascript/data-structures/linear/queue.js)
+
 FIFO (first in, first out): первым пришёл, первым ушёл. Нужна для BFS, очередей задач и буферизации.
 
 Как работает: `Array.shift()` в JS стоит O(n), потому что сдвигает все элементы. Здесь вместо сдвига хранится индекс головы `head`. Когда больше половины массива занято уже извлечёнными элементами, массив один раз сжимается. В итоге `dequeue` работает амортизированно за O(1).
@@ -238,6 +256,8 @@ queue.peek();    // 'b'
 ### Дек
 
 Код: [src/data-structures/linear/deque.ts](src/data-structures/linear/deque.ts)
+
+Другие языки: [Python](ports/python/data_structures/linear/deque.py) · [Java](ports/java/src/data-structures/linear/Deque.java) · [JavaScript](ports/javascript/data-structures/linear/deque.js)
 
 Double-ended queue: добавление и удаление с обоих концов за O(1), плюс доступ по индексу за O(1).
 
@@ -256,6 +276,8 @@ deque.popFront(); // 0
 
 Код: [src/data-structures/linear/circular-buffer.ts](src/data-structures/linear/circular-buffer.ts)
 
+Другие языки: [Python](ports/python/data_structures/linear/circular_buffer.py) · [Java](ports/java/src/data-structures/linear/CircularBuffer.java) · [JavaScript](ports/javascript/data-structures/linear/circular-buffer.js)
+
 Очередь фиксированной ёмкости, которая никогда не растёт. Когда буфер полон, новый элемент затирает самый старый, и `push` возвращает вытесненное значение. Подходит для логов, метрик, истории последних N событий и аудио-буферов: память выделяется один раз.
 
 ```ts
@@ -270,6 +292,8 @@ buffer.toArray(); // [2, 3, 4]
 ### Список с пропусками
 
 Код: [src/data-structures/linear/skip-list.ts](src/data-structures/linear/skip-list.ts)
+
+Другие языки: [Python](ports/python/data_structures/linear/skip_list.py) · [Java](ports/java/src/data-structures/linear/SkipList.java) · [JavaScript](ports/javascript/data-structures/linear/skip-list.js)
 
 Skip list — отсортированный связный список с «экспресс-полосами». Нижний уровень содержит все элементы, каждый следующий примерно половину элементов предыдущего.
 
@@ -297,6 +321,8 @@ set.toArray(); // [3, 5, 9]
 ### Бинарная куча
 
 Код: [src/data-structures/heaps/binary-heap.ts](src/data-structures/heaps/binary-heap.ts)
+
+Другие языки: [Python](ports/python/data_structures/heaps/binary_heap.py) · [Java](ports/java/src/data-structures/heaps/BinaryHeap.java) · [JavaScript](ports/javascript/data-structures/heaps/binary-heap.js)
 
 Полное двоичное дерево, где каждый родитель не больше своих потомков (для min-кучи). Минимум всегда в корне. Дерево хранится прямо в массиве: у элемента `i` дети лежат в `2i + 1` и `2i + 2`, родитель в `(i - 1) / 2`.
 
@@ -329,6 +355,8 @@ byLength.pop(); // 'a'
 
 Код: [src/data-structures/heaps/priority-queue.ts](src/data-structures/heaps/priority-queue.ts)
 
+Другие языки: [Python](ports/python/data_structures/heaps/priority_queue.py) · [Java](ports/java/src/data-structures/heaps/PriorityQueue.java) · [JavaScript](ports/javascript/data-structures/heaps/priority-queue.js)
+
 Обёртка над бинарной кучей, где каждому значению сопоставлен числовой приоритет: чем меньше число, тем раньше элемент выйдет. Внутри каждой записи хранится порядковый номер вставки, поэтому при равных приоритетах сохраняется порядок добавления (стабильность). Обычная куча такого не гарантирует.
 
 Применяется в [Дейкстре](#алгоритм-дейкстры), [A*](#a-поиск), планировщиках задач и симуляциях событий.
@@ -350,6 +378,8 @@ tasks.dequeue(); // 'urgent-2'
 ### Хеш-таблица с цепочками
 
 Код: [src/data-structures/hashing/hash-table.ts](src/data-structures/hashing/hash-table.ts)
+
+Другие языки: [Python](ports/python/data_structures/hashing/hash_table.py) · [Java](ports/java/src/data-structures/hashing/HashTable.java) · [JavaScript](ports/javascript/data-structures/hashing/hash-table.js)
 
 Separate chaining: массив корзин, каждая корзина — список пар ключ-значение. Ключи, попавшие в одну корзину (коллизия), просто лежат в одном списке.
 
@@ -373,6 +403,8 @@ table.delete(1);
 
 Код: [src/data-structures/hashing/open-addressing-hash-map.ts](src/data-structures/hashing/open-addressing-hash-map.ts)
 
+Другие языки: [Python](ports/python/data_structures/hashing/open_addressing_hash_map.py) · [Java](ports/java/src/data-structures/hashing/OpenAddressingHashMap.java) · [JavaScript](ports/javascript/data-structures/hashing/open-addressing-hash-map.js)
+
 Все записи лежат прямо в массиве, без списков. При коллизии ищется следующая свободная ячейка: `i + 1`, `i + 2` и так далее (линейное пробирование).
 
 Подводный камень — удаление. Если просто очистить ячейку, то поиск ключа, который лежит дальше по той же цепочке, остановится на пустой ячейке и вернёт «не найдено». Поэтому удалённые ячейки помечаются «надгробием» (tombstone): поиск через него проходит, а вставка может его переиспользовать. Таблица держится заполненной не больше чем наполовину, иначе цепочки проб становятся длинными.
@@ -390,6 +422,8 @@ map.delete('a'); // true
 ### Фильтр Блума
 
 Код: [src/data-structures/hashing/bloom-filter.ts](src/data-structures/hashing/bloom-filter.ts)
+
+Другие языки: [Python](ports/python/data_structures/hashing/bloom_filter.py) · [Java](ports/java/src/data-structures/hashing/BloomFilter.java) · [JavaScript](ports/javascript/data-structures/hashing/bloom-filter.js)
 
 Вероятностное множество, которое отвечает «точно нет» или «скорее всего да». Ложноотрицательных ответов не бывает, ложноположительные бывают с заданной вероятностью. Хранится только битовый массив, без самих элементов, поэтому структура очень компактная.
 
@@ -414,6 +448,8 @@ seen.mightContain('bob@example.com');   // false (с вероятностью ~9
 
 Код: [src/data-structures/hashing/lru-cache.ts](src/data-structures/hashing/lru-cache.ts)
 
+Другие языки: [Python](ports/python/data_structures/hashing/lru_cache.py) · [Java](ports/java/src/data-structures/hashing/LRUCache.java) · [JavaScript](ports/javascript/data-structures/hashing/lru-cache.js)
+
 Кеш ограниченного размера, который при переполнении выбрасывает элемент, к которому дольше всех не обращались (Least Recently Used).
 
 Как работает: `Map` хранит ключ → узел [двусвязного списка](#двусвязный-список), а сам список хранит порядок использования, самые свежие в начале. При `get` и `set` узел переносится в начало: удаление и вставка известного узла стоят O(1). При переполнении удаляется хвост списка. В итоге все операции O(1).
@@ -435,6 +471,8 @@ cache.keys();      // ['c', 'a']
 ### Бинарное дерево поиска
 
 Код: [src/data-structures/trees/binary-search-tree.ts](src/data-structures/trees/binary-search-tree.ts)
+
+Другие языки: [Python](ports/python/data_structures/trees/binary_search_tree.py) · [Java](ports/java/src/data-structures/trees/BinarySearchTree.java) · [JavaScript](ports/javascript/data-structures/trees/binary-search-tree.js)
 
 У каждого узла все ключи в левом поддереве меньше, а в правом больше. Поиск каждый раз отбрасывает одно из поддеревьев, как бинарный поиск.
 
@@ -461,6 +499,8 @@ tree.delete(30);
 
 Код: [src/data-structures/trees/avl-tree.ts](src/data-structures/trees/avl-tree.ts)
 
+Другие языки: [Python](ports/python/data_structures/trees/avl_tree.py) · [Java](ports/java/src/data-structures/trees/AVLTree.java) · [JavaScript](ports/javascript/data-structures/trees/avl-tree.js)
+
 Самобалансирующееся BST, в котором у каждого узла высоты левого и правого поддеревьев отличаются не больше чем на 1. Благодаря этому высота всегда не больше ~1.44·log₂ n.
 
 Как работает:
@@ -485,6 +525,8 @@ tree.isBalanced(); // true
 ### Красно-чёрное дерево
 
 Код: [src/data-structures/trees/red-black-tree.ts](src/data-structures/trees/red-black-tree.ts)
+
+Другие языки: [Python](ports/python/data_structures/trees/red_black_tree.py) · [Java](ports/java/src/data-structures/trees/RedBlackTree.java) · [JavaScript](ports/javascript/data-structures/trees/red-black-tree.js)
 
 Самобалансирующееся BST, в котором каждый узел окрашен в красный или чёрный цвет и выполняются правила:
 1. Корень чёрный.
@@ -512,6 +554,8 @@ tree.toArray(); // [10, 15, 25, 30]
 
 Код: [src/data-structures/trees/b-tree.ts](src/data-structures/trees/b-tree.ts)
 
+Другие языки: [Python](ports/python/data_structures/trees/b_tree.py) · [Java](ports/java/src/data-structures/trees/BTree.java) · [JavaScript](ports/javascript/data-structures/trees/b-tree.js)
+
 Сбалансированное дерево, в узле которого хранится не один ключ, а много: от t−1 до 2t−1 ключей (t — минимальная степень), и до 2t детей. Все листья всегда на одной глубине. Из-за большого ветвления дерево очень низкое: при t = 100 миллиард ключей помещается в 5 уровней.
 
 Как работает:
@@ -534,6 +578,8 @@ tree.has(5000); // false
 ### Префиксное дерево
 
 Код: [src/data-structures/trees/trie.ts](src/data-structures/trees/trie.ts)
+
+Другие языки: [Python](ports/python/data_structures/trees/trie.py) · [Java](ports/java/src/data-structures/trees/Trie.java) · [JavaScript](ports/javascript/data-structures/trees/trie.js)
 
 Trie — дерево, где каждое ребро помечено символом, а слово соответствует пути от корня. Слова с общим началом делят общую ветку.
 
@@ -569,6 +615,8 @@ trie.delete('dog');
 
 Код: [src/data-structures/range-queries/segment-tree.ts](src/data-structures/range-queries/segment-tree.ts)
 
+Другие языки: [Python](ports/python/data_structures/range_queries/segment_tree.py) · [Java](ports/java/src/data-structures/range-queries/SegmentTree.java) · [JavaScript](ports/javascript/data-structures/range-queries/segment-tree.js)
+
 Каждый узел хранит агрегат (сумму, минимум и т.п.) своего отрезка массива: корень за весь массив, его дети за левую и правую половины и так далее до отдельных элементов.
 
 Как работает (здесь итеративная версия на массиве размером 2n):
@@ -596,6 +644,8 @@ text.query(1, 4); // 'bcde'
 
 Код: [src/data-structures/range-queries/lazy-segment-tree.ts](src/data-structures/range-queries/lazy-segment-tree.ts)
 
+Другие языки: [Python](ports/python/data_structures/range_queries/lazy_segment_tree.py) · [Java](ports/java/src/data-structures/range-queries/LazySegmentTree.java) · [JavaScript](ports/javascript/data-structures/range-queries/lazy-segment-tree.js)
+
 Обычное дерево отрезков меняет элементы по одному. Если нужно прибавить число ко всему отрезку, пришлось бы обновить каждый лист, то есть O(n log n). Ленивое распространение решает это за O(log n).
 
 Как работает: если отрезок узла целиком попадает под обновление, мы меняем только сумму этого узла и записываем «отложенное» прибавление в поле `pending`, не трогая детей. Когда позже понадобится спуститься в этого ребёнка (при запросе или другом обновлении), отложенное значение сначала «проталкивается» вниз (`push`).
@@ -611,6 +661,8 @@ tree.rangeSum(0, 4);     // 45
 ### Дерево Фенвика
 
 Код: [src/data-structures/range-queries/fenwick-tree.ts](src/data-structures/range-queries/fenwick-tree.ts)
+
+Другие языки: [Python](ports/python/data_structures/range_queries/fenwick_tree.py) · [Java](ports/java/src/data-structures/range-queries/FenwickTree.java) · [JavaScript](ports/javascript/data-structures/range-queries/fenwick-tree.js)
 
 Binary Indexed Tree: массив размером n+1, где ячейка `i` хранит сумму отрезка длиной `i & -i` (младший единичный бит индекса), заканчивающегося в `i`.
 
@@ -634,6 +686,8 @@ fenwick.rangeSum(1, 3); // 17
 
 Код: [src/data-structures/range-queries/sparse-table.ts](src/data-structures/range-queries/sparse-table.ts)
 
+Другие языки: [Python](ports/python/data_structures/range_queries/sparse_table.py) · [Java](ports/java/src/data-structures/range-queries/SparseTable.java) · [JavaScript](ports/javascript/data-structures/range-queries/sparse-table.js)
+
 Sparse table заранее считает ответ для всех отрезков длиной степень двойки: `table[k][i]` — агрегат на отрезке `[i, i + 2^k)`. Каждый уровень получается из предыдущего склейкой двух половин.
 
 Как работает запрос за O(1): любой отрезок [l, r] покрывается двумя перекрывающимися отрезками длиной 2^k, где k = ⌊log₂(r − l + 1)⌋. Для min, max или gcd перекрытие не мешает, потому что такие операции идемпотентны (min(x, x) = x). Для суммы этот трюк не работает.
@@ -651,6 +705,8 @@ rmq.query(4, 7); // 3
 ### Sqrt-декомпозиция
 
 Код: [src/data-structures/range-queries/sqrt-decomposition.ts](src/data-structures/range-queries/sqrt-decomposition.ts)
+
+Другие языки: [Python](ports/python/data_structures/range_queries/sqrt_decomposition.py) · [Java](ports/java/src/data-structures/range-queries/SqrtDecomposition.java) · [JavaScript](ports/javascript/data-structures/range-queries/sqrt-decomposition.js)
 
 Массив делится на блоки размером примерно √n, и для каждого блока хранится сумма его элементов.
 
@@ -675,6 +731,8 @@ blocks.rangeSum(2, 6); // 10
 
 Код: [src/data-structures/graphs/graph.ts](src/data-structures/graphs/graph.ts)
 
+Другие языки: [Python](ports/python/data_structures/graphs/graph.py) · [Java](ports/java/src/data-structures/graphs/Graph.java) · [JavaScript](ports/javascript/data-structures/graphs/graph.js)
+
 Граф — множество вершин и рёбер между ними. Бывает ориентированным (у рёбер есть направление) и неориентированным, взвешенным и невзвешенным.
 
 Есть два основных способа хранения:
@@ -697,6 +755,8 @@ roads.hasEdge(2, 1); // false
 ### Система непересекающихся множеств
 
 Код: [src/data-structures/graphs/disjoint-set.ts](src/data-structures/graphs/disjoint-set.ts)
+
+Другие языки: [Python](ports/python/data_structures/graphs/disjoint_set.py) · [Java](ports/java/src/data-structures/graphs/DisjointSet.java) · [JavaScript](ports/javascript/data-structures/graphs/disjoint-set.js)
 
 Union-Find хранит разбиение элементов на группы и умеет две операции: `union(a, b)` объединяет группы, `find(x)` возвращает представителя группы. Два элемента в одной группе, если у них общий представитель.
 
@@ -760,11 +820,15 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/bubble-sort.ts](src/algorithms/sorting/bubble-sort.ts)
 
+Другие языки: [Python](ports/python/algorithms/sorting/bubble_sort.py) · [Java](ports/java/src/algorithms/sorting/BubbleSort.java) · [JavaScript](ports/javascript/algorithms/sorting/bubble-sort.js)
+
 Проходим по массиву и меняем местами соседей, стоящих в неправильном порядке. После каждого прохода самый большой из оставшихся элементов «всплывает» в конец, поэтому следующий проход на один элемент короче. Если за проход не было ни одного обмена, массив уже отсортирован и мы останавливаемся: на отсортированных данных это O(n). Используется в основном в учебных целях.
 
 ### Шейкерная сортировка
 
 Код: [src/algorithms/sorting/cocktail-shaker-sort.ts](src/algorithms/sorting/cocktail-shaker-sort.ts)
+
+Другие языки: [Python](ports/python/algorithms/sorting/cocktail_shaker_sort.py) · [Java](ports/java/src/algorithms/sorting/CocktailShakerSort.java) · [JavaScript](ports/javascript/algorithms/sorting/cocktail-shaker-sort.js)
 
 Пузырёк, который ходит туда и обратно: прямой проход выталкивает максимум в конец, обратный тянет минимум в начало. Обычный пузырёк медленно двигает маленькие элементы из конца массива («черепахи»), шейкерная эту проблему решает. Асимптотика та же, O(n²).
 
@@ -772,11 +836,15 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/selection-sort.ts](src/algorithms/sorting/selection-sort.ts)
 
+Другие языки: [Python](ports/python/algorithms/sorting/selection_sort.py) · [Java](ports/java/src/algorithms/sorting/SelectionSort.java) · [JavaScript](ports/javascript/algorithms/sorting/selection-sort.js)
+
 На шаге i ищем минимум среди элементов `i..n-1` и меняем его местами с элементом i. Сравнений всегда n²/2 независимо от входа, зато обменов не больше n − 1, что полезно, если запись в память очень дорогая. Нестабильна: обмен может перепрыгнуть через равный элемент.
 
 ### Сортировка вставками
 
 Код: [src/algorithms/sorting/insertion-sort.ts](src/algorithms/sorting/insertion-sort.ts)
+
+Другие языки: [Python](ports/python/algorithms/sorting/insertion_sort.py) · [Java](ports/java/src/algorithms/sorting/InsertionSort.java) · [JavaScript](ports/javascript/algorithms/sorting/insertion-sort.js)
 
 Левая часть массива всегда отсортирована. Берём следующий элемент и сдвигаем его влево, пока слева не окажется элемент меньше или равный, как при сортировке карт в руке. На почти отсортированных данных работает почти за O(n), а на маленьких массивах обгоняет «быстрые» алгоритмы из-за низких накладных расходов. Поэтому её используют внутри [Timsort](#timsort) и [блочной сортировки](#блочная-сортировка).
 
@@ -784,11 +852,15 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/shell-sort.ts](src/algorithms/sorting/shell-sort.ts)
 
+Другие языки: [Python](ports/python/algorithms/sorting/shell_sort.py) · [Java](ports/java/src/algorithms/sorting/ShellSort.java) · [JavaScript](ports/javascript/algorithms/sorting/shell-sort.js)
+
 Улучшенные вставки: сначала сортируем элементы, стоящие далеко друг от друга (через шаг h), потом шаг уменьшаем до 1. Дальние перестановки быстро двигают элементы ближе к своим местам, и финальные вставки с шагом 1 работают почти на отсортированных данных. Здесь используется последовательность шагов Кнута 1, 4, 13, 40… (h = 3h + 1). Точная сложность зависит от последовательности шагов, на практике около O(n^1.25).
 
 ### Сортировка слиянием
 
 Код: [src/algorithms/sorting/merge-sort.ts](src/algorithms/sorting/merge-sort.ts)
+
+Другие языки: [Python](ports/python/algorithms/sorting/merge_sort.py) · [Java](ports/java/src/algorithms/sorting/MergeSort.java) · [JavaScript](ports/javascript/algorithms/sorting/merge-sort.js)
 
 Классический «разделяй и властвуй»:
 1. Делим массив пополам.
@@ -800,6 +872,8 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 ### Быстрая сортировка
 
 Код: [src/algorithms/sorting/quick-sort.ts](src/algorithms/sorting/quick-sort.ts)
+
+Другие языки: [Python](ports/python/algorithms/sorting/quick_sort.py) · [Java](ports/java/src/algorithms/sorting/QuickSort.java) · [JavaScript](ports/javascript/algorithms/sorting/quick-sort.js)
 
 1. Выбираем опорный элемент (pivot).
 2. Разбиваем массив на части: меньше pivot, равные ему и больше.
@@ -816,6 +890,8 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/heap-sort.ts](src/algorithms/sorting/heap-sort.ts)
 
+Другие языки: [Python](ports/python/algorithms/sorting/heap_sort.py) · [Java](ports/java/src/algorithms/sorting/HeapSort.java) · [JavaScript](ports/javascript/algorithms/sorting/heap-sort.js)
+
 1. Превращаем массив в max-[кучу](#бинарная-куча) прямо на месте за O(n).
 2. Меняем корень (максимум) с последним элементом, уменьшаем размер кучи на 1 и восстанавливаем кучу (sift down) за O(log n).
 3. Повторяем, пока куча не опустеет.
@@ -826,6 +902,8 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/tim-sort.ts](src/algorithms/sorting/tim-sort.ts)
 
+Другие языки: [Python](ports/python/algorithms/sorting/tim_sort.py) · [Java](ports/java/src/algorithms/sorting/TimSort.java) · [JavaScript](ports/javascript/algorithms/sorting/tim-sort.js)
+
 Гибрид [вставок](#сортировка-вставками) и [слияния](#сортировка-слиянием):
 1. Массив режется на куски длиной `minRun` (32–64 элемента), каждый сортируется вставками: на маленьких кусках они очень быстрые.
 2. Отсортированные куски сливаются попарно, как в сортировке слиянием снизу вверх.
@@ -835,6 +913,8 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 ### Сортировка подсчётом
 
 Код: [src/algorithms/sorting/counting-sort.ts](src/algorithms/sorting/counting-sort.ts)
+
+Другие языки: [Python](ports/python/algorithms/sorting/counting_sort.py) · [Java](ports/java/src/algorithms/sorting/CountingSort.java) · [JavaScript](ports/javascript/algorithms/sorting/counting-sort.js)
 
 Не сравнивает элементы, а считает их:
 1. Находим минимум и максимум, заводим массив счётчиков на `max − min + 1` ячеек.
@@ -848,6 +928,8 @@ O(n + k), где k — диапазон значений. Очень быстр�
 
 Код: [src/algorithms/sorting/radix-sort.ts](src/algorithms/sorting/radix-sort.ts)
 
+Другие языки: [Python](ports/python/algorithms/sorting/radix_sort.py) · [Java](ports/java/src/algorithms/sorting/RadixSort.java) · [JavaScript](ports/javascript/algorithms/sorting/radix-sort.js)
+
 LSD radix sort сортирует числа по одному разряду за раз, начиная с младшего. На каждом шаге числа стабильно раскладываются по 10 корзинам по текущей цифре и собираются обратно. Благодаря стабильности после обработки старшего разряда массив полностью упорядочен.
 
 Сложность O(d·n), где d — количество разрядов. Для 32-битных целых это фактически линейное время. Отрицательные числа сортируются отдельно по модулю, затем их порядок разворачивается и они ставятся перед положительными.
@@ -855,6 +937,8 @@ LSD radix sort сортирует числа по одному разряду з
 ### Блочная сортировка
 
 Код: [src/algorithms/sorting/bucket-sort.ts](src/algorithms/sorting/bucket-sort.ts)
+
+Другие языки: [Python](ports/python/algorithms/sorting/bucket_sort.py) · [Java](ports/java/src/algorithms/sorting/BucketSort.java) · [JavaScript](ports/javascript/algorithms/sorting/bucket-sort.js)
 
 Диапазон `[min, max]` делится на √n равных интервалов (корзин), каждое число попадает в свою корзину, каждая корзина сортируется вставками, и результаты склеиваются по порядку. При равномерном распределении в каждую корзину попадает несколько элементов, и всё работает за O(n). Если все значения скучились в одной корзине, получаем O(n²).
 
@@ -865,6 +949,8 @@ LSD radix sort сортирует числа по одному разряду з
 ### Линейный поиск
 
 Код: [src/algorithms/searching/linear-search.ts](src/algorithms/searching/linear-search.ts)
+
+Другие языки: [Python](ports/python/algorithms/searching/linear_search.py) · [Java](ports/java/src/algorithms/searching/LinearSearch.java) · [JavaScript](ports/javascript/algorithms/searching/linear-search.js)
 
 Перебираем элементы по порядку, пока не встретим нужный. O(n), зато работает на любых, в том числе неотсортированных, данных. На маленьких массивах (до нескольких десятков элементов) часто быстрее бинарного поиска из-за простоты. `linearSearchAll` возвращает все индексы, подходящие под условие.
 
@@ -878,6 +964,8 @@ linearSearchAll([1, 4, 5, 8, 5], (v) => v === 5); // [2, 4]
 ### Бинарный поиск
 
 Код: [src/algorithms/searching/binary-search.ts](src/algorithms/searching/binary-search.ts)
+
+Другие языки: [Python](ports/python/algorithms/searching/binary_search.py) · [Java](ports/java/src/algorithms/searching/BinarySearch.java) · [JavaScript](ports/javascript/algorithms/searching/binary-search.js)
 
 Работает только на отсортированном массиве. Смотрим на средний элемент: если он меньше искомого, ответ справа, если больше — слева. Каждый шаг вдвое сокращает диапазон, поэтому на миллиард элементов хватает 30 сравнений: O(log n).
 
@@ -902,6 +990,8 @@ firstTrue(0, 100, (x) => x * x >= 50); // 8
 
 Код: [src/algorithms/searching/jump-search.ts](src/algorithms/searching/jump-search.ts)
 
+Другие языки: [Python](ports/python/algorithms/searching/jump_search.py) · [Java](ports/java/src/algorithms/searching/JumpSearch.java) · [JavaScript](ports/javascript/algorithms/searching/jump-search.js)
+
 Прыгаем по отсортированному массиву шагами длиной √n, пока не перескочим искомое значение, затем линейно проверяем последний блок. Всего около √n прыжков и √n проверок: O(√n). Медленнее бинарного поиска, но двигается только вперёд, что удобно, когда возврат назад дорогой (например, на ленте или в потоке).
 
 ```ts
@@ -913,6 +1003,8 @@ jumpSearch([0, 1, 2, 3, 5, 8, 13, 21, 34, 55], 21); // 7
 ### Интерполяционный поиск
 
 Код: [src/algorithms/searching/interpolation-search.ts](src/algorithms/searching/interpolation-search.ts)
+
+Другие языки: [Python](ports/python/algorithms/searching/interpolation_search.py) · [Java](ports/java/src/algorithms/searching/InterpolationSearch.java) · [JavaScript](ports/javascript/algorithms/searching/interpolation-search.js)
 
 Ищем так, как человек ищет слово в словаре: на букву «Я» открываем ближе к концу. Позиция угадывается пропорционально значению: `pos = low + (x − a[low]) · (high − low) / (a[high] − a[low])`. На равномерно распределённых данных это O(log log n), но на неравномерных может деградировать до O(n).
 
@@ -926,6 +1018,8 @@ interpolationSearch([10, 20, 30, 40, 50, 60], 40); // 3
 
 Код: [src/algorithms/searching/exponential-search.ts](src/algorithms/searching/exponential-search.ts)
 
+Другие языки: [Python](ports/python/algorithms/searching/exponential_search.py) · [Java](ports/java/src/algorithms/searching/ExponentialSearch.java) · [JavaScript](ports/javascript/algorithms/searching/exponential-search.js)
+
 Проверяем позиции 1, 2, 4, 8… пока не встретим элемент больше искомого. Затем запускаем [бинарный поиск](#бинарный-поиск) в последнем интервале [bound/2, bound]. Сложность O(log i), где i — позиция найденного элемента, поэтому элементы в начале находятся очень быстро. Подходит для неограниченных или очень больших последовательностей, у которых неизвестна длина.
 
 ```ts
@@ -937,6 +1031,8 @@ exponentialSearch([2, 3, 4, 10, 40, 55, 70], 10); // 3
 ### Тернарный поиск
 
 Код: [src/algorithms/searching/ternary-search.ts](src/algorithms/searching/ternary-search.ts)
+
+Другие языки: [Python](ports/python/algorithms/searching/ternary_search.py) · [Java](ports/java/src/algorithms/searching/TernarySearch.java) · [JavaScript](ports/javascript/algorithms/searching/ternary-search.js)
 
 Ищет экстремум унимодальной функции, то есть функции, которая сначала растёт, потом падает (или наоборот). Отрезок делится двумя точками m1 и m2 на три части. Если f(m1) < f(m2), максимум точно не левее m1, и левая треть отбрасывается, иначе отбрасывается правая. За каждую итерацию отрезок сужается на треть: O(log((hi − lo)/ε)).
 
@@ -952,6 +1048,8 @@ findPeakIndex([1, 3, 8, 12, 4, 2]);                // 3
 ### Быстрый выбор
 
 Код: [src/algorithms/searching/quick-select.ts](src/algorithms/searching/quick-select.ts)
+
+Другие языки: [Python](ports/python/algorithms/searching/quick_select.py) · [Java](ports/java/src/algorithms/searching/QuickSelect.java) · [JavaScript](ports/javascript/algorithms/searching/quick-select.js)
 
 Quickselect находит k-й по величине элемент без полной сортировки. Делаем разбиение, как в [быстрой сортировке](#быстрая-сортировка): если опорный элемент встал на позицию k, это и есть ответ. Иначе продолжаем только в той половине, где лежит k, а вторую выбрасываем. В среднем n + n/2 + n/4 + … = O(n). Через него же считается медиана.
 
@@ -971,6 +1069,8 @@ median([4, 1, 3, 2]);                  // 2.5
 ### Поиск в ширину
 
 Код: [src/algorithms/graphs/bfs.ts](src/algorithms/graphs/bfs.ts)
+
+Другие языки: [Python](ports/python/algorithms/graphs/bfs.py) · [Java](ports/java/src/algorithms/graphs/Bfs.java) · [JavaScript](ports/javascript/algorithms/graphs/bfs.js)
 
 BFS обходит граф «волной»: сначала все вершины на расстоянии 1 от старта, потом на расстоянии 2 и так далее.
 
@@ -996,6 +1096,8 @@ gridShortestPath(['..#.', '..#.', '....'], [0, 0], [0, 3]); // 7
 
 Код: [src/algorithms/graphs/dfs.ts](src/algorithms/graphs/dfs.ts)
 
+Другие языки: [Python](ports/python/algorithms/graphs/dfs.py) · [Java](ports/java/src/algorithms/graphs/Dfs.java) · [JavaScript](ports/javascript/algorithms/graphs/dfs.js)
+
 DFS идёт по графу как можно глубже, а упёршись в тупик, возвращается к последней развилке. Реализуется рекурсией (`dfsRecursive`) или явным [стеком](#стек) (`dfs`). Итеративная версия не упирается в лимит стека вызовов на больших графах.
 
 Сложность O(V + E). DFS — основа для многих алгоритмов: [топологической сортировки](#топологическая-сортировка), [поиска сильно связных компонент](#сильно-связные-компоненты), [мостов](#мосты-и-точки-сочленения), поиска циклов и решения лабиринтов.
@@ -1011,6 +1113,8 @@ hasPath([[1], [2], []], 0, 2);                    // true
 
 Код: [src/algorithms/graphs/flood-fill.ts](src/algorithms/graphs/flood-fill.ts)
 
+Другие языки: [Python](ports/python/algorithms/graphs/flood_fill.py) · [Java](ports/java/src/algorithms/graphs/FloodFill.java) · [JavaScript](ports/javascript/algorithms/graphs/flood-fill.js)
+
 Перекрашивает связную область одного цвета, начиная с заданной клетки, как инструмент «ведро» в Paint. По сути это DFS по сетке, где соседи — четыре соседние клетки того же цвета. O(количество клеток).
 
 ```ts
@@ -1022,6 +1126,8 @@ floodFill([[1, 1, 0], [1, 0, 0], [1, 1, 1]], 0, 0, 2); // [[2,2,0],[2,0,0],[2,2,
 ### Топологическая сортировка
 
 Код: [src/algorithms/graphs/topological-sort.ts](src/algorithms/graphs/topological-sort.ts)
+
+Другие языки: [Python](ports/python/algorithms/graphs/topological_sort.py) · [Java](ports/java/src/algorithms/graphs/TopologicalSort.java) · [JavaScript](ports/javascript/algorithms/graphs/topological-sort.js)
 
 Упорядочивает вершины ориентированного ациклического графа (DAG) так, что каждое ребро ведёт слева направо. Примеры: порядок сборки модулей, установка пакетов с зависимостями, расписание курсов с пререквизитами.
 
@@ -1042,6 +1148,8 @@ topologicalSortKahn([[1], [2], [0]]);        // null
 
 Код: [src/algorithms/graphs/cycle-detection.ts](src/algorithms/graphs/cycle-detection.ts)
 
+Другие языки: [Python](ports/python/algorithms/graphs/cycle_detection.py) · [Java](ports/java/src/algorithms/graphs/CycleDetection.java) · [JavaScript](ports/javascript/algorithms/graphs/cycle-detection.js)
+
 - **Ориентированный граф**: цикл есть ровно тогда, когда [топологическая сортировка](#топологическая-сортировка) невозможна.
 - **Неориентированный граф**: идём по рёбрам и объединяем концы в [Union-Find](#система-непересекающихся-множеств). Если концы ребра уже в одной группе, между ними уже есть путь, и это ребро замыкает цикл. Почти O(E).
 
@@ -1054,6 +1162,8 @@ hasCycleUndirected(3, [[0, 1], [1, 2], [2, 0]]); // true
 ### Проверка на двудольность
 
 Код: [src/algorithms/graphs/bipartite.ts](src/algorithms/graphs/bipartite.ts)
+
+Другие языки: [Python](ports/python/algorithms/graphs/bipartite.py) · [Java](ports/java/src/algorithms/graphs/Bipartite.java) · [JavaScript](ports/javascript/algorithms/graphs/bipartite.js)
 
 Граф двудольный, если вершины можно разделить на две группы так, что каждое ребро соединяет вершины из разных групп. Эквивалентное условие — в графе нет циклов нечётной длины.
 
@@ -1070,6 +1180,8 @@ bipartiteColoring(toUndirected(4, [[0, 1], [1, 2], [2, 3], [3, 0]])); // [0, 1, 
 
 Код: [src/algorithms/graphs/connected-components.ts](src/algorithms/graphs/connected-components.ts)
 
+Другие языки: [Python](ports/python/algorithms/graphs/connected_components.py) · [Java](ports/java/src/algorithms/graphs/ConnectedComponents.java) · [JavaScript](ports/javascript/algorithms/graphs/connected-components.js)
+
 Разбивает неориентированный граф на группы вершин, между которыми есть путь. Запускаем обход из каждой ещё не посещённой вершины: всё, до чего он дотянулся, образует одну компоненту. O(V + E).
 
 ```ts
@@ -1082,6 +1194,8 @@ connectedComponents(toUndirected(6, [[0, 1], [2, 3], [3, 4]])); // [[0, 1], [2, 
 ### Сильно связные компоненты
 
 Код: [src/algorithms/graphs/strongly-connected-components.ts](src/algorithms/graphs/strongly-connected-components.ts)
+
+Другие языки: [Python](ports/python/algorithms/graphs/strongly_connected_components.py) · [Java](ports/java/src/algorithms/graphs/StronglyConnectedComponents.java) · [JavaScript](ports/javascript/algorithms/graphs/strongly-connected-components.js)
 
 В ориентированном графе сильно связная компонента (SCC) — максимальная группа вершин, где из любой вершины можно дойти до любой другой. Если сжать каждую SCC в одну вершину, получится DAG.
 
@@ -1099,6 +1213,8 @@ tarjanScc([[1], [2], [0, 3], [4], [5], [3], []]); // [[3, 4, 5], [0, 1, 2], [6]]
 ### Мосты и точки сочленения
 
 Код: [src/algorithms/graphs/bridges-and-articulation-points.ts](src/algorithms/graphs/bridges-and-articulation-points.ts)
+
+Другие языки: [Python](ports/python/algorithms/graphs/bridges_and_articulation_points.py) · [Java](ports/java/src/algorithms/graphs/BridgesAndArticulationPoints.java) · [JavaScript](ports/javascript/algorithms/graphs/bridges-and-articulation-points.js)
 
 **Мост** — ребро, после удаления которого граф распадается на части. **Точка сочленения** — такая же «уязвимая» вершина. Применение: поиск слабых мест в сетях и инфраструктуре.
 
@@ -1121,6 +1237,8 @@ findBridgesAndArticulationPoints(graph);
 
 Код: [src/algorithms/graphs/eulerian-path.ts](src/algorithms/graphs/eulerian-path.ts)
 
+Другие языки: [Python](ports/python/algorithms/graphs/eulerian_path.py) · [Java](ports/java/src/algorithms/graphs/EulerianPath.java) · [JavaScript](ports/javascript/algorithms/graphs/eulerian-path.js)
+
 Путь, который проходит по каждому ребру ровно один раз (задача о кёнигсбергских мостах). В ориентированном графе он существует, если у всех вершин число входящих рёбер равно числу исходящих, кроме, может быть, двух: у стартовой исходящих на одно больше, у конечной на одно меньше.
 
 Алгоритм Хирхольцера: идём из старта по ещё не использованным рёбрам, пока не застрянем. Застрявшую вершину переносим из стека в ответ и пытаемся продолжить из предыдущей. Перевёрнутый ответ и есть путь. O(E). Применение: сборка генома из фрагментов, обход улиц уборочной машиной.
@@ -1134,6 +1252,8 @@ eulerianPathDirected([[1], [2], [0, 3], []]); // [2, 0, 1, 2, 3]
 ### Алгоритм Дейкстры
 
 Код: [src/algorithms/graphs/dijkstra.ts](src/algorithms/graphs/dijkstra.ts)
+
+Другие языки: [Python](ports/python/algorithms/graphs/dijkstra.py) · [Java](ports/java/src/algorithms/graphs/Dijkstra.java) · [JavaScript](ports/javascript/algorithms/graphs/dijkstra.js)
 
 Находит кратчайшие пути от одной вершины до всех остальных во взвешенном графе с неотрицательными весами.
 
@@ -1162,6 +1282,8 @@ dijkstraPath(graph, 0, 4); // { distance: 7, path: [0, 2, 1, 3, 4] }
 
 Код: [src/algorithms/graphs/bellman-ford.ts](src/algorithms/graphs/bellman-ford.ts)
 
+Другие языки: [Python](ports/python/algorithms/graphs/bellman_ford.py) · [Java](ports/java/src/algorithms/graphs/BellmanFord.java) · [JavaScript](ports/javascript/algorithms/graphs/bellman-ford.js)
+
 Кратчайшие пути от одной вершины, в том числе с отрицательными весами рёбер.
 
 Как работает: кратчайший путь без циклов содержит не больше V − 1 рёбер. Поэтому делаем V − 1 проходов, и в каждом пытаемся улучшить расстояния по всем рёбрам. Если после этого какое-то ребро всё ещё улучшает расстояние, в графе есть отрицательный цикл, и кратчайшего пути не существует (можно крутиться по циклу бесконечно). Если за проход ничего не поменялось, останавливаемся раньше.
@@ -1181,6 +1303,8 @@ bellmanFord(3, [
 ### Алгоритм Флойда-Уоршелла
 
 Код: [src/algorithms/graphs/floyd-warshall.ts](src/algorithms/graphs/floyd-warshall.ts)
+
+Другие языки: [Python](ports/python/algorithms/graphs/floyd_warshall.py) · [Java](ports/java/src/algorithms/graphs/FloydWarshall.java) · [JavaScript](ports/javascript/algorithms/graphs/floyd-warshall.js)
 
 Кратчайшие пути между всеми парами вершин. Динамическое программирование: `dist[i][j]` на шаге k — кратчайший путь из i в j, использующий в качестве промежуточных только вершины 0..k. Переход: `dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])`.
 
@@ -1202,6 +1326,8 @@ floydWarshallPath(next, 0, 2); // [0, 1, 2]
 
 Код: [src/algorithms/graphs/a-star.ts](src/algorithms/graphs/a-star.ts)
 
+Другие языки: [Python](ports/python/algorithms/graphs/a_star.py) · [Java](ports/java/src/algorithms/graphs/AStar.java) · [JavaScript](ports/javascript/algorithms/graphs/a-star.js)
+
 Дейкстра с подсказкой. Каждая вершина оценивается по `f = g + h`, где g — пройденное расстояние от старта, а h — эвристическая оценка оставшегося пути до цели. Из кучи сначала достаются вершины, которые выглядят ближе к цели, поэтому A* обычно просматривает гораздо меньше вершин.
 
 Если эвристика никогда не переоценивает реальное расстояние (допустимая эвристика), найденный путь гарантированно кратчайший. Для сетки с движением в 4 стороны такая эвристика — манхэттенское расстояние `|dx| + |dy|`. С h = 0 A* превращается в обычную Дейкстру.
@@ -1218,6 +1344,8 @@ aStarGrid(['..#.', '..#.', '....'], [0, 0], [0, 3]);
 ### Минимальное остовное дерево
 
 Код: [src/algorithms/graphs/minimum-spanning-tree.ts](src/algorithms/graphs/minimum-spanning-tree.ts)
+
+Другие языки: [Python](ports/python/algorithms/graphs/minimum_spanning_tree.py) · [Java](ports/java/src/algorithms/graphs/MinimumSpanningTree.java) · [JavaScript](ports/javascript/algorithms/graphs/minimum-spanning-tree.js)
 
 Остовное дерево связывает все вершины графа без циклов (V − 1 рёбер). Минимальное (MST) — то, у которого сумма весов наименьшая. Применение: проектирование сетей (кабели, дороги, трубы) с минимальной стоимостью, кластеризация.
 
@@ -1242,6 +1370,8 @@ prim(toWeightedUndirected(3, edges)).weight; // 3
 ### Максимальный поток
 
 Код: [src/algorithms/graphs/max-flow.ts](src/algorithms/graphs/max-flow.ts)
+
+Другие языки: [Python](ports/python/algorithms/graphs/max_flow.py) · [Java](ports/java/src/algorithms/graphs/MaxFlow.java) · [JavaScript](ports/javascript/algorithms/graphs/max-flow.js)
 
 Есть сеть труб с пропускными способностями, исток и сток. Нужно найти, сколько «жидкости» можно максимально прогнать из истока в сток.
 
@@ -1274,6 +1404,8 @@ edmondsKarp([
 
 Код: [src/algorithms/trees/binary-tree.ts](src/algorithms/trees/binary-tree.ts)
 
+Другие языки: [Python](ports/python/algorithms/trees/binary_tree.py) · [Java](ports/java/src/algorithms/trees/BinaryTree.java) · [JavaScript](ports/javascript/algorithms/trees/binary-tree.js)
+
 Четыре классических порядка обхода:
 - **Pre-order** (корень, левое, правое): удобно для копирования и сериализации дерева.
 - **In-order** (левое, корень, правое): у дерева поиска выдаёт элементы по возрастанию.
@@ -1303,6 +1435,8 @@ maxDepth(root);   // 3
 
 Код: [src/algorithms/trees/lowest-common-ancestor.ts](src/algorithms/trees/lowest-common-ancestor.ts)
 
+Другие языки: [Python](ports/python/algorithms/trees/lowest_common_ancestor.py) · [Java](ports/java/src/algorithms/trees/LowestCommonAncestor.java) · [JavaScript](ports/javascript/algorithms/trees/lowest-common-ancestor.js)
+
 LCA двух вершин — самая глубокая вершина, которая является предком обеих.
 
 Двоичный подъём (binary lifting):
@@ -1327,6 +1461,8 @@ lca.distance(3, 2); // 3
 
 Код: [src/algorithms/trees/tree-diameter.ts](src/algorithms/trees/tree-diameter.ts)
 
+Другие языки: [Python](ports/python/algorithms/trees/tree_diameter.py) · [Java](ports/java/src/algorithms/trees/TreeDiameter.java) · [JavaScript](ports/javascript/algorithms/trees/tree-diameter.js)
+
 Диаметр — самый длинный путь между двумя вершинами дерева. Трюк с двумя BFS: из любой вершины находим самую дальнюю вершину A, она гарантированно является концом какого-то диаметра. Затем из A находим самую дальнюю B. Путь A–B и есть диаметр. O(n).
 
 ```ts
@@ -1350,6 +1486,8 @@ treeDiameter(toUndirected(5, [[0, 1], [1, 2], [1, 3], [3, 4]])); // { length: 3,
 
 Код: [src/algorithms/dynamic-programming/memoize.ts](src/algorithms/dynamic-programming/memoize.ts)
 
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/memoize.py) · [Java](ports/java/src/algorithms/dynamic-programming/Memoize.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/memoize.js)
+
 Обёртка, которая запоминает результаты чистой функции по её аргументам. Ключ по умолчанию — сам аргумент, если он один, или `JSON.stringify` от списка аргументов. Можно передать свою функцию ключа. Кеш доступен через `.cache`.
 
 ```ts
@@ -1363,6 +1501,8 @@ square(4); // берёт из square.cache
 ### Числа Фибоначчи
 
 Код: [src/algorithms/dynamic-programming/fibonacci.ts](src/algorithms/dynamic-programming/fibonacci.ts)
+
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/fibonacci.py) · [Java](ports/java/src/algorithms/dynamic-programming/Fibonacci.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/fibonacci.js)
 
 Классический пример того, как подход меняет сложность одной и той же задачи:
 
@@ -1385,6 +1525,8 @@ fibonacciFast(100); // то же самое за O(log n)
 ### Задача о рюкзаке
 
 Код: [src/algorithms/dynamic-programming/knapsack.ts](src/algorithms/dynamic-programming/knapsack.ts)
+
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/knapsack.py) · [Java](ports/java/src/algorithms/dynamic-programming/Knapsack.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/knapsack.js)
 
 Есть предметы с весом и ценностью и рюкзак вместимостью W. Нужно набрать максимальную ценность, не превысив вес.
 
@@ -1412,6 +1554,8 @@ knapsack01([
 
 Код: [src/algorithms/dynamic-programming/coin-change.ts](src/algorithms/dynamic-programming/coin-change.ts)
 
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/coin_change.py) · [Java](ports/java/src/algorithms/dynamic-programming/CoinChange.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/coin-change.js)
+
 - **Минимум монет** (`minCoins`): `dp[s] = min(dp[s − coin] + 1)` по всем монетам. Для каждой суммы запоминается последняя использованная монета, чтобы восстановить набор.
 - **Число способов** (`coinChangeWays`): `ways[s] += ways[s − coin]`. Внешний цикл идёт по монетам, поэтому 1+2 и 2+1 считаются одним способом, ведь нас интересуют комбинации, а не последовательности.
 
@@ -1427,6 +1571,8 @@ coinChangeWays([1, 2, 5], 5); // 4
 ### Наибольшая общая подпоследовательность
 
 Код: [src/algorithms/dynamic-programming/longest-common-subsequence.ts](src/algorithms/dynamic-programming/longest-common-subsequence.ts)
+
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/longest_common_subsequence.py) · [Java](ports/java/src/algorithms/dynamic-programming/LongestCommonSubsequence.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/longest-common-subsequence.js)
 
 **LCS** — самая длинная последовательность символов, которая встречается в обеих строках в том же порядке, но не обязательно подряд.
 - `dp[i][j]` — длина LCS для префиксов `a[0..i)` и `b[0..j)`.
@@ -1448,6 +1594,8 @@ longestCommonSubstring('xabcdey', 'zzbcdq');   // 'bcd'
 
 Код: [src/algorithms/dynamic-programming/longest-increasing-subsequence.ts](src/algorithms/dynamic-programming/longest-increasing-subsequence.ts)
 
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/longest_increasing_subsequence.py) · [Java](ports/java/src/algorithms/dynamic-programming/LongestIncreasingSubsequence.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/longest-increasing-subsequence.js)
+
 Самая длинная строго возрастающая подпоследовательность (элементы не обязаны идти подряд). Прямое ДП работает за O(n²), здесь используется решение за O(n log n):
 1. Храним массив «хвостов»: `tails[k]` — наименьший последний элемент среди всех возрастающих подпоследовательностей длины k + 1.
 2. Для каждого числа [бинарным поиском](#бинарный-поиск) находим первый хвост ≥ числа и заменяем его. Если такого нет, удлиняем массив.
@@ -1464,6 +1612,8 @@ longestIncreasingSubsequence([10, 9, 2, 5, 3, 7, 101, 18]); // [2, 3, 7, 18]
 ### Расстояние Левенштейна
 
 Код: [src/algorithms/dynamic-programming/edit-distance.ts](src/algorithms/dynamic-programming/edit-distance.ts)
+
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/edit_distance.py) · [Java](ports/java/src/algorithms/dynamic-programming/EditDistance.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/edit-distance.js)
 
 Минимальное число вставок, удалений и замен символов, чтобы превратить одну строку в другую.
 - `dp[i][j]` — расстояние между префиксами длиной i и j.
@@ -1482,6 +1632,8 @@ editDistance('kitten', 'sitting'); // 3
 
 Код: [src/algorithms/dynamic-programming/max-subarray.ts](src/algorithms/dynamic-programming/max-subarray.ts)
 
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/max_subarray.py) · [Java](ports/java/src/algorithms/dynamic-programming/MaxSubarray.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/max-subarray.js)
+
 Алгоритм Кадане находит непрерывный подмассив с максимальной суммой за один проход. Храним лучшую сумму подмассива, заканчивающегося в текущей позиции. Если она стала отрицательной, продолжать её бессмысленно, и мы начинаем новый подмассив с текущего элемента. O(n), O(1) памяти. Возвращает сумму и границы.
 
 ```ts
@@ -1493,6 +1645,8 @@ maxSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]); // { sum: 6, start: 3, end: 6 }
 ### Порядок перемножения матриц
 
 Код: [src/algorithms/dynamic-programming/matrix-chain.ts](src/algorithms/dynamic-programming/matrix-chain.ts)
+
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/matrix_chain.py) · [Java](ports/java/src/algorithms/dynamic-programming/MatrixChain.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/matrix-chain.js)
 
 Умножение матриц ассоциативно, но стоимость сильно зависит от расстановки скобок. Для матриц 10×30, 30×5 и 5×60 порядок (A1·A2)·A3 стоит 4 500 умножений, а A1·(A2·A3) — 27 000.
 
@@ -1508,6 +1662,8 @@ matrixChainOrder([10, 30, 5, 60]); // { cost: 4500, order: '((A1A2)A3)' }
 
 Код: [src/algorithms/dynamic-programming/rod-cutting.ts](src/algorithms/dynamic-programming/rod-cutting.ts)
 
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/rod_cutting.py) · [Java](ports/java/src/algorithms/dynamic-programming/RodCutting.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/rod-cutting.js)
+
 Стержень длиной n можно разрезать на куски, кусок длиной i продаётся по `prices[i-1]`. Нужна максимальная выручка. `revenue[n] = max(prices[i] + revenue[n − i])` по длине первого куска. Сохраняя длину первого куска, восстанавливаем, как резать. O(n²).
 
 ```ts
@@ -1519,6 +1675,8 @@ rodCutting([1, 5, 8, 9, 10, 17, 17, 20], 8); // { revenue: 22, pieces: [2, 6] }
 ### Сумма подмножества
 
 Код: [src/algorithms/dynamic-programming/subset-sum.ts](src/algorithms/dynamic-programming/subset-sum.ts)
+
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/subset_sum.py) · [Java](ports/java/src/algorithms/dynamic-programming/SubsetSum.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/subset-sum.js)
 
 Можно ли выбрать числа с заданной суммой. `reachable[s]` — достижима ли сумма s. Для каждого числа обновляем суммы от большей к меньшей, чтобы одно число не использовалось дважды (тот же приём, что и в 0/1-рюкзаке). O(n·target).
 
@@ -1535,6 +1693,8 @@ canPartition([1, 5, 11, 5]);        // true: [1, 5, 5] и [11]
 
 Код: [src/algorithms/dynamic-programming/word-break.ts](src/algorithms/dynamic-programming/word-break.ts)
 
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/word_break.py) · [Java](ports/java/src/algorithms/dynamic-programming/WordBreak.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/word-break.js)
+
 Можно ли разбить строку без пробелов на слова из словаря. `reachable[i]` — можно ли разбить префикс длины i. Префикс длины `end` разбивается, если для какого-то `start` префикс до `start` разбивается, а кусок `text[start..end)` есть в словаре. Перебор `start` ограничен длиной самого длинного слова. Применение: токенизация текстов на языках без пробелов (китайский, японский), разбор хештегов.
 
 ```ts
@@ -1546,6 +1706,8 @@ wordBreak('applepenapple', ['apple', 'pen']); // ['apple', 'pen', 'apple']
 ### Пути в сетке
 
 Код: [src/algorithms/dynamic-programming/grid-paths.ts](src/algorithms/dynamic-programming/grid-paths.ts)
+
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/grid_paths.py) · [Java](ports/java/src/algorithms/dynamic-programming/GridPaths.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/grid-paths.js)
 
 Из левого верхнего угла в правый нижний можно ходить только вправо и вниз.
 - `uniquePaths`: число путей. `ways[r][c] = ways[r-1][c] + ways[r][c-1]`, заблокированные клетки обнуляются. Хватает одной строки таблицы.
@@ -1576,6 +1738,8 @@ minPathSum([[1, 3, 1], [1, 5, 1], [4, 2, 1]]); // 7
 
 Код: [src/algorithms/strings/kmp.ts](src/algorithms/strings/kmp.ts)
 
+Другие языки: [Python](ports/python/algorithms/strings/kmp.py) · [Java](ports/java/src/algorithms/strings/Kmp.java) · [JavaScript](ports/javascript/algorithms/strings/kmp.js)
+
 **Префикс-функция** `pi[i]` — длина наибольшего собственного префикса шаблона, который одновременно является суффиксом подстроки `pattern[0..i]`. Например, для `aabaaab` это `[0, 1, 0, 1, 2, 2, 3]`.
 
 Как ищем: идём по тексту и держим k — сколько символов шаблона уже совпало. При несовпадении не возвращаемся назад по тексту, а сдвигаем k на `pi[k-1]`: это самое длинное начало шаблона, которое уже точно совпадает. Каждый символ текста обрабатывается амортизированно за O(1), итого O(n + m).
@@ -1590,6 +1754,8 @@ prefixFunction('aabaaab');        // [0, 1, 0, 1, 2, 2, 3]
 ### Z-функция
 
 Код: [src/algorithms/strings/z-function.ts](src/algorithms/strings/z-function.ts)
+
+Другие языки: [Python](ports/python/algorithms/strings/z_function.py) · [Java](ports/java/src/algorithms/strings/ZFunction.java) · [JavaScript](ports/javascript/algorithms/strings/z-function.js)
 
 `z[i]` — длина наибольшего общего префикса строки и её суффикса, начинающегося с позиции i. Вычисляется за O(n): алгоритм поддерживает самый правый найденный отрезок совпадения [l, r) и для позиций внутри него переиспользует уже посчитанные значения.
 
@@ -1606,6 +1772,8 @@ zSearch('aaaa', 'aa');   // [0, 1, 2]
 
 Код: [src/algorithms/strings/rabin-karp.ts](src/algorithms/strings/rabin-karp.ts)
 
+Другие языки: [Python](ports/python/algorithms/strings/rabin_karp.py) · [Java](ports/java/src/algorithms/strings/RabinKarp.java) · [JavaScript](ports/javascript/algorithms/strings/rabin-karp.js)
+
 Сравниваем не строки, а их хеши. Полиномиальный хеш окна текста пересчитывается при сдвиге на один символ за O(1) (rolling hash): вычитаем вклад ушедшего символа, умножаем на основание, добавляем новый символ. При совпадении хешей строки сверяются напрямую, чтобы исключить случайную коллизию.
 
 В среднем O(n + m). Особенно удобен для поиска многих шаблонов одной длины и для поиска дубликатов (плагиат, одинаковые блоки в файлах).
@@ -1620,6 +1788,8 @@ rabinKarp('aaaa', 'aa'); // [0, 1, 2]
 
 Код: [src/algorithms/strings/boyer-moore-horspool.ts](src/algorithms/strings/boyer-moore-horspool.ts)
 
+Другие языки: [Python](ports/python/algorithms/strings/boyer_moore_horspool.py) · [Java](ports/java/src/algorithms/strings/BoyerMooreHorspool.java) · [JavaScript](ports/javascript/algorithms/strings/boyer-moore-horspool.js)
+
 Шаблон прикладывается к тексту, но символы сравниваются справа налево. После проверки окно сдвигается в зависимости от символа текста под последней позицией шаблона: если такого символа в шаблоне нет, можно прыгнуть сразу на всю длину шаблона. Таблица сдвигов строится заранее.
 
 На обычных текстах и длинных шаблонах часто пропускает большую часть символов, поэтому на практике один из самых быстрых алгоритмов (вариации используются в `grep`). В худшем случае O(n·m).
@@ -1633,6 +1803,8 @@ boyerMooreHorspool('abracadabra abracadabra', 'abra'); // [0, 7, 12, 19]
 ### Алгоритм Ахо-Корасик
 
 Код: [src/algorithms/strings/aho-corasick.ts](src/algorithms/strings/aho-corasick.ts)
+
+Другие языки: [Python](ports/python/algorithms/strings/aho_corasick.py) · [Java](ports/java/src/algorithms/strings/AhoCorasick.java) · [JavaScript](ports/javascript/algorithms/strings/aho-corasick.js)
 
 Ищет сразу много шаблонов за один проход по тексту. Это обобщение КМП на [префиксное дерево](#префиксное-дерево).
 
@@ -1655,6 +1827,8 @@ new AhoCorasick(['he', 'she', 'his', 'hers']).search('ahishers');
 
 Код: [src/algorithms/strings/manacher.ts](src/algorithms/strings/manacher.ts)
 
+Другие языки: [Python](ports/python/algorithms/strings/manacher.py) · [Java](ports/java/src/algorithms/strings/Manacher.java) · [JavaScript](ports/javascript/algorithms/strings/manacher.js)
+
 Находит самый длинный палиндром в строке за O(n). Наивное расширение от каждого центра даёт O(n²).
 
 Как работает:
@@ -1671,6 +1845,8 @@ longestPalindromicSubstring('forgeeksskeegfor'); // 'geeksskeeg'
 ### Суффиксный массив
 
 Код: [src/algorithms/strings/suffix-array.ts](src/algorithms/strings/suffix-array.ts)
+
+Другие языки: [Python](ports/python/algorithms/strings/suffix_array.py) · [Java](ports/java/src/algorithms/strings/SuffixArray.java) · [JavaScript](ports/javascript/algorithms/strings/suffix-array.js)
 
 Суффиксный массив — начальные позиции всех суффиксов строки, отсортированные лексикографически. Для `banana` это `[5, 3, 1, 0, 4, 2]`: a, ana, anana, banana, na, nana.
 
@@ -1691,6 +1867,8 @@ countDistinctSubstrings('abab');           // 7
 ### Строковые утилиты
 
 Код: [src/algorithms/strings/string-utils.ts](src/algorithms/strings/string-utils.ts)
+
+Другие языки: [Python](ports/python/algorithms/strings/string_utils.py) · [Java](ports/java/src/algorithms/strings/StringUtils.java) · [JavaScript](ports/javascript/algorithms/strings/string-utils.js)
 
 - `isBalanced`: проверка скобок через [стек](#стек). Открывающая скобка кладётся в стек, закрывающая должна совпасть с вершиной.
 - `isPalindrome`: два указателя с концов строки. Регистр, пробелы и знаки препинания игнорируются.
@@ -1718,6 +1896,8 @@ runLengthEncode('aaabccdddd');                  // '3a1b2c4d'
 
 Код: [src/algorithms/math/gcd.ts](src/algorithms/math/gcd.ts)
 
+Другие языки: [Python](ports/python/algorithms/math/gcd.py) · [Java](ports/java/src/algorithms/math/Gcd.java) · [JavaScript](ports/javascript/algorithms/math/gcd.js)
+
 - **Алгоритм Евклида** (`gcd`): НОД(a, b) = НОД(b, a mod b), пока b не станет 0. O(log min(a, b)).
 - **НОК** (`lcm`) = a / НОД(a, b) · b. Деление выполняется до умножения, чтобы не переполниться.
 - **Расширенный Евклид** (`extendedGcd`) дополнительно находит такие x и y, что a·x + b·y = НОД(a, b) (соотношение Безу).
@@ -1736,6 +1916,8 @@ modInverse(3, 11);    // 4, потому что 3·4 = 12 ≡ 1 (mod 11)
 
 Код: [src/algorithms/math/power.ts](src/algorithms/math/power.ts)
 
+Другие языки: [Python](ports/python/algorithms/math/power.py) · [Java](ports/java/src/algorithms/math/Power.java) · [JavaScript](ports/javascript/algorithms/math/power.js)
+
 - **Бинарное возведение в степень** (`fastPower`, `modPow`): показатель раскладывается в двоичную запись, основание на каждом шаге возводится в квадрат, а результат умножается на него там, где в показателе стоит 1. Например, x¹³ = x⁸·x⁴·x¹. O(log n) умножений вместо n. `modPow` работает с BigInt и берёт остаток на каждом шаге, поэтому числа не разрастаются. Это основа RSA и [теста Миллера-Рабина](#простые-числа).
 - **Целочисленный корень** (`integerSqrt`) и **метод Ньютона** (`newtonSqrt`): итерация x → (x + n/x) / 2 сходится квадратично, то есть число верных знаков примерно удваивается на каждом шаге.
 
@@ -1750,6 +1932,8 @@ integerSqrt(99);                  // 9
 ### Простые числа
 
 Код: [src/algorithms/math/primes.ts](src/algorithms/math/primes.ts)
+
+Другие языки: [Python](ports/python/algorithms/math/primes.py) · [Java](ports/java/src/algorithms/math/Primes.java) · [JavaScript](ports/javascript/algorithms/math/primes.js)
 
 - **Решето Эратосфена** (`sieveOfEratosthenes`): выписываем числа до n и для каждого простого вычёркиваем все его кратные, начиная с p². Оставшиеся числа простые. O(n log log n).
 - **Линейное решето** (`linearSieve`): каждое составное число вычёркивается ровно один раз, через свой минимальный простой делитель. O(n), и заодно для каждого числа известен минимальный делитель, что даёт разложение на множители за O(log n).
@@ -1770,6 +1954,8 @@ eulerPhi(36);                // 12
 
 Код: [src/algorithms/math/matrix.ts](src/algorithms/math/matrix.ts)
 
+Другие языки: [Python](ports/python/algorithms/math/matrix.py) · [Java](ports/java/src/algorithms/math/Matrix.java) · [JavaScript](ports/javascript/algorithms/math/matrix.js)
+
 - **Умножение** (`multiply`): O(n³). Циклы переставлены в порядке i-k-j, чтобы внутренний цикл шёл по строке подряд, что лучше для кеша процессора.
 - **Возведение в степень** (`matrixPower`): то же бинарное возведение, что и для чисел, O(n³ log k). Классический трюк: n-е число Фибоначчи — элемент матрицы [[1,1],[1,0]]ⁿ, а значит любая линейная рекуррентность считается за O(log n).
 - **Определитель** (`determinant`) и **решение СЛАУ** (`solveLinearSystem`): метод Гаусса с выбором главного элемента. Строка с наибольшим по модулю элементом в столбце переставляется наверх, что снижает ошибки округления. O(n³).
@@ -1787,6 +1973,8 @@ solveLinearSystem([[2, 1, -1], [-3, -1, 2], [-2, 1, 2]], [8, -11, -3]); // [2, 3
 ### Комбинаторика
 
 Код: [src/algorithms/math/combinatorics.ts](src/algorithms/math/combinatorics.ts)
+
+Другие языки: [Python](ports/python/algorithms/math/combinatorics.py) · [Java](ports/java/src/algorithms/math/Combinatorics.java) · [JavaScript](ports/javascript/algorithms/math/combinatorics.js)
 
 - `factorial`: n! на BigInt, потому что уже 21! не помещается в точный диапазон `number`.
 - `binomial`: число сочетаний C(n, k). Считается последовательным умножением и делением, а не через факториалы, поэтому промежуточные числа остаются маленькими. Используется симметрия C(n, k) = C(n, n−k).
@@ -1810,6 +1998,8 @@ nextPermutation(perm); // true, perm = [1, 3, 2]
 
 Код: [src/algorithms/math/number-conversion.ts](src/algorithms/math/number-conversion.ts)
 
+Другие языки: [Python](ports/python/algorithms/math/number_conversion.py) · [Java](ports/java/src/algorithms/math/NumberConversion.java) · [JavaScript](ports/javascript/algorithms/math/number-conversion.js)
+
 - `toBase` и `fromBase`: перевод между системами счисления с основанием от 2 до 36 через последовательное деление с остатком и схему Горнера.
 - `toRoman`: жадный алгоритм по таблице, где есть и вычитательные пары (CM, XC, IV и т.п.).
 - `fromRoman`: символ вычитается, если следующий символ больше (IV = 5 − 1), иначе прибавляется.
@@ -1832,6 +2022,8 @@ Backtracking строит решение по шагам: на каждом ша
 
 Код: [src/algorithms/backtracking/permutations.ts](src/algorithms/backtracking/permutations.ts)
 
+Другие языки: [Python](ports/python/algorithms/backtracking/permutations.py) · [Java](ports/java/src/algorithms/backtracking/Permutations.java) · [JavaScript](ports/javascript/algorithms/backtracking/permutations.js)
+
 - `permutations`: n! вариантов. На каждом шаге выбираем ещё не использованный элемент.
 - `combinations(items, k)`: C(n, k) вариантов. Элементы берутся только по возрастанию индекса, чтобы не было повторов. Перебор отсекается, если оставшихся элементов не хватит до размера k.
 - `subsets`: 2ⁿ вариантов. Для каждого элемента две ветки: не брать или брать.
@@ -1850,6 +2042,8 @@ combinationSum([2, 3, 6, 7], 7); // [[2, 2, 3], [7]]
 
 Код: [src/algorithms/backtracking/n-queens.ts](src/algorithms/backtracking/n-queens.ts)
 
+Другие языки: [Python](ports/python/algorithms/backtracking/n_queens.py) · [Java](ports/java/src/algorithms/backtracking/NQueens.java) · [JavaScript](ports/javascript/algorithms/backtracking/n-queens.js)
+
 Расставить N ферзей на доске N×N так, чтобы они не били друг друга. Ставим по одному ферзю в каждую строку. Занятые столбцы и обе диагонали хранятся в множествах: у клеток одной диагонали одинаковая разность `row − col`, у клеток одной антидиагонали одинаковая сумма `row + col`. Поэтому проверка клетки занимает O(1).
 
 `countNQueens` только считает решения и делает это на битовых масках: свободные клетки вычисляются одной операцией `~(cols | diag | antiDiag)`, а младший свободный бит берётся через `free & -free`. Получается в разы быстрее.
@@ -1865,6 +2059,8 @@ countNQueens(8); // 92
 
 Код: [src/algorithms/backtracking/sudoku.ts](src/algorithms/backtracking/sudoku.ts)
 
+Другие языки: [Python](ports/python/algorithms/backtracking/sudoku.py) · [Java](ports/java/src/algorithms/backtracking/Sudoku.java) · [JavaScript](ports/javascript/algorithms/backtracking/sudoku.js)
+
 Для каждой строки, столбца и квадрата 3×3 хранится множество уже использованных цифр, поэтому проверка кандидата занимает O(1). Пустые клетки заполняются по очереди: пробуем цифры от 1 до 9, рекурсивно идём дальше, а при тупике откатываемся. Некорректная исходная доска сразу даёт `null`. Входная доска не мутируется.
 
 ```ts
@@ -1876,6 +2072,8 @@ solveSudoku(board); // решённая доска 9×9 или null, где boar
 ### Поиск слова в сетке
 
 Код: [src/algorithms/backtracking/word-search.ts](src/algorithms/backtracking/word-search.ts)
+
+Другие языки: [Python](ports/python/algorithms/backtracking/word_search.py) · [Java](ports/java/src/algorithms/backtracking/WordSearch.java) · [JavaScript](ports/javascript/algorithms/backtracking/word-search.js)
 
 Можно ли составить слово, переходя по соседним клеткам и не используя клетку дважды. DFS из каждой клетки, которая совпадает с первой буквой. Клетка помечается посещённой на время рекурсии и освобождается при откате.
 
@@ -1896,6 +2094,8 @@ wordSearch(['ABCE', 'SFCS', 'ADEE'], 'ABCB');   // false
 
 Код: [src/algorithms/greedy/activity-selection.ts](src/algorithms/greedy/activity-selection.ts)
 
+Другие языки: [Python](ports/python/algorithms/greedy/activity_selection.py) · [Java](ports/java/src/algorithms/greedy/ActivitySelection.java) · [JavaScript](ports/javascript/algorithms/greedy/activity-selection.js)
+
 - **Выбор заявок** (`activitySelection`): максимум непересекающихся интервалов. Сортируем по времени окончания и берём каждый интервал, который начинается не раньше конца предыдущего выбранного. Интервал, который заканчивается раньше всех, оставляет больше всего места остальным, поэтому жадность здесь оптимальна. O(n log n).
 - **Слияние интервалов** (`mergeIntervals`): сортируем по началу и склеиваем перекрывающиеся.
 - **Минимум переговорок** (`minMeetingRooms`): отдельно сортируем начала и концы и идём двумя указателями. Начало встречи занимает комнату, конец освобождает. Максимальное число одновременно занятых комнат и есть ответ.
@@ -1912,6 +2112,8 @@ minMeetingRooms([{ start: 0, end: 30 }, { start: 5, end: 10 }, { start: 15, end:
 
 Код: [src/algorithms/greedy/fractional-knapsack.ts](src/algorithms/greedy/fractional-knapsack.ts)
 
+Другие языки: [Python](ports/python/algorithms/greedy/fractional_knapsack.py) · [Java](ports/java/src/algorithms/greedy/FractionalKnapsack.java) · [JavaScript](ports/javascript/algorithms/greedy/fractional-knapsack.js)
+
 То же, что [рюкзак](#задача-о-рюкзаке), но предметы можно делить (песок, жидкости). Сортируем по удельной ценности (ценность / вес) и берём сначала самое ценное на килограмм, а последний предмет отрезаем по остатку места. Здесь жадность оптимальна, в отличие от 0/1-рюкзака. O(n log n).
 
 ```ts
@@ -1923,6 +2125,8 @@ fractionalKnapsack([{ weight: 10, value: 60 }, { weight: 20, value: 100 }, { wei
 ### Код Хаффмана
 
 Код: [src/algorithms/greedy/huffman.ts](src/algorithms/greedy/huffman.ts)
+
+Другие языки: [Python](ports/python/algorithms/greedy/huffman.py) · [Java](ports/java/src/algorithms/greedy/Huffman.java) · [JavaScript](ports/javascript/algorithms/greedy/huffman.js)
 
 Сжатие без потерь: частые символы получают короткие битовые коды, редкие — длинные. Код префиксный, то есть ни один код не является началом другого, поэтому битовую строку можно однозначно раскодировать без разделителей.
 
@@ -1945,6 +2149,8 @@ huffmanDecode(encoded, codes);                           // 'abracadabra'
 
 Код: [src/algorithms/greedy/jump-game.ts](src/algorithms/greedy/jump-game.ts)
 
+Другие языки: [Python](ports/python/algorithms/greedy/jump_game.py) · [Java](ports/java/src/algorithms/greedy/JumpGame.java) · [JavaScript](ports/javascript/algorithms/greedy/jump-game.js)
+
 - `canReachEnd`: в каждой клетке записано, на сколько максимум можно прыгнуть. Поддерживаем самую дальнюю достижимую позицию. Если текущий индекс оказался дальше неё, конец недостижим. O(n).
 - `minJumps`: минимум прыжков. Это BFS по «уровням»: все позиции, достижимые за k прыжков, образуют отрезок, а следующий уровень заканчивается на самой дальней позиции, достижимой из текущего. O(n).
 - `greedyChange`: размен самыми крупными монетами. Оптимален для «канонических» систем (рубли, доллары), но не для любых наборов монет: см. [размен монет через ДП](#размен-монет).
@@ -1964,6 +2170,8 @@ greedyChange(289, [1, 5, 10, 25, 100]); // [100, 100, 25, 25, 25, 10, 1, 1, 1, 1
 ### Два указателя
 
 Код: [src/algorithms/techniques/two-pointers.ts](src/algorithms/techniques/two-pointers.ts)
+
+Другие языки: [Python](ports/python/algorithms/techniques/two_pointers.py) · [Java](ports/java/src/algorithms/techniques/TwoPointers.java) · [JavaScript](ports/javascript/algorithms/techniques/two-pointers.js)
 
 Два индекса двигаются по массиву навстречу друг другу или в одну сторону и превращают перебор пар за O(n²) в один проход за O(n). Чаще всего техника применяется к отсортированным данным.
 
@@ -1989,6 +2197,8 @@ dutchNationalFlag([2, 0, 2, 1, 1, 0], 1);            // [0, 0, 1, 1, 2, 2]
 
 Код: [src/algorithms/techniques/sliding-window.ts](src/algorithms/techniques/sliding-window.ts)
 
+Другие языки: [Python](ports/python/algorithms/techniques/sliding_window.py) · [Java](ports/java/src/algorithms/techniques/SlidingWindow.java) · [JavaScript](ports/javascript/algorithms/techniques/sliding-window.js)
+
 Окно [left, right] двигается по массиву, и его состояние обновляется инкрементально: добавляем вошедший элемент и убираем вышедший, а не пересчитываем всё окно заново.
 
 - `maxSumWindow`: окно фиксированного размера k, сумма обновляется за O(1).
@@ -2008,6 +2218,8 @@ minWindowSubstring('ADOBECODEBANC', 'ABC');          // 'BANC'
 ### Префиксные суммы
 
 Код: [src/algorithms/techniques/prefix-sums.ts](src/algorithms/techniques/prefix-sums.ts)
+
+Другие языки: [Python](ports/python/algorithms/techniques/prefix_sums.py) · [Java](ports/java/src/algorithms/techniques/PrefixSums.java) · [JavaScript](ports/javascript/algorithms/techniques/prefix-sums.js)
 
 `prefix[i]` — сумма первых i элементов. Тогда сумма на отрезке [l, r] равна `prefix[r + 1] − prefix[l]`: O(n) на предподсчёт и O(1) на запрос.
 
@@ -2030,6 +2242,8 @@ majorityElement([2, 2, 1, 1, 1, 2, 2]);                              // 2
 
 Код: [src/algorithms/randomized/shuffle.ts](src/algorithms/randomized/shuffle.ts) · Тесты: [tests/algorithms/misc.test.ts](tests/algorithms/misc.test.ts)
 
+Другие языки: [Python](ports/python/algorithms/randomized/shuffle.py) · [Java](ports/java/src/algorithms/randomized/Shuffle.java) · [JavaScript](ports/javascript/algorithms/randomized/shuffle.js)
+
 - **Перемешивание Фишера-Йетса** (`fisherYatesShuffle`): идём с конца массива и меняем элемент i со случайным элементом из диапазона [0, i]. Каждая из n! перестановок получается равновероятно, O(n). Популярный вариант `sort(() => Math.random() - 0.5)` даёт смещённое распределение, так делать нельзя.
 - **Reservoir sampling** (`reservoirSample`): выбор k случайных элементов из потока неизвестной длины за один проход и O(k) памяти. Первые k элементов кладутся в резервуар, а i-й элемент заменяет случайный элемент резервуара с вероятностью k/i. В итоге каждый элемент потока попадает в выборку с вероятностью k/n.
 - **Метод Монте-Карло** (`monteCarloPi`): точки бросаются случайно в единичный квадрат, доля попавших в четверть круга стремится к π/4. Точность растёт как 1/√n.
@@ -2049,6 +2263,8 @@ monteCarloPi(100_000, random);                                          // ≈ 3
 ## Битовые операции
 
 Код: [src/algorithms/bit-manipulation/bits.ts](src/algorithms/bit-manipulation/bits.ts) · Тесты: [tests/algorithms/misc.test.ts](tests/algorithms/misc.test.ts)
+
+Другие языки: [Python](ports/python/algorithms/bit_manipulation/bits.py) · [Java](ports/java/src/algorithms/bit-manipulation/Bits.java) · [JavaScript](ports/javascript/algorithms/bit-manipulation/bits.js)
 
 Работа с числами на уровне отдельных битов. Такие операции выполняются за один такт процессора и часто заменяют циклы и условия.
 
@@ -2079,6 +2295,8 @@ bits.subsetsByMask(['a', 'b']);     // [[], ['a'], ['b'], ['a', 'b']]
 ## Вычислительная геометрия
 
 Код: [src/algorithms/geometry/geometry.ts](src/algorithms/geometry/geometry.ts) · Тесты: [tests/algorithms/misc.test.ts](tests/algorithms/misc.test.ts)
+
+Другие языки: [Python](ports/python/algorithms/geometry/geometry.py) · [Java](ports/java/src/algorithms/geometry/Geometry.java) · [JavaScript](ports/javascript/algorithms/geometry/geometry.js)
 
 Почти всё здесь построено на **векторном произведении** `cross(o, a, b)`. Его знак показывает, где лежит точка b относительно луча o→a: положительный — слева (поворот против часовой стрелки), отрицательный — справа, ноль — на одной прямой.
 
@@ -2115,6 +2333,8 @@ closestPair(points);                  // { a, b, distance }
 
 Код: [src/patterns/creational/singleton.ts](src/patterns/creational/singleton.ts)
 
+Другие языки: [Python](ports/python/patterns/creational/singleton.py) · [Java](ports/java/src/patterns/creational/Singleton.java) · [JavaScript](ports/javascript/patterns/creational/singleton.js)
+
 **Singleton**. Проблема: нужен ровно один экземпляр на всё приложение (конфигурация, пул соединений) и глобальная точка доступа к нему.
 
 Решение: конструктор приватный, экземпляр создаётся лениво при первом вызове `getInstance()`. `lazySingleton` даёт ту же идею для функций без классов.
@@ -2135,6 +2355,8 @@ getConnection() === getConnection(); // true, объект создаётся о
 
 Код: [src/patterns/creational/factory-method.ts](src/patterns/creational/factory-method.ts)
 
+Другие языки: [Python](ports/python/patterns/creational/factory_method.py) · [Java](ports/java/src/patterns/creational/FactoryMethod.java) · [JavaScript](ports/javascript/patterns/creational/factory-method.js)
+
 **Factory Method**. Проблема: базовый код знает, что делать с объектом, но не должен знать, какой именно класс создавать.
 
 Решение: базовый класс `Logistics` описывает алгоритм `planDelivery` и вызывает абстрактный `createTransport()`. Подклассы `RoadLogistics` и `SeaLogistics` решают, создать грузовик или корабль. Новый вид доставки добавляется новым подклассом без изменения существующего кода (принцип открытости/закрытости). `createTransport(kind)` — упрощённая «простая фабрика» по ключу.
@@ -2151,6 +2373,8 @@ createTransport('ship').kind;               // 'ship'
 
 Код: [src/patterns/creational/abstract-factory.ts](src/patterns/creational/abstract-factory.ts)
 
+Другие языки: [Python](ports/python/patterns/creational/abstract_factory.py) · [Java](ports/java/src/patterns/creational/AbstractFactory.java) · [JavaScript](ports/javascript/patterns/creational/abstract-factory.js)
+
 **Abstract Factory**. Проблема: нужно создавать семейства связанных объектов, которые должны сочетаться между собой. Например, светлая кнопка не должна оказаться рядом с тёмным чекбоксом.
 
 Решение: интерфейс фабрики с методами для каждого продукта семейства (`createButton`, `createCheckbox`) и по одной реализации на семейство (`LightThemeFactory`, `DarkThemeFactory`). Клиентский код получает фабрику и работает только с интерфейсами, поэтому тема меняется заменой одного объекта.
@@ -2164,6 +2388,8 @@ renderSettingsForm(new DarkThemeFactory()); // ['[dark x]', '[dark button: Save]
 ### Строитель
 
 Код: [src/patterns/creational/builder.ts](src/patterns/creational/builder.ts)
+
+Другие языки: [Python](ports/python/patterns/creational/builder.py) · [Java](ports/java/src/patterns/creational/Builder.java) · [JavaScript](ports/javascript/patterns/creational/builder.js)
 
 **Builder**. Проблема: у объекта много необязательных параметров, и конструктор с десятью аргументами нечитаем.
 
@@ -2185,6 +2411,8 @@ const request = HttpRequestBuilder.post('https://api.example.com/users')
 
 Код: [src/patterns/creational/prototype.ts](src/patterns/creational/prototype.ts)
 
+Другие языки: [Python](ports/python/patterns/creational/prototype.py) · [Java](ports/java/src/patterns/creational/Prototype.java) · [JavaScript](ports/javascript/patterns/creational/prototype.js)
+
 **Prototype**. Проблема: нужно создать копию объекта, не зная его конкретного класса, или создание с нуля дорогое.
 
 Решение: объект сам умеет себя клонировать (`clone()`). Копия глубокая: вложенные массивы тоже копируются, поэтому изменения копии не затрагивают оригинал. `PrototypeRegistry` хранит готовые образцы по имени и выдаёт их копии.
@@ -2202,6 +2430,8 @@ const copy = new Circle(0, 0, 'red', 2, ['round']).clone();
 ### Пул объектов
 
 Код: [src/patterns/creational/object-pool.ts](src/patterns/creational/object-pool.ts)
+
+Другие языки: [Python](ports/python/patterns/creational/object_pool.py) · [Java](ports/java/src/patterns/creational/ObjectPool.java) · [JavaScript](ports/javascript/patterns/creational/object-pool.js)
 
 **Object Pool**. Проблема: объекты дорого создавать (соединения с БД, большие буферы, потоки), а нужны они ненадолго.
 
@@ -2224,6 +2454,8 @@ const sum = pool.use((buffer) => buffer.reduce((a, b) => a + b, 0));
 
 Код: [src/patterns/structural/adapter.ts](src/patterns/structural/adapter.ts)
 
+Другие языки: [Python](ports/python/patterns/structural/adapter.py) · [Java](ports/java/src/patterns/structural/Adapter.java) · [JavaScript](ports/javascript/patterns/structural/adapter.js)
+
 **Adapter**. Проблема: есть полезный класс (старый код, сторонняя библиотека), но его интерфейс не совпадает с ожидаемым.
 
 Решение: обёртка реализует нужный интерфейс и переводит вызовы. `FahrenheitSensorAdapter` превращает старый датчик в Фаренгейтах в `TemperatureSensor` с Цельсиями. `promisify` адаптирует API на колбэках в стиле Node.js к промисам.
@@ -2242,6 +2474,8 @@ await promisify(legacyDivide)(10, 2); // 5
 
 Код: [src/patterns/structural/bridge.ts](src/patterns/structural/bridge.ts)
 
+Другие языки: [Python](ports/python/patterns/structural/bridge.py) · [Java](ports/java/src/patterns/structural/Bridge.java) · [JavaScript](ports/javascript/patterns/structural/bridge.js)
+
 **Bridge**. Проблема: две независимые оси изменений (виды пультов и виды устройств) при наследовании дают взрыв классов: `TvBasicRemote`, `TvAdvancedRemote`, `RadioBasicRemote`…
 
 Решение: абстракция (`RemoteControl`) держит ссылку на реализацию (`Device`) и делегирует ей работу. Пульты и устройства развиваются независимо, и любой пульт работает с любым устройством: N + M классов вместо N × M.
@@ -2257,6 +2491,8 @@ new AdvancedRemoteControl(new Radio()).mute();
 ### Компоновщик
 
 Код: [src/patterns/structural/composite.ts](src/patterns/structural/composite.ts)
+
+Другие языки: [Python](ports/python/patterns/structural/composite.py) · [Java](ports/java/src/patterns/structural/Composite.java) · [JavaScript](ports/javascript/patterns/structural/composite.js)
 
 **Composite**. Проблема: древовидная структура (файлы и папки, элементы UI, меню), где с отдельным элементом и с группой нужно работать одинаково.
 
@@ -2277,6 +2513,8 @@ root.render(); // ['root/ (350)', '  a.txt (100)', '  src/ (250)', '    index.ts
 
 Код: [src/patterns/structural/decorator.ts](src/patterns/structural/decorator.ts)
 
+Другие языки: [Python](ports/python/patterns/structural/decorator.py) · [Java](ports/java/src/patterns/structural/Decorator.java) · [JavaScript](ports/javascript/patterns/structural/decorator.js)
+
 **Decorator**. Проблема: нужно добавлять объекту поведение в разных комбинациях (email + SMS, email + Slack, всё сразу), а наследование под каждую комбинацию даёт взрыв классов.
 
 Решение: обёртки реализуют тот же интерфейс, что и оборачиваемый объект, делегируют ему вызов и добавляют своё. Обёртки можно вкладывать друг в друга в любом порядке. `withLogging` — функциональный вариант: функция высшего порядка, которая оборачивает другую функцию логированием, по тому же принципу работают декораторы в TS и middleware.
@@ -2295,6 +2533,8 @@ add(2, 3); // логирует 'add(2, 3)' и 'add -> 5'
 
 Код: [src/patterns/structural/facade.ts](src/patterns/structural/facade.ts)
 
+Другие языки: [Python](ports/python/patterns/structural/facade.py) · [Java](ports/java/src/patterns/structural/Facade.java) · [JavaScript](ports/javascript/patterns/structural/facade.js)
+
 **Facade**. Проблема: подсистема из многих классов, которые нужно вызывать в правильном порядке (кодеки, чтение битрейта, микширование аудио).
 
 Решение: один класс с простым методом `convert(file, format)`, который внутри оркеструет всю подсистему. Клиент не зависит от деталей, а подсистему можно менять, не трогая клиентский код. Фасад не запрещает прямой доступ к подсистеме, когда он действительно нужен.
@@ -2308,6 +2548,8 @@ new VideoConverter().convert('movie.ogg', 'mp4'); // 'buffer(movie.ogg, ogg-code
 ### Легковес
 
 Код: [src/patterns/structural/flyweight.ts](src/patterns/structural/flyweight.ts)
+
+Другие языки: [Python](ports/python/patterns/structural/flyweight.py) · [Java](ports/java/src/patterns/structural/Flyweight.java) · [JavaScript](ports/javascript/patterns/structural/flyweight.js)
 
 **Flyweight**. Проблема: миллионы похожих объектов (деревья в игре, символы в редакторе) съедают память, потому что каждый хранит одинаковые тяжёлые данные.
 
@@ -2325,6 +2567,8 @@ forest.typeCount; // 2
 ### Заместитель
 
 Код: [src/patterns/structural/proxy.ts](src/patterns/structural/proxy.ts)
+
+Другие языки: [Python](ports/python/patterns/structural/proxy.py) · [Java](ports/java/src/patterns/structural/Proxy.java) · [JavaScript](ports/javascript/patterns/structural/proxy.js)
 
 **Proxy**. Проблема: нужно контролировать доступ к объекту (кеширование, проверка прав, ленивая инициализация, валидация), не меняя сам объект и его клиентов.
 
@@ -2357,6 +2601,8 @@ user.age = -1; // TypeError
 
 Код: [src/patterns/behavioral/chain-of-responsibility.ts](src/patterns/behavioral/chain-of-responsibility.ts)
 
+Другие языки: [Python](ports/python/patterns/behavioral/chain_of_responsibility.py) · [Java](ports/java/src/patterns/behavioral/ChainOfResponsibility.java) · [JavaScript](ports/javascript/patterns/behavioral/chain-of-responsibility.js)
+
 **Chain of Responsibility**. Проблема: запрос может обработать один из нескольких обработчиков, и отправитель не должен знать, какой именно.
 
 Решение: обработчики выстраиваются в цепочку. Каждый либо обрабатывает запрос, либо передаёт его следующему. В примере тикет поддержки идёт от бота к агенту и дальше к инженеру. Порядок и состав цепочки меняются без изменения обработчиков. Тот же принцип лежит в основе [middleware](#конвейер-middleware) и всплытия событий в DOM.
@@ -2373,6 +2619,8 @@ support.handle({ topic: 'outage', severity: 3 });   // 'Engineer fixed outage'
 ### Команда
 
 Код: [src/patterns/behavioral/command.ts](src/patterns/behavioral/command.ts)
+
+Другие языки: [Python](ports/python/patterns/behavioral/command.py) · [Java](ports/java/src/patterns/behavioral/Command.java) · [JavaScript](ports/javascript/patterns/behavioral/command.js)
 
 **Command**. Проблема: действия нужно отменять и повторять, складывать в очередь, логировать или объединять в макросы.
 
@@ -2393,6 +2641,8 @@ history.redo();                            // 'world'
 
 Код: [src/patterns/behavioral/interpreter.ts](src/patterns/behavioral/interpreter.ts)
 
+Другие языки: [Python](ports/python/patterns/behavioral/interpreter.py) · [Java](ports/java/src/patterns/behavioral/Interpreter.java) · [JavaScript](ports/javascript/patterns/behavioral/interpreter.js)
+
 **Interpreter**. Проблема: нужно вычислять выражения простого языка (формулы, правила, фильтры, запросы).
 
 Решение: каждое правило грамматики становится классом: число, переменная, бинарная операция. Выражение — дерево таких объектов (AST), и `interpret(context)` рекурсивно вычисляет его. Дерево строит рекурсивный нисходящий парсер: `parseSum` разбирает `+` и `-`, `parseProduct` разбирает `*` и `/`, а `parsePrimary` — числа, переменные и скобки. Такое разделение автоматически даёт правильный приоритет операций.
@@ -2408,6 +2658,8 @@ expr.toString();                 // '((2 * (x + 3)) - (y / 2))'
 ### Итератор
 
 Код: [src/patterns/behavioral/iterator.ts](src/patterns/behavioral/iterator.ts)
+
+Другие языки: [Python](ports/python/patterns/behavioral/iterator.py) · [Java](ports/java/src/patterns/behavioral/Iterator.java) · [JavaScript](ports/javascript/patterns/behavioral/iterator.js)
 
 **Iterator**. Проблема: коллекцию нужно обходить разными способами, не раскрывая её внутреннего устройства.
 
@@ -2432,6 +2684,8 @@ function* naturals() {
 
 Код: [src/patterns/behavioral/mediator.ts](src/patterns/behavioral/mediator.ts)
 
+Другие языки: [Python](ports/python/patterns/behavioral/mediator.py) · [Java](ports/java/src/patterns/behavioral/Mediator.java) · [JavaScript](ports/javascript/patterns/behavioral/mediator.js)
+
 **Mediator**. Проблема: много объектов общаются друг с другом напрямую, и связи «каждый с каждым» превращаются в паутину.
 
 Решение: объекты общаются только через посредника. Пользователи чата не знают друг о друге: они отправляют сообщения в `ChatRoom`, а комната решает, кому их доставить (всем или одному адресату). Связей становится N вместо N². Похожим образом устроены диспетчерская авиаузла, шина событий и контроллер формы.
@@ -2451,6 +2705,8 @@ bob.inbox; // ['alice: hi all']
 ### Снимок
 
 Код: [src/patterns/behavioral/memento.ts](src/patterns/behavioral/memento.ts)
+
+Другие языки: [Python](ports/python/patterns/behavioral/memento.py) · [Java](ports/java/src/patterns/behavioral/Memento.java) · [JavaScript](ports/javascript/patterns/behavioral/memento.js)
 
 **Memento**. Проблема: нужно сохранять и восстанавливать состояние объекта (undo, черновики), не раскрывая его приватные поля.
 
@@ -2473,6 +2729,8 @@ editor.text; // 'Hello'
 ### Наблюдатель
 
 Код: [src/patterns/behavioral/observer.ts](src/patterns/behavioral/observer.ts)
+
+Другие языки: [Python](ports/python/patterns/behavioral/observer.py) · [Java](ports/java/src/patterns/behavioral/Observer.java) · [JavaScript](ports/javascript/patterns/behavioral/observer.js)
 
 **Observer**. Проблема: несколько объектов должны узнавать об изменениях в другом объекте, но он не должен от них зависеть.
 
@@ -2497,6 +2755,8 @@ theme.subscribe(console.log); // сразу печатает 'light'
 
 Код: [src/patterns/behavioral/state.ts](src/patterns/behavioral/state.ts)
 
+Другие языки: [Python](ports/python/patterns/behavioral/state.py) · [Java](ports/java/src/patterns/behavioral/State.java) · [JavaScript](ports/javascript/patterns/behavioral/state.js)
+
 **State**. Проблема: поведение объекта сильно зависит от его состояния, и код зарастает `switch (status)` в каждом методе.
 
 Решение: каждое состояние — отдельный класс с одинаковым интерфейсом. Заказ делегирует вызовы текущему состоянию, а состояние само решает, что делать и в какое состояние перейти. Базовый класс по умолчанию запрещает все действия, поэтому недопустимый переход (например, отменить отправленный заказ) сразу бросает понятную ошибку. Новое состояние добавляется новым классом. По сути это конечный автомат.
@@ -2515,6 +2775,8 @@ order.history;   // ['new', 'paid', 'shipped', 'delivered']
 ### Стратегия
 
 Код: [src/patterns/behavioral/strategy.ts](src/patterns/behavioral/strategy.ts)
+
+Другие языки: [Python](ports/python/patterns/behavioral/strategy.py) · [Java](ports/java/src/patterns/behavioral/Strategy.java) · [JavaScript](ports/javascript/patterns/behavioral/strategy.js)
 
 **Strategy**. Проблема: есть несколько вариантов алгоритма (расчёт доставки, сортировка, сжатие), и выбирать между ними нужно во время работы программы.
 
@@ -2535,6 +2797,8 @@ calculator.calculate({ weightKg: 2.3, orderTotal: 80 }); // 12
 
 Код: [src/patterns/behavioral/template-method.ts](src/patterns/behavioral/template-method.ts)
 
+Другие языки: [Python](ports/python/patterns/behavioral/template_method.py) · [Java](ports/java/src/patterns/behavioral/TemplateMethod.java) · [JavaScript](ports/javascript/patterns/behavioral/template-method.js)
+
 **Template Method**. Проблема: несколько классов выполняют одинаковый алгоритм, который отличается только отдельными шагами.
 
 Решение: базовый класс задаёт скелет алгоритма в методе `mine()`: разобрать данные, отфильтровать некорректные, построить отчёт. Подклассы переопределяют только отличающиеся шаги: `CsvSalesMiner` и `JsonSalesMiner` реализуют свой `parse`. Остальные шаги (`isValid`, `report`) имеют реализацию по умолчанию, которую тоже можно переопределить.
@@ -2551,6 +2815,8 @@ new CsvSalesMiner().mine('product,amount\napple,10\npear,5\napple,7');
 ### Посетитель
 
 Код: [src/patterns/behavioral/visitor.ts](src/patterns/behavioral/visitor.ts)
+
+Другие языки: [Python](ports/python/patterns/behavioral/visitor.py) · [Java](ports/java/src/patterns/behavioral/Visitor.java) · [JavaScript](ports/javascript/patterns/behavioral/visitor.js)
 
 **Visitor**. Проблема: над стабильной иерархией классов (фигуры, узлы AST) нужно часто добавлять новые операции: площадь, периметр, экспорт в JSON, отрисовку. Добавлять каждую операцию в каждый класс неудобно.
 
@@ -2575,6 +2841,8 @@ shapes.map((shape) => shape.accept(new JsonExportVisitor())); // ['{"type":"circ
 ### Внедрение зависимостей
 
 Код: [src/patterns/architectural/dependency-injection.ts](src/patterns/architectural/dependency-injection.ts)
+
+Другие языки: [Python](ports/python/patterns/architectural/dependency_injection.py) · [Java](ports/java/src/patterns/architectural/DependencyInjection.java) · [JavaScript](ports/javascript/patterns/architectural/dependency-injection.js)
 
 **Dependency Injection**. Проблема: если класс сам создаёт свои зависимости (`new Database()` внутри сервиса), его невозможно протестировать отдельно и сложно перенастроить.
 
@@ -2606,6 +2874,10 @@ container.resolve(DB).url; // 'postgres://localhost', тип выводится 
 
 Код: [src/patterns/architectural/repository.ts](src/patterns/architectural/repository.ts), [src/patterns/architectural/specification.ts](src/patterns/architectural/specification.ts)
 
+Другие языки (repository): [Python](ports/python/patterns/architectural/repository.py) · [Java](ports/java/src/patterns/architectural/Repository.java) · [JavaScript](ports/javascript/patterns/architectural/repository.js)
+
+Другие языки (specification): [Python](ports/python/patterns/architectural/specification.py) · [Java](ports/java/src/patterns/architectural/Specification.java) · [JavaScript](ports/javascript/patterns/architectural/specification.js)
+
 **Repository** прячет хранилище данных за интерфейсом коллекции (`findById`, `findAll`, `save`, `delete`). Бизнес-логика не знает, где лежат данные: в памяти, в PostgreSQL или во внешнем API. Для тестов подставляется `InMemoryRepository`. Репозиторий отдаёт копии (`structuredClone`), поэтому внешние изменения объекта не попадают в хранилище без `save`.
 
 **Specification** выносит бизнес-правило отбора в отдельный объект. Правила комбинируются через `and`, `or` и `not`, переиспользуются и тестируются отдельно.
@@ -2633,6 +2905,8 @@ await users.findAll(adult.and(active)); // [{ id: '2', ... }]
 
 Код: [src/patterns/architectural/event-emitter.ts](src/patterns/architectural/event-emitter.ts)
 
+Другие языки: [Python](ports/python/patterns/architectural/event_emitter.py) · [Java](ports/java/src/patterns/architectural/EventEmitter.java) · [JavaScript](ports/javascript/patterns/architectural/event-emitter.js)
+
 Pub/Sub, то есть [наблюдатель](#наблюдатель) с именованными событиями. Карта событий передаётся дженериком, поэтому TypeScript проверяет и имя события, и тип данных: опечатка в имени или неверный payload ловятся при компиляции. `on` возвращает функцию отписки, `once` срабатывает один раз.
 
 ```ts
@@ -2647,6 +2921,8 @@ events.emit('login', { user: 'alex' });
 ### Конвейер middleware
 
 Код: [src/patterns/architectural/middleware.ts](src/patterns/architectural/middleware.ts)
+
+Другие языки: [Python](ports/python/patterns/architectural/middleware.py) · [Java](ports/java/src/patterns/architectural/Middleware.java) · [JavaScript](ports/javascript/patterns/architectural/middleware.js)
 
 Цепочка обработчиков по модели «луковицы», как в Koa и Express. Каждый middleware получает контекст и функцию `next()`:
 - код до `await next()` выполняется на пути внутрь, код после — на пути наружу (замер времени, логирование);
@@ -2673,6 +2949,8 @@ await new Pipeline<{ path: string; status?: number }>()
 
 Код: [src/patterns/architectural/null-object.ts](src/patterns/architectural/null-object.ts)
 
+Другие языки: [Python](ports/python/patterns/architectural/null_object.py) · [Java](ports/java/src/patterns/architectural/NullObject.java) · [JavaScript](ports/javascript/patterns/architectural/null-object.js)
+
 **Null Object**. Проблема: необязательная зависимость (логгер, метрики) приводит к проверкам `if (logger)` по всему коду.
 
 Решение: объект-заглушка с тем же интерфейсом и пустым поведением. `PaymentService` по умолчанию получает `NullLogger` и вызывает методы логгера без проверок.
@@ -2687,6 +2965,8 @@ new PaymentService(new MemoryLogger()).charge(10); // логирует
 ### Хранилище состояния
 
 Код: [src/patterns/architectural/store.ts](src/patterns/architectural/store.ts)
+
+Другие языки: [Python](ports/python/patterns/architectural/store.py) · [Java](ports/java/src/patterns/architectural/Store.java) · [JavaScript](ports/javascript/patterns/architectural/store.js)
 
 **Flux / Redux store**. Единое хранилище состояния приложения с однонаправленным потоком данных:
 1. Состояние меняется только через `dispatch(action)`, где action — объект с полем `type`.
@@ -2707,6 +2987,8 @@ store.dispatch({ type: 'add', amount: 10 }); // 11
 ### Предохранитель и повтор
 
 Код: [src/patterns/architectural/circuit-breaker.ts](src/patterns/architectural/circuit-breaker.ts)
+
+Другие языки: [Python](ports/python/patterns/architectural/circuit_breaker.py) · [Java](ports/java/src/patterns/architectural/CircuitBreaker.java) · [JavaScript](ports/javascript/patterns/architectural/circuit-breaker.js)
 
 **Circuit Breaker**. Проблема: внешний сервис упал, а мы продолжаем засыпать его запросами. Каждый запрос долго ждёт таймаута, а сервису становится только хуже.
 
@@ -2730,148 +3012,107 @@ await retry(() => fetch('https://api.example.com'), { attempts: 5, delayMs: 100 
 ```
 
 
-## Шаблоны на других языках
+## Как выбрать решение
 
-В [templates/](templates/) лежит стартовый набор из 24 самостоятельных реализаций: по три на Python, C#, C++, PHP, Java, JavaScript, Go и Rust. Это дополнение к полной коллекции TypeScript, а не полный перенос всех её алгоритмов и паттернов. Зависимости сторонних библиотек не нужны. Код шаблонов не содержит комментариев.
+| Задача и ограничения | Подход | Почему |
+|---|---|---|
+| Один поиск в неотсортированном массиве | [Линейный поиск](#линейный-поиск) | Один проход за `O(n)` без подготовки данных |
+| Много поисков по неизменному отсортированному массиву | [Бинарный поиск](#бинарный-поиск) | Каждый запрос занимает `O(log n)`; проверьте порядок и компаратор |
+| Нужна стабильная сортировка произвольных значений | [Слияние](#сортировка-слиянием) | Равные элементы сохраняют взаимный порядок |
+| Нужно многократно извлекать минимум | [Бинарная куча](#бинарная-куча) | Извлечение за `O(log n)` без повторной сортировки |
+| Кратчайший путь по числу рёбер | [BFS](#поиск-в-ширину) | Обходит вершины по слоям за `O(V + E)` |
+| Кратчайший путь с неотрицательными весами | [Дейкстра](#алгоритм-дейкстры) | Выбирает ближайшую непосещённую вершину через очередь с приоритетом |
+| В графе есть отрицательные веса | [Беллман–Форд](#алгоритм-беллмана-форда) | Проверяет улучшения всех рёбер и обнаруживает достижимый отрицательный цикл |
+| Меняются значения, нужны суммы на отрезках | [Фенвик](#дерево-фенвика) | Обновления и запросы за `O(log n)` с памятью `O(n)` |
+| Нужны изменения целых отрезков | [Ленивое дерево отрезков](#дерево-отрезков-с-ленивым-распространением) | Откладывает массовые обновления до нужного спуска |
+| Поиск одного образца в строке | [KMP](#алгоритм-кнута-морриса-пратта) | Префикс-функция позволяет не сравнивать уже совпавший префикс заново |
+| Поиск многих образцов за один проход | [Ахо–Корасик](#алгоритм-ахо-корасик) | Объединяет образцы в автомат с суффиксными переходами |
+| Нужны отмена и повтор действий | [Команда](#команда) | Хранит прямую и обратную операции отдельно от интерфейса |
 
-### Каталог исходников
+Перед выбором проверьте ограничения в описании конкретного решения: допустимые веса, порядок входа, поддержку повторяющихся значений и изменение исходных данных. Например, жадный размен не гарантирует минимального числа монет для произвольных номиналов; в таком случае нужен [динамический размен](#размен-монет).
 
-| Язык | Поиск: бинарный | Сортировки: слиянием | Структуры данных: Union-Find |
+## Реализации на других языках
+
+Каждый из трёх каталогов содержит соответствие всем 140 модулям `src/`, включая вспомогательные функции, варианты алгоритмов, структуры данных и 32 паттерна. Идея решения и оценка сложности описаны выше; рядом со ссылкой «Код» находятся ссылки на версии других языков. [Полный каталог](ports/CATALOG.md) также включает служебные модули сравнения, хеширования, типов графа и объединённых экспортов сортировок.
+
+| Язык | Исходники и запуск | Числа и строки | Асинхронные операции |
 |---|---|---|---|
-| Python | [binary_search.py](templates/python/searching/binary_search.py) | [merge_sort.py](templates/python/sorting/merge_sort.py) | [disjoint_set.py](templates/python/data_structures/disjoint_set.py) |
-| C# | [BinarySearch.cs](templates/csharp/searching/BinarySearch.cs) | [MergeSort.cs](templates/csharp/sorting/MergeSort.cs) | [DisjointSet.cs](templates/csharp/data-structures/DisjointSet.cs) |
-| C++ | [binary_search.hpp](templates/cpp/searching/binary_search.hpp) | [merge_sort.hpp](templates/cpp/sorting/merge_sort.hpp) | [disjoint_set.hpp](templates/cpp/data-structures/disjoint_set.hpp) |
-| PHP | [binary_search.php](templates/php/searching/binary_search.php) | [merge_sort.php](templates/php/sorting/merge_sort.php) | [DisjointSet.php](templates/php/data-structures/DisjointSet.php) |
-| Java | [BinarySearch.java](templates/java/searching/BinarySearch.java) | [MergeSort.java](templates/java/sorting/MergeSort.java) | [DisjointSet.java](templates/java/data-structures/DisjointSet.java) |
-| JavaScript | [binary-search.mjs](templates/javascript/searching/binary-search.mjs) | [merge-sort.mjs](templates/javascript/sorting/merge-sort.mjs) | [disjoint-set.mjs](templates/javascript/data-structures/disjoint-set.mjs) |
-| Go | [binary_search.go](templates/go/searching/binary_search.go) | [merge_sort.go](templates/go/sorting/merge_sort.go) | [disjoint_set.go](templates/go/data-structures/disjoint_set.go) |
-| Rust | [binary_search.rs](templates/rust/searching/binary_search.rs) | [merge_sort.rs](templates/rust/sorting/merge_sort.rs) | [disjoint_set.rs](templates/rust/data-structures/disjoint_set.rs) |
+| TypeScript | [src](src), `pnpm test` | `Number`, `BigInt`, UTF-16 | `Promise` |
+| Python | [Руководство](ports/python/README.md), [исходники](ports/python) | `int` произвольной точности, Unicode | Корутины и `await` |
+| Java | [Руководство](ports/java/README.md), [исходники](ports/java/src) | Примитивы, `BigInteger`, UTF-16 | `CompletableFuture` |
+| JavaScript | [Руководство](ports/javascript/README.md), [исходники](ports/javascript) | `Number`, `BigInt`, UTF-16 | `Promise` |
 
-### Как работают решения
+C#, C++, PHP, Go и Rust пока представлены прежними [минимальными примерами](templates): бинарным поиском, сортировкой слиянием и Union-Find. Полный перенос на эти языки — следующий этап.
 
-**Бинарный поиск.** Входной массив должен быть отсортирован по возрастанию. Держим полуоткрытый интервал `[left, right)`, сравниваем середину с целью и отбрасываем половину. При равенстве продолжаем слева: все шаблоны возвращают индекс первого совпадения. Например, `[1, 3, 3, 7]` и цель `3` дают `1`; цель `2` даёт `-1`, а Rust возвращает `None`. Время `O(log n)`, дополнительная память `O(1)`. Подходит для поиска в отсортированном справочнике; сортировка перед единственным поиском обычно дороже линейного прохода.
+### Python
 
-**Сортировка слиянием.** Делим массив пополам до частей длиной 0 или 1, сортируем обе половины, затем сливаем двумя указателями. При равенстве выбираем левый элемент: сортировка стабильна. `[3, -1, 3, 0]` превращается в `[-1, 0, 3, 3]`. Исходный массив сохраняется, возвращается новый. Время `O(n log n)`, пиковая дополнительная память `O(n)`, глубина рекурсии `O(log n)`. В шаблонах используются копии половин ради простоты; для больших массивов можно переиспользовать общий буфер. PHP-массивы занимают существенно больше памяти, чем массивы целых чисел в C++ или Java.
-
-**Union-Find.** Индексы `0..n-1` сначала образуют отдельные множества. `find` находит корень и сокращает путь к нему; `union` прикрепляет меньшую компоненту к большей. После объединений `(0, 1)` и `(1, 2)` корни 0 и 2 совпадают; повторное объединение `(2, 0)` возвращает `false`. Применяется в алгоритме Краскала и при добавлении связей в неориентированный граф. Создание занимает `O(n)` времени и памяти, последовательность операций — амортизированно `O(α(n))` на операцию. Удаление связей этот шаблон не поддерживает. Неверный индекс вызывает исключение, а в Go и Rust — panic.
-
-### Примеры использования по языкам
-
-Во всех примерах поиск возвращает первый индекс `1`, сортировка — `[-1, 0, 3, 3]`, объединение двух отдельных множеств — истину. Шаблоны рассчитаны на целые числа; Python и JavaScript также допускают другие сравнимые значения, но смешивать несовместимые типы не следует.
-
-**Python.** Импорты ниже выполняются из каталога `templates/python`:
+Нужен Python 3.10+. Запускайте пример из корня репозитория:
 
 ```python
-from searching.binary_search import binary_search
-from sorting.merge_sort import merge_sort
-from data_structures.disjoint_set import DisjointSet
+from ports.python.algorithms.sorting.merge_sort import merge_sort
+from ports.python.algorithms.dynamic_programming.fibonacci import fibonacci_fast
+from ports.python.data_structures.trees.red_black_tree import RedBlackTree
 
-index = binary_search([1, 3, 3, 7], 3)
 ordered = merge_sort([3, -1, 3, 0])
-sets = DisjointSet(4)
-merged = sets.union(0, 1)
+tree = RedBlackTree()
+for value in ordered:
+    tree.insert(value)
+print(ordered)
+print(tree.to_array())
+print(fibonacci_fast(100))
 ```
 
-**C#.** Добавьте три `.cs` файла в консольный проект .NET 8 или новее. Методы принимают `int[]`, Union-Find — фиксированное количество индексов:
+Результаты: `[-1, 0, 3, 3]`, `[-1, 0, 3]`, `354224848179261915075`. Слияние сохраняет дубликаты, дерево хранит множество уникальных значений. Имена функций и методов используют `snake_case`. Сигнатуры, формы результатов и асинхронные примеры смотрите в [руководстве Python](ports/python/README.md).
 
-```csharp
-var index = BinarySearch.Search(new[] { 1, 3, 3, 7 }, 3);
-var ordered = MergeSort.Sort(new[] { 3, -1, 3, 0 });
-var sets = new DisjointSet(4);
-var merged = sets.Union(0, 1);
-```
+### Java
 
-**C++.** Подключите заголовки относительно `templates/cpp`. Функции объявлены `inline`, чтобы заголовки можно было включать из нескольких единиц трансляции:
-
-```cpp
-#include "searching/binary_search.hpp"
-#include "sorting/merge_sort.hpp"
-#include "data-structures/disjoint_set.hpp"
-
-int main() {
-    auto index = binary_search({1, 3, 3, 7}, 3);
-    auto ordered = merge_sort({3, -1, 3, 0});
-    DisjointSet sets(4);
-    auto merged = sets.unite(0, 1);
-}
-```
-
-**PHP.** Подключите файлы относительно `templates/php`. На вход подавайте списки с последовательными числовыми ключами и целыми значениями, а не ассоциативные массивы:
-
-```php
-require 'searching/binary_search.php';
-require 'sorting/merge_sort.php';
-require 'data-structures/DisjointSet.php';
-
-$index = binarySearch([1, 3, 3, 7], 3);
-$ordered = mergeSort([3, -1, 3, 0]);
-$sets = new DisjointSet(4);
-$merged = $sets->union(0, 1);
-```
-
-**Java.** Классы без объявления пакета, чтобы их можно было скопировать в учебный проект. При переносе в приложение добавьте собственный `package`:
+Нужен JDK 17+. Статические методы группируются по исходному модулю, некоторые структуры объявлены вложенными классами:
 
 ```java
-int index = BinarySearch.search(new int[] {1, 3, 3, 7}, 3);
-int[] ordered = MergeSort.sort(new int[] {3, -1, 3, 0});
-DisjointSet sets = new DisjointSet(4);
-boolean merged = sets.union(0, 1);
+var ordered = algorithms.sorting.MergeSort.mergeSort(java.util.List.of(3, -1, 3, 0));
+var tree = new data_structures.trees.RedBlackTree.Tree<Integer>();
+for (int value : ordered) {
+    tree.insert(value);
+}
+System.out.println(ordered);
+System.out.println(tree.toArray());
+System.out.println(algorithms.dynamic_programming.Fibonacci.fibonacciFast(100));
 ```
 
-**JavaScript.** Используются ES-модули `.mjs`; импорты относительно `templates/javascript`. Для точного представления целых чисел используйте безопасный диапазон `Number`:
+Этот фрагмент выполняется внутри `main`; результаты совпадают с Python. [Руководство Java](ports/java/README.md) содержит полный класс примера, команды компиляции и особенности типов.
+
+### JavaScript
+
+Нужен Node.js 22+. Сохраните пример как `.mjs` в корне репозитория:
 
 ```javascript
-import { binarySearch } from './searching/binary-search.mjs';
-import { mergeSort } from './sorting/merge-sort.mjs';
-import { DisjointSet } from './data-structures/disjoint-set.mjs';
+import { mergeSort } from './ports/javascript/algorithms/sorting/merge-sort.js';
+import { fibonacciFast } from './ports/javascript/algorithms/dynamic-programming/fibonacci.js';
+import { RedBlackTree } from './ports/javascript/data-structures/trees/red-black-tree.js';
 
-const index = binarySearch([1, 3, 3, 7], 3);
 const ordered = mergeSort([3, -1, 3, 0]);
-const sets = new DisjointSet(4);
-const merged = sets.union(0, 1);
+const tree = new RedBlackTree();
+for (const value of ordered) tree.insert(value);
+console.log(ordered);
+console.log(tree.toArray());
+console.log(fibonacciFast(100).toString());
 ```
 
-**Go.** Каталог содержит собственный [go.mod](templates/go/go.mod). Внутри модуля функции доступны через следующие пакеты:
+Экспорты и имена методов повторяют TypeScript. `BigInt` нужно преобразовывать в строку перед обычной JSON-сериализацией. [Руководство JavaScript](ports/javascript/README.md) также показывает кратчайший путь и запуск проверок.
 
-```go
-import (
-    "algorithms/templates/searching"
-    "algorithms/templates/sorting"
-    structures "algorithms/templates/data-structures"
-)
+### Общие проверки
 
-func example() {
-    index := searching.BinarySearch([]int{1, 3, 3, 7}, 3)
-    ordered := sorting.MergeSort([]int{3, -1, 3, 0})
-    sets := structures.NewDisjointSet(4)
-    merged := sets.Union(0, 1)
-    _, _, _ = index, ordered, merged
-}
-```
-
-**Rust.** Подключите модули относительно `templates/rust`. Поиск возвращает `Option<usize>`, Union-Find требует изменяемого доступа, поскольку поиск сжимает пути:
-
-```rust
-#[path = "searching/binary_search.rs"] mod searching;
-#[path = "sorting/merge_sort.rs"] mod sorting;
-#[path = "data-structures/disjoint_set.rs"] mod structures;
-
-fn main() {
-    let index = searching::binary_search(&[1, 3, 3, 7], 3);
-    let ordered = sorting::merge_sort(&[3, -1, 3, 0]);
-    let mut sets = structures::DisjointSet::new(4);
-    let merged = sets.union(0, 1);
-}
-```
-
-### Проверка шаблонов
-
-[templates/check.py](templates/check.py) собирает временные программы в `dist/template-checks`, запускает проверки и удаляет их после завершения. Проверяет сортировку против стандартной, поиск против первого совпадения, пустой ввод, дубликаты, отрицательные значения и повторное объединение. Это отдельные проверки; `pnpm test` продолжает проверять TypeScript.
+Из корня репозитория:
 
 ```bash
-python -B templates/check.py
-python -B templates/check.py python javascript php java csharp
-python -B templates/check.py cpp go rust
+python -B ports/check.py
+python -B ports/check.py python java
+node --test "ports/javascript/tests/**/*.test.js"
+python -B ports/catalog.py --strict
 ```
 
-Без аргументов недоступные компиляторы отмечаются как `SKIP`. Если язык указан явно, отсутствие его инструмента считается ошибкой. Требуются Python 3.9+, Node.js 22+, PHP 8+, JDK 17+, .NET SDK 8+, C++17, Go 1.22+ или Rust с поддержкой edition 2021 — в зависимости от выбранных языков. Скрипт не устанавливает эти инструменты. В CI все восемь языков проверяются отдельным заданием.
+[Общий скрипт](ports/check.py) запускает только опубликованные полные реализации; отсутствие нужного инструмента считается ошибкой. Python проверяет наличие всех экспортов и 64 общих примера, Java компилирует все модули и выполняет те же примеры. Оба набора дополнительно проверяют 2000 случайных операций на сбалансированных деревьях и поведение отдельных паттернов. JavaScript выполняет 218 тестов: 154 перенесённых теста TypeScript и 64 общих примера.
+
+[Эталонные примеры](ports/golden-cases.json) содержат вход и ожидаемый результат; [fixtures.mjs](ports/fixtures.mjs) пересоздаёт их по реализации JavaScript. Большие целые в JSON записаны десятичными строками. Различия в форме результатов между языками учитываются при сравнении. Набор проверок не покрывает каждую ветвь всех 140 модулей.
+
+[Проверка каталога](ports/catalog.py) сверяет наличие файлов и соответствие объявленных экспортов. Для обновления ссылок после добавления модулей выполните `python -B ports/catalog.py --write --strict`. В GitHub Actions отдельно запускаются TypeScript, полные реализации и прежние минимальные примеры.

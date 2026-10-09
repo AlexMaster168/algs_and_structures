@@ -1,0 +1,938 @@
+[
+  {
+    "source": "src/algorithms/sorting/bubble-sort.ts",
+    "name": "bubbleSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/cocktail-shaker-sort.ts",
+    "name": "cocktailShakerSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/selection-sort.ts",
+    "name": "selectionSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/insertion-sort.ts",
+    "name": "insertionSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/shell-sort.ts",
+    "name": "shellSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/merge-sort.ts",
+    "name": "mergeSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/merge-sort.ts",
+    "name": "bottomUpMergeSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/quick-sort.ts",
+    "name": "quickSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/quick-sort.ts",
+    "name": "quickSortFunctional",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/heap-sort.ts",
+    "name": "heapSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/counting-sort.ts",
+    "name": "countingSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/radix-sort.ts",
+    "name": "radixSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/bucket-sort.ts",
+    "name": "bucketSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/sorting/tim-sort.ts",
+    "name": "timSort",
+    "args": [
+      [
+        3,
+        -1,
+        3,
+        0
+      ]
+    ],
+    "expected": [
+      -1,
+      0,
+      3,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/searching/linear-search.ts",
+    "name": "linearSearch",
+    "args": [
+      [
+        4,
+        1,
+        4
+      ],
+      4
+    ],
+    "expected": 0
+  },
+  {
+    "source": "src/algorithms/searching/binary-search.ts",
+    "name": "binarySearch",
+    "args": [
+      [
+        1,
+        3,
+        5,
+        7
+      ],
+      5
+    ],
+    "expected": 2
+  },
+  {
+    "source": "src/algorithms/searching/jump-search.ts",
+    "name": "jumpSearch",
+    "args": [
+      [
+        1,
+        3,
+        5,
+        7
+      ],
+      5
+    ],
+    "expected": 2
+  },
+  {
+    "source": "src/algorithms/searching/interpolation-search.ts",
+    "name": "interpolationSearch",
+    "args": [
+      [
+        1,
+        3,
+        5,
+        7
+      ],
+      5
+    ],
+    "expected": 2
+  },
+  {
+    "source": "src/algorithms/searching/exponential-search.ts",
+    "name": "exponentialSearch",
+    "args": [
+      [
+        1,
+        3,
+        5,
+        7
+      ],
+      5
+    ],
+    "expected": 2
+  },
+  {
+    "source": "src/algorithms/searching/quick-select.ts",
+    "name": "quickSelect",
+    "args": [
+      [
+        7,
+        10,
+        4,
+        3,
+        20,
+        15
+      ],
+      2
+    ],
+    "expected": 7
+  },
+  {
+    "source": "src/algorithms/searching/quick-select.ts",
+    "name": "median",
+    "args": [
+      [
+        1,
+        5,
+        3,
+        7
+      ]
+    ],
+    "expected": 4
+  },
+  {
+    "source": "src/algorithms/dynamic-programming/fibonacci.ts",
+    "name": "fibonacciRecursive",
+    "args": [
+      10
+    ],
+    "expected": 55
+  },
+  {
+    "source": "src/algorithms/dynamic-programming/fibonacci.ts",
+    "name": "fibonacci",
+    "args": [
+      100
+    ],
+    "expected": "354224848179261915075"
+  },
+  {
+    "source": "src/algorithms/dynamic-programming/fibonacci.ts",
+    "name": "fibonacciFast",
+    "args": [
+      100
+    ],
+    "expected": "354224848179261915075"
+  },
+  {
+    "source": "src/algorithms/dynamic-programming/edit-distance.ts",
+    "name": "editDistance",
+    "args": [
+      "kitten",
+      "sitting"
+    ],
+    "expected": 3
+  },
+  {
+    "source": "src/algorithms/dynamic-programming/coin-change.ts",
+    "name": "coinChangeWays",
+    "args": [
+      [
+        1,
+        2,
+        5
+      ],
+      5
+    ],
+    "expected": 4
+  },
+  {
+    "source": "src/algorithms/dynamic-programming/grid-paths.ts",
+    "name": "uniquePaths",
+    "args": [
+      3,
+      7
+    ],
+    "expected": 28
+  },
+  {
+    "source": "src/algorithms/dynamic-programming/grid-paths.ts",
+    "name": "minPathSum",
+    "args": [
+      [
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ]
+      ]
+    ],
+    "expected": 7
+  },
+  {
+    "source": "src/algorithms/dynamic-programming/subset-sum.ts",
+    "name": "canPartition",
+    "args": [
+      [
+        1,
+        5,
+        11,
+        5
+      ]
+    ],
+    "expected": true
+  },
+  {
+    "source": "src/algorithms/strings/kmp.ts",
+    "name": "prefixFunction",
+    "args": [
+      "ababaca"
+    ],
+    "expected": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1
+    ]
+  },
+  {
+    "source": "src/algorithms/strings/kmp.ts",
+    "name": "kmpSearch",
+    "args": [
+      "aaaaa",
+      "aa"
+    ],
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/strings/z-function.ts",
+    "name": "zFunction",
+    "args": [
+      "aaaaa"
+    ],
+    "expected": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "source": "src/algorithms/strings/rabin-karp.ts",
+    "name": "rabinKarp",
+    "args": [
+      "aaaaa",
+      "aa"
+    ],
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/strings/boyer-moore-horspool.ts",
+    "name": "boyerMooreHorspool",
+    "args": [
+      "aaaaa",
+      "aa"
+    ],
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/strings/manacher.ts",
+    "name": "longestPalindromicSubstring",
+    "args": [
+      "forgeeksskeegfor"
+    ],
+    "expected": "geeksskeeg"
+  },
+  {
+    "source": "src/algorithms/strings/suffix-array.ts",
+    "name": "suffixArray",
+    "args": [
+      "banana"
+    ],
+    "expected": [
+      5,
+      3,
+      1,
+      0,
+      4,
+      2
+    ]
+  },
+  {
+    "source": "src/algorithms/math/gcd.ts",
+    "name": "gcd",
+    "args": [
+      -48,
+      18
+    ],
+    "expected": 6
+  },
+  {
+    "source": "src/algorithms/math/gcd.ts",
+    "name": "lcm",
+    "args": [
+      21,
+      6
+    ],
+    "expected": 42
+  },
+  {
+    "source": "src/algorithms/math/gcd.ts",
+    "name": "extendedGcd",
+    "args": [
+      240,
+      46
+    ],
+    "expected": {
+      "gcd": 2,
+      "x": -9,
+      "y": 47
+    }
+  },
+  {
+    "source": "src/algorithms/math/gcd.ts",
+    "name": "modInverse",
+    "args": [
+      3,
+      11
+    ],
+    "expected": 4
+  },
+  {
+    "source": "src/algorithms/math/power.ts",
+    "name": "fastPower",
+    "args": [
+      2,
+      10
+    ],
+    "expected": 1024
+  },
+  {
+    "source": "src/algorithms/math/power.ts",
+    "name": "integerSqrt",
+    "args": [
+      80
+    ],
+    "expected": 8
+  },
+  {
+    "source": "src/algorithms/math/primes.ts",
+    "name": "sieveOfEratosthenes",
+    "args": [
+      30
+    ],
+    "expected": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ]
+  },
+  {
+    "source": "src/algorithms/math/primes.ts",
+    "name": "linearSieve",
+    "args": [
+      10
+    ],
+    "expected": {
+      "primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "smallestFactor": [
+        0,
+        0,
+        2,
+        3,
+        2,
+        5,
+        2,
+        7,
+        2,
+        3,
+        2
+      ]
+    }
+  },
+  {
+    "source": "src/algorithms/math/primes.ts",
+    "name": "isPrime",
+    "args": [
+      97
+    ],
+    "expected": true
+  },
+  {
+    "source": "src/algorithms/math/primes.ts",
+    "name": "primeFactors",
+    "args": [
+      360
+    ],
+    "expected": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        5,
+        1
+      ]
+    ]
+  },
+  {
+    "source": "src/algorithms/math/primes.ts",
+    "name": "divisors",
+    "args": [
+      36
+    ],
+    "expected": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      9,
+      12,
+      18,
+      36
+    ]
+  },
+  {
+    "source": "src/algorithms/math/primes.ts",
+    "name": "eulerPhi",
+    "args": [
+      36
+    ],
+    "expected": 12
+  },
+  {
+    "source": "src/algorithms/math/combinatorics.ts",
+    "name": "factorial",
+    "args": [
+      30
+    ],
+    "expected": "265252859812191058636308480000000"
+  },
+  {
+    "source": "src/algorithms/math/combinatorics.ts",
+    "name": "binomial",
+    "args": [
+      50,
+      25
+    ],
+    "expected": "126410606437752"
+  },
+  {
+    "source": "src/algorithms/math/combinatorics.ts",
+    "name": "catalan",
+    "args": [
+      20
+    ],
+    "expected": "6564120420"
+  },
+  {
+    "source": "src/algorithms/math/number-conversion.ts",
+    "name": "toRoman",
+    "args": [
+      2026
+    ],
+    "expected": "MMXXVI"
+  },
+  {
+    "source": "src/algorithms/math/number-conversion.ts",
+    "name": "fromRoman",
+    "args": [
+      "MMXXVI"
+    ],
+    "expected": 2026
+  },
+  {
+    "source": "src/algorithms/math/matrix.ts",
+    "name": "multiply",
+    "args": [
+      [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ]
+    ],
+    "expected": [
+      [
+        19,
+        22
+      ],
+      [
+        43,
+        50
+      ]
+    ]
+  },
+  {
+    "source": "src/algorithms/math/matrix.ts",
+    "name": "determinant",
+    "args": [
+      [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    ],
+    "expected": -2
+  },
+  {
+    "source": "src/algorithms/backtracking/n-queens.ts",
+    "name": "countNQueens",
+    "args": [
+      4
+    ],
+    "expected": 2
+  },
+  {
+    "source": "src/algorithms/backtracking/word-search.ts",
+    "name": "wordSearch",
+    "args": [
+      [
+        "ABCE",
+        "SFCS",
+        "ADEE"
+      ],
+      "ABCCED"
+    ],
+    "expected": true
+  },
+  {
+    "source": "src/algorithms/greedy/jump-game.ts",
+    "name": "canReachEnd",
+    "args": [
+      [
+        3,
+        2,
+        1,
+        0,
+        4
+      ]
+    ],
+    "expected": false
+  },
+  {
+    "source": "src/algorithms/greedy/jump-game.ts",
+    "name": "minJumps",
+    "args": [
+      [
+        2,
+        3,
+        1,
+        1,
+        4
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "source": "src/algorithms/bit-manipulation/bits.ts",
+    "name": "reverseBits",
+    "args": [
+      1
+    ],
+    "expected": 2147483648
+  },
+  {
+    "source": "src/algorithms/bit-manipulation/bits.ts",
+    "name": "countSetBits",
+    "args": [
+      4294967295
+    ],
+    "expected": 32
+  },
+  {
+    "source": "src/algorithms/graphs/topological-sort.ts",
+    "name": "topologicalSortKahn",
+    "args": [
+      [
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        []
+      ]
+    ],
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "source": "src/algorithms/graphs/bipartite.ts",
+    "name": "isBipartite",
+    "args": [
+      [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "expected": false
+  },
+  {
+    "source": "src/algorithms/graphs/max-flow.ts",
+    "name": "edmondsKarp",
+    "args": [
+      [
+        [
+          0,
+          3,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      0,
+      3
+    ],
+    "expected": 5
+  }
+]

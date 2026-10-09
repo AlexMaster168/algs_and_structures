@@ -1,3 +1,10 @@
 /node_modules
 /dist
 /.idea
+/ports/**/bin/
+/ports/**/obj/
+/ports/**/target/
+/ports/**/.tools/
+/ports/**/__pycache__/
+/ports/**/*.pyc
+/ports/**/*.class

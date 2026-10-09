@@ -33,6 +33,21 @@ jobs:
 
       - run: pnpm test
 
+  ports:
+    name: Full implementations (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [python, java, javascript]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: python3 -B ports/catalog.py --strict
+      - run: python3 -B ports/check.py ${{ matrix.language }}
+
   templates:
     name: Multilanguage templates
     runs-on: ubuntu-latest

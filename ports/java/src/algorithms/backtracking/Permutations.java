@@ -1,0 +1,8 @@
+package algorithms.backtracking;
+import java.util.*;
+import java.util.function.*;
+import java.math.*;
+
+public class Permutations {
+public static <T> List<List<T>> permutations(List<T> a){List<List<T>> o=new ArrayList<>();perm(a,new boolean[a.size()],new ArrayList<>(),o);return o;}private static <T> void perm(List<T> a,boolean[] u,List<T> c,List<List<T>> o){if(c.size()==a.size()){o.add(new ArrayList<>(c));return;}for(int i=0;i<a.size();i++)if(!u[i]){u[i]=true;c.add(a.get(i));perm(a,u,c,o);c.remove(c.size()-1);u[i]=false;}}public static <T> List<List<T>> combinations(List<T> a,int size){List<List<T>> o=new ArrayList<>();comb(a,size,0,new ArrayList<>(),o);return o;}private static <T> void comb(List<T> a,int n,int s,List<T> c,List<List<T>> o){if(c.size()==n){o.add(new ArrayList<>(c));return;}for(int i=s;i<=a.size()-(n-c.size());i++){c.add(a.get(i));comb(a,n,i+1,c,o);c.remove(c.size()-1);}}public static <T> List<List<T>> subsets(List<T> a){List<List<T>> o=new ArrayList<>();sub(a,0,new ArrayList<>(),o);return o;}private static <T> void sub(List<T> a,int i,List<T> c,List<List<T>> o){if(i==a.size()){o.add(new ArrayList<>(c));return;}sub(a,i+1,c,o);c.add(a.get(i));sub(a,i+1,c,o);c.remove(c.size()-1);}public static List<List<Integer>> combinationSum(List<Integer> a,int t){a=algorithms.sorting.MergeSort.mergeSort(new ArrayList<>(new LinkedHashSet<>(a)));for(int v:a)if(v<=0)throw new IllegalArgumentException();List<List<Integer>> o=new ArrayList<>();sum(a,0,t,new ArrayList<>(),o);return o;}private static void sum(List<Integer> a,int s,int t,List<Integer> c,List<List<Integer>> o){if(t==0){o.add(new ArrayList<>(c));return;}for(int i=s;i<a.size()&&a.get(i)<=t;i++){c.add(a.get(i));sum(a,i,t-a.get(i),c,o);c.remove(c.size()-1);}}
+}

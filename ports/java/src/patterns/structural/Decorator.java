@@ -1,0 +1,8 @@
+package patterns.structural;
+import java.util.*;
+import java.util.function.*;
+import java.math.*;
+
+public class Decorator {
+public interface Notifier{List<String> send(String message);}public static class EmailNotifier implements Notifier{private final String email;public EmailNotifier(String email){this.email=email;}public List<String> send(String message){return new ArrayList<>(List.of("email to "+email+": "+message));}}public abstract static class NotifierDecorator implements Notifier{protected final Notifier wrapped;protected NotifierDecorator(Notifier n){wrapped=n;}public List<String> send(String message){return wrapped.send(message);}}public static class SmsNotifier extends NotifierDecorator{private final String phone;public SmsNotifier(Notifier n,String phone){super(n);this.phone=phone;}public List<String> send(String message){List<String> o=new ArrayList<>(super.send(message));o.add("sms to "+phone+": "+message);return o;}}public static class SlackNotifier extends NotifierDecorator{private final String channel;public SlackNotifier(Notifier n,String channel){super(n);this.channel=channel;}public List<String> send(String message){List<String> o=new ArrayList<>(super.send(message));o.add("slack #"+channel+": "+message);return o;}}public static <A,R> Function<A,R> withLogging(Function<A,R> fn,Consumer<String> log){return withLogging(fn,log,"anonymous");}public static <A,R> Function<A,R> withLogging(Function<A,R> fn,Consumer<String> log,String name){return args->{String arg=args instanceof List<?> list?String.join(", ",list.stream().map(shared.Json::stringify).toList()):shared.Json.stringify(args);log.accept(name+"("+arg+")");R result=fn.apply(args);log.accept(name+" -> "+shared.Json.stringify(result));return result;};}
+}
