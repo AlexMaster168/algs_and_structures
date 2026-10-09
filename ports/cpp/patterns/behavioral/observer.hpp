@@ -1,0 +1,9 @@
+#pragma once
+#include "../../support.hpp"
+namespace algs {
+template<class T> struct Observer { std::function<void(const T&)> callback; explicit Observer(std::function<void(const T&)> callback): callback(std::move(callback)) {} };
+template<class T> class Subject { struct State { std::vector<std::shared_ptr<Observer<T>>> observers; }; std::shared_ptr<State> state = std::make_shared<State>(); public: virtual ~Subject() = default; std::size_t observerCount() const { return state->observers.size(); } virtual std::function<void()> subscribe(std::shared_ptr<Observer<T>> observer) { if (std::find(state->observers.begin(), state->observers.end(), observer) == state->observers.end()) state->observers.push_back(observer); std::weak_ptr<State> weak = state; return [weak, observer] { if (auto state = weak.lock()) std::erase(state->observers, observer); }; } virtual void notify(const T& value) { auto snapshot = state->observers; for (auto& observer : snapshot) observer->callback(value); } };
+struct PriceChange { std::string symbol; double price, change; };
+class StockTicker { std::map<std::string, double> prices; public: Subject<PriceChange> changes; void update(std::string symbol, double price) { auto it = prices.find(symbol); double previous = it == prices.end() ? price : it->second; prices[symbol] = price; changes.notify({symbol, price, price - previous}); } };
+template<class T> class BehaviorSubject : public Subject<T> { T current; public: explicit BehaviorSubject(T current): current(std::move(current)) {} const T& value() const { return current; } std::function<void()> subscribe(std::shared_ptr<Observer<T>> observer) override { observer->callback(current); return Subject<T>::subscribe(std::move(observer)); } void notify(const T& value) override { current = value; Subject<T>::notify(value); } };
+}

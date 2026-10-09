@@ -58,5 +58,15 @@
         "ports/go/check.py"
       ]
     ]
+  },
+  "cpp": {
+    "cwd": ".",
+    "commands": [
+      [
+        "{python}",
+        "-B",
+        "ports/cpp/check.py"
+      ]
+    ]
   }
 }

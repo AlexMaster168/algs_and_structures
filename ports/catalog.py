@@ -4,7 +4,7 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-LANGUAGES = ['python', 'java', 'javascript', 'csharp', 'php', 'go']
+LANGUAGES = ['python', 'java', 'javascript', 'csharp', 'php', 'go', 'cpp']
 
 
 def inventory():
@@ -30,7 +30,7 @@ def main():
     mappings = {language: load_coverage(language) for language in LANGUAGES}
     failures = []
     counts = dict.fromkeys(LANGUAGES, 0)
-    lines = ['# Каталог реализаций', '', '140 исходных модулей TypeScript и соответствующие реализации Python, Java, JavaScript, C#, PHP и Go. Категории и состав модулей повторяют исходную коллекцию, включая структуры данных, паттерны и вспомогательные функции.', '', 'Идеи, оценки сложности, условия применения и примеры: [основной README](../README.md). Запуск: [Python](python/README.md), [Java](java/README.md), [JavaScript](javascript/README.md), [C#](csharp/README.md), [PHP](php/README.md), [Go](go/README.md).', '', '| TypeScript | ' + ' | '.join(LANGUAGES) + ' |', '|---|' + '---|' * len(LANGUAGES)]
+    lines = ['# Каталог реализаций', '', '140 исходных модулей TypeScript и соответствующие реализации Python, Java, JavaScript, C#, PHP, Go и C++. Категории и состав модулей повторяют исходную коллекцию, включая структуры данных, паттерны и вспомогательные функции.', '', 'Идеи, оценки сложности, условия применения и примеры: [основной README](../README.md). Запуск: [Python](python/README.md), [Java](java/README.md), [JavaScript](javascript/README.md), [C#](csharp/README.md), [PHP](php/README.md), [Go](go/README.md), [C++](cpp/README.md).', '', '| TypeScript | ' + ' | '.join(LANGUAGES) + ' |', '|---|' + '---|' * len(LANGUAGES)]
     for source, exports in original.items():
         cells = [f'[{source[4:]}](../{source})']
         for language in LANGUAGES:

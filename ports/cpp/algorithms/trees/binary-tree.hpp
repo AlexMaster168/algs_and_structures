@@ -1,0 +1,17 @@
+#pragma once
+#include "../../support.hpp"
+namespace algs {
+template<class T> struct TreeNode { T value; std::shared_ptr<TreeNode> left, right; };
+template<class T> using Tree = std::shared_ptr<TreeNode<T>>;
+template<class T> Tree<T> treeNode(T value, Tree<T> left = nullptr, Tree<T> right = nullptr) { return std::make_shared<TreeNode<T>>(TreeNode<T>{std::move(value), std::move(left), std::move(right)}); }
+template<class T> Tree<T> fromLevelOrder(const std::vector<std::optional<T>>& values) { if (values.empty() || !values[0]) return nullptr; auto root = treeNode(*values[0]); std::vector<Tree<T>> queue{root}; std::size_t i = 1; for (std::size_t head = 0; head < queue.size() && i < values.size(); ++head) for (auto side : {&TreeNode<T>::left, &TreeNode<T>::right}) { if (i < values.size() && values[i]) { queue[head].get()->*side = treeNode(*values[i]); queue.push_back(queue[head].get()->*side); } ++i; } return root; }
+template<class T> std::vector<T> preOrder(Tree<T> root) { std::vector<T> result; std::vector<Tree<T>> stack; if (root) stack.push_back(root); while (!stack.empty()) { auto node = stack.back(); stack.pop_back(); result.push_back(node->value); if (node->right) stack.push_back(node->right); if (node->left) stack.push_back(node->left); } return result; }
+template<class T> std::vector<T> inOrder(Tree<T> root) { std::vector<T> result; std::vector<Tree<T>> stack; while (root || !stack.empty()) { while (root) { stack.push_back(root); root = root->left; } root = stack.back(); stack.pop_back(); result.push_back(root->value); root = root->right; } return result; }
+template<class T> std::vector<T> postOrder(Tree<T> root) { std::vector<T> result; std::vector<Tree<T>> stack; if (root) stack.push_back(root); while (!stack.empty()) { auto node = stack.back(); stack.pop_back(); result.push_back(node->value); if (node->left) stack.push_back(node->left); if (node->right) stack.push_back(node->right); } std::reverse(result.begin(), result.end()); return result; }
+template<class T> std::vector<std::vector<T>> levelOrder(Tree<T> root) { std::vector<std::vector<T>> levels; std::vector<Tree<T>> level; if (root) level.push_back(root); while (!level.empty()) { std::vector<T> values; std::vector<Tree<T>> next; for (auto node : level) { values.push_back(node->value); if (node->left) next.push_back(node->left); if (node->right) next.push_back(node->right); } levels.push_back(std::move(values)); level = std::move(next); } return levels; }
+template<class T> int maxDepth(Tree<T> root) { return root ? 1 + std::max(maxDepth(root->left), maxDepth(root->right)) : 0; }
+inline std::optional<double> maxValue(Tree<double> root) { auto values = preOrder(root); if (values.empty()) return {}; return *std::max_element(values.begin(), values.end()); }
+inline bool isValidBst(Tree<double> root, double low = -infinity, double high = infinity) { return !root || (root->value > low && root->value < high && isValidBst(root->left, low, root->value) && isValidBst(root->right, root->value, high)); }
+template<class T> Tree<T> invertTree(Tree<T> root) { if (root) { auto left = invertTree(root->right), right = invertTree(root->left); root->left = left; root->right = right; } return root; }
+inline Tree<double> lowestCommonAncestorBst(Tree<double> root, double a, double b) { while (root) { if (a < root->value && b < root->value) root = root->left; else if (a > root->value && b > root->value) root = root->right; else return root; } return nullptr; }
+}

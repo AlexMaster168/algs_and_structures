@@ -1,0 +1,9 @@
+#pragma once
+#include "../../support.hpp"
+#include "power.hpp"
+namespace algs {
+inline std::vector<int>sieveOfEratosthenes(int limit){if(limit<2)return {};std::vector<bool>composite(limit+1);std::vector<int>p;for(int i=2;i<=limit;++i){if(composite[i])continue;p.push_back(i);for(std::int64_t j=std::int64_t(i)*i;j<=limit;j+=i)composite[std::size_t(j)]=true;}return p;}struct LinearSieveResult{std::vector<int>primes,smallestFactor;};inline LinearSieveResult linearSieve(int limit){LinearSieveResult r{{},std::vector<int>(limit+1)};for(int i=2;i<=limit;++i){if(!r.smallestFactor[i]){r.smallestFactor[i]=i;r.primes.push_back(i);}for(int p:r.primes){if(p>r.smallestFactor[i]||std::int64_t(i)*p>limit)break;r.smallestFactor[i*p]=p;}}return r;}
+inline bool isPrime(std::int64_t n){if(n<2)return false;if(n<4)return true;if(n%2==0||n%3==0)return false;for(std::int64_t i=5;i<=n/i;i+=6)if(n%i==0||n%(i+2)==0)return false;return true;}
+inline bool millerRabin(const BigInt&n){if(n<2)return false;std::vector<int>p{2,3,5,7,11,13,17,19,23,29,31,37};for(int v:p){if(n==v)return true;if(n%v==0)return false;}BigInt d=n-1;int r=0;while((d&1)==0){d>>=1;++r;}for(int a:p){BigInt x=modPow(a,d,n);if(x==1||x==n-1)continue;bool pass=false;for(int i=1;i<r;++i){x=x*x%n;if(x==n-1){pass=true;break;}}if(!pass)return false;}return true;}
+inline std::map<std::int64_t,int>primeFactors(std::int64_t n){std::map<std::int64_t,int>r;for(std::int64_t p=2;p<=n/p;++p)while(n%p==0){++r[p];n/=p;}if(n>1)++r[n];return r;}inline std::vector<std::int64_t>divisors(std::int64_t n){std::vector<std::int64_t>a,b;for(std::int64_t i=1;i<=n/i;++i)if(n%i==0){a.push_back(i);if(i!=n/i)b.push_back(n/i);}a.insert(a.end(),b.rbegin(),b.rend());return a;}inline std::int64_t eulerPhi(std::int64_t n){auto r=n;for(auto [p,count]:primeFactors(n))r-=r/p;return r;}
+}

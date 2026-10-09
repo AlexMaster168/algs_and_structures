@@ -1,0 +1,8 @@
+#pragma once
+#include "../../support.hpp"
+namespace algs {
+template<class T>std::vector<std::vector<T>>permutations(const std::vector<T>&a){std::vector<std::vector<T>>r;std::vector<T>cur;std::vector<bool>used(a.size());std::function<void()>build=[&](){if(cur.size()==a.size()){r.push_back(cur);return;}for(int i=0;i<int(a.size());++i)if(!used[i]){used[i]=true;cur.push_back(a[i]);build();cur.pop_back();used[i]=false;}};build();return r;}
+template<class T>std::vector<std::vector<T>>combinations(const std::vector<T>&a,int size){std::vector<std::vector<T>>r;std::vector<T>cur;std::function<void(int)>build=[&](int start){if(int(cur.size())==size){r.push_back(cur);return;}for(int i=start;i<=int(a.size())-(size-int(cur.size()));++i){cur.push_back(a[i]);build(i+1);cur.pop_back();}};if(size>=0)build(0);return r;}
+template<class T>std::vector<std::vector<T>>subsets(const std::vector<T>&a){std::vector<std::vector<T>>r;std::vector<T>cur;std::function<void(int)>build=[&](int i){if(i==int(a.size())){r.push_back(cur);return;}build(i+1);cur.push_back(a[i]);build(i+1);cur.pop_back();};build(0);return r;}
+inline std::vector<Numbers>combinationSum(const Numbers&a,double target){std::set<double>unique(a.begin(),a.end());Numbers sorted(unique.begin(),unique.end()),cur;std::vector<Numbers>r;for(double v:sorted)if(v<=0)throw std::invalid_argument("Candidates must be positive");std::function<void(int,double)>build=[&](int start,double rem){if(rem==0){r.push_back(cur);return;}for(int i=start;i<int(sorted.size())&&sorted[i]<=rem;++i){cur.push_back(sorted[i]);build(i,rem-sorted[i]);cur.pop_back();}};build(0,target);return r;}
+}

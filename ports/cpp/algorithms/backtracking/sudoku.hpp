@@ -1,0 +1,5 @@
+#pragma once
+#include "../../support.hpp"
+namespace algs {
+using SudokuBoard=std::vector<std::vector<int>>;inline std::optional<SudokuBoard>solveSudoku(SudokuBoard b){if(b.size()!=9)throw std::invalid_argument("Invalid board");std::array<std::set<int>,9>rows,cols,boxes;std::vector<std::pair<int,int>>empty;auto box=[](int r,int c){return r/3*3+c/3;};for(int r=0;r<9;++r){if(b[r].size()!=9)throw std::invalid_argument("Invalid board");for(int c=0;c<9;++c){int v=b[r][c];if(v==0){empty.emplace_back(r,c);continue;}if(v<1||v>9||rows[r].count(v)||cols[c].count(v)||boxes[box(r,c)].count(v))return {};rows[r].insert(v);cols[c].insert(v);boxes[box(r,c)].insert(v);}}std::function<bool(int)>fill=[&](int i){if(i==int(empty.size()))return true;auto [r,c]=empty[i];int k=box(r,c);for(int v=1;v<=9;++v){if(rows[r].count(v)||cols[c].count(v)||boxes[k].count(v))continue;b[r][c]=v;rows[r].insert(v);cols[c].insert(v);boxes[k].insert(v);if(fill(i+1))return true;b[r][c]=0;rows[r].erase(v);cols[c].erase(v);boxes[k].erase(v);}return false;};if(fill(0))return b;return {};}
+}

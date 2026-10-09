@@ -1,0 +1,10 @@
+#pragma once
+#include "../../shared/json.hpp"
+namespace algs {
+struct Notifier { virtual ~Notifier() = default; virtual std::vector<std::string> send(const std::string& message) = 0; };
+class EmailNotifier : public Notifier { std::string email; public: explicit EmailNotifier(std::string email): email(std::move(email)) {} std::vector<std::string> send(const std::string& message) override { return {"email to " + email + ": " + message}; } };
+class NotifierDecorator : public Notifier { protected: std::shared_ptr<Notifier> wrapped; public: explicit NotifierDecorator(std::shared_ptr<Notifier> wrapped): wrapped(std::move(wrapped)) {} std::vector<std::string> send(const std::string& message) override { return wrapped->send(message); } };
+class SmsNotifier : public NotifierDecorator { std::string phone; public: SmsNotifier(std::shared_ptr<Notifier> wrapped, std::string phone): NotifierDecorator(std::move(wrapped)), phone(std::move(phone)) {} std::vector<std::string> send(const std::string& message) override { auto lines = NotifierDecorator::send(message); lines.push_back("sms to " + phone + ": " + message); return lines; } };
+class SlackNotifier : public NotifierDecorator { std::string channel; public: SlackNotifier(std::shared_ptr<Notifier> wrapped, std::string channel): NotifierDecorator(std::move(wrapped)), channel(std::move(channel)) {} std::vector<std::string> send(const std::string& message) override { auto lines = NotifierDecorator::send(message); lines.push_back("slack #" + channel + ": " + message); return lines; } };
+template<class Function> auto withLogging(Function fn, std::function<void(std::string)> log, std::string name = "anonymous") { return [fn = std::move(fn), log = std::move(log), name = std::move(name)](auto... args) { std::vector<std::string> arguments{Json(args).dump()...}; std::string line = name + "("; for (std::size_t i = 0; i < arguments.size(); ++i) { if (i) line += ", "; line += arguments[i]; } log(line + ")"); auto result = fn(args...); log(name + " -> " + Json(result).dump()); return result; }; }
+}

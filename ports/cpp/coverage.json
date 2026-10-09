@@ -1,0 +1,1043 @@
+{
+  "src/algorithms/backtracking/n-queens.ts": {
+    "path": "ports/cpp/algorithms/backtracking/n-queens.hpp",
+    "exports": {
+      "nQueens": "nQueens",
+      "countNQueens": "countNQueens"
+    }
+  },
+  "src/algorithms/backtracking/permutations.ts": {
+    "path": "ports/cpp/algorithms/backtracking/permutations.hpp",
+    "exports": {
+      "permutations": "permutations",
+      "combinations": "combinations",
+      "subsets": "subsets",
+      "combinationSum": "combinationSum"
+    }
+  },
+  "src/algorithms/backtracking/sudoku.ts": {
+    "path": "ports/cpp/algorithms/backtracking/sudoku.hpp",
+    "exports": {
+      "solveSudoku": "solveSudoku"
+    }
+  },
+  "src/algorithms/backtracking/word-search.ts": {
+    "path": "ports/cpp/algorithms/backtracking/word-search.hpp",
+    "exports": {
+      "wordSearch": "wordSearch"
+    }
+  },
+  "src/algorithms/bit-manipulation/bits.ts": {
+    "path": "ports/cpp/algorithms/bit-manipulation/bits.hpp",
+    "exports": {
+      "getBit": "getBit",
+      "setBit": "setBit",
+      "clearBit": "clearBit",
+      "toggleBit": "toggleBit",
+      "countSetBits": "countSetBits",
+      "isPowerOfTwo": "isPowerOfTwo",
+      "lowestSetBit": "lowestSetBit",
+      "singleNumber": "singleNumber",
+      "reverseBits": "reverseBits",
+      "grayCode": "grayCode",
+      "subsetsByMask": "subsetsByMask",
+      "swapWithoutTemp": "swapWithoutTemp",
+      "hammingDistance": "hammingDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/coin-change.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/coin-change.hpp",
+    "exports": {
+      "minCoins": "minCoins",
+      "coinChangeWays": "coinChangeWays"
+    }
+  },
+  "src/algorithms/dynamic-programming/edit-distance.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/edit-distance.hpp",
+    "exports": {
+      "editDistance": "editDistance"
+    }
+  },
+  "src/algorithms/dynamic-programming/fibonacci.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/fibonacci.hpp",
+    "exports": {
+      "fibonacciRecursive": "fibonacciRecursive",
+      "fibonacciMemo": "fibonacciMemo",
+      "fibonacci": "fibonacci",
+      "fibonacciFast": "fibonacciFast"
+    }
+  },
+  "src/algorithms/dynamic-programming/grid-paths.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/grid-paths.hpp",
+    "exports": {
+      "uniquePaths": "uniquePaths",
+      "minPathSum": "minPathSum"
+    }
+  },
+  "src/algorithms/dynamic-programming/knapsack.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/knapsack.hpp",
+    "exports": {
+      "knapsack01": "knapsack01",
+      "unboundedKnapsack": "unboundedKnapsack"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-common-subsequence.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/longest-common-subsequence.hpp",
+    "exports": {
+      "longestCommonSubsequence": "longestCommonSubsequence",
+      "longestCommonSubstring": "longestCommonSubstring"
+    }
+  },
+  "src/algorithms/dynamic-programming/longest-increasing-subsequence.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/longest-increasing-subsequence.hpp",
+    "exports": {
+      "longestIncreasingSubsequence": "longestIncreasingSubsequence"
+    }
+  },
+  "src/algorithms/dynamic-programming/matrix-chain.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/matrix-chain.hpp",
+    "exports": {
+      "matrixChainOrder": "matrixChainOrder"
+    }
+  },
+  "src/algorithms/dynamic-programming/max-subarray.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/max-subarray.hpp",
+    "exports": {
+      "maxSubarray": "maxSubarray"
+    }
+  },
+  "src/algorithms/dynamic-programming/memoize.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/memoize.hpp",
+    "exports": {
+      "memoize": "memoize"
+    }
+  },
+  "src/algorithms/dynamic-programming/rod-cutting.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/rod-cutting.hpp",
+    "exports": {
+      "rodCutting": "rodCutting"
+    }
+  },
+  "src/algorithms/dynamic-programming/subset-sum.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/subset-sum.hpp",
+    "exports": {
+      "subsetSum": "subsetSum",
+      "canPartition": "canPartition"
+    }
+  },
+  "src/algorithms/dynamic-programming/word-break.ts": {
+    "path": "ports/cpp/algorithms/dynamic-programming/word-break.hpp",
+    "exports": {
+      "wordBreak": "wordBreak"
+    }
+  },
+  "src/algorithms/geometry/geometry.ts": {
+    "path": "ports/cpp/algorithms/geometry/geometry.hpp",
+    "exports": {
+      "cross": "cross",
+      "distance": "distance",
+      "convexHull": "convexHull",
+      "polygonArea": "polygonArea",
+      "pointInPolygon": "pointInPolygon",
+      "segmentsIntersect": "segmentsIntersect",
+      "closestPair": "closestPair"
+    }
+  },
+  "src/algorithms/graphs/a-star.ts": {
+    "path": "ports/cpp/algorithms/graphs/a-star.hpp",
+    "exports": {
+      "aStar": "aStar",
+      "aStarGrid": "aStarGrid"
+    }
+  },
+  "src/algorithms/graphs/bellman-ford.ts": {
+    "path": "ports/cpp/algorithms/graphs/bellman-ford.hpp",
+    "exports": {
+      "bellmanFord": "bellmanFord"
+    }
+  },
+  "src/algorithms/graphs/bfs.ts": {
+    "path": "ports/cpp/algorithms/graphs/bfs.hpp",
+    "exports": {
+      "bfs": "bfs",
+      "shortestPathUnweighted": "shortestPathUnweighted",
+      "gridShortestPath": "gridShortestPath"
+    }
+  },
+  "src/algorithms/graphs/bipartite.ts": {
+    "path": "ports/cpp/algorithms/graphs/bipartite.hpp",
+    "exports": {
+      "bipartiteColoring": "bipartiteColoring",
+      "isBipartite": "isBipartite"
+    }
+  },
+  "src/algorithms/graphs/bridges-and-articulation-points.ts": {
+    "path": "ports/cpp/algorithms/graphs/bridges-and-articulation-points.hpp",
+    "exports": {
+      "findBridgesAndArticulationPoints": "findBridgesAndArticulationPoints"
+    }
+  },
+  "src/algorithms/graphs/connected-components.ts": {
+    "path": "ports/cpp/algorithms/graphs/connected-components.hpp",
+    "exports": {
+      "connectedComponents": "connectedComponents"
+    }
+  },
+  "src/algorithms/graphs/cycle-detection.ts": {
+    "path": "ports/cpp/algorithms/graphs/cycle-detection.hpp",
+    "exports": {
+      "hasCycleDirected": "hasCycleDirected",
+      "hasCycleUndirected": "hasCycleUndirected"
+    }
+  },
+  "src/algorithms/graphs/dfs.ts": {
+    "path": "ports/cpp/algorithms/graphs/dfs.hpp",
+    "exports": {
+      "dfs": "dfs",
+      "dfsRecursive": "dfsRecursive",
+      "hasPath": "hasPath"
+    }
+  },
+  "src/algorithms/graphs/dijkstra.ts": {
+    "path": "ports/cpp/algorithms/graphs/dijkstra.hpp",
+    "exports": {
+      "dijkstra": "dijkstra",
+      "dijkstraPath": "dijkstraPath"
+    }
+  },
+  "src/algorithms/graphs/eulerian-path.ts": {
+    "path": "ports/cpp/algorithms/graphs/eulerian-path.hpp",
+    "exports": {
+      "eulerianPathDirected": "eulerianPathDirected"
+    }
+  },
+  "src/algorithms/graphs/flood-fill.ts": {
+    "path": "ports/cpp/algorithms/graphs/flood-fill.hpp",
+    "exports": {
+      "floodFill": "floodFill"
+    }
+  },
+  "src/algorithms/graphs/floyd-warshall.ts": {
+    "path": "ports/cpp/algorithms/graphs/floyd-warshall.hpp",
+    "exports": {
+      "floydWarshall": "floydWarshall",
+      "floydWarshallPath": "floydWarshallPath"
+    }
+  },
+  "src/algorithms/graphs/max-flow.ts": {
+    "path": "ports/cpp/algorithms/graphs/max-flow.hpp",
+    "exports": {
+      "edmondsKarp": "edmondsKarp"
+    }
+  },
+  "src/algorithms/graphs/minimum-spanning-tree.ts": {
+    "path": "ports/cpp/algorithms/graphs/minimum-spanning-tree.hpp",
+    "exports": {
+      "kruskal": "kruskal",
+      "prim": "prim"
+    }
+  },
+  "src/algorithms/graphs/strongly-connected-components.ts": {
+    "path": "ports/cpp/algorithms/graphs/strongly-connected-components.hpp",
+    "exports": {
+      "tarjanScc": "tarjanScc",
+      "kosarajuScc": "kosarajuScc"
+    }
+  },
+  "src/algorithms/graphs/topological-sort.ts": {
+    "path": "ports/cpp/algorithms/graphs/topological-sort.hpp",
+    "exports": {
+      "topologicalSortKahn": "topologicalSortKahn",
+      "topologicalSortDfs": "topologicalSortDfs"
+    }
+  },
+  "src/algorithms/graphs/types.ts": {
+    "path": "ports/cpp/algorithms/graphs/types.hpp",
+    "exports": {
+      "reconstructPath": "reconstructPath",
+      "toUndirected": "toUndirected",
+      "toWeightedUndirected": "toWeightedUndirected"
+    }
+  },
+  "src/algorithms/greedy/activity-selection.ts": {
+    "path": "ports/cpp/algorithms/greedy/activity-selection.hpp",
+    "exports": {
+      "activitySelection": "activitySelection",
+      "mergeIntervals": "mergeIntervals",
+      "minMeetingRooms": "minMeetingRooms"
+    }
+  },
+  "src/algorithms/greedy/fractional-knapsack.ts": {
+    "path": "ports/cpp/algorithms/greedy/fractional-knapsack.hpp",
+    "exports": {
+      "fractionalKnapsack": "fractionalKnapsack"
+    }
+  },
+  "src/algorithms/greedy/huffman.ts": {
+    "path": "ports/cpp/algorithms/greedy/huffman.hpp",
+    "exports": {
+      "huffmanCodes": "huffmanCodes",
+      "huffmanEncode": "huffmanEncode",
+      "huffmanDecode": "huffmanDecode"
+    }
+  },
+  "src/algorithms/greedy/jump-game.ts": {
+    "path": "ports/cpp/algorithms/greedy/jump-game.hpp",
+    "exports": {
+      "canReachEnd": "canReachEnd",
+      "minJumps": "minJumps",
+      "greedyChange": "greedyChange"
+    }
+  },
+  "src/algorithms/math/combinatorics.ts": {
+    "path": "ports/cpp/algorithms/math/combinatorics.hpp",
+    "exports": {
+      "factorial": "factorial",
+      "binomial": "binomial",
+      "pascalTriangle": "pascalTriangle",
+      "catalan": "catalan",
+      "nextPermutation": "nextPermutation"
+    }
+  },
+  "src/algorithms/math/gcd.ts": {
+    "path": "ports/cpp/algorithms/math/gcd.hpp",
+    "exports": {
+      "gcd": "gcd",
+      "lcm": "lcm",
+      "extendedGcd": "extendedGcd",
+      "modInverse": "modInverse"
+    }
+  },
+  "src/algorithms/math/matrix.ts": {
+    "path": "ports/cpp/algorithms/math/matrix.hpp",
+    "exports": {
+      "identity": "identity",
+      "multiply": "multiply",
+      "transpose": "transpose",
+      "matrixPower": "matrixPower",
+      "determinant": "determinant",
+      "solveLinearSystem": "solveLinearSystem"
+    }
+  },
+  "src/algorithms/math/number-conversion.ts": {
+    "path": "ports/cpp/algorithms/math/number-conversion.hpp",
+    "exports": {
+      "toBase": "toBase",
+      "fromBase": "fromBase",
+      "toRoman": "toRoman",
+      "fromRoman": "fromRoman"
+    }
+  },
+  "src/algorithms/math/power.ts": {
+    "path": "ports/cpp/algorithms/math/power.hpp",
+    "exports": {
+      "fastPower": "fastPower",
+      "modPow": "modPow",
+      "integerSqrt": "integerSqrt",
+      "newtonSqrt": "newtonSqrt"
+    }
+  },
+  "src/algorithms/math/primes.ts": {
+    "path": "ports/cpp/algorithms/math/primes.hpp",
+    "exports": {
+      "sieveOfEratosthenes": "sieveOfEratosthenes",
+      "linearSieve": "linearSieve",
+      "isPrime": "isPrime",
+      "millerRabin": "millerRabin",
+      "primeFactors": "primeFactors",
+      "divisors": "divisors",
+      "eulerPhi": "eulerPhi"
+    }
+  },
+  "src/algorithms/randomized/shuffle.ts": {
+    "path": "ports/cpp/algorithms/randomized/shuffle.hpp",
+    "exports": {
+      "fisherYatesShuffle": "fisherYatesShuffle",
+      "reservoirSample": "reservoirSample",
+      "mulberry32": "mulberry32",
+      "monteCarloPi": "monteCarloPi"
+    }
+  },
+  "src/algorithms/searching/binary-search.ts": {
+    "path": "ports/cpp/algorithms/searching/binary-search.hpp",
+    "exports": {
+      "binarySearch": "binarySearch",
+      "binarySearchRecursive": "binarySearchRecursive",
+      "lowerBound": "lowerBound",
+      "upperBound": "upperBound",
+      "firstTrue": "firstTrue"
+    }
+  },
+  "src/algorithms/searching/exponential-search.ts": {
+    "path": "ports/cpp/algorithms/searching/exponential-search.hpp",
+    "exports": {
+      "exponentialSearch": "exponentialSearch"
+    }
+  },
+  "src/algorithms/searching/interpolation-search.ts": {
+    "path": "ports/cpp/algorithms/searching/interpolation-search.hpp",
+    "exports": {
+      "interpolationSearch": "interpolationSearch"
+    }
+  },
+  "src/algorithms/searching/jump-search.ts": {
+    "path": "ports/cpp/algorithms/searching/jump-search.hpp",
+    "exports": {
+      "jumpSearch": "jumpSearch"
+    }
+  },
+  "src/algorithms/searching/linear-search.ts": {
+    "path": "ports/cpp/algorithms/searching/linear-search.hpp",
+    "exports": {
+      "linearSearch": "linearSearch",
+      "linearSearchAll": "linearSearchAll"
+    }
+  },
+  "src/algorithms/searching/quick-select.ts": {
+    "path": "ports/cpp/algorithms/searching/quick-select.hpp",
+    "exports": {
+      "quickSelect": "quickSelect",
+      "median": "median"
+    }
+  },
+  "src/algorithms/searching/ternary-search.ts": {
+    "path": "ports/cpp/algorithms/searching/ternary-search.hpp",
+    "exports": {
+      "ternarySearchMax": "ternarySearchMax",
+      "ternarySearchMin": "ternarySearchMin",
+      "findPeakIndex": "findPeakIndex"
+    }
+  },
+  "src/algorithms/sorting/bubble-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/bubble-sort.hpp",
+    "exports": {
+      "bubbleSort": "bubbleSort"
+    }
+  },
+  "src/algorithms/sorting/bucket-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/bucket-sort.hpp",
+    "exports": {
+      "bucketSort": "bucketSort"
+    }
+  },
+  "src/algorithms/sorting/cocktail-shaker-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/cocktail-shaker-sort.hpp",
+    "exports": {
+      "cocktailShakerSort": "cocktailShakerSort"
+    }
+  },
+  "src/algorithms/sorting/counting-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/counting-sort.hpp",
+    "exports": {
+      "countingSort": "countingSort"
+    }
+  },
+  "src/algorithms/sorting/heap-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/heap-sort.hpp",
+    "exports": {
+      "heapSort": "heapSort"
+    }
+  },
+  "src/algorithms/sorting/index.ts": {
+    "path": "ports/cpp/algorithms/sorting/index.hpp",
+    "exports": {}
+  },
+  "src/algorithms/sorting/insertion-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/insertion-sort.hpp",
+    "exports": {
+      "insertionSortRange": "insertionSortRange",
+      "insertionSort": "insertionSort"
+    }
+  },
+  "src/algorithms/sorting/merge-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/merge-sort.hpp",
+    "exports": {
+      "merge": "merge",
+      "mergeSort": "mergeSort",
+      "bottomUpMergeSort": "bottomUpMergeSort"
+    }
+  },
+  "src/algorithms/sorting/quick-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/quick-sort.hpp",
+    "exports": {
+      "partition3": "partition3",
+      "quickSort": "quickSort",
+      "lomutoPartition": "lomutoPartition",
+      "quickSortFunctional": "quickSortFunctional"
+    }
+  },
+  "src/algorithms/sorting/radix-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/radix-sort.hpp",
+    "exports": {
+      "radixSort": "radixSort"
+    }
+  },
+  "src/algorithms/sorting/selection-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/selection-sort.hpp",
+    "exports": {
+      "selectionSort": "selectionSort"
+    }
+  },
+  "src/algorithms/sorting/shell-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/shell-sort.hpp",
+    "exports": {
+      "shellSort": "shellSort"
+    }
+  },
+  "src/algorithms/sorting/tim-sort.ts": {
+    "path": "ports/cpp/algorithms/sorting/tim-sort.hpp",
+    "exports": {
+      "timSort": "timSort"
+    }
+  },
+  "src/algorithms/strings/aho-corasick.ts": {
+    "path": "ports/cpp/algorithms/strings/aho-corasick.hpp",
+    "exports": {
+      "AhoCorasick": "AhoCorasick"
+    }
+  },
+  "src/algorithms/strings/boyer-moore-horspool.ts": {
+    "path": "ports/cpp/algorithms/strings/boyer-moore-horspool.hpp",
+    "exports": {
+      "boyerMooreHorspool": "boyerMooreHorspool"
+    }
+  },
+  "src/algorithms/strings/kmp.ts": {
+    "path": "ports/cpp/algorithms/strings/kmp.hpp",
+    "exports": {
+      "prefixFunction": "prefixFunction",
+      "kmpSearch": "kmpSearch"
+    }
+  },
+  "src/algorithms/strings/manacher.ts": {
+    "path": "ports/cpp/algorithms/strings/manacher.hpp",
+    "exports": {
+      "longestPalindromicSubstring": "longestPalindromicSubstring"
+    }
+  },
+  "src/algorithms/strings/rabin-karp.ts": {
+    "path": "ports/cpp/algorithms/strings/rabin-karp.hpp",
+    "exports": {
+      "rabinKarp": "rabinKarp"
+    }
+  },
+  "src/algorithms/strings/string-utils.ts": {
+    "path": "ports/cpp/algorithms/strings/string-utils.hpp",
+    "exports": {
+      "isBalanced": "isBalanced",
+      "isPalindrome": "isPalindrome",
+      "isAnagram": "isAnagram",
+      "groupAnagrams": "groupAnagrams",
+      "runLengthEncode": "runLengthEncode",
+      "runLengthDecode": "runLengthDecode",
+      "reverseWords": "reverseWords"
+    }
+  },
+  "src/algorithms/strings/suffix-array.ts": {
+    "path": "ports/cpp/algorithms/strings/suffix-array.hpp",
+    "exports": {
+      "suffixArray": "suffixArray",
+      "lcpArray": "lcpArray",
+      "countDistinctSubstrings": "countDistinctSubstrings"
+    }
+  },
+  "src/algorithms/strings/z-function.ts": {
+    "path": "ports/cpp/algorithms/strings/z-function.hpp",
+    "exports": {
+      "zFunction": "zFunction",
+      "zSearch": "zSearch"
+    }
+  },
+  "src/algorithms/techniques/prefix-sums.ts": {
+    "path": "ports/cpp/algorithms/techniques/prefix-sums.hpp",
+    "exports": {
+      "PrefixSums": "PrefixSums",
+      "PrefixSums2D": "PrefixSums2D",
+      "subarraySumEquals": "subarraySumEquals",
+      "differenceArrayApply": "differenceArrayApply",
+      "majorityElement": "majorityElement"
+    }
+  },
+  "src/algorithms/techniques/sliding-window.ts": {
+    "path": "ports/cpp/algorithms/techniques/sliding-window.hpp",
+    "exports": {
+      "maxSumWindow": "maxSumWindow",
+      "slidingWindowMaximum": "slidingWindowMaximum",
+      "longestUniqueSubstring": "longestUniqueSubstring",
+      "minWindowSubstring": "minWindowSubstring"
+    }
+  },
+  "src/algorithms/techniques/two-pointers.ts": {
+    "path": "ports/cpp/algorithms/techniques/two-pointers.hpp",
+    "exports": {
+      "twoSumSorted": "twoSumSorted",
+      "twoSum": "twoSum",
+      "threeSum": "threeSum",
+      "containerWithMostWater": "containerWithMostWater",
+      "removeDuplicatesSorted": "removeDuplicatesSorted",
+      "dutchNationalFlag": "dutchNationalFlag",
+      "hasCycleFloyd": "hasCycleFloyd"
+    }
+  },
+  "src/algorithms/trees/binary-tree.ts": {
+    "path": "ports/cpp/algorithms/trees/binary-tree.hpp",
+    "exports": {
+      "treeNode": "treeNode",
+      "fromLevelOrder": "fromLevelOrder",
+      "preOrder": "preOrder",
+      "inOrder": "inOrder",
+      "postOrder": "postOrder",
+      "levelOrder": "levelOrder",
+      "maxDepth": "maxDepth",
+      "maxValue": "maxValue",
+      "isValidBst": "isValidBst",
+      "invertTree": "invertTree",
+      "lowestCommonAncestorBst": "lowestCommonAncestorBst"
+    }
+  },
+  "src/algorithms/trees/lowest-common-ancestor.ts": {
+    "path": "ports/cpp/algorithms/trees/lowest-common-ancestor.hpp",
+    "exports": {
+      "LowestCommonAncestor": "LowestCommonAncestor"
+    }
+  },
+  "src/algorithms/trees/tree-diameter.ts": {
+    "path": "ports/cpp/algorithms/trees/tree-diameter.hpp",
+    "exports": {
+      "treeDiameter": "treeDiameter"
+    }
+  },
+  "src/data-structures/graphs/disjoint-set.ts": {
+    "path": "ports/cpp/data-structures/graphs/disjoint-set.hpp",
+    "exports": {
+      "DisjointSet": "DisjointSet"
+    }
+  },
+  "src/data-structures/graphs/graph.ts": {
+    "path": "ports/cpp/data-structures/graphs/graph.hpp",
+    "exports": {
+      "Graph": "Graph"
+    }
+  },
+  "src/data-structures/hashing/bloom-filter.ts": {
+    "path": "ports/cpp/data-structures/hashing/bloom-filter.hpp",
+    "exports": {
+      "BloomFilter": "BloomFilter"
+    }
+  },
+  "src/data-structures/hashing/hash-table.ts": {
+    "path": "ports/cpp/data-structures/hashing/hash-table.hpp",
+    "exports": {
+      "HashTable": "HashTable"
+    }
+  },
+  "src/data-structures/hashing/hash.ts": {
+    "path": "ports/cpp/data-structures/hashing/hash.hpp",
+    "exports": {
+      "fnv1a": "fnv1a",
+      "defaultHasher": "defaultHasher"
+    }
+  },
+  "src/data-structures/hashing/lru-cache.ts": {
+    "path": "ports/cpp/data-structures/hashing/lru-cache.hpp",
+    "exports": {
+      "LRUCache": "LRUCache"
+    }
+  },
+  "src/data-structures/hashing/open-addressing-hash-map.ts": {
+    "path": "ports/cpp/data-structures/hashing/open-addressing-hash-map.hpp",
+    "exports": {
+      "OpenAddressingHashMap": "OpenAddressingHashMap"
+    }
+  },
+  "src/data-structures/heaps/binary-heap.ts": {
+    "path": "ports/cpp/data-structures/heaps/binary-heap.hpp",
+    "exports": {
+      "BinaryHeap": "BinaryHeap",
+      "MinHeap": "MinHeap",
+      "MaxHeap": "MaxHeap"
+    }
+  },
+  "src/data-structures/heaps/priority-queue.ts": {
+    "path": "ports/cpp/data-structures/heaps/priority-queue.hpp",
+    "exports": {
+      "PriorityQueue": "PriorityQueue"
+    }
+  },
+  "src/data-structures/linear/circular-buffer.ts": {
+    "path": "ports/cpp/data-structures/linear/circular-buffer.hpp",
+    "exports": {
+      "CircularBuffer": "CircularBuffer"
+    }
+  },
+  "src/data-structures/linear/deque.ts": {
+    "path": "ports/cpp/data-structures/linear/deque.hpp",
+    "exports": {
+      "Deque": "Deque"
+    }
+  },
+  "src/data-structures/linear/doubly-linked-list.ts": {
+    "path": "ports/cpp/data-structures/linear/doubly-linked-list.hpp",
+    "exports": {
+      "DoublyLinkedListNode": "DoublyLinkedListNode",
+      "DoublyLinkedList": "DoublyLinkedList"
+    }
+  },
+  "src/data-structures/linear/linked-list.ts": {
+    "path": "ports/cpp/data-structures/linear/linked-list.hpp",
+    "exports": {
+      "LinkedListNode": "LinkedListNode",
+      "LinkedList": "LinkedList"
+    }
+  },
+  "src/data-structures/linear/queue.ts": {
+    "path": "ports/cpp/data-structures/linear/queue.hpp",
+    "exports": {
+      "Queue": "Queue"
+    }
+  },
+  "src/data-structures/linear/skip-list.ts": {
+    "path": "ports/cpp/data-structures/linear/skip-list.hpp",
+    "exports": {
+      "SkipList": "SkipList"
+    }
+  },
+  "src/data-structures/linear/stack.ts": {
+    "path": "ports/cpp/data-structures/linear/stack.hpp",
+    "exports": {
+      "Stack": "Stack"
+    }
+  },
+  "src/data-structures/range-queries/fenwick-tree.ts": {
+    "path": "ports/cpp/data-structures/range-queries/fenwick-tree.hpp",
+    "exports": {
+      "FenwickTree": "FenwickTree"
+    }
+  },
+  "src/data-structures/range-queries/lazy-segment-tree.ts": {
+    "path": "ports/cpp/data-structures/range-queries/lazy-segment-tree.hpp",
+    "exports": {
+      "LazySegmentTree": "LazySegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/segment-tree.ts": {
+    "path": "ports/cpp/data-structures/range-queries/segment-tree.hpp",
+    "exports": {
+      "SegmentTree": "SegmentTree",
+      "sumSegmentTree": "sumSegmentTree",
+      "minSegmentTree": "minSegmentTree",
+      "maxSegmentTree": "maxSegmentTree"
+    }
+  },
+  "src/data-structures/range-queries/sparse-table.ts": {
+    "path": "ports/cpp/data-structures/range-queries/sparse-table.hpp",
+    "exports": {
+      "SparseTable": "SparseTable",
+      "minSparseTable": "minSparseTable",
+      "maxSparseTable": "maxSparseTable"
+    }
+  },
+  "src/data-structures/range-queries/sqrt-decomposition.ts": {
+    "path": "ports/cpp/data-structures/range-queries/sqrt-decomposition.hpp",
+    "exports": {
+      "SqrtDecomposition": "SqrtDecomposition"
+    }
+  },
+  "src/data-structures/trees/avl-tree.ts": {
+    "path": "ports/cpp/data-structures/trees/avl-tree.hpp",
+    "exports": {
+      "AVLTree": "AVLTree"
+    }
+  },
+  "src/data-structures/trees/b-tree.ts": {
+    "path": "ports/cpp/data-structures/trees/b-tree.hpp",
+    "exports": {
+      "BTree": "BTree"
+    }
+  },
+  "src/data-structures/trees/binary-search-tree.ts": {
+    "path": "ports/cpp/data-structures/trees/binary-search-tree.hpp",
+    "exports": {
+      "BSTNode": "BSTNode",
+      "BinarySearchTree": "BinarySearchTree"
+    }
+  },
+  "src/data-structures/trees/red-black-tree.ts": {
+    "path": "ports/cpp/data-structures/trees/red-black-tree.hpp",
+    "exports": {
+      "RedBlackTree": "RedBlackTree"
+    }
+  },
+  "src/data-structures/trees/trie.ts": {
+    "path": "ports/cpp/data-structures/trees/trie.hpp",
+    "exports": {
+      "Trie": "Trie"
+    }
+  },
+  "src/patterns/architectural/circuit-breaker.ts": {
+    "path": "ports/cpp/patterns/architectural/circuit-breaker.hpp",
+    "exports": {
+      "CircuitOpenError": "CircuitOpenError",
+      "CircuitBreaker": "CircuitBreaker",
+      "retry": "retry"
+    }
+  },
+  "src/patterns/architectural/dependency-injection.ts": {
+    "path": "ports/cpp/patterns/architectural/dependency-injection.hpp",
+    "exports": {
+      "token": "token",
+      "Container": "Container"
+    }
+  },
+  "src/patterns/architectural/event-emitter.ts": {
+    "path": "ports/cpp/patterns/architectural/event-emitter.hpp",
+    "exports": {
+      "TypedEventEmitter": "TypedEventEmitter"
+    }
+  },
+  "src/patterns/architectural/middleware.ts": {
+    "path": "ports/cpp/patterns/architectural/middleware.hpp",
+    "exports": {
+      "compose": "compose",
+      "Pipeline": "Pipeline"
+    }
+  },
+  "src/patterns/architectural/null-object.ts": {
+    "path": "ports/cpp/patterns/architectural/null-object.hpp",
+    "exports": {
+      "MemoryLogger": "MemoryLogger",
+      "NullLogger": "NullLogger",
+      "PaymentService": "PaymentService"
+    }
+  },
+  "src/patterns/architectural/repository.ts": {
+    "path": "ports/cpp/patterns/architectural/repository.hpp",
+    "exports": {
+      "InMemoryRepository": "InMemoryRepository"
+    }
+  },
+  "src/patterns/architectural/specification.ts": {
+    "path": "ports/cpp/patterns/architectural/specification.hpp",
+    "exports": {
+      "Spec": "Spec",
+      "spec": "spec"
+    }
+  },
+  "src/patterns/architectural/store.ts": {
+    "path": "ports/cpp/patterns/architectural/store.hpp",
+    "exports": {
+      "createStore": "createStore",
+      "combineReducers": "combineReducers",
+      "counterReducer": "counterReducer"
+    }
+  },
+  "src/patterns/behavioral/chain-of-responsibility.ts": {
+    "path": "ports/cpp/patterns/behavioral/chain-of-responsibility.hpp",
+    "exports": {
+      "SupportHandler": "SupportHandler",
+      "FaqBot": "FaqBot",
+      "SupportAgent": "SupportAgent",
+      "Engineer": "Engineer",
+      "createSupportChain": "createSupportChain"
+    }
+  },
+  "src/patterns/behavioral/command.ts": {
+    "path": "ports/cpp/patterns/behavioral/command.hpp",
+    "exports": {
+      "TextDocument": "TextDocument",
+      "InsertCommand": "InsertCommand",
+      "DeleteCommand": "DeleteCommand",
+      "MacroCommand": "MacroCommand",
+      "CommandHistory": "CommandHistory"
+    }
+  },
+  "src/patterns/behavioral/interpreter.ts": {
+    "path": "ports/cpp/patterns/behavioral/interpreter.hpp",
+    "exports": {
+      "NumberExpression": "NumberExpression",
+      "VariableExpression": "VariableExpression",
+      "BinaryExpression": "BinaryExpression",
+      "parseExpression": "parseExpression"
+    }
+  },
+  "src/patterns/behavioral/iterator.ts": {
+    "path": "ports/cpp/patterns/behavioral/iterator.hpp",
+    "exports": {
+      "NumberRange": "NumberRange",
+      "depthFirst": "depthFirst",
+      "breadthFirst": "breadthFirst",
+      "take": "take"
+    }
+  },
+  "src/patterns/behavioral/mediator.ts": {
+    "path": "ports/cpp/patterns/behavioral/mediator.hpp",
+    "exports": {
+      "ChatUser": "ChatUser",
+      "ChatRoom": "ChatRoom"
+    }
+  },
+  "src/patterns/behavioral/memento.ts": {
+    "path": "ports/cpp/patterns/behavioral/memento.hpp",
+    "exports": {
+      "Editor": "Editor",
+      "EditorHistory": "EditorHistory"
+    }
+  },
+  "src/patterns/behavioral/observer.ts": {
+    "path": "ports/cpp/patterns/behavioral/observer.hpp",
+    "exports": {
+      "Subject": "Subject",
+      "StockTicker": "StockTicker",
+      "BehaviorSubject": "BehaviorSubject"
+    }
+  },
+  "src/patterns/behavioral/state.ts": {
+    "path": "ports/cpp/patterns/behavioral/state.hpp",
+    "exports": {
+      "Order": "Order"
+    }
+  },
+  "src/patterns/behavioral/strategy.ts": {
+    "path": "ports/cpp/patterns/behavioral/strategy.hpp",
+    "exports": {
+      "FlatRateShipping": "FlatRateShipping",
+      "WeightBasedShipping": "WeightBasedShipping",
+      "FreeOverThresholdShipping": "FreeOverThresholdShipping",
+      "ShippingCalculator": "ShippingCalculator"
+    }
+  },
+  "src/patterns/behavioral/template-method.ts": {
+    "path": "ports/cpp/patterns/behavioral/template-method.hpp",
+    "exports": {
+      "SalesDataMiner": "SalesDataMiner",
+      "CsvSalesMiner": "CsvSalesMiner",
+      "JsonSalesMiner": "JsonSalesMiner"
+    }
+  },
+  "src/patterns/behavioral/visitor.ts": {
+    "path": "ports/cpp/patterns/behavioral/visitor.hpp",
+    "exports": {
+      "CircleShape": "CircleShape",
+      "RectangleShape": "RectangleShape",
+      "TriangleShape": "TriangleShape",
+      "AreaVisitor": "AreaVisitor",
+      "PerimeterVisitor": "PerimeterVisitor",
+      "JsonExportVisitor": "JsonExportVisitor"
+    }
+  },
+  "src/patterns/creational/abstract-factory.ts": {
+    "path": "ports/cpp/patterns/creational/abstract-factory.hpp",
+    "exports": {
+      "LightThemeFactory": "LightThemeFactory",
+      "DarkThemeFactory": "DarkThemeFactory",
+      "renderSettingsForm": "renderSettingsForm"
+    }
+  },
+  "src/patterns/creational/builder.ts": {
+    "path": "ports/cpp/patterns/creational/builder.hpp",
+    "exports": {
+      "HttpRequestBuilder": "HttpRequestBuilder"
+    }
+  },
+  "src/patterns/creational/factory-method.ts": {
+    "path": "ports/cpp/patterns/creational/factory-method.hpp",
+    "exports": {
+      "Truck": "Truck",
+      "Ship": "Ship",
+      "Logistics": "Logistics",
+      "RoadLogistics": "RoadLogistics",
+      "SeaLogistics": "SeaLogistics",
+      "createTransport": "createTransport"
+    }
+  },
+  "src/patterns/creational/object-pool.ts": {
+    "path": "ports/cpp/patterns/creational/object-pool.hpp",
+    "exports": {
+      "ObjectPool": "ObjectPool"
+    }
+  },
+  "src/patterns/creational/prototype.ts": {
+    "path": "ports/cpp/patterns/creational/prototype.hpp",
+    "exports": {
+      "Shape": "Shape",
+      "Circle": "Circle",
+      "Rectangle": "Rectangle",
+      "PrototypeRegistry": "PrototypeRegistry"
+    }
+  },
+  "src/patterns/creational/singleton.ts": {
+    "path": "ports/cpp/patterns/creational/singleton.hpp",
+    "exports": {
+      "AppConfig": "AppConfig",
+      "lazySingleton": "lazySingleton"
+    }
+  },
+  "src/patterns/structural/adapter.ts": {
+    "path": "ports/cpp/patterns/structural/adapter.hpp",
+    "exports": {
+      "LegacyFahrenheitSensor": "LegacyFahrenheitSensor",
+      "FahrenheitSensorAdapter": "FahrenheitSensorAdapter",
+      "averageTemperature": "averageTemperature",
+      "promisify": "promisify"
+    }
+  },
+  "src/patterns/structural/bridge.ts": {
+    "path": "ports/cpp/patterns/structural/bridge.hpp",
+    "exports": {
+      "Tv": "Tv",
+      "Radio": "Radio",
+      "RemoteControl": "RemoteControl",
+      "AdvancedRemoteControl": "AdvancedRemoteControl"
+    }
+  },
+  "src/patterns/structural/composite.ts": {
+    "path": "ports/cpp/patterns/structural/composite.hpp",
+    "exports": {
+      "FileEntry": "FileEntry",
+      "Directory": "Directory"
+    }
+  },
+  "src/patterns/structural/decorator.ts": {
+    "path": "ports/cpp/patterns/structural/decorator.hpp",
+    "exports": {
+      "EmailNotifier": "EmailNotifier",
+      "NotifierDecorator": "NotifierDecorator",
+      "SmsNotifier": "SmsNotifier",
+      "SlackNotifier": "SlackNotifier",
+      "withLogging": "withLogging"
+    }
+  },
+  "src/patterns/structural/facade.ts": {
+    "path": "ports/cpp/patterns/structural/facade.hpp",
+    "exports": {
+      "VideoFile": "VideoFile",
+      "CodecFactory": "CodecFactory",
+      "BitrateReader": "BitrateReader",
+      "AudioMixer": "AudioMixer",
+      "VideoConverter": "VideoConverter"
+    }
+  },
+  "src/patterns/structural/flyweight.ts": {
+    "path": "ports/cpp/patterns/structural/flyweight.hpp",
+    "exports": {
+      "TreeType": "TreeType",
+      "TreeTypeFactory": "TreeTypeFactory",
+      "Forest": "Forest"
+    }
+  },
+  "src/patterns/structural/proxy.ts": {
+    "path": "ports/cpp/patterns/structural/proxy.hpp",
+    "exports": {
+      "CachingWeatherProxy": "CachingWeatherProxy",
+      "AccessControlProxy": "AccessControlProxy",
+      "createValidatedObject": "createValidatedObject"
+    }
+  },
+  "src/shared/compare.ts": {
+    "path": "ports/cpp/shared/compare.hpp",
+    "exports": {
+      "defaultCompare": "defaultCompare",
+      "reverseCompare": "reverseCompare"
+    }
+  }
+}

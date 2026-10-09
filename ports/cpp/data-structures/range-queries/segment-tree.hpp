@@ -1,0 +1,6 @@
+#pragma once
+#include "../../support.hpp"
+namespace algs {
+template<class T>class SegmentTree{int n;std::vector<T>tree;std::function<T(const T&,const T&)>combine;T identity;void assertIndex(int i)const{if(i<0||i>=n)throw std::out_of_range("Invalid index");}public:SegmentTree(const std::vector<T>&a,std::function<T(const T&,const T&)>c,T id):n(int(a.size())),tree(2*n,id),combine(c),identity(id){for(int i=0;i<n;++i)tree[n+i]=a[i];for(int i=n-1;i>0;--i)tree[i]=combine(tree[2*i],tree[2*i+1]);}int size()const{return n;}T get(int i)const{assertIndex(i);return tree[n+i];}void update(int i,T v){assertIndex(i);int p=n+i;tree[p]=v;for(p>>=1;p>0;p>>=1)tree[p]=combine(tree[2*p],tree[2*p+1]);}T query(int left,int right)const{if(left<0||right>=n||left>right)throw std::out_of_range("Invalid range");T a=identity,b=identity;for(int l=left+n,r=right+n+1;l<r;l>>=1,r>>=1){if(l&1)a=combine(a,tree[l++]);if(r&1)b=combine(tree[--r],b);}return combine(a,b);}};
+inline SegmentTree<double>sumSegmentTree(const Numbers&a){return {a,[](double x,double y){return x+y;},0};}inline SegmentTree<double>minSegmentTree(const Numbers&a){return {a,[](double x,double y){return std::min(x,y);},infinity};}inline SegmentTree<double>maxSegmentTree(const Numbers&a){return {a,[](double x,double y){return std::max(x,y);},-infinity};}
+}

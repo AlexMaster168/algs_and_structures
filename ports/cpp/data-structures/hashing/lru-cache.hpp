@@ -1,0 +1,5 @@
+#pragma once
+#include "../../support.hpp"
+namespace algs {
+template<class K,class V>class LRUCache{std::list<std::pair<K,V>>order;std::map<K,typename std::list<std::pair<K,V>>::iterator>nodes;public:const int capacity;explicit LRUCache(int c):capacity(c){if(c<=0)throw std::out_of_range("Capacity must be a positive integer");}int size()const{return int(nodes.size());}std::optional<V>get(const K&k){auto it=nodes.find(k);if(it==nodes.end())return {};order.splice(order.begin(),order,it->second);return it->second->second;}bool has(const K&k)const{return nodes.count(k)!=0;}LRUCache&set(K k,V v){auto it=nodes.find(k);if(it!=nodes.end()){it->second->second=v;order.splice(order.begin(),order,it->second);}else{order.emplace_front(k,v);nodes[k]=order.begin();}if(int(nodes.size())>capacity){nodes.erase(order.back().first);order.pop_back();}return *this;}bool erase(const K&k){auto it=nodes.find(k);if(it==nodes.end())return false;order.erase(it->second);nodes.erase(it);return true;}std::vector<K>keys()const{std::vector<K>r;for(auto&e:order)r.push_back(e.first);return r;}};
+}
