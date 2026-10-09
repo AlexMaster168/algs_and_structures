@@ -2,12 +2,12 @@
 
 [![CI](https://github.com/AlexMaster168/algs_and_structures/actions/workflows/ci.yml/badge.svg)](https://github.com/AlexMaster168/algs_and_structures/actions/workflows/ci.yml)
 
-Коллекция алгоритмов, структур данных и паттернов проектирования: 140 модулей TypeScript 7 (strict, ESM) и соответствующие реализации Python, Java, JavaScript, C#, PHP, Go и C++. У каждого раздела есть описание идеи, пошаговый разбор, оценка сложности, пример использования, ссылка на исходник и на тесты.
+Коллекция алгоритмов, структур данных и паттернов проектирования: 140 модулей TypeScript 7 (strict, ESM) и соответствующие реализации Python, Java, JavaScript, C#, PHP, Go, C++ и Rust. У каждого раздела есть описание идеи, пошаговый разбор, оценка сложности, пример использования, ссылка на исходник и на тесты.
 
 ## Оглавление
 
 - [Реализации на других языках](#реализации-на-других-языках) · [Каталог всех модулей](ports/CATALOG.md)
-  - [Python](#python) · [Java](#java) · [JavaScript](#javascript) · [Общие проверки](#общие-проверки)
+  - [Python](#python) · [Java](#java) · [JavaScript](#javascript) · [C#, PHP и Go](#c-php-и-go) · [C++](#c) · [Rust](#rust) · [Общие проверки](#общие-проверки)
 - [Как выбрать решение](#как-выбрать-решение)
 
 - [Как пользоваться репозиторием](#как-пользоваться-репозиторием)
@@ -117,6 +117,11 @@ ports/
   python/                 самостоятельные реализации Python
   java/src/               самостоятельные реализации Java
   javascript/             самостоятельные ES-модули JavaScript
+  csharp/                 полная библиотека C#
+  php/                    полная библиотека PHP
+  go/                     полный модуль Go
+  cpp/                    полная библиотека заголовков C++20
+  rust/                   полный пакет Cargo
   golden-cases.json       общие эталонные примеры
   check.py                запуск проверок выбранных языков
 templates/                прежние минимальные примеры на восьми языках
@@ -167,7 +172,7 @@ templates/                прежние минимальные примеры �
 
 Код: [src/data-structures/linear/linked-list.ts](src/data-structures/linear/linked-list.ts)
 
-Другие языки: [Python](ports/python/data_structures/linear/linked_list.py) · [Java](ports/java/src/data-structures/linear/LinkedList.java) · [JavaScript](ports/javascript/data-structures/linear/linked-list.js) · [C#](ports/csharp/data-structures/linear/linked-list.cs) · [PHP](ports/php/data-structures/linear/linked-list.php) · [Go](ports/go/data-structures/linear/linked-list.go) · [C++](ports/cpp/data-structures/linear/linked-list.hpp)
+Другие языки: [Python](ports/python/data_structures/linear/linked_list.py) · [Java](ports/java/src/data-structures/linear/LinkedList.java) · [JavaScript](ports/javascript/data-structures/linear/linked-list.js) · [C#](ports/csharp/data-structures/linear/linked-list.cs) · [PHP](ports/php/data-structures/linear/linked-list.php) · [Go](ports/go/data-structures/linear/linked-list.go) · [C++](ports/cpp/data-structures/linear/linked-list.hpp) · [Rust](ports/rust/data_structures/linear/linked_list.rs)
 
 Цепочка узлов, где каждый хранит значение и ссылку на следующий. В отличие от массива элементы не лежат подряд в памяти, поэтому вставка в начало не требует сдвигать остальные элементы.
 
@@ -197,7 +202,7 @@ list.reverse().toArray(); // ['Slim', 'is', 'name', 'My']
 
 Код: [src/data-structures/linear/doubly-linked-list.ts](src/data-structures/linear/doubly-linked-list.ts)
 
-Другие языки: [Python](ports/python/data_structures/linear/doubly_linked_list.py) · [Java](ports/java/src/data-structures/linear/DoublyLinkedList.java) · [JavaScript](ports/javascript/data-structures/linear/doubly-linked-list.js) · [C#](ports/csharp/data-structures/linear/doubly-linked-list.cs) · [PHP](ports/php/data-structures/linear/doubly-linked-list.php) · [Go](ports/go/data-structures/linear/doubly-linked-list.go) · [C++](ports/cpp/data-structures/linear/doubly-linked-list.hpp)
+Другие языки: [Python](ports/python/data_structures/linear/doubly_linked_list.py) · [Java](ports/java/src/data-structures/linear/DoublyLinkedList.java) · [JavaScript](ports/javascript/data-structures/linear/doubly-linked-list.js) · [C#](ports/csharp/data-structures/linear/doubly-linked-list.cs) · [PHP](ports/php/data-structures/linear/doubly-linked-list.php) · [Go](ports/go/data-structures/linear/doubly-linked-list.go) · [C++](ports/cpp/data-structures/linear/doubly-linked-list.hpp) · [Rust](ports/rust/data_structures/linear/doubly_linked_list.rs)
 
 Каждый узел знает и следующего, и предыдущего соседа. За это платим лишней ссылкой на узел, а взамен получаем удаление любого известного узла за O(1) и обход в обе стороны. На двусвязном списке построен [LRU-кеш](#lru-кеш).
 
@@ -221,7 +226,7 @@ list.popFront();      // 1
 
 Код: [src/data-structures/linear/stack.ts](src/data-structures/linear/stack.ts)
 
-Другие языки: [Python](ports/python/data_structures/linear/stack.py) · [Java](ports/java/src/data-structures/linear/Stack.java) · [JavaScript](ports/javascript/data-structures/linear/stack.js) · [C#](ports/csharp/data-structures/linear/stack.cs) · [PHP](ports/php/data-structures/linear/stack.php) · [Go](ports/go/data-structures/linear/stack.go) · [C++](ports/cpp/data-structures/linear/stack.hpp)
+Другие языки: [Python](ports/python/data_structures/linear/stack.py) · [Java](ports/java/src/data-structures/linear/Stack.java) · [JavaScript](ports/javascript/data-structures/linear/stack.js) · [C#](ports/csharp/data-structures/linear/stack.cs) · [PHP](ports/php/data-structures/linear/stack.php) · [Go](ports/go/data-structures/linear/stack.go) · [C++](ports/cpp/data-structures/linear/stack.hpp) · [Rust](ports/rust/data_structures/linear/stack.rs)
 
 LIFO (last in, first out): последний положенный элемент достаётся первым, как стопка тарелок. Стек лежит в основе вызовов функций, отмены действий, проверки скобок, обхода в глубину и вычисления выражений.
 
@@ -239,7 +244,7 @@ stack.pop();  // 3
 
 Код: [src/data-structures/linear/queue.ts](src/data-structures/linear/queue.ts)
 
-Другие языки: [Python](ports/python/data_structures/linear/queue.py) · [Java](ports/java/src/data-structures/linear/Queue.java) · [JavaScript](ports/javascript/data-structures/linear/queue.js) · [C#](ports/csharp/data-structures/linear/queue.cs) · [PHP](ports/php/data-structures/linear/queue.php) · [Go](ports/go/data-structures/linear/queue.go) · [C++](ports/cpp/data-structures/linear/queue.hpp)
+Другие языки: [Python](ports/python/data_structures/linear/queue.py) · [Java](ports/java/src/data-structures/linear/Queue.java) · [JavaScript](ports/javascript/data-structures/linear/queue.js) · [C#](ports/csharp/data-structures/linear/queue.cs) · [PHP](ports/php/data-structures/linear/queue.php) · [Go](ports/go/data-structures/linear/queue.go) · [C++](ports/cpp/data-structures/linear/queue.hpp) · [Rust](ports/rust/data_structures/linear/queue.rs)
 
 FIFO (first in, first out): первым пришёл, первым ушёл. Нужна для BFS, очередей задач и буферизации.
 
@@ -257,7 +262,7 @@ queue.peek();    // 'b'
 
 Код: [src/data-structures/linear/deque.ts](src/data-structures/linear/deque.ts)
 
-Другие языки: [Python](ports/python/data_structures/linear/deque.py) · [Java](ports/java/src/data-structures/linear/Deque.java) · [JavaScript](ports/javascript/data-structures/linear/deque.js) · [C#](ports/csharp/data-structures/linear/deque.cs) · [PHP](ports/php/data-structures/linear/deque.php) · [Go](ports/go/data-structures/linear/deque.go) · [C++](ports/cpp/data-structures/linear/deque.hpp)
+Другие языки: [Python](ports/python/data_structures/linear/deque.py) · [Java](ports/java/src/data-structures/linear/Deque.java) · [JavaScript](ports/javascript/data-structures/linear/deque.js) · [C#](ports/csharp/data-structures/linear/deque.cs) · [PHP](ports/php/data-structures/linear/deque.php) · [Go](ports/go/data-structures/linear/deque.go) · [C++](ports/cpp/data-structures/linear/deque.hpp) · [Rust](ports/rust/data_structures/linear/deque.rs)
 
 Double-ended queue: добавление и удаление с обоих концов за O(1), плюс доступ по индексу за O(1).
 
@@ -276,7 +281,7 @@ deque.popFront(); // 0
 
 Код: [src/data-structures/linear/circular-buffer.ts](src/data-structures/linear/circular-buffer.ts)
 
-Другие языки: [Python](ports/python/data_structures/linear/circular_buffer.py) · [Java](ports/java/src/data-structures/linear/CircularBuffer.java) · [JavaScript](ports/javascript/data-structures/linear/circular-buffer.js) · [C#](ports/csharp/data-structures/linear/circular-buffer.cs) · [PHP](ports/php/data-structures/linear/circular-buffer.php) · [Go](ports/go/data-structures/linear/circular-buffer.go) · [C++](ports/cpp/data-structures/linear/circular-buffer.hpp)
+Другие языки: [Python](ports/python/data_structures/linear/circular_buffer.py) · [Java](ports/java/src/data-structures/linear/CircularBuffer.java) · [JavaScript](ports/javascript/data-structures/linear/circular-buffer.js) · [C#](ports/csharp/data-structures/linear/circular-buffer.cs) · [PHP](ports/php/data-structures/linear/circular-buffer.php) · [Go](ports/go/data-structures/linear/circular-buffer.go) · [C++](ports/cpp/data-structures/linear/circular-buffer.hpp) · [Rust](ports/rust/data_structures/linear/circular_buffer.rs)
 
 Очередь фиксированной ёмкости, которая никогда не растёт. Когда буфер полон, новый элемент затирает самый старый, и `push` возвращает вытесненное значение. Подходит для логов, метрик, истории последних N событий и аудио-буферов: память выделяется один раз.
 
@@ -293,7 +298,7 @@ buffer.toArray(); // [2, 3, 4]
 
 Код: [src/data-structures/linear/skip-list.ts](src/data-structures/linear/skip-list.ts)
 
-Другие языки: [Python](ports/python/data_structures/linear/skip_list.py) · [Java](ports/java/src/data-structures/linear/SkipList.java) · [JavaScript](ports/javascript/data-structures/linear/skip-list.js) · [C#](ports/csharp/data-structures/linear/skip-list.cs) · [PHP](ports/php/data-structures/linear/skip-list.php) · [Go](ports/go/data-structures/linear/skip-list.go) · [C++](ports/cpp/data-structures/linear/skip-list.hpp)
+Другие языки: [Python](ports/python/data_structures/linear/skip_list.py) · [Java](ports/java/src/data-structures/linear/SkipList.java) · [JavaScript](ports/javascript/data-structures/linear/skip-list.js) · [C#](ports/csharp/data-structures/linear/skip-list.cs) · [PHP](ports/php/data-structures/linear/skip-list.php) · [Go](ports/go/data-structures/linear/skip-list.go) · [C++](ports/cpp/data-structures/linear/skip-list.hpp) · [Rust](ports/rust/data_structures/linear/skip_list.rs)
 
 Skip list — отсортированный связный список с «экспресс-полосами». Нижний уровень содержит все элементы, каждый следующий примерно половину элементов предыдущего.
 
@@ -322,7 +327,7 @@ set.toArray(); // [3, 5, 9]
 
 Код: [src/data-structures/heaps/binary-heap.ts](src/data-structures/heaps/binary-heap.ts)
 
-Другие языки: [Python](ports/python/data_structures/heaps/binary_heap.py) · [Java](ports/java/src/data-structures/heaps/BinaryHeap.java) · [JavaScript](ports/javascript/data-structures/heaps/binary-heap.js) · [C#](ports/csharp/data-structures/heaps/binary-heap.cs) · [PHP](ports/php/data-structures/heaps/binary-heap.php) · [Go](ports/go/data-structures/heaps/binary-heap.go) · [C++](ports/cpp/data-structures/heaps/binary-heap.hpp)
+Другие языки: [Python](ports/python/data_structures/heaps/binary_heap.py) · [Java](ports/java/src/data-structures/heaps/BinaryHeap.java) · [JavaScript](ports/javascript/data-structures/heaps/binary-heap.js) · [C#](ports/csharp/data-structures/heaps/binary-heap.cs) · [PHP](ports/php/data-structures/heaps/binary-heap.php) · [Go](ports/go/data-structures/heaps/binary-heap.go) · [C++](ports/cpp/data-structures/heaps/binary-heap.hpp) · [Rust](ports/rust/data_structures/heaps/binary_heap.rs)
 
 Полное двоичное дерево, где каждый родитель не больше своих потомков (для min-кучи). Минимум всегда в корне. Дерево хранится прямо в массиве: у элемента `i` дети лежат в `2i + 1` и `2i + 2`, родитель в `(i - 1) / 2`.
 
@@ -355,7 +360,7 @@ byLength.pop(); // 'a'
 
 Код: [src/data-structures/heaps/priority-queue.ts](src/data-structures/heaps/priority-queue.ts)
 
-Другие языки: [Python](ports/python/data_structures/heaps/priority_queue.py) · [Java](ports/java/src/data-structures/heaps/PriorityQueue.java) · [JavaScript](ports/javascript/data-structures/heaps/priority-queue.js) · [C#](ports/csharp/data-structures/heaps/priority-queue.cs) · [PHP](ports/php/data-structures/heaps/priority-queue.php) · [Go](ports/go/data-structures/heaps/priority-queue.go) · [C++](ports/cpp/data-structures/heaps/priority-queue.hpp)
+Другие языки: [Python](ports/python/data_structures/heaps/priority_queue.py) · [Java](ports/java/src/data-structures/heaps/PriorityQueue.java) · [JavaScript](ports/javascript/data-structures/heaps/priority-queue.js) · [C#](ports/csharp/data-structures/heaps/priority-queue.cs) · [PHP](ports/php/data-structures/heaps/priority-queue.php) · [Go](ports/go/data-structures/heaps/priority-queue.go) · [C++](ports/cpp/data-structures/heaps/priority-queue.hpp) · [Rust](ports/rust/data_structures/heaps/priority_queue.rs)
 
 Обёртка над бинарной кучей, где каждому значению сопоставлен числовой приоритет: чем меньше число, тем раньше элемент выйдет. Внутри каждой записи хранится порядковый номер вставки, поэтому при равных приоритетах сохраняется порядок добавления (стабильность). Обычная куча такого не гарантирует.
 
@@ -379,7 +384,7 @@ tasks.dequeue(); // 'urgent-2'
 
 Код: [src/data-structures/hashing/hash-table.ts](src/data-structures/hashing/hash-table.ts)
 
-Другие языки: [Python](ports/python/data_structures/hashing/hash_table.py) · [Java](ports/java/src/data-structures/hashing/HashTable.java) · [JavaScript](ports/javascript/data-structures/hashing/hash-table.js) · [C#](ports/csharp/data-structures/hashing/hash-table.cs) · [PHP](ports/php/data-structures/hashing/hash-table.php) · [Go](ports/go/data-structures/hashing/hash-table.go) · [C++](ports/cpp/data-structures/hashing/hash-table.hpp)
+Другие языки: [Python](ports/python/data_structures/hashing/hash_table.py) · [Java](ports/java/src/data-structures/hashing/HashTable.java) · [JavaScript](ports/javascript/data-structures/hashing/hash-table.js) · [C#](ports/csharp/data-structures/hashing/hash-table.cs) · [PHP](ports/php/data-structures/hashing/hash-table.php) · [Go](ports/go/data-structures/hashing/hash-table.go) · [C++](ports/cpp/data-structures/hashing/hash-table.hpp) · [Rust](ports/rust/data_structures/hashing/hash_table.rs)
 
 Separate chaining: массив корзин, каждая корзина — список пар ключ-значение. Ключи, попавшие в одну корзину (коллизия), просто лежат в одном списке.
 
@@ -403,7 +408,7 @@ table.delete(1);
 
 Код: [src/data-structures/hashing/open-addressing-hash-map.ts](src/data-structures/hashing/open-addressing-hash-map.ts)
 
-Другие языки: [Python](ports/python/data_structures/hashing/open_addressing_hash_map.py) · [Java](ports/java/src/data-structures/hashing/OpenAddressingHashMap.java) · [JavaScript](ports/javascript/data-structures/hashing/open-addressing-hash-map.js) · [C#](ports/csharp/data-structures/hashing/open-addressing-hash-map.cs) · [PHP](ports/php/data-structures/hashing/open-addressing-hash-map.php) · [Go](ports/go/data-structures/hashing/open-addressing-hash-map.go) · [C++](ports/cpp/data-structures/hashing/open-addressing-hash-map.hpp)
+Другие языки: [Python](ports/python/data_structures/hashing/open_addressing_hash_map.py) · [Java](ports/java/src/data-structures/hashing/OpenAddressingHashMap.java) · [JavaScript](ports/javascript/data-structures/hashing/open-addressing-hash-map.js) · [C#](ports/csharp/data-structures/hashing/open-addressing-hash-map.cs) · [PHP](ports/php/data-structures/hashing/open-addressing-hash-map.php) · [Go](ports/go/data-structures/hashing/open-addressing-hash-map.go) · [C++](ports/cpp/data-structures/hashing/open-addressing-hash-map.hpp) · [Rust](ports/rust/data_structures/hashing/open_addressing_hash_map.rs)
 
 Все записи лежат прямо в массиве, без списков. При коллизии ищется следующая свободная ячейка: `i + 1`, `i + 2` и так далее (линейное пробирование).
 
@@ -423,7 +428,7 @@ map.delete('a'); // true
 
 Код: [src/data-structures/hashing/bloom-filter.ts](src/data-structures/hashing/bloom-filter.ts)
 
-Другие языки: [Python](ports/python/data_structures/hashing/bloom_filter.py) · [Java](ports/java/src/data-structures/hashing/BloomFilter.java) · [JavaScript](ports/javascript/data-structures/hashing/bloom-filter.js) · [C#](ports/csharp/data-structures/hashing/bloom-filter.cs) · [PHP](ports/php/data-structures/hashing/bloom-filter.php) · [Go](ports/go/data-structures/hashing/bloom-filter.go) · [C++](ports/cpp/data-structures/hashing/bloom-filter.hpp)
+Другие языки: [Python](ports/python/data_structures/hashing/bloom_filter.py) · [Java](ports/java/src/data-structures/hashing/BloomFilter.java) · [JavaScript](ports/javascript/data-structures/hashing/bloom-filter.js) · [C#](ports/csharp/data-structures/hashing/bloom-filter.cs) · [PHP](ports/php/data-structures/hashing/bloom-filter.php) · [Go](ports/go/data-structures/hashing/bloom-filter.go) · [C++](ports/cpp/data-structures/hashing/bloom-filter.hpp) · [Rust](ports/rust/data_structures/hashing/bloom_filter.rs)
 
 Вероятностное множество, которое отвечает «точно нет» или «скорее всего да». Ложноотрицательных ответов не бывает, ложноположительные бывают с заданной вероятностью. Хранится только битовый массив, без самих элементов, поэтому структура очень компактная.
 
@@ -448,7 +453,7 @@ seen.mightContain('bob@example.com');   // false (с вероятностью ~9
 
 Код: [src/data-structures/hashing/lru-cache.ts](src/data-structures/hashing/lru-cache.ts)
 
-Другие языки: [Python](ports/python/data_structures/hashing/lru_cache.py) · [Java](ports/java/src/data-structures/hashing/LRUCache.java) · [JavaScript](ports/javascript/data-structures/hashing/lru-cache.js) · [C#](ports/csharp/data-structures/hashing/lru-cache.cs) · [PHP](ports/php/data-structures/hashing/lru-cache.php) · [Go](ports/go/data-structures/hashing/lru-cache.go) · [C++](ports/cpp/data-structures/hashing/lru-cache.hpp)
+Другие языки: [Python](ports/python/data_structures/hashing/lru_cache.py) · [Java](ports/java/src/data-structures/hashing/LRUCache.java) · [JavaScript](ports/javascript/data-structures/hashing/lru-cache.js) · [C#](ports/csharp/data-structures/hashing/lru-cache.cs) · [PHP](ports/php/data-structures/hashing/lru-cache.php) · [Go](ports/go/data-structures/hashing/lru-cache.go) · [C++](ports/cpp/data-structures/hashing/lru-cache.hpp) · [Rust](ports/rust/data_structures/hashing/lru_cache.rs)
 
 Кеш ограниченного размера, который при переполнении выбрасывает элемент, к которому дольше всех не обращались (Least Recently Used).
 
@@ -472,7 +477,7 @@ cache.keys();      // ['c', 'a']
 
 Код: [src/data-structures/trees/binary-search-tree.ts](src/data-structures/trees/binary-search-tree.ts)
 
-Другие языки: [Python](ports/python/data_structures/trees/binary_search_tree.py) · [Java](ports/java/src/data-structures/trees/BinarySearchTree.java) · [JavaScript](ports/javascript/data-structures/trees/binary-search-tree.js) · [C#](ports/csharp/data-structures/trees/binary-search-tree.cs) · [PHP](ports/php/data-structures/trees/binary-search-tree.php) · [Go](ports/go/data-structures/trees/binary-search-tree.go) · [C++](ports/cpp/data-structures/trees/binary-search-tree.hpp)
+Другие языки: [Python](ports/python/data_structures/trees/binary_search_tree.py) · [Java](ports/java/src/data-structures/trees/BinarySearchTree.java) · [JavaScript](ports/javascript/data-structures/trees/binary-search-tree.js) · [C#](ports/csharp/data-structures/trees/binary-search-tree.cs) · [PHP](ports/php/data-structures/trees/binary-search-tree.php) · [Go](ports/go/data-structures/trees/binary-search-tree.go) · [C++](ports/cpp/data-structures/trees/binary-search-tree.hpp) · [Rust](ports/rust/data_structures/trees/binary_search_tree.rs)
 
 У каждого узла все ключи в левом поддереве меньше, а в правом больше. Поиск каждый раз отбрасывает одно из поддеревьев, как бинарный поиск.
 
@@ -499,7 +504,7 @@ tree.delete(30);
 
 Код: [src/data-structures/trees/avl-tree.ts](src/data-structures/trees/avl-tree.ts)
 
-Другие языки: [Python](ports/python/data_structures/trees/avl_tree.py) · [Java](ports/java/src/data-structures/trees/AVLTree.java) · [JavaScript](ports/javascript/data-structures/trees/avl-tree.js) · [C#](ports/csharp/data-structures/trees/avl-tree.cs) · [PHP](ports/php/data-structures/trees/avl-tree.php) · [Go](ports/go/data-structures/trees/avl-tree.go) · [C++](ports/cpp/data-structures/trees/avl-tree.hpp)
+Другие языки: [Python](ports/python/data_structures/trees/avl_tree.py) · [Java](ports/java/src/data-structures/trees/AVLTree.java) · [JavaScript](ports/javascript/data-structures/trees/avl-tree.js) · [C#](ports/csharp/data-structures/trees/avl-tree.cs) · [PHP](ports/php/data-structures/trees/avl-tree.php) · [Go](ports/go/data-structures/trees/avl-tree.go) · [C++](ports/cpp/data-structures/trees/avl-tree.hpp) · [Rust](ports/rust/data_structures/trees/avl_tree.rs)
 
 Самобалансирующееся BST, в котором у каждого узла высоты левого и правого поддеревьев отличаются не больше чем на 1. Благодаря этому высота всегда не больше ~1.44·log₂ n.
 
@@ -526,7 +531,7 @@ tree.isBalanced(); // true
 
 Код: [src/data-structures/trees/red-black-tree.ts](src/data-structures/trees/red-black-tree.ts)
 
-Другие языки: [Python](ports/python/data_structures/trees/red_black_tree.py) · [Java](ports/java/src/data-structures/trees/RedBlackTree.java) · [JavaScript](ports/javascript/data-structures/trees/red-black-tree.js) · [C#](ports/csharp/data-structures/trees/red-black-tree.cs) · [PHP](ports/php/data-structures/trees/red-black-tree.php) · [Go](ports/go/data-structures/trees/red-black-tree.go) · [C++](ports/cpp/data-structures/trees/red-black-tree.hpp)
+Другие языки: [Python](ports/python/data_structures/trees/red_black_tree.py) · [Java](ports/java/src/data-structures/trees/RedBlackTree.java) · [JavaScript](ports/javascript/data-structures/trees/red-black-tree.js) · [C#](ports/csharp/data-structures/trees/red-black-tree.cs) · [PHP](ports/php/data-structures/trees/red-black-tree.php) · [Go](ports/go/data-structures/trees/red-black-tree.go) · [C++](ports/cpp/data-structures/trees/red-black-tree.hpp) · [Rust](ports/rust/data_structures/trees/red_black_tree.rs)
 
 Самобалансирующееся BST, в котором каждый узел окрашен в красный или чёрный цвет и выполняются правила:
 1. Корень чёрный.
@@ -554,7 +559,7 @@ tree.toArray(); // [10, 15, 25, 30]
 
 Код: [src/data-structures/trees/b-tree.ts](src/data-structures/trees/b-tree.ts)
 
-Другие языки: [Python](ports/python/data_structures/trees/b_tree.py) · [Java](ports/java/src/data-structures/trees/BTree.java) · [JavaScript](ports/javascript/data-structures/trees/b-tree.js) · [C#](ports/csharp/data-structures/trees/b-tree.cs) · [PHP](ports/php/data-structures/trees/b-tree.php) · [Go](ports/go/data-structures/trees/b-tree.go) · [C++](ports/cpp/data-structures/trees/b-tree.hpp)
+Другие языки: [Python](ports/python/data_structures/trees/b_tree.py) · [Java](ports/java/src/data-structures/trees/BTree.java) · [JavaScript](ports/javascript/data-structures/trees/b-tree.js) · [C#](ports/csharp/data-structures/trees/b-tree.cs) · [PHP](ports/php/data-structures/trees/b-tree.php) · [Go](ports/go/data-structures/trees/b-tree.go) · [C++](ports/cpp/data-structures/trees/b-tree.hpp) · [Rust](ports/rust/data_structures/trees/b_tree.rs)
 
 Сбалансированное дерево, в узле которого хранится не один ключ, а много: от t−1 до 2t−1 ключей (t — минимальная степень), и до 2t детей. Все листья всегда на одной глубине. Из-за большого ветвления дерево очень низкое: при t = 100 миллиард ключей помещается в 5 уровней.
 
@@ -579,7 +584,7 @@ tree.has(5000); // false
 
 Код: [src/data-structures/trees/trie.ts](src/data-structures/trees/trie.ts)
 
-Другие языки: [Python](ports/python/data_structures/trees/trie.py) · [Java](ports/java/src/data-structures/trees/Trie.java) · [JavaScript](ports/javascript/data-structures/trees/trie.js) · [C#](ports/csharp/data-structures/trees/trie.cs) · [PHP](ports/php/data-structures/trees/trie.php) · [Go](ports/go/data-structures/trees/trie.go) · [C++](ports/cpp/data-structures/trees/trie.hpp)
+Другие языки: [Python](ports/python/data_structures/trees/trie.py) · [Java](ports/java/src/data-structures/trees/Trie.java) · [JavaScript](ports/javascript/data-structures/trees/trie.js) · [C#](ports/csharp/data-structures/trees/trie.cs) · [PHP](ports/php/data-structures/trees/trie.php) · [Go](ports/go/data-structures/trees/trie.go) · [C++](ports/cpp/data-structures/trees/trie.hpp) · [Rust](ports/rust/data_structures/trees/trie.rs)
 
 Trie — дерево, где каждое ребро помечено символом, а слово соответствует пути от корня. Слова с общим началом делят общую ветку.
 
@@ -615,7 +620,7 @@ trie.delete('dog');
 
 Код: [src/data-structures/range-queries/segment-tree.ts](src/data-structures/range-queries/segment-tree.ts)
 
-Другие языки: [Python](ports/python/data_structures/range_queries/segment_tree.py) · [Java](ports/java/src/data-structures/range-queries/SegmentTree.java) · [JavaScript](ports/javascript/data-structures/range-queries/segment-tree.js) · [C#](ports/csharp/data-structures/range-queries/segment-tree.cs) · [PHP](ports/php/data-structures/range-queries/segment-tree.php) · [Go](ports/go/data-structures/range-queries/segment-tree.go) · [C++](ports/cpp/data-structures/range-queries/segment-tree.hpp)
+Другие языки: [Python](ports/python/data_structures/range_queries/segment_tree.py) · [Java](ports/java/src/data-structures/range-queries/SegmentTree.java) · [JavaScript](ports/javascript/data-structures/range-queries/segment-tree.js) · [C#](ports/csharp/data-structures/range-queries/segment-tree.cs) · [PHP](ports/php/data-structures/range-queries/segment-tree.php) · [Go](ports/go/data-structures/range-queries/segment-tree.go) · [C++](ports/cpp/data-structures/range-queries/segment-tree.hpp) · [Rust](ports/rust/data_structures/range_queries/segment_tree.rs)
 
 Каждый узел хранит агрегат (сумму, минимум и т.п.) своего отрезка массива: корень за весь массив, его дети за левую и правую половины и так далее до отдельных элементов.
 
@@ -644,7 +649,7 @@ text.query(1, 4); // 'bcde'
 
 Код: [src/data-structures/range-queries/lazy-segment-tree.ts](src/data-structures/range-queries/lazy-segment-tree.ts)
 
-Другие языки: [Python](ports/python/data_structures/range_queries/lazy_segment_tree.py) · [Java](ports/java/src/data-structures/range-queries/LazySegmentTree.java) · [JavaScript](ports/javascript/data-structures/range-queries/lazy-segment-tree.js) · [C#](ports/csharp/data-structures/range-queries/lazy-segment-tree.cs) · [PHP](ports/php/data-structures/range-queries/lazy-segment-tree.php) · [Go](ports/go/data-structures/range-queries/lazy-segment-tree.go) · [C++](ports/cpp/data-structures/range-queries/lazy-segment-tree.hpp)
+Другие языки: [Python](ports/python/data_structures/range_queries/lazy_segment_tree.py) · [Java](ports/java/src/data-structures/range-queries/LazySegmentTree.java) · [JavaScript](ports/javascript/data-structures/range-queries/lazy-segment-tree.js) · [C#](ports/csharp/data-structures/range-queries/lazy-segment-tree.cs) · [PHP](ports/php/data-structures/range-queries/lazy-segment-tree.php) · [Go](ports/go/data-structures/range-queries/lazy-segment-tree.go) · [C++](ports/cpp/data-structures/range-queries/lazy-segment-tree.hpp) · [Rust](ports/rust/data_structures/range_queries/lazy_segment_tree.rs)
 
 Обычное дерево отрезков меняет элементы по одному. Если нужно прибавить число ко всему отрезку, пришлось бы обновить каждый лист, то есть O(n log n). Ленивое распространение решает это за O(log n).
 
@@ -662,7 +667,7 @@ tree.rangeSum(0, 4);     // 45
 
 Код: [src/data-structures/range-queries/fenwick-tree.ts](src/data-structures/range-queries/fenwick-tree.ts)
 
-Другие языки: [Python](ports/python/data_structures/range_queries/fenwick_tree.py) · [Java](ports/java/src/data-structures/range-queries/FenwickTree.java) · [JavaScript](ports/javascript/data-structures/range-queries/fenwick-tree.js) · [C#](ports/csharp/data-structures/range-queries/fenwick-tree.cs) · [PHP](ports/php/data-structures/range-queries/fenwick-tree.php) · [Go](ports/go/data-structures/range-queries/fenwick-tree.go) · [C++](ports/cpp/data-structures/range-queries/fenwick-tree.hpp)
+Другие языки: [Python](ports/python/data_structures/range_queries/fenwick_tree.py) · [Java](ports/java/src/data-structures/range-queries/FenwickTree.java) · [JavaScript](ports/javascript/data-structures/range-queries/fenwick-tree.js) · [C#](ports/csharp/data-structures/range-queries/fenwick-tree.cs) · [PHP](ports/php/data-structures/range-queries/fenwick-tree.php) · [Go](ports/go/data-structures/range-queries/fenwick-tree.go) · [C++](ports/cpp/data-structures/range-queries/fenwick-tree.hpp) · [Rust](ports/rust/data_structures/range_queries/fenwick_tree.rs)
 
 Binary Indexed Tree: массив размером n+1, где ячейка `i` хранит сумму отрезка длиной `i & -i` (младший единичный бит индекса), заканчивающегося в `i`.
 
@@ -686,7 +691,7 @@ fenwick.rangeSum(1, 3); // 17
 
 Код: [src/data-structures/range-queries/sparse-table.ts](src/data-structures/range-queries/sparse-table.ts)
 
-Другие языки: [Python](ports/python/data_structures/range_queries/sparse_table.py) · [Java](ports/java/src/data-structures/range-queries/SparseTable.java) · [JavaScript](ports/javascript/data-structures/range-queries/sparse-table.js) · [C#](ports/csharp/data-structures/range-queries/sparse-table.cs) · [PHP](ports/php/data-structures/range-queries/sparse-table.php) · [Go](ports/go/data-structures/range-queries/sparse-table.go) · [C++](ports/cpp/data-structures/range-queries/sparse-table.hpp)
+Другие языки: [Python](ports/python/data_structures/range_queries/sparse_table.py) · [Java](ports/java/src/data-structures/range-queries/SparseTable.java) · [JavaScript](ports/javascript/data-structures/range-queries/sparse-table.js) · [C#](ports/csharp/data-structures/range-queries/sparse-table.cs) · [PHP](ports/php/data-structures/range-queries/sparse-table.php) · [Go](ports/go/data-structures/range-queries/sparse-table.go) · [C++](ports/cpp/data-structures/range-queries/sparse-table.hpp) · [Rust](ports/rust/data_structures/range_queries/sparse_table.rs)
 
 Sparse table заранее считает ответ для всех отрезков длиной степень двойки: `table[k][i]` — агрегат на отрезке `[i, i + 2^k)`. Каждый уровень получается из предыдущего склейкой двух половин.
 
@@ -706,7 +711,7 @@ rmq.query(4, 7); // 3
 
 Код: [src/data-structures/range-queries/sqrt-decomposition.ts](src/data-structures/range-queries/sqrt-decomposition.ts)
 
-Другие языки: [Python](ports/python/data_structures/range_queries/sqrt_decomposition.py) · [Java](ports/java/src/data-structures/range-queries/SqrtDecomposition.java) · [JavaScript](ports/javascript/data-structures/range-queries/sqrt-decomposition.js) · [C#](ports/csharp/data-structures/range-queries/sqrt-decomposition.cs) · [PHP](ports/php/data-structures/range-queries/sqrt-decomposition.php) · [Go](ports/go/data-structures/range-queries/sqrt-decomposition.go) · [C++](ports/cpp/data-structures/range-queries/sqrt-decomposition.hpp)
+Другие языки: [Python](ports/python/data_structures/range_queries/sqrt_decomposition.py) · [Java](ports/java/src/data-structures/range-queries/SqrtDecomposition.java) · [JavaScript](ports/javascript/data-structures/range-queries/sqrt-decomposition.js) · [C#](ports/csharp/data-structures/range-queries/sqrt-decomposition.cs) · [PHP](ports/php/data-structures/range-queries/sqrt-decomposition.php) · [Go](ports/go/data-structures/range-queries/sqrt-decomposition.go) · [C++](ports/cpp/data-structures/range-queries/sqrt-decomposition.hpp) · [Rust](ports/rust/data_structures/range_queries/sqrt_decomposition.rs)
 
 Массив делится на блоки размером примерно √n, и для каждого блока хранится сумма его элементов.
 
@@ -731,7 +736,7 @@ blocks.rangeSum(2, 6); // 10
 
 Код: [src/data-structures/graphs/graph.ts](src/data-structures/graphs/graph.ts)
 
-Другие языки: [Python](ports/python/data_structures/graphs/graph.py) · [Java](ports/java/src/data-structures/graphs/Graph.java) · [JavaScript](ports/javascript/data-structures/graphs/graph.js) · [C#](ports/csharp/data-structures/graphs/graph.cs) · [PHP](ports/php/data-structures/graphs/graph.php) · [Go](ports/go/data-structures/graphs/graph.go) · [C++](ports/cpp/data-structures/graphs/graph.hpp)
+Другие языки: [Python](ports/python/data_structures/graphs/graph.py) · [Java](ports/java/src/data-structures/graphs/Graph.java) · [JavaScript](ports/javascript/data-structures/graphs/graph.js) · [C#](ports/csharp/data-structures/graphs/graph.cs) · [PHP](ports/php/data-structures/graphs/graph.php) · [Go](ports/go/data-structures/graphs/graph.go) · [C++](ports/cpp/data-structures/graphs/graph.hpp) · [Rust](ports/rust/data_structures/graphs/graph.rs)
 
 Граф — множество вершин и рёбер между ними. Бывает ориентированным (у рёбер есть направление) и неориентированным, взвешенным и невзвешенным.
 
@@ -756,7 +761,7 @@ roads.hasEdge(2, 1); // false
 
 Код: [src/data-structures/graphs/disjoint-set.ts](src/data-structures/graphs/disjoint-set.ts)
 
-Другие языки: [Python](ports/python/data_structures/graphs/disjoint_set.py) · [Java](ports/java/src/data-structures/graphs/DisjointSet.java) · [JavaScript](ports/javascript/data-structures/graphs/disjoint-set.js) · [C#](ports/csharp/data-structures/graphs/disjoint-set.cs) · [PHP](ports/php/data-structures/graphs/disjoint-set.php) · [Go](ports/go/data-structures/graphs/disjoint-set.go) · [C++](ports/cpp/data-structures/graphs/disjoint-set.hpp)
+Другие языки: [Python](ports/python/data_structures/graphs/disjoint_set.py) · [Java](ports/java/src/data-structures/graphs/DisjointSet.java) · [JavaScript](ports/javascript/data-structures/graphs/disjoint-set.js) · [C#](ports/csharp/data-structures/graphs/disjoint-set.cs) · [PHP](ports/php/data-structures/graphs/disjoint-set.php) · [Go](ports/go/data-structures/graphs/disjoint-set.go) · [C++](ports/cpp/data-structures/graphs/disjoint-set.hpp) · [Rust](ports/rust/data_structures/graphs/disjoint_set.rs)
 
 Union-Find хранит разбиение элементов на группы и умеет две операции: `union(a, b)` объединяет группы, `find(x)` возвращает представителя группы. Два элемента в одной группе, если у них общий представитель.
 
@@ -820,7 +825,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/bubble-sort.ts](src/algorithms/sorting/bubble-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/bubble_sort.py) · [Java](ports/java/src/algorithms/sorting/BubbleSort.java) · [JavaScript](ports/javascript/algorithms/sorting/bubble-sort.js) · [C#](ports/csharp/algorithms/sorting/bubble-sort.cs) · [PHP](ports/php/algorithms/sorting/bubble-sort.php) · [Go](ports/go/algorithms/sorting/bubble-sort.go) · [C++](ports/cpp/algorithms/sorting/bubble-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/bubble_sort.py) · [Java](ports/java/src/algorithms/sorting/BubbleSort.java) · [JavaScript](ports/javascript/algorithms/sorting/bubble-sort.js) · [C#](ports/csharp/algorithms/sorting/bubble-sort.cs) · [PHP](ports/php/algorithms/sorting/bubble-sort.php) · [Go](ports/go/algorithms/sorting/bubble-sort.go) · [C++](ports/cpp/algorithms/sorting/bubble-sort.hpp) · [Rust](ports/rust/algorithms/sorting/bubble_sort.rs)
 
 Проходим по массиву и меняем местами соседей, стоящих в неправильном порядке. После каждого прохода самый большой из оставшихся элементов «всплывает» в конец, поэтому следующий проход на один элемент короче. Если за проход не было ни одного обмена, массив уже отсортирован и мы останавливаемся: на отсортированных данных это O(n). Используется в основном в учебных целях.
 
@@ -828,7 +833,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/cocktail-shaker-sort.ts](src/algorithms/sorting/cocktail-shaker-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/cocktail_shaker_sort.py) · [Java](ports/java/src/algorithms/sorting/CocktailShakerSort.java) · [JavaScript](ports/javascript/algorithms/sorting/cocktail-shaker-sort.js) · [C#](ports/csharp/algorithms/sorting/cocktail-shaker-sort.cs) · [PHP](ports/php/algorithms/sorting/cocktail-shaker-sort.php) · [Go](ports/go/algorithms/sorting/cocktail-shaker-sort.go) · [C++](ports/cpp/algorithms/sorting/cocktail-shaker-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/cocktail_shaker_sort.py) · [Java](ports/java/src/algorithms/sorting/CocktailShakerSort.java) · [JavaScript](ports/javascript/algorithms/sorting/cocktail-shaker-sort.js) · [C#](ports/csharp/algorithms/sorting/cocktail-shaker-sort.cs) · [PHP](ports/php/algorithms/sorting/cocktail-shaker-sort.php) · [Go](ports/go/algorithms/sorting/cocktail-shaker-sort.go) · [C++](ports/cpp/algorithms/sorting/cocktail-shaker-sort.hpp) · [Rust](ports/rust/algorithms/sorting/cocktail_shaker_sort.rs)
 
 Пузырёк, который ходит туда и обратно: прямой проход выталкивает максимум в конец, обратный тянет минимум в начало. Обычный пузырёк медленно двигает маленькие элементы из конца массива («черепахи»), шейкерная эту проблему решает. Асимптотика та же, O(n²).
 
@@ -836,7 +841,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/selection-sort.ts](src/algorithms/sorting/selection-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/selection_sort.py) · [Java](ports/java/src/algorithms/sorting/SelectionSort.java) · [JavaScript](ports/javascript/algorithms/sorting/selection-sort.js) · [C#](ports/csharp/algorithms/sorting/selection-sort.cs) · [PHP](ports/php/algorithms/sorting/selection-sort.php) · [Go](ports/go/algorithms/sorting/selection-sort.go) · [C++](ports/cpp/algorithms/sorting/selection-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/selection_sort.py) · [Java](ports/java/src/algorithms/sorting/SelectionSort.java) · [JavaScript](ports/javascript/algorithms/sorting/selection-sort.js) · [C#](ports/csharp/algorithms/sorting/selection-sort.cs) · [PHP](ports/php/algorithms/sorting/selection-sort.php) · [Go](ports/go/algorithms/sorting/selection-sort.go) · [C++](ports/cpp/algorithms/sorting/selection-sort.hpp) · [Rust](ports/rust/algorithms/sorting/selection_sort.rs)
 
 На шаге i ищем минимум среди элементов `i..n-1` и меняем его местами с элементом i. Сравнений всегда n²/2 независимо от входа, зато обменов не больше n − 1, что полезно, если запись в память очень дорогая. Нестабильна: обмен может перепрыгнуть через равный элемент.
 
@@ -844,7 +849,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/insertion-sort.ts](src/algorithms/sorting/insertion-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/insertion_sort.py) · [Java](ports/java/src/algorithms/sorting/InsertionSort.java) · [JavaScript](ports/javascript/algorithms/sorting/insertion-sort.js) · [C#](ports/csharp/algorithms/sorting/insertion-sort.cs) · [PHP](ports/php/algorithms/sorting/insertion-sort.php) · [Go](ports/go/algorithms/sorting/insertion-sort.go) · [C++](ports/cpp/algorithms/sorting/insertion-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/insertion_sort.py) · [Java](ports/java/src/algorithms/sorting/InsertionSort.java) · [JavaScript](ports/javascript/algorithms/sorting/insertion-sort.js) · [C#](ports/csharp/algorithms/sorting/insertion-sort.cs) · [PHP](ports/php/algorithms/sorting/insertion-sort.php) · [Go](ports/go/algorithms/sorting/insertion-sort.go) · [C++](ports/cpp/algorithms/sorting/insertion-sort.hpp) · [Rust](ports/rust/algorithms/sorting/insertion_sort.rs)
 
 Левая часть массива всегда отсортирована. Берём следующий элемент и сдвигаем его влево, пока слева не окажется элемент меньше или равный, как при сортировке карт в руке. На почти отсортированных данных работает почти за O(n), а на маленьких массивах обгоняет «быстрые» алгоритмы из-за низких накладных расходов. Поэтому её используют внутри [Timsort](#timsort) и [блочной сортировки](#блочная-сортировка).
 
@@ -852,7 +857,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/shell-sort.ts](src/algorithms/sorting/shell-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/shell_sort.py) · [Java](ports/java/src/algorithms/sorting/ShellSort.java) · [JavaScript](ports/javascript/algorithms/sorting/shell-sort.js) · [C#](ports/csharp/algorithms/sorting/shell-sort.cs) · [PHP](ports/php/algorithms/sorting/shell-sort.php) · [Go](ports/go/algorithms/sorting/shell-sort.go) · [C++](ports/cpp/algorithms/sorting/shell-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/shell_sort.py) · [Java](ports/java/src/algorithms/sorting/ShellSort.java) · [JavaScript](ports/javascript/algorithms/sorting/shell-sort.js) · [C#](ports/csharp/algorithms/sorting/shell-sort.cs) · [PHP](ports/php/algorithms/sorting/shell-sort.php) · [Go](ports/go/algorithms/sorting/shell-sort.go) · [C++](ports/cpp/algorithms/sorting/shell-sort.hpp) · [Rust](ports/rust/algorithms/sorting/shell_sort.rs)
 
 Улучшенные вставки: сначала сортируем элементы, стоящие далеко друг от друга (через шаг h), потом шаг уменьшаем до 1. Дальние перестановки быстро двигают элементы ближе к своим местам, и финальные вставки с шагом 1 работают почти на отсортированных данных. Здесь используется последовательность шагов Кнута 1, 4, 13, 40… (h = 3h + 1). Точная сложность зависит от последовательности шагов, на практике около O(n^1.25).
 
@@ -860,7 +865,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/merge-sort.ts](src/algorithms/sorting/merge-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/merge_sort.py) · [Java](ports/java/src/algorithms/sorting/MergeSort.java) · [JavaScript](ports/javascript/algorithms/sorting/merge-sort.js) · [C#](ports/csharp/algorithms/sorting/merge-sort.cs) · [PHP](ports/php/algorithms/sorting/merge-sort.php) · [Go](ports/go/algorithms/sorting/merge-sort.go) · [C++](ports/cpp/algorithms/sorting/merge-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/merge_sort.py) · [Java](ports/java/src/algorithms/sorting/MergeSort.java) · [JavaScript](ports/javascript/algorithms/sorting/merge-sort.js) · [C#](ports/csharp/algorithms/sorting/merge-sort.cs) · [PHP](ports/php/algorithms/sorting/merge-sort.php) · [Go](ports/go/algorithms/sorting/merge-sort.go) · [C++](ports/cpp/algorithms/sorting/merge-sort.hpp) · [Rust](ports/rust/algorithms/sorting/merge_sort.rs)
 
 Классический «разделяй и властвуй»:
 1. Делим массив пополам.
@@ -873,7 +878,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/quick-sort.ts](src/algorithms/sorting/quick-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/quick_sort.py) · [Java](ports/java/src/algorithms/sorting/QuickSort.java) · [JavaScript](ports/javascript/algorithms/sorting/quick-sort.js) · [C#](ports/csharp/algorithms/sorting/quick-sort.cs) · [PHP](ports/php/algorithms/sorting/quick-sort.php) · [Go](ports/go/algorithms/sorting/quick-sort.go) · [C++](ports/cpp/algorithms/sorting/quick-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/quick_sort.py) · [Java](ports/java/src/algorithms/sorting/QuickSort.java) · [JavaScript](ports/javascript/algorithms/sorting/quick-sort.js) · [C#](ports/csharp/algorithms/sorting/quick-sort.cs) · [PHP](ports/php/algorithms/sorting/quick-sort.php) · [Go](ports/go/algorithms/sorting/quick-sort.go) · [C++](ports/cpp/algorithms/sorting/quick-sort.hpp) · [Rust](ports/rust/algorithms/sorting/quick_sort.rs)
 
 1. Выбираем опорный элемент (pivot).
 2. Разбиваем массив на части: меньше pivot, равные ему и больше.
@@ -890,7 +895,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/heap-sort.ts](src/algorithms/sorting/heap-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/heap_sort.py) · [Java](ports/java/src/algorithms/sorting/HeapSort.java) · [JavaScript](ports/javascript/algorithms/sorting/heap-sort.js) · [C#](ports/csharp/algorithms/sorting/heap-sort.cs) · [PHP](ports/php/algorithms/sorting/heap-sort.php) · [Go](ports/go/algorithms/sorting/heap-sort.go) · [C++](ports/cpp/algorithms/sorting/heap-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/heap_sort.py) · [Java](ports/java/src/algorithms/sorting/HeapSort.java) · [JavaScript](ports/javascript/algorithms/sorting/heap-sort.js) · [C#](ports/csharp/algorithms/sorting/heap-sort.cs) · [PHP](ports/php/algorithms/sorting/heap-sort.php) · [Go](ports/go/algorithms/sorting/heap-sort.go) · [C++](ports/cpp/algorithms/sorting/heap-sort.hpp) · [Rust](ports/rust/algorithms/sorting/heap_sort.rs)
 
 1. Превращаем массив в max-[кучу](#бинарная-куча) прямо на месте за O(n).
 2. Меняем корень (максимум) с последним элементом, уменьшаем размер кучи на 1 и восстанавливаем кучу (sift down) за O(log n).
@@ -902,7 +907,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/tim-sort.ts](src/algorithms/sorting/tim-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/tim_sort.py) · [Java](ports/java/src/algorithms/sorting/TimSort.java) · [JavaScript](ports/javascript/algorithms/sorting/tim-sort.js) · [C#](ports/csharp/algorithms/sorting/tim-sort.cs) · [PHP](ports/php/algorithms/sorting/tim-sort.php) · [Go](ports/go/algorithms/sorting/tim-sort.go) · [C++](ports/cpp/algorithms/sorting/tim-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/tim_sort.py) · [Java](ports/java/src/algorithms/sorting/TimSort.java) · [JavaScript](ports/javascript/algorithms/sorting/tim-sort.js) · [C#](ports/csharp/algorithms/sorting/tim-sort.cs) · [PHP](ports/php/algorithms/sorting/tim-sort.php) · [Go](ports/go/algorithms/sorting/tim-sort.go) · [C++](ports/cpp/algorithms/sorting/tim-sort.hpp) · [Rust](ports/rust/algorithms/sorting/tim_sort.rs)
 
 Гибрид [вставок](#сортировка-вставками) и [слияния](#сортировка-слиянием):
 1. Массив режется на куски длиной `minRun` (32–64 элемента), каждый сортируется вставками: на маленьких кусках они очень быстрые.
@@ -914,7 +919,7 @@ radixSort([170, -45, 75, 90, 2]);                                   // [-45, 2, 
 
 Код: [src/algorithms/sorting/counting-sort.ts](src/algorithms/sorting/counting-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/counting_sort.py) · [Java](ports/java/src/algorithms/sorting/CountingSort.java) · [JavaScript](ports/javascript/algorithms/sorting/counting-sort.js) · [C#](ports/csharp/algorithms/sorting/counting-sort.cs) · [PHP](ports/php/algorithms/sorting/counting-sort.php) · [Go](ports/go/algorithms/sorting/counting-sort.go) · [C++](ports/cpp/algorithms/sorting/counting-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/counting_sort.py) · [Java](ports/java/src/algorithms/sorting/CountingSort.java) · [JavaScript](ports/javascript/algorithms/sorting/counting-sort.js) · [C#](ports/csharp/algorithms/sorting/counting-sort.cs) · [PHP](ports/php/algorithms/sorting/counting-sort.php) · [Go](ports/go/algorithms/sorting/counting-sort.go) · [C++](ports/cpp/algorithms/sorting/counting-sort.hpp) · [Rust](ports/rust/algorithms/sorting/counting_sort.rs)
 
 Не сравнивает элементы, а считает их:
 1. Находим минимум и максимум, заводим массив счётчиков на `max − min + 1` ячеек.
@@ -928,7 +933,7 @@ O(n + k), где k — диапазон значений. Очень быстр�
 
 Код: [src/algorithms/sorting/radix-sort.ts](src/algorithms/sorting/radix-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/radix_sort.py) · [Java](ports/java/src/algorithms/sorting/RadixSort.java) · [JavaScript](ports/javascript/algorithms/sorting/radix-sort.js) · [C#](ports/csharp/algorithms/sorting/radix-sort.cs) · [PHP](ports/php/algorithms/sorting/radix-sort.php) · [Go](ports/go/algorithms/sorting/radix-sort.go) · [C++](ports/cpp/algorithms/sorting/radix-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/radix_sort.py) · [Java](ports/java/src/algorithms/sorting/RadixSort.java) · [JavaScript](ports/javascript/algorithms/sorting/radix-sort.js) · [C#](ports/csharp/algorithms/sorting/radix-sort.cs) · [PHP](ports/php/algorithms/sorting/radix-sort.php) · [Go](ports/go/algorithms/sorting/radix-sort.go) · [C++](ports/cpp/algorithms/sorting/radix-sort.hpp) · [Rust](ports/rust/algorithms/sorting/radix_sort.rs)
 
 LSD radix sort сортирует числа по одному разряду за раз, начиная с младшего. На каждом шаге числа стабильно раскладываются по 10 корзинам по текущей цифре и собираются обратно. Благодаря стабильности после обработки старшего разряда массив полностью упорядочен.
 
@@ -938,7 +943,7 @@ LSD radix sort сортирует числа по одному разряду з
 
 Код: [src/algorithms/sorting/bucket-sort.ts](src/algorithms/sorting/bucket-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/sorting/bucket_sort.py) · [Java](ports/java/src/algorithms/sorting/BucketSort.java) · [JavaScript](ports/javascript/algorithms/sorting/bucket-sort.js) · [C#](ports/csharp/algorithms/sorting/bucket-sort.cs) · [PHP](ports/php/algorithms/sorting/bucket-sort.php) · [Go](ports/go/algorithms/sorting/bucket-sort.go) · [C++](ports/cpp/algorithms/sorting/bucket-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/sorting/bucket_sort.py) · [Java](ports/java/src/algorithms/sorting/BucketSort.java) · [JavaScript](ports/javascript/algorithms/sorting/bucket-sort.js) · [C#](ports/csharp/algorithms/sorting/bucket-sort.cs) · [PHP](ports/php/algorithms/sorting/bucket-sort.php) · [Go](ports/go/algorithms/sorting/bucket-sort.go) · [C++](ports/cpp/algorithms/sorting/bucket-sort.hpp) · [Rust](ports/rust/algorithms/sorting/bucket_sort.rs)
 
 Диапазон `[min, max]` делится на √n равных интервалов (корзин), каждое число попадает в свою корзину, каждая корзина сортируется вставками, и результаты склеиваются по порядку. При равномерном распределении в каждую корзину попадает несколько элементов, и всё работает за O(n). Если все значения скучились в одной корзине, получаем O(n²).
 
@@ -950,7 +955,7 @@ LSD radix sort сортирует числа по одному разряду з
 
 Код: [src/algorithms/searching/linear-search.ts](src/algorithms/searching/linear-search.ts)
 
-Другие языки: [Python](ports/python/algorithms/searching/linear_search.py) · [Java](ports/java/src/algorithms/searching/LinearSearch.java) · [JavaScript](ports/javascript/algorithms/searching/linear-search.js) · [C#](ports/csharp/algorithms/searching/linear-search.cs) · [PHP](ports/php/algorithms/searching/linear-search.php) · [Go](ports/go/algorithms/searching/linear-search.go) · [C++](ports/cpp/algorithms/searching/linear-search.hpp)
+Другие языки: [Python](ports/python/algorithms/searching/linear_search.py) · [Java](ports/java/src/algorithms/searching/LinearSearch.java) · [JavaScript](ports/javascript/algorithms/searching/linear-search.js) · [C#](ports/csharp/algorithms/searching/linear-search.cs) · [PHP](ports/php/algorithms/searching/linear-search.php) · [Go](ports/go/algorithms/searching/linear-search.go) · [C++](ports/cpp/algorithms/searching/linear-search.hpp) · [Rust](ports/rust/algorithms/searching/linear_search.rs)
 
 Перебираем элементы по порядку, пока не встретим нужный. O(n), зато работает на любых, в том числе неотсортированных, данных. На маленьких массивах (до нескольких десятков элементов) часто быстрее бинарного поиска из-за простоты. `linearSearchAll` возвращает все индексы, подходящие под условие.
 
@@ -965,7 +970,7 @@ linearSearchAll([1, 4, 5, 8, 5], (v) => v === 5); // [2, 4]
 
 Код: [src/algorithms/searching/binary-search.ts](src/algorithms/searching/binary-search.ts)
 
-Другие языки: [Python](ports/python/algorithms/searching/binary_search.py) · [Java](ports/java/src/algorithms/searching/BinarySearch.java) · [JavaScript](ports/javascript/algorithms/searching/binary-search.js) · [C#](ports/csharp/algorithms/searching/binary-search.cs) · [PHP](ports/php/algorithms/searching/binary-search.php) · [Go](ports/go/algorithms/searching/binary-search.go) · [C++](ports/cpp/algorithms/searching/binary-search.hpp)
+Другие языки: [Python](ports/python/algorithms/searching/binary_search.py) · [Java](ports/java/src/algorithms/searching/BinarySearch.java) · [JavaScript](ports/javascript/algorithms/searching/binary-search.js) · [C#](ports/csharp/algorithms/searching/binary-search.cs) · [PHP](ports/php/algorithms/searching/binary-search.php) · [Go](ports/go/algorithms/searching/binary-search.go) · [C++](ports/cpp/algorithms/searching/binary-search.hpp) · [Rust](ports/rust/algorithms/searching/binary_search.rs)
 
 Работает только на отсортированном массиве. Смотрим на средний элемент: если он меньше искомого, ответ справа, если больше — слева. Каждый шаг вдвое сокращает диапазон, поэтому на миллиард элементов хватает 30 сравнений: O(log n).
 
@@ -990,7 +995,7 @@ firstTrue(0, 100, (x) => x * x >= 50); // 8
 
 Код: [src/algorithms/searching/jump-search.ts](src/algorithms/searching/jump-search.ts)
 
-Другие языки: [Python](ports/python/algorithms/searching/jump_search.py) · [Java](ports/java/src/algorithms/searching/JumpSearch.java) · [JavaScript](ports/javascript/algorithms/searching/jump-search.js) · [C#](ports/csharp/algorithms/searching/jump-search.cs) · [PHP](ports/php/algorithms/searching/jump-search.php) · [Go](ports/go/algorithms/searching/jump-search.go) · [C++](ports/cpp/algorithms/searching/jump-search.hpp)
+Другие языки: [Python](ports/python/algorithms/searching/jump_search.py) · [Java](ports/java/src/algorithms/searching/JumpSearch.java) · [JavaScript](ports/javascript/algorithms/searching/jump-search.js) · [C#](ports/csharp/algorithms/searching/jump-search.cs) · [PHP](ports/php/algorithms/searching/jump-search.php) · [Go](ports/go/algorithms/searching/jump-search.go) · [C++](ports/cpp/algorithms/searching/jump-search.hpp) · [Rust](ports/rust/algorithms/searching/jump_search.rs)
 
 Прыгаем по отсортированному массиву шагами длиной √n, пока не перескочим искомое значение, затем линейно проверяем последний блок. Всего около √n прыжков и √n проверок: O(√n). Медленнее бинарного поиска, но двигается только вперёд, что удобно, когда возврат назад дорогой (например, на ленте или в потоке).
 
@@ -1004,7 +1009,7 @@ jumpSearch([0, 1, 2, 3, 5, 8, 13, 21, 34, 55], 21); // 7
 
 Код: [src/algorithms/searching/interpolation-search.ts](src/algorithms/searching/interpolation-search.ts)
 
-Другие языки: [Python](ports/python/algorithms/searching/interpolation_search.py) · [Java](ports/java/src/algorithms/searching/InterpolationSearch.java) · [JavaScript](ports/javascript/algorithms/searching/interpolation-search.js) · [C#](ports/csharp/algorithms/searching/interpolation-search.cs) · [PHP](ports/php/algorithms/searching/interpolation-search.php) · [Go](ports/go/algorithms/searching/interpolation-search.go) · [C++](ports/cpp/algorithms/searching/interpolation-search.hpp)
+Другие языки: [Python](ports/python/algorithms/searching/interpolation_search.py) · [Java](ports/java/src/algorithms/searching/InterpolationSearch.java) · [JavaScript](ports/javascript/algorithms/searching/interpolation-search.js) · [C#](ports/csharp/algorithms/searching/interpolation-search.cs) · [PHP](ports/php/algorithms/searching/interpolation-search.php) · [Go](ports/go/algorithms/searching/interpolation-search.go) · [C++](ports/cpp/algorithms/searching/interpolation-search.hpp) · [Rust](ports/rust/algorithms/searching/interpolation_search.rs)
 
 Ищем так, как человек ищет слово в словаре: на букву «Я» открываем ближе к концу. Позиция угадывается пропорционально значению: `pos = low + (x − a[low]) · (high − low) / (a[high] − a[low])`. На равномерно распределённых данных это O(log log n), но на неравномерных может деградировать до O(n).
 
@@ -1018,7 +1023,7 @@ interpolationSearch([10, 20, 30, 40, 50, 60], 40); // 3
 
 Код: [src/algorithms/searching/exponential-search.ts](src/algorithms/searching/exponential-search.ts)
 
-Другие языки: [Python](ports/python/algorithms/searching/exponential_search.py) · [Java](ports/java/src/algorithms/searching/ExponentialSearch.java) · [JavaScript](ports/javascript/algorithms/searching/exponential-search.js) · [C#](ports/csharp/algorithms/searching/exponential-search.cs) · [PHP](ports/php/algorithms/searching/exponential-search.php) · [Go](ports/go/algorithms/searching/exponential-search.go) · [C++](ports/cpp/algorithms/searching/exponential-search.hpp)
+Другие языки: [Python](ports/python/algorithms/searching/exponential_search.py) · [Java](ports/java/src/algorithms/searching/ExponentialSearch.java) · [JavaScript](ports/javascript/algorithms/searching/exponential-search.js) · [C#](ports/csharp/algorithms/searching/exponential-search.cs) · [PHP](ports/php/algorithms/searching/exponential-search.php) · [Go](ports/go/algorithms/searching/exponential-search.go) · [C++](ports/cpp/algorithms/searching/exponential-search.hpp) · [Rust](ports/rust/algorithms/searching/exponential_search.rs)
 
 Проверяем позиции 1, 2, 4, 8… пока не встретим элемент больше искомого. Затем запускаем [бинарный поиск](#бинарный-поиск) в последнем интервале [bound/2, bound]. Сложность O(log i), где i — позиция найденного элемента, поэтому элементы в начале находятся очень быстро. Подходит для неограниченных или очень больших последовательностей, у которых неизвестна длина.
 
@@ -1032,7 +1037,7 @@ exponentialSearch([2, 3, 4, 10, 40, 55, 70], 10); // 3
 
 Код: [src/algorithms/searching/ternary-search.ts](src/algorithms/searching/ternary-search.ts)
 
-Другие языки: [Python](ports/python/algorithms/searching/ternary_search.py) · [Java](ports/java/src/algorithms/searching/TernarySearch.java) · [JavaScript](ports/javascript/algorithms/searching/ternary-search.js) · [C#](ports/csharp/algorithms/searching/ternary-search.cs) · [PHP](ports/php/algorithms/searching/ternary-search.php) · [Go](ports/go/algorithms/searching/ternary-search.go) · [C++](ports/cpp/algorithms/searching/ternary-search.hpp)
+Другие языки: [Python](ports/python/algorithms/searching/ternary_search.py) · [Java](ports/java/src/algorithms/searching/TernarySearch.java) · [JavaScript](ports/javascript/algorithms/searching/ternary-search.js) · [C#](ports/csharp/algorithms/searching/ternary-search.cs) · [PHP](ports/php/algorithms/searching/ternary-search.php) · [Go](ports/go/algorithms/searching/ternary-search.go) · [C++](ports/cpp/algorithms/searching/ternary-search.hpp) · [Rust](ports/rust/algorithms/searching/ternary_search.rs)
 
 Ищет экстремум унимодальной функции, то есть функции, которая сначала растёт, потом падает (или наоборот). Отрезок делится двумя точками m1 и m2 на три части. Если f(m1) < f(m2), максимум точно не левее m1, и левая треть отбрасывается, иначе отбрасывается правая. За каждую итерацию отрезок сужается на треть: O(log((hi − lo)/ε)).
 
@@ -1049,7 +1054,7 @@ findPeakIndex([1, 3, 8, 12, 4, 2]);                // 3
 
 Код: [src/algorithms/searching/quick-select.ts](src/algorithms/searching/quick-select.ts)
 
-Другие языки: [Python](ports/python/algorithms/searching/quick_select.py) · [Java](ports/java/src/algorithms/searching/QuickSelect.java) · [JavaScript](ports/javascript/algorithms/searching/quick-select.js) · [C#](ports/csharp/algorithms/searching/quick-select.cs) · [PHP](ports/php/algorithms/searching/quick-select.php) · [Go](ports/go/algorithms/searching/quick-select.go) · [C++](ports/cpp/algorithms/searching/quick-select.hpp)
+Другие языки: [Python](ports/python/algorithms/searching/quick_select.py) · [Java](ports/java/src/algorithms/searching/QuickSelect.java) · [JavaScript](ports/javascript/algorithms/searching/quick-select.js) · [C#](ports/csharp/algorithms/searching/quick-select.cs) · [PHP](ports/php/algorithms/searching/quick-select.php) · [Go](ports/go/algorithms/searching/quick-select.go) · [C++](ports/cpp/algorithms/searching/quick-select.hpp) · [Rust](ports/rust/algorithms/searching/quick_select.rs)
 
 Quickselect находит k-й по величине элемент без полной сортировки. Делаем разбиение, как в [быстрой сортировке](#быстрая-сортировка): если опорный элемент встал на позицию k, это и есть ответ. Иначе продолжаем только в той половине, где лежит k, а вторую выбрасываем. В среднем n + n/2 + n/4 + … = O(n). Через него же считается медиана.
 
@@ -1070,7 +1075,7 @@ median([4, 1, 3, 2]);                  // 2.5
 
 Код: [src/algorithms/graphs/bfs.ts](src/algorithms/graphs/bfs.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/bfs.py) · [Java](ports/java/src/algorithms/graphs/Bfs.java) · [JavaScript](ports/javascript/algorithms/graphs/bfs.js) · [C#](ports/csharp/algorithms/graphs/bfs.cs) · [PHP](ports/php/algorithms/graphs/bfs.php) · [Go](ports/go/algorithms/graphs/bfs.go) · [C++](ports/cpp/algorithms/graphs/bfs.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/bfs.py) · [Java](ports/java/src/algorithms/graphs/Bfs.java) · [JavaScript](ports/javascript/algorithms/graphs/bfs.js) · [C#](ports/csharp/algorithms/graphs/bfs.cs) · [PHP](ports/php/algorithms/graphs/bfs.php) · [Go](ports/go/algorithms/graphs/bfs.go) · [C++](ports/cpp/algorithms/graphs/bfs.hpp) · [Rust](ports/rust/algorithms/graphs/bfs.rs)
 
 BFS обходит граф «волной»: сначала все вершины на расстоянии 1 от старта, потом на расстоянии 2 и так далее.
 
@@ -1096,7 +1101,7 @@ gridShortestPath(['..#.', '..#.', '....'], [0, 0], [0, 3]); // 7
 
 Код: [src/algorithms/graphs/dfs.ts](src/algorithms/graphs/dfs.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/dfs.py) · [Java](ports/java/src/algorithms/graphs/Dfs.java) · [JavaScript](ports/javascript/algorithms/graphs/dfs.js) · [C#](ports/csharp/algorithms/graphs/dfs.cs) · [PHP](ports/php/algorithms/graphs/dfs.php) · [Go](ports/go/algorithms/graphs/dfs.go) · [C++](ports/cpp/algorithms/graphs/dfs.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/dfs.py) · [Java](ports/java/src/algorithms/graphs/Dfs.java) · [JavaScript](ports/javascript/algorithms/graphs/dfs.js) · [C#](ports/csharp/algorithms/graphs/dfs.cs) · [PHP](ports/php/algorithms/graphs/dfs.php) · [Go](ports/go/algorithms/graphs/dfs.go) · [C++](ports/cpp/algorithms/graphs/dfs.hpp) · [Rust](ports/rust/algorithms/graphs/dfs.rs)
 
 DFS идёт по графу как можно глубже, а упёршись в тупик, возвращается к последней развилке. Реализуется рекурсией (`dfsRecursive`) или явным [стеком](#стек) (`dfs`). Итеративная версия не упирается в лимит стека вызовов на больших графах.
 
@@ -1113,7 +1118,7 @@ hasPath([[1], [2], []], 0, 2);                    // true
 
 Код: [src/algorithms/graphs/flood-fill.ts](src/algorithms/graphs/flood-fill.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/flood_fill.py) · [Java](ports/java/src/algorithms/graphs/FloodFill.java) · [JavaScript](ports/javascript/algorithms/graphs/flood-fill.js) · [C#](ports/csharp/algorithms/graphs/flood-fill.cs) · [PHP](ports/php/algorithms/graphs/flood-fill.php) · [Go](ports/go/algorithms/graphs/flood-fill.go) · [C++](ports/cpp/algorithms/graphs/flood-fill.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/flood_fill.py) · [Java](ports/java/src/algorithms/graphs/FloodFill.java) · [JavaScript](ports/javascript/algorithms/graphs/flood-fill.js) · [C#](ports/csharp/algorithms/graphs/flood-fill.cs) · [PHP](ports/php/algorithms/graphs/flood-fill.php) · [Go](ports/go/algorithms/graphs/flood-fill.go) · [C++](ports/cpp/algorithms/graphs/flood-fill.hpp) · [Rust](ports/rust/algorithms/graphs/flood_fill.rs)
 
 Перекрашивает связную область одного цвета, начиная с заданной клетки, как инструмент «ведро» в Paint. По сути это DFS по сетке, где соседи — четыре соседние клетки того же цвета. O(количество клеток).
 
@@ -1127,7 +1132,7 @@ floodFill([[1, 1, 0], [1, 0, 0], [1, 1, 1]], 0, 0, 2); // [[2,2,0],[2,0,0],[2,2,
 
 Код: [src/algorithms/graphs/topological-sort.ts](src/algorithms/graphs/topological-sort.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/topological_sort.py) · [Java](ports/java/src/algorithms/graphs/TopologicalSort.java) · [JavaScript](ports/javascript/algorithms/graphs/topological-sort.js) · [C#](ports/csharp/algorithms/graphs/topological-sort.cs) · [PHP](ports/php/algorithms/graphs/topological-sort.php) · [Go](ports/go/algorithms/graphs/topological-sort.go) · [C++](ports/cpp/algorithms/graphs/topological-sort.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/topological_sort.py) · [Java](ports/java/src/algorithms/graphs/TopologicalSort.java) · [JavaScript](ports/javascript/algorithms/graphs/topological-sort.js) · [C#](ports/csharp/algorithms/graphs/topological-sort.cs) · [PHP](ports/php/algorithms/graphs/topological-sort.php) · [Go](ports/go/algorithms/graphs/topological-sort.go) · [C++](ports/cpp/algorithms/graphs/topological-sort.hpp) · [Rust](ports/rust/algorithms/graphs/topological_sort.rs)
 
 Упорядочивает вершины ориентированного ациклического графа (DAG) так, что каждое ребро ведёт слева направо. Примеры: порядок сборки модулей, установка пакетов с зависимостями, расписание курсов с пререквизитами.
 
@@ -1148,7 +1153,7 @@ topologicalSortKahn([[1], [2], [0]]);        // null
 
 Код: [src/algorithms/graphs/cycle-detection.ts](src/algorithms/graphs/cycle-detection.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/cycle_detection.py) · [Java](ports/java/src/algorithms/graphs/CycleDetection.java) · [JavaScript](ports/javascript/algorithms/graphs/cycle-detection.js) · [C#](ports/csharp/algorithms/graphs/cycle-detection.cs) · [PHP](ports/php/algorithms/graphs/cycle-detection.php) · [Go](ports/go/algorithms/graphs/cycle-detection.go) · [C++](ports/cpp/algorithms/graphs/cycle-detection.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/cycle_detection.py) · [Java](ports/java/src/algorithms/graphs/CycleDetection.java) · [JavaScript](ports/javascript/algorithms/graphs/cycle-detection.js) · [C#](ports/csharp/algorithms/graphs/cycle-detection.cs) · [PHP](ports/php/algorithms/graphs/cycle-detection.php) · [Go](ports/go/algorithms/graphs/cycle-detection.go) · [C++](ports/cpp/algorithms/graphs/cycle-detection.hpp) · [Rust](ports/rust/algorithms/graphs/cycle_detection.rs)
 
 - **Ориентированный граф**: цикл есть ровно тогда, когда [топологическая сортировка](#топологическая-сортировка) невозможна.
 - **Неориентированный граф**: идём по рёбрам и объединяем концы в [Union-Find](#система-непересекающихся-множеств). Если концы ребра уже в одной группе, между ними уже есть путь, и это ребро замыкает цикл. Почти O(E).
@@ -1163,7 +1168,7 @@ hasCycleUndirected(3, [[0, 1], [1, 2], [2, 0]]); // true
 
 Код: [src/algorithms/graphs/bipartite.ts](src/algorithms/graphs/bipartite.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/bipartite.py) · [Java](ports/java/src/algorithms/graphs/Bipartite.java) · [JavaScript](ports/javascript/algorithms/graphs/bipartite.js) · [C#](ports/csharp/algorithms/graphs/bipartite.cs) · [PHP](ports/php/algorithms/graphs/bipartite.php) · [Go](ports/go/algorithms/graphs/bipartite.go) · [C++](ports/cpp/algorithms/graphs/bipartite.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/bipartite.py) · [Java](ports/java/src/algorithms/graphs/Bipartite.java) · [JavaScript](ports/javascript/algorithms/graphs/bipartite.js) · [C#](ports/csharp/algorithms/graphs/bipartite.cs) · [PHP](ports/php/algorithms/graphs/bipartite.php) · [Go](ports/go/algorithms/graphs/bipartite.go) · [C++](ports/cpp/algorithms/graphs/bipartite.hpp) · [Rust](ports/rust/algorithms/graphs/bipartite.rs)
 
 Граф двудольный, если вершины можно разделить на две группы так, что каждое ребро соединяет вершины из разных групп. Эквивалентное условие — в графе нет циклов нечётной длины.
 
@@ -1180,7 +1185,7 @@ bipartiteColoring(toUndirected(4, [[0, 1], [1, 2], [2, 3], [3, 0]])); // [0, 1, 
 
 Код: [src/algorithms/graphs/connected-components.ts](src/algorithms/graphs/connected-components.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/connected_components.py) · [Java](ports/java/src/algorithms/graphs/ConnectedComponents.java) · [JavaScript](ports/javascript/algorithms/graphs/connected-components.js) · [C#](ports/csharp/algorithms/graphs/connected-components.cs) · [PHP](ports/php/algorithms/graphs/connected-components.php) · [Go](ports/go/algorithms/graphs/connected-components.go) · [C++](ports/cpp/algorithms/graphs/connected-components.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/connected_components.py) · [Java](ports/java/src/algorithms/graphs/ConnectedComponents.java) · [JavaScript](ports/javascript/algorithms/graphs/connected-components.js) · [C#](ports/csharp/algorithms/graphs/connected-components.cs) · [PHP](ports/php/algorithms/graphs/connected-components.php) · [Go](ports/go/algorithms/graphs/connected-components.go) · [C++](ports/cpp/algorithms/graphs/connected-components.hpp) · [Rust](ports/rust/algorithms/graphs/connected_components.rs)
 
 Разбивает неориентированный граф на группы вершин, между которыми есть путь. Запускаем обход из каждой ещё не посещённой вершины: всё, до чего он дотянулся, образует одну компоненту. O(V + E).
 
@@ -1195,7 +1200,7 @@ connectedComponents(toUndirected(6, [[0, 1], [2, 3], [3, 4]])); // [[0, 1], [2, 
 
 Код: [src/algorithms/graphs/strongly-connected-components.ts](src/algorithms/graphs/strongly-connected-components.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/strongly_connected_components.py) · [Java](ports/java/src/algorithms/graphs/StronglyConnectedComponents.java) · [JavaScript](ports/javascript/algorithms/graphs/strongly-connected-components.js) · [C#](ports/csharp/algorithms/graphs/strongly-connected-components.cs) · [PHP](ports/php/algorithms/graphs/strongly-connected-components.php) · [Go](ports/go/algorithms/graphs/strongly-connected-components.go) · [C++](ports/cpp/algorithms/graphs/strongly-connected-components.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/strongly_connected_components.py) · [Java](ports/java/src/algorithms/graphs/StronglyConnectedComponents.java) · [JavaScript](ports/javascript/algorithms/graphs/strongly-connected-components.js) · [C#](ports/csharp/algorithms/graphs/strongly-connected-components.cs) · [PHP](ports/php/algorithms/graphs/strongly-connected-components.php) · [Go](ports/go/algorithms/graphs/strongly-connected-components.go) · [C++](ports/cpp/algorithms/graphs/strongly-connected-components.hpp) · [Rust](ports/rust/algorithms/graphs/strongly_connected_components.rs)
 
 В ориентированном графе сильно связная компонента (SCC) — максимальная группа вершин, где из любой вершины можно дойти до любой другой. Если сжать каждую SCC в одну вершину, получится DAG.
 
@@ -1214,7 +1219,7 @@ tarjanScc([[1], [2], [0, 3], [4], [5], [3], []]); // [[3, 4, 5], [0, 1, 2], [6]]
 
 Код: [src/algorithms/graphs/bridges-and-articulation-points.ts](src/algorithms/graphs/bridges-and-articulation-points.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/bridges_and_articulation_points.py) · [Java](ports/java/src/algorithms/graphs/BridgesAndArticulationPoints.java) · [JavaScript](ports/javascript/algorithms/graphs/bridges-and-articulation-points.js) · [C#](ports/csharp/algorithms/graphs/bridges-and-articulation-points.cs) · [PHP](ports/php/algorithms/graphs/bridges-and-articulation-points.php) · [Go](ports/go/algorithms/graphs/bridges-and-articulation-points.go) · [C++](ports/cpp/algorithms/graphs/bridges-and-articulation-points.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/bridges_and_articulation_points.py) · [Java](ports/java/src/algorithms/graphs/BridgesAndArticulationPoints.java) · [JavaScript](ports/javascript/algorithms/graphs/bridges-and-articulation-points.js) · [C#](ports/csharp/algorithms/graphs/bridges-and-articulation-points.cs) · [PHP](ports/php/algorithms/graphs/bridges-and-articulation-points.php) · [Go](ports/go/algorithms/graphs/bridges-and-articulation-points.go) · [C++](ports/cpp/algorithms/graphs/bridges-and-articulation-points.hpp) · [Rust](ports/rust/algorithms/graphs/bridges_and_articulation_points.rs)
 
 **Мост** — ребро, после удаления которого граф распадается на части. **Точка сочленения** — такая же «уязвимая» вершина. Применение: поиск слабых мест в сетях и инфраструктуре.
 
@@ -1237,7 +1242,7 @@ findBridgesAndArticulationPoints(graph);
 
 Код: [src/algorithms/graphs/eulerian-path.ts](src/algorithms/graphs/eulerian-path.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/eulerian_path.py) · [Java](ports/java/src/algorithms/graphs/EulerianPath.java) · [JavaScript](ports/javascript/algorithms/graphs/eulerian-path.js) · [C#](ports/csharp/algorithms/graphs/eulerian-path.cs) · [PHP](ports/php/algorithms/graphs/eulerian-path.php) · [Go](ports/go/algorithms/graphs/eulerian-path.go) · [C++](ports/cpp/algorithms/graphs/eulerian-path.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/eulerian_path.py) · [Java](ports/java/src/algorithms/graphs/EulerianPath.java) · [JavaScript](ports/javascript/algorithms/graphs/eulerian-path.js) · [C#](ports/csharp/algorithms/graphs/eulerian-path.cs) · [PHP](ports/php/algorithms/graphs/eulerian-path.php) · [Go](ports/go/algorithms/graphs/eulerian-path.go) · [C++](ports/cpp/algorithms/graphs/eulerian-path.hpp) · [Rust](ports/rust/algorithms/graphs/eulerian_path.rs)
 
 Путь, который проходит по каждому ребру ровно один раз (задача о кёнигсбергских мостах). В ориентированном графе он существует, если у всех вершин число входящих рёбер равно числу исходящих, кроме, может быть, двух: у стартовой исходящих на одно больше, у конечной на одно меньше.
 
@@ -1253,7 +1258,7 @@ eulerianPathDirected([[1], [2], [0, 3], []]); // [2, 0, 1, 2, 3]
 
 Код: [src/algorithms/graphs/dijkstra.ts](src/algorithms/graphs/dijkstra.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/dijkstra.py) · [Java](ports/java/src/algorithms/graphs/Dijkstra.java) · [JavaScript](ports/javascript/algorithms/graphs/dijkstra.js) · [C#](ports/csharp/algorithms/graphs/dijkstra.cs) · [PHP](ports/php/algorithms/graphs/dijkstra.php) · [Go](ports/go/algorithms/graphs/dijkstra.go) · [C++](ports/cpp/algorithms/graphs/dijkstra.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/dijkstra.py) · [Java](ports/java/src/algorithms/graphs/Dijkstra.java) · [JavaScript](ports/javascript/algorithms/graphs/dijkstra.js) · [C#](ports/csharp/algorithms/graphs/dijkstra.cs) · [PHP](ports/php/algorithms/graphs/dijkstra.php) · [Go](ports/go/algorithms/graphs/dijkstra.go) · [C++](ports/cpp/algorithms/graphs/dijkstra.hpp) · [Rust](ports/rust/algorithms/graphs/dijkstra.rs)
 
 Находит кратчайшие пути от одной вершины до всех остальных во взвешенном графе с неотрицательными весами.
 
@@ -1282,7 +1287,7 @@ dijkstraPath(graph, 0, 4); // { distance: 7, path: [0, 2, 1, 3, 4] }
 
 Код: [src/algorithms/graphs/bellman-ford.ts](src/algorithms/graphs/bellman-ford.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/bellman_ford.py) · [Java](ports/java/src/algorithms/graphs/BellmanFord.java) · [JavaScript](ports/javascript/algorithms/graphs/bellman-ford.js) · [C#](ports/csharp/algorithms/graphs/bellman-ford.cs) · [PHP](ports/php/algorithms/graphs/bellman-ford.php) · [Go](ports/go/algorithms/graphs/bellman-ford.go) · [C++](ports/cpp/algorithms/graphs/bellman-ford.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/bellman_ford.py) · [Java](ports/java/src/algorithms/graphs/BellmanFord.java) · [JavaScript](ports/javascript/algorithms/graphs/bellman-ford.js) · [C#](ports/csharp/algorithms/graphs/bellman-ford.cs) · [PHP](ports/php/algorithms/graphs/bellman-ford.php) · [Go](ports/go/algorithms/graphs/bellman-ford.go) · [C++](ports/cpp/algorithms/graphs/bellman-ford.hpp) · [Rust](ports/rust/algorithms/graphs/bellman_ford.rs)
 
 Кратчайшие пути от одной вершины, в том числе с отрицательными весами рёбер.
 
@@ -1304,7 +1309,7 @@ bellmanFord(3, [
 
 Код: [src/algorithms/graphs/floyd-warshall.ts](src/algorithms/graphs/floyd-warshall.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/floyd_warshall.py) · [Java](ports/java/src/algorithms/graphs/FloydWarshall.java) · [JavaScript](ports/javascript/algorithms/graphs/floyd-warshall.js) · [C#](ports/csharp/algorithms/graphs/floyd-warshall.cs) · [PHP](ports/php/algorithms/graphs/floyd-warshall.php) · [Go](ports/go/algorithms/graphs/floyd-warshall.go) · [C++](ports/cpp/algorithms/graphs/floyd-warshall.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/floyd_warshall.py) · [Java](ports/java/src/algorithms/graphs/FloydWarshall.java) · [JavaScript](ports/javascript/algorithms/graphs/floyd-warshall.js) · [C#](ports/csharp/algorithms/graphs/floyd-warshall.cs) · [PHP](ports/php/algorithms/graphs/floyd-warshall.php) · [Go](ports/go/algorithms/graphs/floyd-warshall.go) · [C++](ports/cpp/algorithms/graphs/floyd-warshall.hpp) · [Rust](ports/rust/algorithms/graphs/floyd_warshall.rs)
 
 Кратчайшие пути между всеми парами вершин. Динамическое программирование: `dist[i][j]` на шаге k — кратчайший путь из i в j, использующий в качестве промежуточных только вершины 0..k. Переход: `dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])`.
 
@@ -1326,7 +1331,7 @@ floydWarshallPath(next, 0, 2); // [0, 1, 2]
 
 Код: [src/algorithms/graphs/a-star.ts](src/algorithms/graphs/a-star.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/a_star.py) · [Java](ports/java/src/algorithms/graphs/AStar.java) · [JavaScript](ports/javascript/algorithms/graphs/a-star.js) · [C#](ports/csharp/algorithms/graphs/a-star.cs) · [PHP](ports/php/algorithms/graphs/a-star.php) · [Go](ports/go/algorithms/graphs/a-star.go) · [C++](ports/cpp/algorithms/graphs/a-star.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/a_star.py) · [Java](ports/java/src/algorithms/graphs/AStar.java) · [JavaScript](ports/javascript/algorithms/graphs/a-star.js) · [C#](ports/csharp/algorithms/graphs/a-star.cs) · [PHP](ports/php/algorithms/graphs/a-star.php) · [Go](ports/go/algorithms/graphs/a-star.go) · [C++](ports/cpp/algorithms/graphs/a-star.hpp) · [Rust](ports/rust/algorithms/graphs/a_star.rs)
 
 Дейкстра с подсказкой. Каждая вершина оценивается по `f = g + h`, где g — пройденное расстояние от старта, а h — эвристическая оценка оставшегося пути до цели. Из кучи сначала достаются вершины, которые выглядят ближе к цели, поэтому A* обычно просматривает гораздо меньше вершин.
 
@@ -1345,7 +1350,7 @@ aStarGrid(['..#.', '..#.', '....'], [0, 0], [0, 3]);
 
 Код: [src/algorithms/graphs/minimum-spanning-tree.ts](src/algorithms/graphs/minimum-spanning-tree.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/minimum_spanning_tree.py) · [Java](ports/java/src/algorithms/graphs/MinimumSpanningTree.java) · [JavaScript](ports/javascript/algorithms/graphs/minimum-spanning-tree.js) · [C#](ports/csharp/algorithms/graphs/minimum-spanning-tree.cs) · [PHP](ports/php/algorithms/graphs/minimum-spanning-tree.php) · [Go](ports/go/algorithms/graphs/minimum-spanning-tree.go) · [C++](ports/cpp/algorithms/graphs/minimum-spanning-tree.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/minimum_spanning_tree.py) · [Java](ports/java/src/algorithms/graphs/MinimumSpanningTree.java) · [JavaScript](ports/javascript/algorithms/graphs/minimum-spanning-tree.js) · [C#](ports/csharp/algorithms/graphs/minimum-spanning-tree.cs) · [PHP](ports/php/algorithms/graphs/minimum-spanning-tree.php) · [Go](ports/go/algorithms/graphs/minimum-spanning-tree.go) · [C++](ports/cpp/algorithms/graphs/minimum-spanning-tree.hpp) · [Rust](ports/rust/algorithms/graphs/minimum_spanning_tree.rs)
 
 Остовное дерево связывает все вершины графа без циклов (V − 1 рёбер). Минимальное (MST) — то, у которого сумма весов наименьшая. Применение: проектирование сетей (кабели, дороги, трубы) с минимальной стоимостью, кластеризация.
 
@@ -1371,7 +1376,7 @@ prim(toWeightedUndirected(3, edges)).weight; // 3
 
 Код: [src/algorithms/graphs/max-flow.ts](src/algorithms/graphs/max-flow.ts)
 
-Другие языки: [Python](ports/python/algorithms/graphs/max_flow.py) · [Java](ports/java/src/algorithms/graphs/MaxFlow.java) · [JavaScript](ports/javascript/algorithms/graphs/max-flow.js) · [C#](ports/csharp/algorithms/graphs/max-flow.cs) · [PHP](ports/php/algorithms/graphs/max-flow.php) · [Go](ports/go/algorithms/graphs/max-flow.go) · [C++](ports/cpp/algorithms/graphs/max-flow.hpp)
+Другие языки: [Python](ports/python/algorithms/graphs/max_flow.py) · [Java](ports/java/src/algorithms/graphs/MaxFlow.java) · [JavaScript](ports/javascript/algorithms/graphs/max-flow.js) · [C#](ports/csharp/algorithms/graphs/max-flow.cs) · [PHP](ports/php/algorithms/graphs/max-flow.php) · [Go](ports/go/algorithms/graphs/max-flow.go) · [C++](ports/cpp/algorithms/graphs/max-flow.hpp) · [Rust](ports/rust/algorithms/graphs/max_flow.rs)
 
 Есть сеть труб с пропускными способностями, исток и сток. Нужно найти, сколько «жидкости» можно максимально прогнать из истока в сток.
 
@@ -1404,7 +1409,7 @@ edmondsKarp([
 
 Код: [src/algorithms/trees/binary-tree.ts](src/algorithms/trees/binary-tree.ts)
 
-Другие языки: [Python](ports/python/algorithms/trees/binary_tree.py) · [Java](ports/java/src/algorithms/trees/BinaryTree.java) · [JavaScript](ports/javascript/algorithms/trees/binary-tree.js) · [C#](ports/csharp/algorithms/trees/binary-tree.cs) · [PHP](ports/php/algorithms/trees/binary-tree.php) · [Go](ports/go/algorithms/trees/binary-tree.go) · [C++](ports/cpp/algorithms/trees/binary-tree.hpp)
+Другие языки: [Python](ports/python/algorithms/trees/binary_tree.py) · [Java](ports/java/src/algorithms/trees/BinaryTree.java) · [JavaScript](ports/javascript/algorithms/trees/binary-tree.js) · [C#](ports/csharp/algorithms/trees/binary-tree.cs) · [PHP](ports/php/algorithms/trees/binary-tree.php) · [Go](ports/go/algorithms/trees/binary-tree.go) · [C++](ports/cpp/algorithms/trees/binary-tree.hpp) · [Rust](ports/rust/algorithms/trees/binary_tree.rs)
 
 Четыре классических порядка обхода:
 - **Pre-order** (корень, левое, правое): удобно для копирования и сериализации дерева.
@@ -1435,7 +1440,7 @@ maxDepth(root);   // 3
 
 Код: [src/algorithms/trees/lowest-common-ancestor.ts](src/algorithms/trees/lowest-common-ancestor.ts)
 
-Другие языки: [Python](ports/python/algorithms/trees/lowest_common_ancestor.py) · [Java](ports/java/src/algorithms/trees/LowestCommonAncestor.java) · [JavaScript](ports/javascript/algorithms/trees/lowest-common-ancestor.js) · [C#](ports/csharp/algorithms/trees/lowest-common-ancestor.cs) · [PHP](ports/php/algorithms/trees/lowest-common-ancestor.php) · [Go](ports/go/algorithms/trees/lowest-common-ancestor.go) · [C++](ports/cpp/algorithms/trees/lowest-common-ancestor.hpp)
+Другие языки: [Python](ports/python/algorithms/trees/lowest_common_ancestor.py) · [Java](ports/java/src/algorithms/trees/LowestCommonAncestor.java) · [JavaScript](ports/javascript/algorithms/trees/lowest-common-ancestor.js) · [C#](ports/csharp/algorithms/trees/lowest-common-ancestor.cs) · [PHP](ports/php/algorithms/trees/lowest-common-ancestor.php) · [Go](ports/go/algorithms/trees/lowest-common-ancestor.go) · [C++](ports/cpp/algorithms/trees/lowest-common-ancestor.hpp) · [Rust](ports/rust/algorithms/trees/lowest_common_ancestor.rs)
 
 LCA двух вершин — самая глубокая вершина, которая является предком обеих.
 
@@ -1461,7 +1466,7 @@ lca.distance(3, 2); // 3
 
 Код: [src/algorithms/trees/tree-diameter.ts](src/algorithms/trees/tree-diameter.ts)
 
-Другие языки: [Python](ports/python/algorithms/trees/tree_diameter.py) · [Java](ports/java/src/algorithms/trees/TreeDiameter.java) · [JavaScript](ports/javascript/algorithms/trees/tree-diameter.js) · [C#](ports/csharp/algorithms/trees/tree-diameter.cs) · [PHP](ports/php/algorithms/trees/tree-diameter.php) · [Go](ports/go/algorithms/trees/tree-diameter.go) · [C++](ports/cpp/algorithms/trees/tree-diameter.hpp)
+Другие языки: [Python](ports/python/algorithms/trees/tree_diameter.py) · [Java](ports/java/src/algorithms/trees/TreeDiameter.java) · [JavaScript](ports/javascript/algorithms/trees/tree-diameter.js) · [C#](ports/csharp/algorithms/trees/tree-diameter.cs) · [PHP](ports/php/algorithms/trees/tree-diameter.php) · [Go](ports/go/algorithms/trees/tree-diameter.go) · [C++](ports/cpp/algorithms/trees/tree-diameter.hpp) · [Rust](ports/rust/algorithms/trees/tree_diameter.rs)
 
 Диаметр — самый длинный путь между двумя вершинами дерева. Трюк с двумя BFS: из любой вершины находим самую дальнюю вершину A, она гарантированно является концом какого-то диаметра. Затем из A находим самую дальнюю B. Путь A–B и есть диаметр. O(n).
 
@@ -1486,7 +1491,7 @@ treeDiameter(toUndirected(5, [[0, 1], [1, 2], [1, 3], [3, 4]])); // { length: 3,
 
 Код: [src/algorithms/dynamic-programming/memoize.ts](src/algorithms/dynamic-programming/memoize.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/memoize.py) · [Java](ports/java/src/algorithms/dynamic-programming/Memoize.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/memoize.js) · [C#](ports/csharp/algorithms/dynamic-programming/memoize.cs) · [PHP](ports/php/algorithms/dynamic-programming/memoize.php) · [Go](ports/go/algorithms/dynamic-programming/memoize.go) · [C++](ports/cpp/algorithms/dynamic-programming/memoize.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/memoize.py) · [Java](ports/java/src/algorithms/dynamic-programming/Memoize.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/memoize.js) · [C#](ports/csharp/algorithms/dynamic-programming/memoize.cs) · [PHP](ports/php/algorithms/dynamic-programming/memoize.php) · [Go](ports/go/algorithms/dynamic-programming/memoize.go) · [C++](ports/cpp/algorithms/dynamic-programming/memoize.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/memoize.rs)
 
 Обёртка, которая запоминает результаты чистой функции по её аргументам. Ключ по умолчанию — сам аргумент, если он один, или `JSON.stringify` от списка аргументов. Можно передать свою функцию ключа. Кеш доступен через `.cache`.
 
@@ -1502,7 +1507,7 @@ square(4); // берёт из square.cache
 
 Код: [src/algorithms/dynamic-programming/fibonacci.ts](src/algorithms/dynamic-programming/fibonacci.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/fibonacci.py) · [Java](ports/java/src/algorithms/dynamic-programming/Fibonacci.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/fibonacci.js) · [C#](ports/csharp/algorithms/dynamic-programming/fibonacci.cs) · [PHP](ports/php/algorithms/dynamic-programming/fibonacci.php) · [Go](ports/go/algorithms/dynamic-programming/fibonacci.go) · [C++](ports/cpp/algorithms/dynamic-programming/fibonacci.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/fibonacci.py) · [Java](ports/java/src/algorithms/dynamic-programming/Fibonacci.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/fibonacci.js) · [C#](ports/csharp/algorithms/dynamic-programming/fibonacci.cs) · [PHP](ports/php/algorithms/dynamic-programming/fibonacci.php) · [Go](ports/go/algorithms/dynamic-programming/fibonacci.go) · [C++](ports/cpp/algorithms/dynamic-programming/fibonacci.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/fibonacci.rs)
 
 Классический пример того, как подход меняет сложность одной и той же задачи:
 
@@ -1526,7 +1531,7 @@ fibonacciFast(100); // то же самое за O(log n)
 
 Код: [src/algorithms/dynamic-programming/knapsack.ts](src/algorithms/dynamic-programming/knapsack.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/knapsack.py) · [Java](ports/java/src/algorithms/dynamic-programming/Knapsack.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/knapsack.js) · [C#](ports/csharp/algorithms/dynamic-programming/knapsack.cs) · [PHP](ports/php/algorithms/dynamic-programming/knapsack.php) · [Go](ports/go/algorithms/dynamic-programming/knapsack.go) · [C++](ports/cpp/algorithms/dynamic-programming/knapsack.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/knapsack.py) · [Java](ports/java/src/algorithms/dynamic-programming/Knapsack.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/knapsack.js) · [C#](ports/csharp/algorithms/dynamic-programming/knapsack.cs) · [PHP](ports/php/algorithms/dynamic-programming/knapsack.php) · [Go](ports/go/algorithms/dynamic-programming/knapsack.go) · [C++](ports/cpp/algorithms/dynamic-programming/knapsack.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/knapsack.rs)
 
 Есть предметы с весом и ценностью и рюкзак вместимостью W. Нужно набрать максимальную ценность, не превысив вес.
 
@@ -1554,7 +1559,7 @@ knapsack01([
 
 Код: [src/algorithms/dynamic-programming/coin-change.ts](src/algorithms/dynamic-programming/coin-change.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/coin_change.py) · [Java](ports/java/src/algorithms/dynamic-programming/CoinChange.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/coin-change.js) · [C#](ports/csharp/algorithms/dynamic-programming/coin-change.cs) · [PHP](ports/php/algorithms/dynamic-programming/coin-change.php) · [Go](ports/go/algorithms/dynamic-programming/coin-change.go) · [C++](ports/cpp/algorithms/dynamic-programming/coin-change.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/coin_change.py) · [Java](ports/java/src/algorithms/dynamic-programming/CoinChange.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/coin-change.js) · [C#](ports/csharp/algorithms/dynamic-programming/coin-change.cs) · [PHP](ports/php/algorithms/dynamic-programming/coin-change.php) · [Go](ports/go/algorithms/dynamic-programming/coin-change.go) · [C++](ports/cpp/algorithms/dynamic-programming/coin-change.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/coin_change.rs)
 
 - **Минимум монет** (`minCoins`): `dp[s] = min(dp[s − coin] + 1)` по всем монетам. Для каждой суммы запоминается последняя использованная монета, чтобы восстановить набор.
 - **Число способов** (`coinChangeWays`): `ways[s] += ways[s − coin]`. Внешний цикл идёт по монетам, поэтому 1+2 и 2+1 считаются одним способом, ведь нас интересуют комбинации, а не последовательности.
@@ -1572,7 +1577,7 @@ coinChangeWays([1, 2, 5], 5); // 4
 
 Код: [src/algorithms/dynamic-programming/longest-common-subsequence.ts](src/algorithms/dynamic-programming/longest-common-subsequence.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/longest_common_subsequence.py) · [Java](ports/java/src/algorithms/dynamic-programming/LongestCommonSubsequence.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/longest-common-subsequence.js) · [C#](ports/csharp/algorithms/dynamic-programming/longest-common-subsequence.cs) · [PHP](ports/php/algorithms/dynamic-programming/longest-common-subsequence.php) · [Go](ports/go/algorithms/dynamic-programming/longest-common-subsequence.go) · [C++](ports/cpp/algorithms/dynamic-programming/longest-common-subsequence.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/longest_common_subsequence.py) · [Java](ports/java/src/algorithms/dynamic-programming/LongestCommonSubsequence.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/longest-common-subsequence.js) · [C#](ports/csharp/algorithms/dynamic-programming/longest-common-subsequence.cs) · [PHP](ports/php/algorithms/dynamic-programming/longest-common-subsequence.php) · [Go](ports/go/algorithms/dynamic-programming/longest-common-subsequence.go) · [C++](ports/cpp/algorithms/dynamic-programming/longest-common-subsequence.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/longest_common_subsequence.rs)
 
 **LCS** — самая длинная последовательность символов, которая встречается в обеих строках в том же порядке, но не обязательно подряд.
 - `dp[i][j]` — длина LCS для префиксов `a[0..i)` и `b[0..j)`.
@@ -1594,7 +1599,7 @@ longestCommonSubstring('xabcdey', 'zzbcdq');   // 'bcd'
 
 Код: [src/algorithms/dynamic-programming/longest-increasing-subsequence.ts](src/algorithms/dynamic-programming/longest-increasing-subsequence.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/longest_increasing_subsequence.py) · [Java](ports/java/src/algorithms/dynamic-programming/LongestIncreasingSubsequence.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/longest-increasing-subsequence.js) · [C#](ports/csharp/algorithms/dynamic-programming/longest-increasing-subsequence.cs) · [PHP](ports/php/algorithms/dynamic-programming/longest-increasing-subsequence.php) · [Go](ports/go/algorithms/dynamic-programming/longest-increasing-subsequence.go) · [C++](ports/cpp/algorithms/dynamic-programming/longest-increasing-subsequence.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/longest_increasing_subsequence.py) · [Java](ports/java/src/algorithms/dynamic-programming/LongestIncreasingSubsequence.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/longest-increasing-subsequence.js) · [C#](ports/csharp/algorithms/dynamic-programming/longest-increasing-subsequence.cs) · [PHP](ports/php/algorithms/dynamic-programming/longest-increasing-subsequence.php) · [Go](ports/go/algorithms/dynamic-programming/longest-increasing-subsequence.go) · [C++](ports/cpp/algorithms/dynamic-programming/longest-increasing-subsequence.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/longest_increasing_subsequence.rs)
 
 Самая длинная строго возрастающая подпоследовательность (элементы не обязаны идти подряд). Прямое ДП работает за O(n²), здесь используется решение за O(n log n):
 1. Храним массив «хвостов»: `tails[k]` — наименьший последний элемент среди всех возрастающих подпоследовательностей длины k + 1.
@@ -1613,7 +1618,7 @@ longestIncreasingSubsequence([10, 9, 2, 5, 3, 7, 101, 18]); // [2, 3, 7, 18]
 
 Код: [src/algorithms/dynamic-programming/edit-distance.ts](src/algorithms/dynamic-programming/edit-distance.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/edit_distance.py) · [Java](ports/java/src/algorithms/dynamic-programming/EditDistance.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/edit-distance.js) · [C#](ports/csharp/algorithms/dynamic-programming/edit-distance.cs) · [PHP](ports/php/algorithms/dynamic-programming/edit-distance.php) · [Go](ports/go/algorithms/dynamic-programming/edit-distance.go) · [C++](ports/cpp/algorithms/dynamic-programming/edit-distance.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/edit_distance.py) · [Java](ports/java/src/algorithms/dynamic-programming/EditDistance.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/edit-distance.js) · [C#](ports/csharp/algorithms/dynamic-programming/edit-distance.cs) · [PHP](ports/php/algorithms/dynamic-programming/edit-distance.php) · [Go](ports/go/algorithms/dynamic-programming/edit-distance.go) · [C++](ports/cpp/algorithms/dynamic-programming/edit-distance.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/edit_distance.rs)
 
 Минимальное число вставок, удалений и замен символов, чтобы превратить одну строку в другую.
 - `dp[i][j]` — расстояние между префиксами длиной i и j.
@@ -1632,7 +1637,7 @@ editDistance('kitten', 'sitting'); // 3
 
 Код: [src/algorithms/dynamic-programming/max-subarray.ts](src/algorithms/dynamic-programming/max-subarray.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/max_subarray.py) · [Java](ports/java/src/algorithms/dynamic-programming/MaxSubarray.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/max-subarray.js) · [C#](ports/csharp/algorithms/dynamic-programming/max-subarray.cs) · [PHP](ports/php/algorithms/dynamic-programming/max-subarray.php) · [Go](ports/go/algorithms/dynamic-programming/max-subarray.go) · [C++](ports/cpp/algorithms/dynamic-programming/max-subarray.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/max_subarray.py) · [Java](ports/java/src/algorithms/dynamic-programming/MaxSubarray.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/max-subarray.js) · [C#](ports/csharp/algorithms/dynamic-programming/max-subarray.cs) · [PHP](ports/php/algorithms/dynamic-programming/max-subarray.php) · [Go](ports/go/algorithms/dynamic-programming/max-subarray.go) · [C++](ports/cpp/algorithms/dynamic-programming/max-subarray.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/max_subarray.rs)
 
 Алгоритм Кадане находит непрерывный подмассив с максимальной суммой за один проход. Храним лучшую сумму подмассива, заканчивающегося в текущей позиции. Если она стала отрицательной, продолжать её бессмысленно, и мы начинаем новый подмассив с текущего элемента. O(n), O(1) памяти. Возвращает сумму и границы.
 
@@ -1646,7 +1651,7 @@ maxSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]); // { sum: 6, start: 3, end: 6 }
 
 Код: [src/algorithms/dynamic-programming/matrix-chain.ts](src/algorithms/dynamic-programming/matrix-chain.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/matrix_chain.py) · [Java](ports/java/src/algorithms/dynamic-programming/MatrixChain.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/matrix-chain.js) · [C#](ports/csharp/algorithms/dynamic-programming/matrix-chain.cs) · [PHP](ports/php/algorithms/dynamic-programming/matrix-chain.php) · [Go](ports/go/algorithms/dynamic-programming/matrix-chain.go) · [C++](ports/cpp/algorithms/dynamic-programming/matrix-chain.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/matrix_chain.py) · [Java](ports/java/src/algorithms/dynamic-programming/MatrixChain.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/matrix-chain.js) · [C#](ports/csharp/algorithms/dynamic-programming/matrix-chain.cs) · [PHP](ports/php/algorithms/dynamic-programming/matrix-chain.php) · [Go](ports/go/algorithms/dynamic-programming/matrix-chain.go) · [C++](ports/cpp/algorithms/dynamic-programming/matrix-chain.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/matrix_chain.rs)
 
 Умножение матриц ассоциативно, но стоимость сильно зависит от расстановки скобок. Для матриц 10×30, 30×5 и 5×60 порядок (A1·A2)·A3 стоит 4 500 умножений, а A1·(A2·A3) — 27 000.
 
@@ -1662,7 +1667,7 @@ matrixChainOrder([10, 30, 5, 60]); // { cost: 4500, order: '((A1A2)A3)' }
 
 Код: [src/algorithms/dynamic-programming/rod-cutting.ts](src/algorithms/dynamic-programming/rod-cutting.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/rod_cutting.py) · [Java](ports/java/src/algorithms/dynamic-programming/RodCutting.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/rod-cutting.js) · [C#](ports/csharp/algorithms/dynamic-programming/rod-cutting.cs) · [PHP](ports/php/algorithms/dynamic-programming/rod-cutting.php) · [Go](ports/go/algorithms/dynamic-programming/rod-cutting.go) · [C++](ports/cpp/algorithms/dynamic-programming/rod-cutting.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/rod_cutting.py) · [Java](ports/java/src/algorithms/dynamic-programming/RodCutting.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/rod-cutting.js) · [C#](ports/csharp/algorithms/dynamic-programming/rod-cutting.cs) · [PHP](ports/php/algorithms/dynamic-programming/rod-cutting.php) · [Go](ports/go/algorithms/dynamic-programming/rod-cutting.go) · [C++](ports/cpp/algorithms/dynamic-programming/rod-cutting.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/rod_cutting.rs)
 
 Стержень длиной n можно разрезать на куски, кусок длиной i продаётся по `prices[i-1]`. Нужна максимальная выручка. `revenue[n] = max(prices[i] + revenue[n − i])` по длине первого куска. Сохраняя длину первого куска, восстанавливаем, как резать. O(n²).
 
@@ -1676,7 +1681,7 @@ rodCutting([1, 5, 8, 9, 10, 17, 17, 20], 8); // { revenue: 22, pieces: [2, 6] }
 
 Код: [src/algorithms/dynamic-programming/subset-sum.ts](src/algorithms/dynamic-programming/subset-sum.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/subset_sum.py) · [Java](ports/java/src/algorithms/dynamic-programming/SubsetSum.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/subset-sum.js) · [C#](ports/csharp/algorithms/dynamic-programming/subset-sum.cs) · [PHP](ports/php/algorithms/dynamic-programming/subset-sum.php) · [Go](ports/go/algorithms/dynamic-programming/subset-sum.go) · [C++](ports/cpp/algorithms/dynamic-programming/subset-sum.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/subset_sum.py) · [Java](ports/java/src/algorithms/dynamic-programming/SubsetSum.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/subset-sum.js) · [C#](ports/csharp/algorithms/dynamic-programming/subset-sum.cs) · [PHP](ports/php/algorithms/dynamic-programming/subset-sum.php) · [Go](ports/go/algorithms/dynamic-programming/subset-sum.go) · [C++](ports/cpp/algorithms/dynamic-programming/subset-sum.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/subset_sum.rs)
 
 Можно ли выбрать числа с заданной суммой. `reachable[s]` — достижима ли сумма s. Для каждого числа обновляем суммы от большей к меньшей, чтобы одно число не использовалось дважды (тот же приём, что и в 0/1-рюкзаке). O(n·target).
 
@@ -1693,7 +1698,7 @@ canPartition([1, 5, 11, 5]);        // true: [1, 5, 5] и [11]
 
 Код: [src/algorithms/dynamic-programming/word-break.ts](src/algorithms/dynamic-programming/word-break.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/word_break.py) · [Java](ports/java/src/algorithms/dynamic-programming/WordBreak.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/word-break.js) · [C#](ports/csharp/algorithms/dynamic-programming/word-break.cs) · [PHP](ports/php/algorithms/dynamic-programming/word-break.php) · [Go](ports/go/algorithms/dynamic-programming/word-break.go) · [C++](ports/cpp/algorithms/dynamic-programming/word-break.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/word_break.py) · [Java](ports/java/src/algorithms/dynamic-programming/WordBreak.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/word-break.js) · [C#](ports/csharp/algorithms/dynamic-programming/word-break.cs) · [PHP](ports/php/algorithms/dynamic-programming/word-break.php) · [Go](ports/go/algorithms/dynamic-programming/word-break.go) · [C++](ports/cpp/algorithms/dynamic-programming/word-break.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/word_break.rs)
 
 Можно ли разбить строку без пробелов на слова из словаря. `reachable[i]` — можно ли разбить префикс длины i. Префикс длины `end` разбивается, если для какого-то `start` префикс до `start` разбивается, а кусок `text[start..end)` есть в словаре. Перебор `start` ограничен длиной самого длинного слова. Применение: токенизация текстов на языках без пробелов (китайский, японский), разбор хештегов.
 
@@ -1707,7 +1712,7 @@ wordBreak('applepenapple', ['apple', 'pen']); // ['apple', 'pen', 'apple']
 
 Код: [src/algorithms/dynamic-programming/grid-paths.ts](src/algorithms/dynamic-programming/grid-paths.ts)
 
-Другие языки: [Python](ports/python/algorithms/dynamic_programming/grid_paths.py) · [Java](ports/java/src/algorithms/dynamic-programming/GridPaths.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/grid-paths.js) · [C#](ports/csharp/algorithms/dynamic-programming/grid-paths.cs) · [PHP](ports/php/algorithms/dynamic-programming/grid-paths.php) · [Go](ports/go/algorithms/dynamic-programming/grid-paths.go) · [C++](ports/cpp/algorithms/dynamic-programming/grid-paths.hpp)
+Другие языки: [Python](ports/python/algorithms/dynamic_programming/grid_paths.py) · [Java](ports/java/src/algorithms/dynamic-programming/GridPaths.java) · [JavaScript](ports/javascript/algorithms/dynamic-programming/grid-paths.js) · [C#](ports/csharp/algorithms/dynamic-programming/grid-paths.cs) · [PHP](ports/php/algorithms/dynamic-programming/grid-paths.php) · [Go](ports/go/algorithms/dynamic-programming/grid-paths.go) · [C++](ports/cpp/algorithms/dynamic-programming/grid-paths.hpp) · [Rust](ports/rust/algorithms/dynamic_programming/grid_paths.rs)
 
 Из левого верхнего угла в правый нижний можно ходить только вправо и вниз.
 - `uniquePaths`: число путей. `ways[r][c] = ways[r-1][c] + ways[r][c-1]`, заблокированные клетки обнуляются. Хватает одной строки таблицы.
@@ -1738,7 +1743,7 @@ minPathSum([[1, 3, 1], [1, 5, 1], [4, 2, 1]]); // 7
 
 Код: [src/algorithms/strings/kmp.ts](src/algorithms/strings/kmp.ts)
 
-Другие языки: [Python](ports/python/algorithms/strings/kmp.py) · [Java](ports/java/src/algorithms/strings/Kmp.java) · [JavaScript](ports/javascript/algorithms/strings/kmp.js) · [C#](ports/csharp/algorithms/strings/kmp.cs) · [PHP](ports/php/algorithms/strings/kmp.php) · [Go](ports/go/algorithms/strings/kmp.go) · [C++](ports/cpp/algorithms/strings/kmp.hpp)
+Другие языки: [Python](ports/python/algorithms/strings/kmp.py) · [Java](ports/java/src/algorithms/strings/Kmp.java) · [JavaScript](ports/javascript/algorithms/strings/kmp.js) · [C#](ports/csharp/algorithms/strings/kmp.cs) · [PHP](ports/php/algorithms/strings/kmp.php) · [Go](ports/go/algorithms/strings/kmp.go) · [C++](ports/cpp/algorithms/strings/kmp.hpp) · [Rust](ports/rust/algorithms/strings/kmp.rs)
 
 **Префикс-функция** `pi[i]` — длина наибольшего собственного префикса шаблона, который одновременно является суффиксом подстроки `pattern[0..i]`. Например, для `aabaaab` это `[0, 1, 0, 1, 2, 2, 3]`.
 
@@ -1755,7 +1760,7 @@ prefixFunction('aabaaab');        // [0, 1, 0, 1, 2, 2, 3]
 
 Код: [src/algorithms/strings/z-function.ts](src/algorithms/strings/z-function.ts)
 
-Другие языки: [Python](ports/python/algorithms/strings/z_function.py) · [Java](ports/java/src/algorithms/strings/ZFunction.java) · [JavaScript](ports/javascript/algorithms/strings/z-function.js) · [C#](ports/csharp/algorithms/strings/z-function.cs) · [PHP](ports/php/algorithms/strings/z-function.php) · [Go](ports/go/algorithms/strings/z-function.go) · [C++](ports/cpp/algorithms/strings/z-function.hpp)
+Другие языки: [Python](ports/python/algorithms/strings/z_function.py) · [Java](ports/java/src/algorithms/strings/ZFunction.java) · [JavaScript](ports/javascript/algorithms/strings/z-function.js) · [C#](ports/csharp/algorithms/strings/z-function.cs) · [PHP](ports/php/algorithms/strings/z-function.php) · [Go](ports/go/algorithms/strings/z-function.go) · [C++](ports/cpp/algorithms/strings/z-function.hpp) · [Rust](ports/rust/algorithms/strings/z_function.rs)
 
 `z[i]` — длина наибольшего общего префикса строки и её суффикса, начинающегося с позиции i. Вычисляется за O(n): алгоритм поддерживает самый правый найденный отрезок совпадения [l, r) и для позиций внутри него переиспользует уже посчитанные значения.
 
@@ -1772,7 +1777,7 @@ zSearch('aaaa', 'aa');   // [0, 1, 2]
 
 Код: [src/algorithms/strings/rabin-karp.ts](src/algorithms/strings/rabin-karp.ts)
 
-Другие языки: [Python](ports/python/algorithms/strings/rabin_karp.py) · [Java](ports/java/src/algorithms/strings/RabinKarp.java) · [JavaScript](ports/javascript/algorithms/strings/rabin-karp.js) · [C#](ports/csharp/algorithms/strings/rabin-karp.cs) · [PHP](ports/php/algorithms/strings/rabin-karp.php) · [Go](ports/go/algorithms/strings/rabin-karp.go) · [C++](ports/cpp/algorithms/strings/rabin-karp.hpp)
+Другие языки: [Python](ports/python/algorithms/strings/rabin_karp.py) · [Java](ports/java/src/algorithms/strings/RabinKarp.java) · [JavaScript](ports/javascript/algorithms/strings/rabin-karp.js) · [C#](ports/csharp/algorithms/strings/rabin-karp.cs) · [PHP](ports/php/algorithms/strings/rabin-karp.php) · [Go](ports/go/algorithms/strings/rabin-karp.go) · [C++](ports/cpp/algorithms/strings/rabin-karp.hpp) · [Rust](ports/rust/algorithms/strings/rabin_karp.rs)
 
 Сравниваем не строки, а их хеши. Полиномиальный хеш окна текста пересчитывается при сдвиге на один символ за O(1) (rolling hash): вычитаем вклад ушедшего символа, умножаем на основание, добавляем новый символ. При совпадении хешей строки сверяются напрямую, чтобы исключить случайную коллизию.
 
@@ -1788,7 +1793,7 @@ rabinKarp('aaaa', 'aa'); // [0, 1, 2]
 
 Код: [src/algorithms/strings/boyer-moore-horspool.ts](src/algorithms/strings/boyer-moore-horspool.ts)
 
-Другие языки: [Python](ports/python/algorithms/strings/boyer_moore_horspool.py) · [Java](ports/java/src/algorithms/strings/BoyerMooreHorspool.java) · [JavaScript](ports/javascript/algorithms/strings/boyer-moore-horspool.js) · [C#](ports/csharp/algorithms/strings/boyer-moore-horspool.cs) · [PHP](ports/php/algorithms/strings/boyer-moore-horspool.php) · [Go](ports/go/algorithms/strings/boyer-moore-horspool.go) · [C++](ports/cpp/algorithms/strings/boyer-moore-horspool.hpp)
+Другие языки: [Python](ports/python/algorithms/strings/boyer_moore_horspool.py) · [Java](ports/java/src/algorithms/strings/BoyerMooreHorspool.java) · [JavaScript](ports/javascript/algorithms/strings/boyer-moore-horspool.js) · [C#](ports/csharp/algorithms/strings/boyer-moore-horspool.cs) · [PHP](ports/php/algorithms/strings/boyer-moore-horspool.php) · [Go](ports/go/algorithms/strings/boyer-moore-horspool.go) · [C++](ports/cpp/algorithms/strings/boyer-moore-horspool.hpp) · [Rust](ports/rust/algorithms/strings/boyer_moore_horspool.rs)
 
 Шаблон прикладывается к тексту, но символы сравниваются справа налево. После проверки окно сдвигается в зависимости от символа текста под последней позицией шаблона: если такого символа в шаблоне нет, можно прыгнуть сразу на всю длину шаблона. Таблица сдвигов строится заранее.
 
@@ -1804,7 +1809,7 @@ boyerMooreHorspool('abracadabra abracadabra', 'abra'); // [0, 7, 12, 19]
 
 Код: [src/algorithms/strings/aho-corasick.ts](src/algorithms/strings/aho-corasick.ts)
 
-Другие языки: [Python](ports/python/algorithms/strings/aho_corasick.py) · [Java](ports/java/src/algorithms/strings/AhoCorasick.java) · [JavaScript](ports/javascript/algorithms/strings/aho-corasick.js) · [C#](ports/csharp/algorithms/strings/aho-corasick.cs) · [PHP](ports/php/algorithms/strings/aho-corasick.php) · [Go](ports/go/algorithms/strings/aho-corasick.go) · [C++](ports/cpp/algorithms/strings/aho-corasick.hpp)
+Другие языки: [Python](ports/python/algorithms/strings/aho_corasick.py) · [Java](ports/java/src/algorithms/strings/AhoCorasick.java) · [JavaScript](ports/javascript/algorithms/strings/aho-corasick.js) · [C#](ports/csharp/algorithms/strings/aho-corasick.cs) · [PHP](ports/php/algorithms/strings/aho-corasick.php) · [Go](ports/go/algorithms/strings/aho-corasick.go) · [C++](ports/cpp/algorithms/strings/aho-corasick.hpp) · [Rust](ports/rust/algorithms/strings/aho_corasick.rs)
 
 Ищет сразу много шаблонов за один проход по тексту. Это обобщение КМП на [префиксное дерево](#префиксное-дерево).
 
@@ -1827,7 +1832,7 @@ new AhoCorasick(['he', 'she', 'his', 'hers']).search('ahishers');
 
 Код: [src/algorithms/strings/manacher.ts](src/algorithms/strings/manacher.ts)
 
-Другие языки: [Python](ports/python/algorithms/strings/manacher.py) · [Java](ports/java/src/algorithms/strings/Manacher.java) · [JavaScript](ports/javascript/algorithms/strings/manacher.js) · [C#](ports/csharp/algorithms/strings/manacher.cs) · [PHP](ports/php/algorithms/strings/manacher.php) · [Go](ports/go/algorithms/strings/manacher.go) · [C++](ports/cpp/algorithms/strings/manacher.hpp)
+Другие языки: [Python](ports/python/algorithms/strings/manacher.py) · [Java](ports/java/src/algorithms/strings/Manacher.java) · [JavaScript](ports/javascript/algorithms/strings/manacher.js) · [C#](ports/csharp/algorithms/strings/manacher.cs) · [PHP](ports/php/algorithms/strings/manacher.php) · [Go](ports/go/algorithms/strings/manacher.go) · [C++](ports/cpp/algorithms/strings/manacher.hpp) · [Rust](ports/rust/algorithms/strings/manacher.rs)
 
 Находит самый длинный палиндром в строке за O(n). Наивное расширение от каждого центра даёт O(n²).
 
@@ -1846,7 +1851,7 @@ longestPalindromicSubstring('forgeeksskeegfor'); // 'geeksskeeg'
 
 Код: [src/algorithms/strings/suffix-array.ts](src/algorithms/strings/suffix-array.ts)
 
-Другие языки: [Python](ports/python/algorithms/strings/suffix_array.py) · [Java](ports/java/src/algorithms/strings/SuffixArray.java) · [JavaScript](ports/javascript/algorithms/strings/suffix-array.js) · [C#](ports/csharp/algorithms/strings/suffix-array.cs) · [PHP](ports/php/algorithms/strings/suffix-array.php) · [Go](ports/go/algorithms/strings/suffix-array.go) · [C++](ports/cpp/algorithms/strings/suffix-array.hpp)
+Другие языки: [Python](ports/python/algorithms/strings/suffix_array.py) · [Java](ports/java/src/algorithms/strings/SuffixArray.java) · [JavaScript](ports/javascript/algorithms/strings/suffix-array.js) · [C#](ports/csharp/algorithms/strings/suffix-array.cs) · [PHP](ports/php/algorithms/strings/suffix-array.php) · [Go](ports/go/algorithms/strings/suffix-array.go) · [C++](ports/cpp/algorithms/strings/suffix-array.hpp) · [Rust](ports/rust/algorithms/strings/suffix_array.rs)
 
 Суффиксный массив — начальные позиции всех суффиксов строки, отсортированные лексикографически. Для `banana` это `[5, 3, 1, 0, 4, 2]`: a, ana, anana, banana, na, nana.
 
@@ -1868,7 +1873,7 @@ countDistinctSubstrings('abab');           // 7
 
 Код: [src/algorithms/strings/string-utils.ts](src/algorithms/strings/string-utils.ts)
 
-Другие языки: [Python](ports/python/algorithms/strings/string_utils.py) · [Java](ports/java/src/algorithms/strings/StringUtils.java) · [JavaScript](ports/javascript/algorithms/strings/string-utils.js) · [C#](ports/csharp/algorithms/strings/string-utils.cs) · [PHP](ports/php/algorithms/strings/string-utils.php) · [Go](ports/go/algorithms/strings/string-utils.go) · [C++](ports/cpp/algorithms/strings/string-utils.hpp)
+Другие языки: [Python](ports/python/algorithms/strings/string_utils.py) · [Java](ports/java/src/algorithms/strings/StringUtils.java) · [JavaScript](ports/javascript/algorithms/strings/string-utils.js) · [C#](ports/csharp/algorithms/strings/string-utils.cs) · [PHP](ports/php/algorithms/strings/string-utils.php) · [Go](ports/go/algorithms/strings/string-utils.go) · [C++](ports/cpp/algorithms/strings/string-utils.hpp) · [Rust](ports/rust/algorithms/strings/string_utils.rs)
 
 - `isBalanced`: проверка скобок через [стек](#стек). Открывающая скобка кладётся в стек, закрывающая должна совпасть с вершиной.
 - `isPalindrome`: два указателя с концов строки. Регистр, пробелы и знаки препинания игнорируются.
@@ -1896,7 +1901,7 @@ runLengthEncode('aaabccdddd');                  // '3a1b2c4d'
 
 Код: [src/algorithms/math/gcd.ts](src/algorithms/math/gcd.ts)
 
-Другие языки: [Python](ports/python/algorithms/math/gcd.py) · [Java](ports/java/src/algorithms/math/Gcd.java) · [JavaScript](ports/javascript/algorithms/math/gcd.js) · [C#](ports/csharp/algorithms/math/gcd.cs) · [PHP](ports/php/algorithms/math/gcd.php) · [Go](ports/go/algorithms/math/gcd.go) · [C++](ports/cpp/algorithms/math/gcd.hpp)
+Другие языки: [Python](ports/python/algorithms/math/gcd.py) · [Java](ports/java/src/algorithms/math/Gcd.java) · [JavaScript](ports/javascript/algorithms/math/gcd.js) · [C#](ports/csharp/algorithms/math/gcd.cs) · [PHP](ports/php/algorithms/math/gcd.php) · [Go](ports/go/algorithms/math/gcd.go) · [C++](ports/cpp/algorithms/math/gcd.hpp) · [Rust](ports/rust/algorithms/math/gcd.rs)
 
 - **Алгоритм Евклида** (`gcd`): НОД(a, b) = НОД(b, a mod b), пока b не станет 0. O(log min(a, b)).
 - **НОК** (`lcm`) = a / НОД(a, b) · b. Деление выполняется до умножения, чтобы не переполниться.
@@ -1916,7 +1921,7 @@ modInverse(3, 11);    // 4, потому что 3·4 = 12 ≡ 1 (mod 11)
 
 Код: [src/algorithms/math/power.ts](src/algorithms/math/power.ts)
 
-Другие языки: [Python](ports/python/algorithms/math/power.py) · [Java](ports/java/src/algorithms/math/Power.java) · [JavaScript](ports/javascript/algorithms/math/power.js) · [C#](ports/csharp/algorithms/math/power.cs) · [PHP](ports/php/algorithms/math/power.php) · [Go](ports/go/algorithms/math/power.go) · [C++](ports/cpp/algorithms/math/power.hpp)
+Другие языки: [Python](ports/python/algorithms/math/power.py) · [Java](ports/java/src/algorithms/math/Power.java) · [JavaScript](ports/javascript/algorithms/math/power.js) · [C#](ports/csharp/algorithms/math/power.cs) · [PHP](ports/php/algorithms/math/power.php) · [Go](ports/go/algorithms/math/power.go) · [C++](ports/cpp/algorithms/math/power.hpp) · [Rust](ports/rust/algorithms/math/power.rs)
 
 - **Бинарное возведение в степень** (`fastPower`, `modPow`): показатель раскладывается в двоичную запись, основание на каждом шаге возводится в квадрат, а результат умножается на него там, где в показателе стоит 1. Например, x¹³ = x⁸·x⁴·x¹. O(log n) умножений вместо n. `modPow` работает с BigInt и берёт остаток на каждом шаге, поэтому числа не разрастаются. Это основа RSA и [теста Миллера-Рабина](#простые-числа).
 - **Целочисленный корень** (`integerSqrt`) и **метод Ньютона** (`newtonSqrt`): итерация x → (x + n/x) / 2 сходится квадратично, то есть число верных знаков примерно удваивается на каждом шаге.
@@ -1933,7 +1938,7 @@ integerSqrt(99);                  // 9
 
 Код: [src/algorithms/math/primes.ts](src/algorithms/math/primes.ts)
 
-Другие языки: [Python](ports/python/algorithms/math/primes.py) · [Java](ports/java/src/algorithms/math/Primes.java) · [JavaScript](ports/javascript/algorithms/math/primes.js) · [C#](ports/csharp/algorithms/math/primes.cs) · [PHP](ports/php/algorithms/math/primes.php) · [Go](ports/go/algorithms/math/primes.go) · [C++](ports/cpp/algorithms/math/primes.hpp)
+Другие языки: [Python](ports/python/algorithms/math/primes.py) · [Java](ports/java/src/algorithms/math/Primes.java) · [JavaScript](ports/javascript/algorithms/math/primes.js) · [C#](ports/csharp/algorithms/math/primes.cs) · [PHP](ports/php/algorithms/math/primes.php) · [Go](ports/go/algorithms/math/primes.go) · [C++](ports/cpp/algorithms/math/primes.hpp) · [Rust](ports/rust/algorithms/math/primes.rs)
 
 - **Решето Эратосфена** (`sieveOfEratosthenes`): выписываем числа до n и для каждого простого вычёркиваем все его кратные, начиная с p². Оставшиеся числа простые. O(n log log n).
 - **Линейное решето** (`linearSieve`): каждое составное число вычёркивается ровно один раз, через свой минимальный простой делитель. O(n), и заодно для каждого числа известен минимальный делитель, что даёт разложение на множители за O(log n).
@@ -1954,7 +1959,7 @@ eulerPhi(36);                // 12
 
 Код: [src/algorithms/math/matrix.ts](src/algorithms/math/matrix.ts)
 
-Другие языки: [Python](ports/python/algorithms/math/matrix.py) · [Java](ports/java/src/algorithms/math/Matrix.java) · [JavaScript](ports/javascript/algorithms/math/matrix.js) · [C#](ports/csharp/algorithms/math/matrix.cs) · [PHP](ports/php/algorithms/math/matrix.php) · [Go](ports/go/algorithms/math/matrix.go) · [C++](ports/cpp/algorithms/math/matrix.hpp)
+Другие языки: [Python](ports/python/algorithms/math/matrix.py) · [Java](ports/java/src/algorithms/math/Matrix.java) · [JavaScript](ports/javascript/algorithms/math/matrix.js) · [C#](ports/csharp/algorithms/math/matrix.cs) · [PHP](ports/php/algorithms/math/matrix.php) · [Go](ports/go/algorithms/math/matrix.go) · [C++](ports/cpp/algorithms/math/matrix.hpp) · [Rust](ports/rust/algorithms/math/matrix.rs)
 
 - **Умножение** (`multiply`): O(n³). Циклы переставлены в порядке i-k-j, чтобы внутренний цикл шёл по строке подряд, что лучше для кеша процессора.
 - **Возведение в степень** (`matrixPower`): то же бинарное возведение, что и для чисел, O(n³ log k). Классический трюк: n-е число Фибоначчи — элемент матрицы [[1,1],[1,0]]ⁿ, а значит любая линейная рекуррентность считается за O(log n).
@@ -1974,7 +1979,7 @@ solveLinearSystem([[2, 1, -1], [-3, -1, 2], [-2, 1, 2]], [8, -11, -3]); // [2, 3
 
 Код: [src/algorithms/math/combinatorics.ts](src/algorithms/math/combinatorics.ts)
 
-Другие языки: [Python](ports/python/algorithms/math/combinatorics.py) · [Java](ports/java/src/algorithms/math/Combinatorics.java) · [JavaScript](ports/javascript/algorithms/math/combinatorics.js) · [C#](ports/csharp/algorithms/math/combinatorics.cs) · [PHP](ports/php/algorithms/math/combinatorics.php) · [Go](ports/go/algorithms/math/combinatorics.go) · [C++](ports/cpp/algorithms/math/combinatorics.hpp)
+Другие языки: [Python](ports/python/algorithms/math/combinatorics.py) · [Java](ports/java/src/algorithms/math/Combinatorics.java) · [JavaScript](ports/javascript/algorithms/math/combinatorics.js) · [C#](ports/csharp/algorithms/math/combinatorics.cs) · [PHP](ports/php/algorithms/math/combinatorics.php) · [Go](ports/go/algorithms/math/combinatorics.go) · [C++](ports/cpp/algorithms/math/combinatorics.hpp) · [Rust](ports/rust/algorithms/math/combinatorics.rs)
 
 - `factorial`: n! на BigInt, потому что уже 21! не помещается в точный диапазон `number`.
 - `binomial`: число сочетаний C(n, k). Считается последовательным умножением и делением, а не через факториалы, поэтому промежуточные числа остаются маленькими. Используется симметрия C(n, k) = C(n, n−k).
@@ -1998,7 +2003,7 @@ nextPermutation(perm); // true, perm = [1, 3, 2]
 
 Код: [src/algorithms/math/number-conversion.ts](src/algorithms/math/number-conversion.ts)
 
-Другие языки: [Python](ports/python/algorithms/math/number_conversion.py) · [Java](ports/java/src/algorithms/math/NumberConversion.java) · [JavaScript](ports/javascript/algorithms/math/number-conversion.js) · [C#](ports/csharp/algorithms/math/number-conversion.cs) · [PHP](ports/php/algorithms/math/number-conversion.php) · [Go](ports/go/algorithms/math/number-conversion.go) · [C++](ports/cpp/algorithms/math/number-conversion.hpp)
+Другие языки: [Python](ports/python/algorithms/math/number_conversion.py) · [Java](ports/java/src/algorithms/math/NumberConversion.java) · [JavaScript](ports/javascript/algorithms/math/number-conversion.js) · [C#](ports/csharp/algorithms/math/number-conversion.cs) · [PHP](ports/php/algorithms/math/number-conversion.php) · [Go](ports/go/algorithms/math/number-conversion.go) · [C++](ports/cpp/algorithms/math/number-conversion.hpp) · [Rust](ports/rust/algorithms/math/number_conversion.rs)
 
 - `toBase` и `fromBase`: перевод между системами счисления с основанием от 2 до 36 через последовательное деление с остатком и схему Горнера.
 - `toRoman`: жадный алгоритм по таблице, где есть и вычитательные пары (CM, XC, IV и т.п.).
@@ -2022,7 +2027,7 @@ Backtracking строит решение по шагам: на каждом ша
 
 Код: [src/algorithms/backtracking/permutations.ts](src/algorithms/backtracking/permutations.ts)
 
-Другие языки: [Python](ports/python/algorithms/backtracking/permutations.py) · [Java](ports/java/src/algorithms/backtracking/Permutations.java) · [JavaScript](ports/javascript/algorithms/backtracking/permutations.js) · [C#](ports/csharp/algorithms/backtracking/permutations.cs) · [PHP](ports/php/algorithms/backtracking/permutations.php) · [Go](ports/go/algorithms/backtracking/permutations.go) · [C++](ports/cpp/algorithms/backtracking/permutations.hpp)
+Другие языки: [Python](ports/python/algorithms/backtracking/permutations.py) · [Java](ports/java/src/algorithms/backtracking/Permutations.java) · [JavaScript](ports/javascript/algorithms/backtracking/permutations.js) · [C#](ports/csharp/algorithms/backtracking/permutations.cs) · [PHP](ports/php/algorithms/backtracking/permutations.php) · [Go](ports/go/algorithms/backtracking/permutations.go) · [C++](ports/cpp/algorithms/backtracking/permutations.hpp) · [Rust](ports/rust/algorithms/backtracking/permutations.rs)
 
 - `permutations`: n! вариантов. На каждом шаге выбираем ещё не использованный элемент.
 - `combinations(items, k)`: C(n, k) вариантов. Элементы берутся только по возрастанию индекса, чтобы не было повторов. Перебор отсекается, если оставшихся элементов не хватит до размера k.
@@ -2042,7 +2047,7 @@ combinationSum([2, 3, 6, 7], 7); // [[2, 2, 3], [7]]
 
 Код: [src/algorithms/backtracking/n-queens.ts](src/algorithms/backtracking/n-queens.ts)
 
-Другие языки: [Python](ports/python/algorithms/backtracking/n_queens.py) · [Java](ports/java/src/algorithms/backtracking/NQueens.java) · [JavaScript](ports/javascript/algorithms/backtracking/n-queens.js) · [C#](ports/csharp/algorithms/backtracking/n-queens.cs) · [PHP](ports/php/algorithms/backtracking/n-queens.php) · [Go](ports/go/algorithms/backtracking/n-queens.go) · [C++](ports/cpp/algorithms/backtracking/n-queens.hpp)
+Другие языки: [Python](ports/python/algorithms/backtracking/n_queens.py) · [Java](ports/java/src/algorithms/backtracking/NQueens.java) · [JavaScript](ports/javascript/algorithms/backtracking/n-queens.js) · [C#](ports/csharp/algorithms/backtracking/n-queens.cs) · [PHP](ports/php/algorithms/backtracking/n-queens.php) · [Go](ports/go/algorithms/backtracking/n-queens.go) · [C++](ports/cpp/algorithms/backtracking/n-queens.hpp) · [Rust](ports/rust/algorithms/backtracking/n_queens.rs)
 
 Расставить N ферзей на доске N×N так, чтобы они не били друг друга. Ставим по одному ферзю в каждую строку. Занятые столбцы и обе диагонали хранятся в множествах: у клеток одной диагонали одинаковая разность `row − col`, у клеток одной антидиагонали одинаковая сумма `row + col`. Поэтому проверка клетки занимает O(1).
 
@@ -2059,7 +2064,7 @@ countNQueens(8); // 92
 
 Код: [src/algorithms/backtracking/sudoku.ts](src/algorithms/backtracking/sudoku.ts)
 
-Другие языки: [Python](ports/python/algorithms/backtracking/sudoku.py) · [Java](ports/java/src/algorithms/backtracking/Sudoku.java) · [JavaScript](ports/javascript/algorithms/backtracking/sudoku.js) · [C#](ports/csharp/algorithms/backtracking/sudoku.cs) · [PHP](ports/php/algorithms/backtracking/sudoku.php) · [Go](ports/go/algorithms/backtracking/sudoku.go) · [C++](ports/cpp/algorithms/backtracking/sudoku.hpp)
+Другие языки: [Python](ports/python/algorithms/backtracking/sudoku.py) · [Java](ports/java/src/algorithms/backtracking/Sudoku.java) · [JavaScript](ports/javascript/algorithms/backtracking/sudoku.js) · [C#](ports/csharp/algorithms/backtracking/sudoku.cs) · [PHP](ports/php/algorithms/backtracking/sudoku.php) · [Go](ports/go/algorithms/backtracking/sudoku.go) · [C++](ports/cpp/algorithms/backtracking/sudoku.hpp) · [Rust](ports/rust/algorithms/backtracking/sudoku.rs)
 
 Для каждой строки, столбца и квадрата 3×3 хранится множество уже использованных цифр, поэтому проверка кандидата занимает O(1). Пустые клетки заполняются по очереди: пробуем цифры от 1 до 9, рекурсивно идём дальше, а при тупике откатываемся. Некорректная исходная доска сразу даёт `null`. Входная доска не мутируется.
 
@@ -2073,7 +2078,7 @@ solveSudoku(board); // решённая доска 9×9 или null, где boar
 
 Код: [src/algorithms/backtracking/word-search.ts](src/algorithms/backtracking/word-search.ts)
 
-Другие языки: [Python](ports/python/algorithms/backtracking/word_search.py) · [Java](ports/java/src/algorithms/backtracking/WordSearch.java) · [JavaScript](ports/javascript/algorithms/backtracking/word-search.js) · [C#](ports/csharp/algorithms/backtracking/word-search.cs) · [PHP](ports/php/algorithms/backtracking/word-search.php) · [Go](ports/go/algorithms/backtracking/word-search.go) · [C++](ports/cpp/algorithms/backtracking/word-search.hpp)
+Другие языки: [Python](ports/python/algorithms/backtracking/word_search.py) · [Java](ports/java/src/algorithms/backtracking/WordSearch.java) · [JavaScript](ports/javascript/algorithms/backtracking/word-search.js) · [C#](ports/csharp/algorithms/backtracking/word-search.cs) · [PHP](ports/php/algorithms/backtracking/word-search.php) · [Go](ports/go/algorithms/backtracking/word-search.go) · [C++](ports/cpp/algorithms/backtracking/word-search.hpp) · [Rust](ports/rust/algorithms/backtracking/word_search.rs)
 
 Можно ли составить слово, переходя по соседним клеткам и не используя клетку дважды. DFS из каждой клетки, которая совпадает с первой буквой. Клетка помечается посещённой на время рекурсии и освобождается при откате.
 
@@ -2094,7 +2099,7 @@ wordSearch(['ABCE', 'SFCS', 'ADEE'], 'ABCB');   // false
 
 Код: [src/algorithms/greedy/activity-selection.ts](src/algorithms/greedy/activity-selection.ts)
 
-Другие языки: [Python](ports/python/algorithms/greedy/activity_selection.py) · [Java](ports/java/src/algorithms/greedy/ActivitySelection.java) · [JavaScript](ports/javascript/algorithms/greedy/activity-selection.js) · [C#](ports/csharp/algorithms/greedy/activity-selection.cs) · [PHP](ports/php/algorithms/greedy/activity-selection.php) · [Go](ports/go/algorithms/greedy/activity-selection.go) · [C++](ports/cpp/algorithms/greedy/activity-selection.hpp)
+Другие языки: [Python](ports/python/algorithms/greedy/activity_selection.py) · [Java](ports/java/src/algorithms/greedy/ActivitySelection.java) · [JavaScript](ports/javascript/algorithms/greedy/activity-selection.js) · [C#](ports/csharp/algorithms/greedy/activity-selection.cs) · [PHP](ports/php/algorithms/greedy/activity-selection.php) · [Go](ports/go/algorithms/greedy/activity-selection.go) · [C++](ports/cpp/algorithms/greedy/activity-selection.hpp) · [Rust](ports/rust/algorithms/greedy/activity_selection.rs)
 
 - **Выбор заявок** (`activitySelection`): максимум непересекающихся интервалов. Сортируем по времени окончания и берём каждый интервал, который начинается не раньше конца предыдущего выбранного. Интервал, который заканчивается раньше всех, оставляет больше всего места остальным, поэтому жадность здесь оптимальна. O(n log n).
 - **Слияние интервалов** (`mergeIntervals`): сортируем по началу и склеиваем перекрывающиеся.
@@ -2112,7 +2117,7 @@ minMeetingRooms([{ start: 0, end: 30 }, { start: 5, end: 10 }, { start: 15, end:
 
 Код: [src/algorithms/greedy/fractional-knapsack.ts](src/algorithms/greedy/fractional-knapsack.ts)
 
-Другие языки: [Python](ports/python/algorithms/greedy/fractional_knapsack.py) · [Java](ports/java/src/algorithms/greedy/FractionalKnapsack.java) · [JavaScript](ports/javascript/algorithms/greedy/fractional-knapsack.js) · [C#](ports/csharp/algorithms/greedy/fractional-knapsack.cs) · [PHP](ports/php/algorithms/greedy/fractional-knapsack.php) · [Go](ports/go/algorithms/greedy/fractional-knapsack.go) · [C++](ports/cpp/algorithms/greedy/fractional-knapsack.hpp)
+Другие языки: [Python](ports/python/algorithms/greedy/fractional_knapsack.py) · [Java](ports/java/src/algorithms/greedy/FractionalKnapsack.java) · [JavaScript](ports/javascript/algorithms/greedy/fractional-knapsack.js) · [C#](ports/csharp/algorithms/greedy/fractional-knapsack.cs) · [PHP](ports/php/algorithms/greedy/fractional-knapsack.php) · [Go](ports/go/algorithms/greedy/fractional-knapsack.go) · [C++](ports/cpp/algorithms/greedy/fractional-knapsack.hpp) · [Rust](ports/rust/algorithms/greedy/fractional_knapsack.rs)
 
 То же, что [рюкзак](#задача-о-рюкзаке), но предметы можно делить (песок, жидкости). Сортируем по удельной ценности (ценность / вес) и берём сначала самое ценное на килограмм, а последний предмет отрезаем по остатку места. Здесь жадность оптимальна, в отличие от 0/1-рюкзака. O(n log n).
 
@@ -2126,7 +2131,7 @@ fractionalKnapsack([{ weight: 10, value: 60 }, { weight: 20, value: 100 }, { wei
 
 Код: [src/algorithms/greedy/huffman.ts](src/algorithms/greedy/huffman.ts)
 
-Другие языки: [Python](ports/python/algorithms/greedy/huffman.py) · [Java](ports/java/src/algorithms/greedy/Huffman.java) · [JavaScript](ports/javascript/algorithms/greedy/huffman.js) · [C#](ports/csharp/algorithms/greedy/huffman.cs) · [PHP](ports/php/algorithms/greedy/huffman.php) · [Go](ports/go/algorithms/greedy/huffman.go) · [C++](ports/cpp/algorithms/greedy/huffman.hpp)
+Другие языки: [Python](ports/python/algorithms/greedy/huffman.py) · [Java](ports/java/src/algorithms/greedy/Huffman.java) · [JavaScript](ports/javascript/algorithms/greedy/huffman.js) · [C#](ports/csharp/algorithms/greedy/huffman.cs) · [PHP](ports/php/algorithms/greedy/huffman.php) · [Go](ports/go/algorithms/greedy/huffman.go) · [C++](ports/cpp/algorithms/greedy/huffman.hpp) · [Rust](ports/rust/algorithms/greedy/huffman.rs)
 
 Сжатие без потерь: частые символы получают короткие битовые коды, редкие — длинные. Код префиксный, то есть ни один код не является началом другого, поэтому битовую строку можно однозначно раскодировать без разделителей.
 
@@ -2149,7 +2154,7 @@ huffmanDecode(encoded, codes);                           // 'abracadabra'
 
 Код: [src/algorithms/greedy/jump-game.ts](src/algorithms/greedy/jump-game.ts)
 
-Другие языки: [Python](ports/python/algorithms/greedy/jump_game.py) · [Java](ports/java/src/algorithms/greedy/JumpGame.java) · [JavaScript](ports/javascript/algorithms/greedy/jump-game.js) · [C#](ports/csharp/algorithms/greedy/jump-game.cs) · [PHP](ports/php/algorithms/greedy/jump-game.php) · [Go](ports/go/algorithms/greedy/jump-game.go) · [C++](ports/cpp/algorithms/greedy/jump-game.hpp)
+Другие языки: [Python](ports/python/algorithms/greedy/jump_game.py) · [Java](ports/java/src/algorithms/greedy/JumpGame.java) · [JavaScript](ports/javascript/algorithms/greedy/jump-game.js) · [C#](ports/csharp/algorithms/greedy/jump-game.cs) · [PHP](ports/php/algorithms/greedy/jump-game.php) · [Go](ports/go/algorithms/greedy/jump-game.go) · [C++](ports/cpp/algorithms/greedy/jump-game.hpp) · [Rust](ports/rust/algorithms/greedy/jump_game.rs)
 
 - `canReachEnd`: в каждой клетке записано, на сколько максимум можно прыгнуть. Поддерживаем самую дальнюю достижимую позицию. Если текущий индекс оказался дальше неё, конец недостижим. O(n).
 - `minJumps`: минимум прыжков. Это BFS по «уровням»: все позиции, достижимые за k прыжков, образуют отрезок, а следующий уровень заканчивается на самой дальней позиции, достижимой из текущего. O(n).
@@ -2171,7 +2176,7 @@ greedyChange(289, [1, 5, 10, 25, 100]); // [100, 100, 25, 25, 25, 10, 1, 1, 1, 1
 
 Код: [src/algorithms/techniques/two-pointers.ts](src/algorithms/techniques/two-pointers.ts)
 
-Другие языки: [Python](ports/python/algorithms/techniques/two_pointers.py) · [Java](ports/java/src/algorithms/techniques/TwoPointers.java) · [JavaScript](ports/javascript/algorithms/techniques/two-pointers.js) · [C#](ports/csharp/algorithms/techniques/two-pointers.cs) · [PHP](ports/php/algorithms/techniques/two-pointers.php) · [Go](ports/go/algorithms/techniques/two-pointers.go) · [C++](ports/cpp/algorithms/techniques/two-pointers.hpp)
+Другие языки: [Python](ports/python/algorithms/techniques/two_pointers.py) · [Java](ports/java/src/algorithms/techniques/TwoPointers.java) · [JavaScript](ports/javascript/algorithms/techniques/two-pointers.js) · [C#](ports/csharp/algorithms/techniques/two-pointers.cs) · [PHP](ports/php/algorithms/techniques/two-pointers.php) · [Go](ports/go/algorithms/techniques/two-pointers.go) · [C++](ports/cpp/algorithms/techniques/two-pointers.hpp) · [Rust](ports/rust/algorithms/techniques/two_pointers.rs)
 
 Два индекса двигаются по массиву навстречу друг другу или в одну сторону и превращают перебор пар за O(n²) в один проход за O(n). Чаще всего техника применяется к отсортированным данным.
 
@@ -2197,7 +2202,7 @@ dutchNationalFlag([2, 0, 2, 1, 1, 0], 1);            // [0, 0, 1, 1, 2, 2]
 
 Код: [src/algorithms/techniques/sliding-window.ts](src/algorithms/techniques/sliding-window.ts)
 
-Другие языки: [Python](ports/python/algorithms/techniques/sliding_window.py) · [Java](ports/java/src/algorithms/techniques/SlidingWindow.java) · [JavaScript](ports/javascript/algorithms/techniques/sliding-window.js) · [C#](ports/csharp/algorithms/techniques/sliding-window.cs) · [PHP](ports/php/algorithms/techniques/sliding-window.php) · [Go](ports/go/algorithms/techniques/sliding-window.go) · [C++](ports/cpp/algorithms/techniques/sliding-window.hpp)
+Другие языки: [Python](ports/python/algorithms/techniques/sliding_window.py) · [Java](ports/java/src/algorithms/techniques/SlidingWindow.java) · [JavaScript](ports/javascript/algorithms/techniques/sliding-window.js) · [C#](ports/csharp/algorithms/techniques/sliding-window.cs) · [PHP](ports/php/algorithms/techniques/sliding-window.php) · [Go](ports/go/algorithms/techniques/sliding-window.go) · [C++](ports/cpp/algorithms/techniques/sliding-window.hpp) · [Rust](ports/rust/algorithms/techniques/sliding_window.rs)
 
 Окно [left, right] двигается по массиву, и его состояние обновляется инкрементально: добавляем вошедший элемент и убираем вышедший, а не пересчитываем всё окно заново.
 
@@ -2219,7 +2224,7 @@ minWindowSubstring('ADOBECODEBANC', 'ABC');          // 'BANC'
 
 Код: [src/algorithms/techniques/prefix-sums.ts](src/algorithms/techniques/prefix-sums.ts)
 
-Другие языки: [Python](ports/python/algorithms/techniques/prefix_sums.py) · [Java](ports/java/src/algorithms/techniques/PrefixSums.java) · [JavaScript](ports/javascript/algorithms/techniques/prefix-sums.js) · [C#](ports/csharp/algorithms/techniques/prefix-sums.cs) · [PHP](ports/php/algorithms/techniques/prefix-sums.php) · [Go](ports/go/algorithms/techniques/prefix-sums.go) · [C++](ports/cpp/algorithms/techniques/prefix-sums.hpp)
+Другие языки: [Python](ports/python/algorithms/techniques/prefix_sums.py) · [Java](ports/java/src/algorithms/techniques/PrefixSums.java) · [JavaScript](ports/javascript/algorithms/techniques/prefix-sums.js) · [C#](ports/csharp/algorithms/techniques/prefix-sums.cs) · [PHP](ports/php/algorithms/techniques/prefix-sums.php) · [Go](ports/go/algorithms/techniques/prefix-sums.go) · [C++](ports/cpp/algorithms/techniques/prefix-sums.hpp) · [Rust](ports/rust/algorithms/techniques/prefix_sums.rs)
 
 `prefix[i]` — сумма первых i элементов. Тогда сумма на отрезке [l, r] равна `prefix[r + 1] − prefix[l]`: O(n) на предподсчёт и O(1) на запрос.
 
@@ -2242,7 +2247,7 @@ majorityElement([2, 2, 1, 1, 1, 2, 2]);                              // 2
 
 Код: [src/algorithms/randomized/shuffle.ts](src/algorithms/randomized/shuffle.ts) · Тесты: [tests/algorithms/misc.test.ts](tests/algorithms/misc.test.ts)
 
-Другие языки: [Python](ports/python/algorithms/randomized/shuffle.py) · [Java](ports/java/src/algorithms/randomized/Shuffle.java) · [JavaScript](ports/javascript/algorithms/randomized/shuffle.js) · [C#](ports/csharp/algorithms/randomized/shuffle.cs) · [PHP](ports/php/algorithms/randomized/shuffle.php) · [Go](ports/go/algorithms/randomized/shuffle.go) · [C++](ports/cpp/algorithms/randomized/shuffle.hpp)
+Другие языки: [Python](ports/python/algorithms/randomized/shuffle.py) · [Java](ports/java/src/algorithms/randomized/Shuffle.java) · [JavaScript](ports/javascript/algorithms/randomized/shuffle.js) · [C#](ports/csharp/algorithms/randomized/shuffle.cs) · [PHP](ports/php/algorithms/randomized/shuffle.php) · [Go](ports/go/algorithms/randomized/shuffle.go) · [C++](ports/cpp/algorithms/randomized/shuffle.hpp) · [Rust](ports/rust/algorithms/randomized/shuffle.rs)
 
 - **Перемешивание Фишера-Йетса** (`fisherYatesShuffle`): идём с конца массива и меняем элемент i со случайным элементом из диапазона [0, i]. Каждая из n! перестановок получается равновероятно, O(n). Популярный вариант `sort(() => Math.random() - 0.5)` даёт смещённое распределение, так делать нельзя.
 - **Reservoir sampling** (`reservoirSample`): выбор k случайных элементов из потока неизвестной длины за один проход и O(k) памяти. Первые k элементов кладутся в резервуар, а i-й элемент заменяет случайный элемент резервуара с вероятностью k/i. В итоге каждый элемент потока попадает в выборку с вероятностью k/n.
@@ -2264,7 +2269,7 @@ monteCarloPi(100_000, random);                                          // ≈ 3
 
 Код: [src/algorithms/bit-manipulation/bits.ts](src/algorithms/bit-manipulation/bits.ts) · Тесты: [tests/algorithms/misc.test.ts](tests/algorithms/misc.test.ts)
 
-Другие языки: [Python](ports/python/algorithms/bit_manipulation/bits.py) · [Java](ports/java/src/algorithms/bit-manipulation/Bits.java) · [JavaScript](ports/javascript/algorithms/bit-manipulation/bits.js) · [C#](ports/csharp/algorithms/bit-manipulation/bits.cs) · [PHP](ports/php/algorithms/bit-manipulation/bits.php) · [Go](ports/go/algorithms/bit-manipulation/bits.go) · [C++](ports/cpp/algorithms/bit-manipulation/bits.hpp)
+Другие языки: [Python](ports/python/algorithms/bit_manipulation/bits.py) · [Java](ports/java/src/algorithms/bit-manipulation/Bits.java) · [JavaScript](ports/javascript/algorithms/bit-manipulation/bits.js) · [C#](ports/csharp/algorithms/bit-manipulation/bits.cs) · [PHP](ports/php/algorithms/bit-manipulation/bits.php) · [Go](ports/go/algorithms/bit-manipulation/bits.go) · [C++](ports/cpp/algorithms/bit-manipulation/bits.hpp) · [Rust](ports/rust/algorithms/bit_manipulation/bits.rs)
 
 Работа с числами на уровне отдельных битов. Такие операции выполняются за один такт процессора и часто заменяют циклы и условия.
 
@@ -2296,7 +2301,7 @@ bits.subsetsByMask(['a', 'b']);     // [[], ['a'], ['b'], ['a', 'b']]
 
 Код: [src/algorithms/geometry/geometry.ts](src/algorithms/geometry/geometry.ts) · Тесты: [tests/algorithms/misc.test.ts](tests/algorithms/misc.test.ts)
 
-Другие языки: [Python](ports/python/algorithms/geometry/geometry.py) · [Java](ports/java/src/algorithms/geometry/Geometry.java) · [JavaScript](ports/javascript/algorithms/geometry/geometry.js) · [C#](ports/csharp/algorithms/geometry/geometry.cs) · [PHP](ports/php/algorithms/geometry/geometry.php) · [Go](ports/go/algorithms/geometry/geometry.go) · [C++](ports/cpp/algorithms/geometry/geometry.hpp)
+Другие языки: [Python](ports/python/algorithms/geometry/geometry.py) · [Java](ports/java/src/algorithms/geometry/Geometry.java) · [JavaScript](ports/javascript/algorithms/geometry/geometry.js) · [C#](ports/csharp/algorithms/geometry/geometry.cs) · [PHP](ports/php/algorithms/geometry/geometry.php) · [Go](ports/go/algorithms/geometry/geometry.go) · [C++](ports/cpp/algorithms/geometry/geometry.hpp) · [Rust](ports/rust/algorithms/geometry/geometry.rs)
 
 Почти всё здесь построено на **векторном произведении** `cross(o, a, b)`. Его знак показывает, где лежит точка b относительно луча o→a: положительный — слева (поворот против часовой стрелки), отрицательный — справа, ноль — на одной прямой.
 
@@ -2333,7 +2338,7 @@ closestPair(points);                  // { a, b, distance }
 
 Код: [src/patterns/creational/singleton.ts](src/patterns/creational/singleton.ts)
 
-Другие языки: [Python](ports/python/patterns/creational/singleton.py) · [Java](ports/java/src/patterns/creational/Singleton.java) · [JavaScript](ports/javascript/patterns/creational/singleton.js) · [C#](ports/csharp/patterns/creational/singleton.cs) · [PHP](ports/php/patterns/creational/singleton.php) · [Go](ports/go/patterns/creational/singleton.go) · [C++](ports/cpp/patterns/creational/singleton.hpp)
+Другие языки: [Python](ports/python/patterns/creational/singleton.py) · [Java](ports/java/src/patterns/creational/Singleton.java) · [JavaScript](ports/javascript/patterns/creational/singleton.js) · [C#](ports/csharp/patterns/creational/singleton.cs) · [PHP](ports/php/patterns/creational/singleton.php) · [Go](ports/go/patterns/creational/singleton.go) · [C++](ports/cpp/patterns/creational/singleton.hpp) · [Rust](ports/rust/patterns/creational/singleton.rs)
 
 **Singleton**. Проблема: нужен ровно один экземпляр на всё приложение (конфигурация, пул соединений) и глобальная точка доступа к нему.
 
@@ -2355,7 +2360,7 @@ getConnection() === getConnection(); // true, объект создаётся о
 
 Код: [src/patterns/creational/factory-method.ts](src/patterns/creational/factory-method.ts)
 
-Другие языки: [Python](ports/python/patterns/creational/factory_method.py) · [Java](ports/java/src/patterns/creational/FactoryMethod.java) · [JavaScript](ports/javascript/patterns/creational/factory-method.js) · [C#](ports/csharp/patterns/creational/factory-method.cs) · [PHP](ports/php/patterns/creational/factory-method.php) · [Go](ports/go/patterns/creational/factory-method.go) · [C++](ports/cpp/patterns/creational/factory-method.hpp)
+Другие языки: [Python](ports/python/patterns/creational/factory_method.py) · [Java](ports/java/src/patterns/creational/FactoryMethod.java) · [JavaScript](ports/javascript/patterns/creational/factory-method.js) · [C#](ports/csharp/patterns/creational/factory-method.cs) · [PHP](ports/php/patterns/creational/factory-method.php) · [Go](ports/go/patterns/creational/factory-method.go) · [C++](ports/cpp/patterns/creational/factory-method.hpp) · [Rust](ports/rust/patterns/creational/factory_method.rs)
 
 **Factory Method**. Проблема: базовый код знает, что делать с объектом, но не должен знать, какой именно класс создавать.
 
@@ -2373,7 +2378,7 @@ createTransport('ship').kind;               // 'ship'
 
 Код: [src/patterns/creational/abstract-factory.ts](src/patterns/creational/abstract-factory.ts)
 
-Другие языки: [Python](ports/python/patterns/creational/abstract_factory.py) · [Java](ports/java/src/patterns/creational/AbstractFactory.java) · [JavaScript](ports/javascript/patterns/creational/abstract-factory.js) · [C#](ports/csharp/patterns/creational/abstract-factory.cs) · [PHP](ports/php/patterns/creational/abstract-factory.php) · [Go](ports/go/patterns/creational/abstract-factory.go) · [C++](ports/cpp/patterns/creational/abstract-factory.hpp)
+Другие языки: [Python](ports/python/patterns/creational/abstract_factory.py) · [Java](ports/java/src/patterns/creational/AbstractFactory.java) · [JavaScript](ports/javascript/patterns/creational/abstract-factory.js) · [C#](ports/csharp/patterns/creational/abstract-factory.cs) · [PHP](ports/php/patterns/creational/abstract-factory.php) · [Go](ports/go/patterns/creational/abstract-factory.go) · [C++](ports/cpp/patterns/creational/abstract-factory.hpp) · [Rust](ports/rust/patterns/creational/abstract_factory.rs)
 
 **Abstract Factory**. Проблема: нужно создавать семейства связанных объектов, которые должны сочетаться между собой. Например, светлая кнопка не должна оказаться рядом с тёмным чекбоксом.
 
@@ -2389,7 +2394,7 @@ renderSettingsForm(new DarkThemeFactory()); // ['[dark x]', '[dark button: Save]
 
 Код: [src/patterns/creational/builder.ts](src/patterns/creational/builder.ts)
 
-Другие языки: [Python](ports/python/patterns/creational/builder.py) · [Java](ports/java/src/patterns/creational/Builder.java) · [JavaScript](ports/javascript/patterns/creational/builder.js) · [C#](ports/csharp/patterns/creational/builder.cs) · [PHP](ports/php/patterns/creational/builder.php) · [Go](ports/go/patterns/creational/builder.go) · [C++](ports/cpp/patterns/creational/builder.hpp)
+Другие языки: [Python](ports/python/patterns/creational/builder.py) · [Java](ports/java/src/patterns/creational/Builder.java) · [JavaScript](ports/javascript/patterns/creational/builder.js) · [C#](ports/csharp/patterns/creational/builder.cs) · [PHP](ports/php/patterns/creational/builder.php) · [Go](ports/go/patterns/creational/builder.go) · [C++](ports/cpp/patterns/creational/builder.hpp) · [Rust](ports/rust/patterns/creational/builder.rs)
 
 **Builder**. Проблема: у объекта много необязательных параметров, и конструктор с десятью аргументами нечитаем.
 
@@ -2411,7 +2416,7 @@ const request = HttpRequestBuilder.post('https://api.example.com/users')
 
 Код: [src/patterns/creational/prototype.ts](src/patterns/creational/prototype.ts)
 
-Другие языки: [Python](ports/python/patterns/creational/prototype.py) · [Java](ports/java/src/patterns/creational/Prototype.java) · [JavaScript](ports/javascript/patterns/creational/prototype.js) · [C#](ports/csharp/patterns/creational/prototype.cs) · [PHP](ports/php/patterns/creational/prototype.php) · [Go](ports/go/patterns/creational/prototype.go) · [C++](ports/cpp/patterns/creational/prototype.hpp)
+Другие языки: [Python](ports/python/patterns/creational/prototype.py) · [Java](ports/java/src/patterns/creational/Prototype.java) · [JavaScript](ports/javascript/patterns/creational/prototype.js) · [C#](ports/csharp/patterns/creational/prototype.cs) · [PHP](ports/php/patterns/creational/prototype.php) · [Go](ports/go/patterns/creational/prototype.go) · [C++](ports/cpp/patterns/creational/prototype.hpp) · [Rust](ports/rust/patterns/creational/prototype.rs)
 
 **Prototype**. Проблема: нужно создать копию объекта, не зная его конкретного класса, или создание с нуля дорогое.
 
@@ -2431,7 +2436,7 @@ const copy = new Circle(0, 0, 'red', 2, ['round']).clone();
 
 Код: [src/patterns/creational/object-pool.ts](src/patterns/creational/object-pool.ts)
 
-Другие языки: [Python](ports/python/patterns/creational/object_pool.py) · [Java](ports/java/src/patterns/creational/ObjectPool.java) · [JavaScript](ports/javascript/patterns/creational/object-pool.js) · [C#](ports/csharp/patterns/creational/object-pool.cs) · [PHP](ports/php/patterns/creational/object-pool.php) · [Go](ports/go/patterns/creational/object-pool.go) · [C++](ports/cpp/patterns/creational/object-pool.hpp)
+Другие языки: [Python](ports/python/patterns/creational/object_pool.py) · [Java](ports/java/src/patterns/creational/ObjectPool.java) · [JavaScript](ports/javascript/patterns/creational/object-pool.js) · [C#](ports/csharp/patterns/creational/object-pool.cs) · [PHP](ports/php/patterns/creational/object-pool.php) · [Go](ports/go/patterns/creational/object-pool.go) · [C++](ports/cpp/patterns/creational/object-pool.hpp) · [Rust](ports/rust/patterns/creational/object_pool.rs)
 
 **Object Pool**. Проблема: объекты дорого создавать (соединения с БД, большие буферы, потоки), а нужны они ненадолго.
 
@@ -2454,7 +2459,7 @@ const sum = pool.use((buffer) => buffer.reduce((a, b) => a + b, 0));
 
 Код: [src/patterns/structural/adapter.ts](src/patterns/structural/adapter.ts)
 
-Другие языки: [Python](ports/python/patterns/structural/adapter.py) · [Java](ports/java/src/patterns/structural/Adapter.java) · [JavaScript](ports/javascript/patterns/structural/adapter.js) · [C#](ports/csharp/patterns/structural/adapter.cs) · [PHP](ports/php/patterns/structural/adapter.php) · [Go](ports/go/patterns/structural/adapter.go) · [C++](ports/cpp/patterns/structural/adapter.hpp)
+Другие языки: [Python](ports/python/patterns/structural/adapter.py) · [Java](ports/java/src/patterns/structural/Adapter.java) · [JavaScript](ports/javascript/patterns/structural/adapter.js) · [C#](ports/csharp/patterns/structural/adapter.cs) · [PHP](ports/php/patterns/structural/adapter.php) · [Go](ports/go/patterns/structural/adapter.go) · [C++](ports/cpp/patterns/structural/adapter.hpp) · [Rust](ports/rust/patterns/structural/adapter.rs)
 
 **Adapter**. Проблема: есть полезный класс (старый код, сторонняя библиотека), но его интерфейс не совпадает с ожидаемым.
 
@@ -2474,7 +2479,7 @@ await promisify(legacyDivide)(10, 2); // 5
 
 Код: [src/patterns/structural/bridge.ts](src/patterns/structural/bridge.ts)
 
-Другие языки: [Python](ports/python/patterns/structural/bridge.py) · [Java](ports/java/src/patterns/structural/Bridge.java) · [JavaScript](ports/javascript/patterns/structural/bridge.js) · [C#](ports/csharp/patterns/structural/bridge.cs) · [PHP](ports/php/patterns/structural/bridge.php) · [Go](ports/go/patterns/structural/bridge.go) · [C++](ports/cpp/patterns/structural/bridge.hpp)
+Другие языки: [Python](ports/python/patterns/structural/bridge.py) · [Java](ports/java/src/patterns/structural/Bridge.java) · [JavaScript](ports/javascript/patterns/structural/bridge.js) · [C#](ports/csharp/patterns/structural/bridge.cs) · [PHP](ports/php/patterns/structural/bridge.php) · [Go](ports/go/patterns/structural/bridge.go) · [C++](ports/cpp/patterns/structural/bridge.hpp) · [Rust](ports/rust/patterns/structural/bridge.rs)
 
 **Bridge**. Проблема: две независимые оси изменений (виды пультов и виды устройств) при наследовании дают взрыв классов: `TvBasicRemote`, `TvAdvancedRemote`, `RadioBasicRemote`…
 
@@ -2492,7 +2497,7 @@ new AdvancedRemoteControl(new Radio()).mute();
 
 Код: [src/patterns/structural/composite.ts](src/patterns/structural/composite.ts)
 
-Другие языки: [Python](ports/python/patterns/structural/composite.py) · [Java](ports/java/src/patterns/structural/Composite.java) · [JavaScript](ports/javascript/patterns/structural/composite.js) · [C#](ports/csharp/patterns/structural/composite.cs) · [PHP](ports/php/patterns/structural/composite.php) · [Go](ports/go/patterns/structural/composite.go) · [C++](ports/cpp/patterns/structural/composite.hpp)
+Другие языки: [Python](ports/python/patterns/structural/composite.py) · [Java](ports/java/src/patterns/structural/Composite.java) · [JavaScript](ports/javascript/patterns/structural/composite.js) · [C#](ports/csharp/patterns/structural/composite.cs) · [PHP](ports/php/patterns/structural/composite.php) · [Go](ports/go/patterns/structural/composite.go) · [C++](ports/cpp/patterns/structural/composite.hpp) · [Rust](ports/rust/patterns/structural/composite.rs)
 
 **Composite**. Проблема: древовидная структура (файлы и папки, элементы UI, меню), где с отдельным элементом и с группой нужно работать одинаково.
 
@@ -2513,7 +2518,7 @@ root.render(); // ['root/ (350)', '  a.txt (100)', '  src/ (250)', '    index.ts
 
 Код: [src/patterns/structural/decorator.ts](src/patterns/structural/decorator.ts)
 
-Другие языки: [Python](ports/python/patterns/structural/decorator.py) · [Java](ports/java/src/patterns/structural/Decorator.java) · [JavaScript](ports/javascript/patterns/structural/decorator.js) · [C#](ports/csharp/patterns/structural/decorator.cs) · [PHP](ports/php/patterns/structural/decorator.php) · [Go](ports/go/patterns/structural/decorator.go) · [C++](ports/cpp/patterns/structural/decorator.hpp)
+Другие языки: [Python](ports/python/patterns/structural/decorator.py) · [Java](ports/java/src/patterns/structural/Decorator.java) · [JavaScript](ports/javascript/patterns/structural/decorator.js) · [C#](ports/csharp/patterns/structural/decorator.cs) · [PHP](ports/php/patterns/structural/decorator.php) · [Go](ports/go/patterns/structural/decorator.go) · [C++](ports/cpp/patterns/structural/decorator.hpp) · [Rust](ports/rust/patterns/structural/decorator.rs)
 
 **Decorator**. Проблема: нужно добавлять объекту поведение в разных комбинациях (email + SMS, email + Slack, всё сразу), а наследование под каждую комбинацию даёт взрыв классов.
 
@@ -2533,7 +2538,7 @@ add(2, 3); // логирует 'add(2, 3)' и 'add -> 5'
 
 Код: [src/patterns/structural/facade.ts](src/patterns/structural/facade.ts)
 
-Другие языки: [Python](ports/python/patterns/structural/facade.py) · [Java](ports/java/src/patterns/structural/Facade.java) · [JavaScript](ports/javascript/patterns/structural/facade.js) · [C#](ports/csharp/patterns/structural/facade.cs) · [PHP](ports/php/patterns/structural/facade.php) · [Go](ports/go/patterns/structural/facade.go) · [C++](ports/cpp/patterns/structural/facade.hpp)
+Другие языки: [Python](ports/python/patterns/structural/facade.py) · [Java](ports/java/src/patterns/structural/Facade.java) · [JavaScript](ports/javascript/patterns/structural/facade.js) · [C#](ports/csharp/patterns/structural/facade.cs) · [PHP](ports/php/patterns/structural/facade.php) · [Go](ports/go/patterns/structural/facade.go) · [C++](ports/cpp/patterns/structural/facade.hpp) · [Rust](ports/rust/patterns/structural/facade.rs)
 
 **Facade**. Проблема: подсистема из многих классов, которые нужно вызывать в правильном порядке (кодеки, чтение битрейта, микширование аудио).
 
@@ -2549,7 +2554,7 @@ new VideoConverter().convert('movie.ogg', 'mp4'); // 'buffer(movie.ogg, ogg-code
 
 Код: [src/patterns/structural/flyweight.ts](src/patterns/structural/flyweight.ts)
 
-Другие языки: [Python](ports/python/patterns/structural/flyweight.py) · [Java](ports/java/src/patterns/structural/Flyweight.java) · [JavaScript](ports/javascript/patterns/structural/flyweight.js) · [C#](ports/csharp/patterns/structural/flyweight.cs) · [PHP](ports/php/patterns/structural/flyweight.php) · [Go](ports/go/patterns/structural/flyweight.go) · [C++](ports/cpp/patterns/structural/flyweight.hpp)
+Другие языки: [Python](ports/python/patterns/structural/flyweight.py) · [Java](ports/java/src/patterns/structural/Flyweight.java) · [JavaScript](ports/javascript/patterns/structural/flyweight.js) · [C#](ports/csharp/patterns/structural/flyweight.cs) · [PHP](ports/php/patterns/structural/flyweight.php) · [Go](ports/go/patterns/structural/flyweight.go) · [C++](ports/cpp/patterns/structural/flyweight.hpp) · [Rust](ports/rust/patterns/structural/flyweight.rs)
 
 **Flyweight**. Проблема: миллионы похожих объектов (деревья в игре, символы в редакторе) съедают память, потому что каждый хранит одинаковые тяжёлые данные.
 
@@ -2568,7 +2573,7 @@ forest.typeCount; // 2
 
 Код: [src/patterns/structural/proxy.ts](src/patterns/structural/proxy.ts)
 
-Другие языки: [Python](ports/python/patterns/structural/proxy.py) · [Java](ports/java/src/patterns/structural/Proxy.java) · [JavaScript](ports/javascript/patterns/structural/proxy.js) · [C#](ports/csharp/patterns/structural/proxy.cs) · [PHP](ports/php/patterns/structural/proxy.php) · [Go](ports/go/patterns/structural/proxy.go) · [C++](ports/cpp/patterns/structural/proxy.hpp)
+Другие языки: [Python](ports/python/patterns/structural/proxy.py) · [Java](ports/java/src/patterns/structural/Proxy.java) · [JavaScript](ports/javascript/patterns/structural/proxy.js) · [C#](ports/csharp/patterns/structural/proxy.cs) · [PHP](ports/php/patterns/structural/proxy.php) · [Go](ports/go/patterns/structural/proxy.go) · [C++](ports/cpp/patterns/structural/proxy.hpp) · [Rust](ports/rust/patterns/structural/proxy.rs)
 
 **Proxy**. Проблема: нужно контролировать доступ к объекту (кеширование, проверка прав, ленивая инициализация, валидация), не меняя сам объект и его клиентов.
 
@@ -2601,7 +2606,7 @@ user.age = -1; // TypeError
 
 Код: [src/patterns/behavioral/chain-of-responsibility.ts](src/patterns/behavioral/chain-of-responsibility.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/chain_of_responsibility.py) · [Java](ports/java/src/patterns/behavioral/ChainOfResponsibility.java) · [JavaScript](ports/javascript/patterns/behavioral/chain-of-responsibility.js) · [C#](ports/csharp/patterns/behavioral/chain-of-responsibility.cs) · [PHP](ports/php/patterns/behavioral/chain-of-responsibility.php) · [Go](ports/go/patterns/behavioral/chain-of-responsibility.go) · [C++](ports/cpp/patterns/behavioral/chain-of-responsibility.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/chain_of_responsibility.py) · [Java](ports/java/src/patterns/behavioral/ChainOfResponsibility.java) · [JavaScript](ports/javascript/patterns/behavioral/chain-of-responsibility.js) · [C#](ports/csharp/patterns/behavioral/chain-of-responsibility.cs) · [PHP](ports/php/patterns/behavioral/chain-of-responsibility.php) · [Go](ports/go/patterns/behavioral/chain-of-responsibility.go) · [C++](ports/cpp/patterns/behavioral/chain-of-responsibility.hpp) · [Rust](ports/rust/patterns/behavioral/chain_of_responsibility.rs)
 
 **Chain of Responsibility**. Проблема: запрос может обработать один из нескольких обработчиков, и отправитель не должен знать, какой именно.
 
@@ -2620,7 +2625,7 @@ support.handle({ topic: 'outage', severity: 3 });   // 'Engineer fixed outage'
 
 Код: [src/patterns/behavioral/command.ts](src/patterns/behavioral/command.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/command.py) · [Java](ports/java/src/patterns/behavioral/Command.java) · [JavaScript](ports/javascript/patterns/behavioral/command.js) · [C#](ports/csharp/patterns/behavioral/command.cs) · [PHP](ports/php/patterns/behavioral/command.php) · [Go](ports/go/patterns/behavioral/command.go) · [C++](ports/cpp/patterns/behavioral/command.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/command.py) · [Java](ports/java/src/patterns/behavioral/Command.java) · [JavaScript](ports/javascript/patterns/behavioral/command.js) · [C#](ports/csharp/patterns/behavioral/command.cs) · [PHP](ports/php/patterns/behavioral/command.php) · [Go](ports/go/patterns/behavioral/command.go) · [C++](ports/cpp/patterns/behavioral/command.hpp) · [Rust](ports/rust/patterns/behavioral/command.rs)
 
 **Command**. Проблема: действия нужно отменять и повторять, складывать в очередь, логировать или объединять в макросы.
 
@@ -2641,7 +2646,7 @@ history.redo();                            // 'world'
 
 Код: [src/patterns/behavioral/interpreter.ts](src/patterns/behavioral/interpreter.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/interpreter.py) · [Java](ports/java/src/patterns/behavioral/Interpreter.java) · [JavaScript](ports/javascript/patterns/behavioral/interpreter.js) · [C#](ports/csharp/patterns/behavioral/interpreter.cs) · [PHP](ports/php/patterns/behavioral/interpreter.php) · [Go](ports/go/patterns/behavioral/interpreter.go) · [C++](ports/cpp/patterns/behavioral/interpreter.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/interpreter.py) · [Java](ports/java/src/patterns/behavioral/Interpreter.java) · [JavaScript](ports/javascript/patterns/behavioral/interpreter.js) · [C#](ports/csharp/patterns/behavioral/interpreter.cs) · [PHP](ports/php/patterns/behavioral/interpreter.php) · [Go](ports/go/patterns/behavioral/interpreter.go) · [C++](ports/cpp/patterns/behavioral/interpreter.hpp) · [Rust](ports/rust/patterns/behavioral/interpreter.rs)
 
 **Interpreter**. Проблема: нужно вычислять выражения простого языка (формулы, правила, фильтры, запросы).
 
@@ -2659,7 +2664,7 @@ expr.toString();                 // '((2 * (x + 3)) - (y / 2))'
 
 Код: [src/patterns/behavioral/iterator.ts](src/patterns/behavioral/iterator.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/iterator.py) · [Java](ports/java/src/patterns/behavioral/Iterator.java) · [JavaScript](ports/javascript/patterns/behavioral/iterator.js) · [C#](ports/csharp/patterns/behavioral/iterator.cs) · [PHP](ports/php/patterns/behavioral/iterator.php) · [Go](ports/go/patterns/behavioral/iterator.go) · [C++](ports/cpp/patterns/behavioral/iterator.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/iterator.py) · [Java](ports/java/src/patterns/behavioral/Iterator.java) · [JavaScript](ports/javascript/patterns/behavioral/iterator.js) · [C#](ports/csharp/patterns/behavioral/iterator.cs) · [PHP](ports/php/patterns/behavioral/iterator.php) · [Go](ports/go/patterns/behavioral/iterator.go) · [C++](ports/cpp/patterns/behavioral/iterator.hpp) · [Rust](ports/rust/patterns/behavioral/iterator.rs)
 
 **Iterator**. Проблема: коллекцию нужно обходить разными способами, не раскрывая её внутреннего устройства.
 
@@ -2684,7 +2689,7 @@ function* naturals() {
 
 Код: [src/patterns/behavioral/mediator.ts](src/patterns/behavioral/mediator.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/mediator.py) · [Java](ports/java/src/patterns/behavioral/Mediator.java) · [JavaScript](ports/javascript/patterns/behavioral/mediator.js) · [C#](ports/csharp/patterns/behavioral/mediator.cs) · [PHP](ports/php/patterns/behavioral/mediator.php) · [Go](ports/go/patterns/behavioral/mediator.go) · [C++](ports/cpp/patterns/behavioral/mediator.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/mediator.py) · [Java](ports/java/src/patterns/behavioral/Mediator.java) · [JavaScript](ports/javascript/patterns/behavioral/mediator.js) · [C#](ports/csharp/patterns/behavioral/mediator.cs) · [PHP](ports/php/patterns/behavioral/mediator.php) · [Go](ports/go/patterns/behavioral/mediator.go) · [C++](ports/cpp/patterns/behavioral/mediator.hpp) · [Rust](ports/rust/patterns/behavioral/mediator.rs)
 
 **Mediator**. Проблема: много объектов общаются друг с другом напрямую, и связи «каждый с каждым» превращаются в паутину.
 
@@ -2706,7 +2711,7 @@ bob.inbox; // ['alice: hi all']
 
 Код: [src/patterns/behavioral/memento.ts](src/patterns/behavioral/memento.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/memento.py) · [Java](ports/java/src/patterns/behavioral/Memento.java) · [JavaScript](ports/javascript/patterns/behavioral/memento.js) · [C#](ports/csharp/patterns/behavioral/memento.cs) · [PHP](ports/php/patterns/behavioral/memento.php) · [Go](ports/go/patterns/behavioral/memento.go) · [C++](ports/cpp/patterns/behavioral/memento.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/memento.py) · [Java](ports/java/src/patterns/behavioral/Memento.java) · [JavaScript](ports/javascript/patterns/behavioral/memento.js) · [C#](ports/csharp/patterns/behavioral/memento.cs) · [PHP](ports/php/patterns/behavioral/memento.php) · [Go](ports/go/patterns/behavioral/memento.go) · [C++](ports/cpp/patterns/behavioral/memento.hpp) · [Rust](ports/rust/patterns/behavioral/memento.rs)
 
 **Memento**. Проблема: нужно сохранять и восстанавливать состояние объекта (undo, черновики), не раскрывая его приватные поля.
 
@@ -2730,7 +2735,7 @@ editor.text; // 'Hello'
 
 Код: [src/patterns/behavioral/observer.ts](src/patterns/behavioral/observer.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/observer.py) · [Java](ports/java/src/patterns/behavioral/Observer.java) · [JavaScript](ports/javascript/patterns/behavioral/observer.js) · [C#](ports/csharp/patterns/behavioral/observer.cs) · [PHP](ports/php/patterns/behavioral/observer.php) · [Go](ports/go/patterns/behavioral/observer.go) · [C++](ports/cpp/patterns/behavioral/observer.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/observer.py) · [Java](ports/java/src/patterns/behavioral/Observer.java) · [JavaScript](ports/javascript/patterns/behavioral/observer.js) · [C#](ports/csharp/patterns/behavioral/observer.cs) · [PHP](ports/php/patterns/behavioral/observer.php) · [Go](ports/go/patterns/behavioral/observer.go) · [C++](ports/cpp/patterns/behavioral/observer.hpp) · [Rust](ports/rust/patterns/behavioral/observer.rs)
 
 **Observer**. Проблема: несколько объектов должны узнавать об изменениях в другом объекте, но он не должен от них зависеть.
 
@@ -2755,7 +2760,7 @@ theme.subscribe(console.log); // сразу печатает 'light'
 
 Код: [src/patterns/behavioral/state.ts](src/patterns/behavioral/state.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/state.py) · [Java](ports/java/src/patterns/behavioral/State.java) · [JavaScript](ports/javascript/patterns/behavioral/state.js) · [C#](ports/csharp/patterns/behavioral/state.cs) · [PHP](ports/php/patterns/behavioral/state.php) · [Go](ports/go/patterns/behavioral/state.go) · [C++](ports/cpp/patterns/behavioral/state.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/state.py) · [Java](ports/java/src/patterns/behavioral/State.java) · [JavaScript](ports/javascript/patterns/behavioral/state.js) · [C#](ports/csharp/patterns/behavioral/state.cs) · [PHP](ports/php/patterns/behavioral/state.php) · [Go](ports/go/patterns/behavioral/state.go) · [C++](ports/cpp/patterns/behavioral/state.hpp) · [Rust](ports/rust/patterns/behavioral/state.rs)
 
 **State**. Проблема: поведение объекта сильно зависит от его состояния, и код зарастает `switch (status)` в каждом методе.
 
@@ -2776,7 +2781,7 @@ order.history;   // ['new', 'paid', 'shipped', 'delivered']
 
 Код: [src/patterns/behavioral/strategy.ts](src/patterns/behavioral/strategy.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/strategy.py) · [Java](ports/java/src/patterns/behavioral/Strategy.java) · [JavaScript](ports/javascript/patterns/behavioral/strategy.js) · [C#](ports/csharp/patterns/behavioral/strategy.cs) · [PHP](ports/php/patterns/behavioral/strategy.php) · [Go](ports/go/patterns/behavioral/strategy.go) · [C++](ports/cpp/patterns/behavioral/strategy.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/strategy.py) · [Java](ports/java/src/patterns/behavioral/Strategy.java) · [JavaScript](ports/javascript/patterns/behavioral/strategy.js) · [C#](ports/csharp/patterns/behavioral/strategy.cs) · [PHP](ports/php/patterns/behavioral/strategy.php) · [Go](ports/go/patterns/behavioral/strategy.go) · [C++](ports/cpp/patterns/behavioral/strategy.hpp) · [Rust](ports/rust/patterns/behavioral/strategy.rs)
 
 **Strategy**. Проблема: есть несколько вариантов алгоритма (расчёт доставки, сортировка, сжатие), и выбирать между ними нужно во время работы программы.
 
@@ -2797,7 +2802,7 @@ calculator.calculate({ weightKg: 2.3, orderTotal: 80 }); // 12
 
 Код: [src/patterns/behavioral/template-method.ts](src/patterns/behavioral/template-method.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/template_method.py) · [Java](ports/java/src/patterns/behavioral/TemplateMethod.java) · [JavaScript](ports/javascript/patterns/behavioral/template-method.js) · [C#](ports/csharp/patterns/behavioral/template-method.cs) · [PHP](ports/php/patterns/behavioral/template-method.php) · [Go](ports/go/patterns/behavioral/template-method.go) · [C++](ports/cpp/patterns/behavioral/template-method.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/template_method.py) · [Java](ports/java/src/patterns/behavioral/TemplateMethod.java) · [JavaScript](ports/javascript/patterns/behavioral/template-method.js) · [C#](ports/csharp/patterns/behavioral/template-method.cs) · [PHP](ports/php/patterns/behavioral/template-method.php) · [Go](ports/go/patterns/behavioral/template-method.go) · [C++](ports/cpp/patterns/behavioral/template-method.hpp) · [Rust](ports/rust/patterns/behavioral/template_method.rs)
 
 **Template Method**. Проблема: несколько классов выполняют одинаковый алгоритм, который отличается только отдельными шагами.
 
@@ -2816,7 +2821,7 @@ new CsvSalesMiner().mine('product,amount\napple,10\npear,5\napple,7');
 
 Код: [src/patterns/behavioral/visitor.ts](src/patterns/behavioral/visitor.ts)
 
-Другие языки: [Python](ports/python/patterns/behavioral/visitor.py) · [Java](ports/java/src/patterns/behavioral/Visitor.java) · [JavaScript](ports/javascript/patterns/behavioral/visitor.js) · [C#](ports/csharp/patterns/behavioral/visitor.cs) · [PHP](ports/php/patterns/behavioral/visitor.php) · [Go](ports/go/patterns/behavioral/visitor.go) · [C++](ports/cpp/patterns/behavioral/visitor.hpp)
+Другие языки: [Python](ports/python/patterns/behavioral/visitor.py) · [Java](ports/java/src/patterns/behavioral/Visitor.java) · [JavaScript](ports/javascript/patterns/behavioral/visitor.js) · [C#](ports/csharp/patterns/behavioral/visitor.cs) · [PHP](ports/php/patterns/behavioral/visitor.php) · [Go](ports/go/patterns/behavioral/visitor.go) · [C++](ports/cpp/patterns/behavioral/visitor.hpp) · [Rust](ports/rust/patterns/behavioral/visitor.rs)
 
 **Visitor**. Проблема: над стабильной иерархией классов (фигуры, узлы AST) нужно часто добавлять новые операции: площадь, периметр, экспорт в JSON, отрисовку. Добавлять каждую операцию в каждый класс неудобно.
 
@@ -2842,7 +2847,7 @@ shapes.map((shape) => shape.accept(new JsonExportVisitor())); // ['{"type":"circ
 
 Код: [src/patterns/architectural/dependency-injection.ts](src/patterns/architectural/dependency-injection.ts)
 
-Другие языки: [Python](ports/python/patterns/architectural/dependency_injection.py) · [Java](ports/java/src/patterns/architectural/DependencyInjection.java) · [JavaScript](ports/javascript/patterns/architectural/dependency-injection.js) · [C#](ports/csharp/patterns/architectural/dependency-injection.cs) · [PHP](ports/php/patterns/architectural/dependency-injection.php) · [Go](ports/go/patterns/architectural/dependency-injection.go) · [C++](ports/cpp/patterns/architectural/dependency-injection.hpp)
+Другие языки: [Python](ports/python/patterns/architectural/dependency_injection.py) · [Java](ports/java/src/patterns/architectural/DependencyInjection.java) · [JavaScript](ports/javascript/patterns/architectural/dependency-injection.js) · [C#](ports/csharp/patterns/architectural/dependency-injection.cs) · [PHP](ports/php/patterns/architectural/dependency-injection.php) · [Go](ports/go/patterns/architectural/dependency-injection.go) · [C++](ports/cpp/patterns/architectural/dependency-injection.hpp) · [Rust](ports/rust/patterns/architectural/dependency_injection.rs)
 
 **Dependency Injection**. Проблема: если класс сам создаёт свои зависимости (`new Database()` внутри сервиса), его невозможно протестировать отдельно и сложно перенастроить.
 
@@ -2905,7 +2910,7 @@ await users.findAll(adult.and(active)); // [{ id: '2', ... }]
 
 Код: [src/patterns/architectural/event-emitter.ts](src/patterns/architectural/event-emitter.ts)
 
-Другие языки: [Python](ports/python/patterns/architectural/event_emitter.py) · [Java](ports/java/src/patterns/architectural/EventEmitter.java) · [JavaScript](ports/javascript/patterns/architectural/event-emitter.js) · [C#](ports/csharp/patterns/architectural/event-emitter.cs) · [PHP](ports/php/patterns/architectural/event-emitter.php) · [Go](ports/go/patterns/architectural/event-emitter.go) · [C++](ports/cpp/patterns/architectural/event-emitter.hpp)
+Другие языки: [Python](ports/python/patterns/architectural/event_emitter.py) · [Java](ports/java/src/patterns/architectural/EventEmitter.java) · [JavaScript](ports/javascript/patterns/architectural/event-emitter.js) · [C#](ports/csharp/patterns/architectural/event-emitter.cs) · [PHP](ports/php/patterns/architectural/event-emitter.php) · [Go](ports/go/patterns/architectural/event-emitter.go) · [C++](ports/cpp/patterns/architectural/event-emitter.hpp) · [Rust](ports/rust/patterns/architectural/event_emitter.rs)
 
 Pub/Sub, то есть [наблюдатель](#наблюдатель) с именованными событиями. Карта событий передаётся дженериком, поэтому TypeScript проверяет и имя события, и тип данных: опечатка в имени или неверный payload ловятся при компиляции. `on` возвращает функцию отписки, `once` срабатывает один раз.
 
@@ -2922,7 +2927,7 @@ events.emit('login', { user: 'alex' });
 
 Код: [src/patterns/architectural/middleware.ts](src/patterns/architectural/middleware.ts)
 
-Другие языки: [Python](ports/python/patterns/architectural/middleware.py) · [Java](ports/java/src/patterns/architectural/Middleware.java) · [JavaScript](ports/javascript/patterns/architectural/middleware.js) · [C#](ports/csharp/patterns/architectural/middleware.cs) · [PHP](ports/php/patterns/architectural/middleware.php) · [Go](ports/go/patterns/architectural/middleware.go) · [C++](ports/cpp/patterns/architectural/middleware.hpp)
+Другие языки: [Python](ports/python/patterns/architectural/middleware.py) · [Java](ports/java/src/patterns/architectural/Middleware.java) · [JavaScript](ports/javascript/patterns/architectural/middleware.js) · [C#](ports/csharp/patterns/architectural/middleware.cs) · [PHP](ports/php/patterns/architectural/middleware.php) · [Go](ports/go/patterns/architectural/middleware.go) · [C++](ports/cpp/patterns/architectural/middleware.hpp) · [Rust](ports/rust/patterns/architectural/middleware.rs)
 
 Цепочка обработчиков по модели «луковицы», как в Koa и Express. Каждый middleware получает контекст и функцию `next()`:
 - код до `await next()` выполняется на пути внутрь, код после — на пути наружу (замер времени, логирование);
@@ -2949,7 +2954,7 @@ await new Pipeline<{ path: string; status?: number }>()
 
 Код: [src/patterns/architectural/null-object.ts](src/patterns/architectural/null-object.ts)
 
-Другие языки: [Python](ports/python/patterns/architectural/null_object.py) · [Java](ports/java/src/patterns/architectural/NullObject.java) · [JavaScript](ports/javascript/patterns/architectural/null-object.js) · [C#](ports/csharp/patterns/architectural/null-object.cs) · [PHP](ports/php/patterns/architectural/null-object.php) · [Go](ports/go/patterns/architectural/null-object.go) · [C++](ports/cpp/patterns/architectural/null-object.hpp)
+Другие языки: [Python](ports/python/patterns/architectural/null_object.py) · [Java](ports/java/src/patterns/architectural/NullObject.java) · [JavaScript](ports/javascript/patterns/architectural/null-object.js) · [C#](ports/csharp/patterns/architectural/null-object.cs) · [PHP](ports/php/patterns/architectural/null-object.php) · [Go](ports/go/patterns/architectural/null-object.go) · [C++](ports/cpp/patterns/architectural/null-object.hpp) · [Rust](ports/rust/patterns/architectural/null_object.rs)
 
 **Null Object**. Проблема: необязательная зависимость (логгер, метрики) приводит к проверкам `if (logger)` по всему коду.
 
@@ -2966,7 +2971,7 @@ new PaymentService(new MemoryLogger()).charge(10); // логирует
 
 Код: [src/patterns/architectural/store.ts](src/patterns/architectural/store.ts)
 
-Другие языки: [Python](ports/python/patterns/architectural/store.py) · [Java](ports/java/src/patterns/architectural/Store.java) · [JavaScript](ports/javascript/patterns/architectural/store.js) · [C#](ports/csharp/patterns/architectural/store.cs) · [PHP](ports/php/patterns/architectural/store.php) · [Go](ports/go/patterns/architectural/store.go) · [C++](ports/cpp/patterns/architectural/store.hpp)
+Другие языки: [Python](ports/python/patterns/architectural/store.py) · [Java](ports/java/src/patterns/architectural/Store.java) · [JavaScript](ports/javascript/patterns/architectural/store.js) · [C#](ports/csharp/patterns/architectural/store.cs) · [PHP](ports/php/patterns/architectural/store.php) · [Go](ports/go/patterns/architectural/store.go) · [C++](ports/cpp/patterns/architectural/store.hpp) · [Rust](ports/rust/patterns/architectural/store.rs)
 
 **Flux / Redux store**. Единое хранилище состояния приложения с однонаправленным потоком данных:
 1. Состояние меняется только через `dispatch(action)`, где action — объект с полем `type`.
@@ -2988,7 +2993,7 @@ store.dispatch({ type: 'add', amount: 10 }); // 11
 
 Код: [src/patterns/architectural/circuit-breaker.ts](src/patterns/architectural/circuit-breaker.ts)
 
-Другие языки: [Python](ports/python/patterns/architectural/circuit_breaker.py) · [Java](ports/java/src/patterns/architectural/CircuitBreaker.java) · [JavaScript](ports/javascript/patterns/architectural/circuit-breaker.js) · [C#](ports/csharp/patterns/architectural/circuit-breaker.cs) · [PHP](ports/php/patterns/architectural/circuit-breaker.php) · [Go](ports/go/patterns/architectural/circuit-breaker.go) · [C++](ports/cpp/patterns/architectural/circuit-breaker.hpp)
+Другие языки: [Python](ports/python/patterns/architectural/circuit_breaker.py) · [Java](ports/java/src/patterns/architectural/CircuitBreaker.java) · [JavaScript](ports/javascript/patterns/architectural/circuit-breaker.js) · [C#](ports/csharp/patterns/architectural/circuit-breaker.cs) · [PHP](ports/php/patterns/architectural/circuit-breaker.php) · [Go](ports/go/patterns/architectural/circuit-breaker.go) · [C++](ports/cpp/patterns/architectural/circuit-breaker.hpp) · [Rust](ports/rust/patterns/architectural/circuit_breaker.rs)
 
 **Circuit Breaker**. Проблема: внешний сервис упал, а мы продолжаем засыпать его запросами. Каждый запрос долго ждёт таймаута, а сервису становится только хуже.
 
@@ -3033,7 +3038,7 @@ await retry(() => fetch('https://api.example.com'), { attempts: 5, delayMs: 100 
 
 ## Реализации на других языках
 
-Каждый из семи каталогов содержит соответствие всем 140 модулям `src/`, включая вспомогательные функции, варианты алгоритмов, структуры данных и 32 паттерна. Идея решения и оценка сложности описаны выше; рядом со ссылкой «Код» находятся ссылки на версии других языков. [Полный каталог](ports/CATALOG.md) также включает служебные модули сравнения, хеширования, типов графа и объединённых экспортов сортировок.
+Каждый из восьми каталогов содержит соответствие всем 140 модулям `src/`, включая вспомогательные функции, варианты алгоритмов, структуры данных и 32 паттерна. Идея решения и оценка сложности описаны выше; рядом со ссылкой «Код» находятся ссылки на версии других языков. [Полный каталог](ports/CATALOG.md) также включает служебные модули сравнения, хеширования, типов графа и объединённых экспортов сортировок.
 
 | Язык | Исходники и запуск | Числа и строки | Асинхронные операции |
 |---|---|---|---|
@@ -3045,8 +3050,9 @@ await retry(() => fetch('https://api.example.com'), { attempts: 5, delayMs: 100 
 | PHP | [Руководство](ports/php/README.md), [исходники](ports/php) | BCMath, Unicode и UTF-16 | `Promise`, `Fiber` |
 | Go | [Руководство](ports/go/README.md), [исходники](ports/go) | `big.Int`, Unicode и UTF-16 | Каналы, goroutine |
 | C++ | [Руководство](ports/cpp/README.md), [исходники](ports/cpp) | `BigInt`, байтовые индексы `std::string` | `std::future` |
+| Rust | [Руководство](ports/rust/README.md), [исходники](ports/rust) | `num_bigint::BigInt`, Unicode и UTF-16 | `Future`, каналы |
 
-Rust пока представлен прежними [минимальными примерами](templates); полный перенос готовится отдельно. Каталог включает только завершённые и проверенные переносы.
+В [templates](templates) сохранены прежние минимальные примеры: бинарный поиск, сортировка слиянием и Union-Find. Полные версии всех модулей находятся в ports.
 
 ### Python
 
@@ -3123,6 +3129,17 @@ python -B ports/check.py cpp
 ```
 
 Проверяются совместная компиляция всех заголовков, 64 эталонных примера, 200 тысяч операций на деревьях и сценарии паттернов.
+
+### Rust
+
+Все 140 модулей перенесены в пакет Cargo `algorithm-collection`. [Руководство](ports/rust/README.md) показывает подключение библиотеки, сортировку, дерево и большие целые, а также объясняет владение, `Option`, `Result` и асинхронные операции.
+
+```bash
+python -B ports/check.py rust
+cargo test --manifest-path ports/rust/Cargo.toml --locked
+```
+
+Кроме 64 эталонных примеров проверяются 200 тысяч операций на деревьях, запросы на отрезках, хеш-таблицы, списки и паттерны. На случайных графах сопоставляются Дейкстра, Беллман–Форд и Флойд–Уоршелл, Прим и Краскал, Тарьян и Косарайю.
 
 ### Общие проверки
 

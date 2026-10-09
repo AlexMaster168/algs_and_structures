@@ -68,5 +68,15 @@
         "ports/cpp/check.py"
       ]
     ]
+  },
+  "rust": {
+    "cwd": ".",
+    "commands": [
+      [
+        "{python}",
+        "-B",
+        "ports/rust/check.py"
+      ]
+    ]
   }
 }

@@ -39,7 +39,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [python, java, javascript, csharp, php, go, cpp]
+        language: [python, java, javascript, csharp, php, go, cpp, rust]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -61,6 +61,8 @@ jobs:
           extensions: bcmath, mbstring
           coverage: none
           tools: none
+      - run: rustup update stable --no-self-update
+        if: matrix.language == 'rust'
       - run: python3 -B ports/catalog.py --strict
       - run: python3 -B ports/check.py ${{ matrix.language }}
 
